@@ -9,6 +9,7 @@ import {
 } from "@clerk/nextjs";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { Cloud } from "lucide-react";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,7 +23,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "資格試験対策アプリ",
+  title: "CloudWorkbook - 資格試験対策アプリ",
   description: "効率的な学習で資格試験合格を目指す",
 };
 
@@ -37,10 +38,13 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <header className="border-b">
-            <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-              <Link href="/" className="text-xl font-bold">
-                資格試験対策アプリ
+          <header className="border-b bg-white">
+            <div className="container mx-auto px-4 py-4 flex justify-between items-center max-w-7xl">
+              <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                <Cloud className="h-10 w-10 text-black" />
+                <span className="text-3xl font-bold text-black">
+                  CloudWorkbook
+                </span>
               </Link>
               <nav className="flex items-center gap-4">
                 <SignedOut>
@@ -61,6 +65,12 @@ export default function RootLayout({
                     className="text-sm hover:underline"
                   >
                     ダッシュボード
+                  </Link>
+                  <Link
+                    href="/sections"
+                    className="text-sm hover:underline"
+                  >
+                    セクション
                   </Link>
                   <UserButton afterSignOutUrl="/" />
                 </SignedIn>
