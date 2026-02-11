@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { auth } from "@clerk/nextjs/server";
-import { getRandomQuestions } from "@/lib/db/queries";
+import { getRandomQuestions } from "@/backend/db/queries";
 
 // Edge Runtimeを使用
 export const runtime = "edge";

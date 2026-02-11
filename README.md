@@ -82,25 +82,47 @@ http://localhost:3000 にアクセス
 
 ```
 cloudworkbook/
-├── app/                    # Next.js App Router
-│   ├── api/               # APIルート（Edge Runtime）
-│   ├── layout.tsx         # ルートレイアウト
-│   └── page.tsx           # トップページ
-├── components/            # Reactコンポーネント
-│   └── ui/               # Shadcn/UIコンポーネント
-├── lib/                   # ユーティリティ
-│   ├── db/               # データベース関連
-│   │   ├── schema.ts     # Drizzleスキーマ
-│   │   ├── client.ts     # DB接続（移行対応）
-│   │   └── queries.ts    # クエリ関数
-│   └── utils.ts          # ユーティリティ関数
-├── scripts/               # スクリプト
-│   └── seed.ts           # サンプルデータ投入
-├── drizzle/               # マイグレーションファイル
-├── middleware.ts          # Clerk認証ミドルウェア
-├── drizzle.config.ts      # Drizzle設定
-└── next.config.ts         # Next.js設定
+├── frontend/                   # フロントエンド
+│   ├── screens/               # 画面コンポーネント
+│   │   ├── top.tsx           # トップページ
+│   │   ├── section.tsx       # セクション選択画面
+│   │   ├── quizes.tsx        # クイズ画面
+│   │   ├── list.tsx          # 進捗リスト画面
+│   │   └── dashboard.tsx     # ダッシュボード
+│   ├── components/            # UIコンポーネント
+│   │   ├── common/           # 共通コンポーネント
+│   │   │   ├── app-header.tsx        # ヘッダー
+│   │   │   ├── page-container.tsx    # ページコンテナ
+│   │   │   ├── section-header.tsx    # セクションヘッダー
+│   │   │   └── index.ts              # エクスポート
+│   │   └── features/         # 機能固有コンポーネント
+│   │       ├── sections-accordion.tsx # セクションアコーディオン
+│   │       ├── section-card.tsx       # セクションカード
+│   │       ├── stats-card.tsx         # 統計カード
+│   │       ├── feature-card.tsx       # 機能カード
+│   │       └── index.ts               # エクスポート
+│   ├── constants/             # 定数定義
+│   │   └── descriptions.ts   # 文言管理
+│   ├── hooks/                 # カスタムフック
+│   └── types/                 # 型定義
+├── backend/                    # バックエンド
+│   └── db/                    # データベース関連
+│       ├── schema.ts          # Drizzleスキーマ
+│       ├── client.ts          # DB接続（移行対応）
+│       ├── queries.ts         # クエリ関数
+│       ├── migrate.ts         # マイグレーション
+│       └── index.ts           # エクスポート
+├── app/                        # Next.js App Router
+│   ├── api/                   # APIルート（Edge Runtime）
+│   ├── layout.tsx             # ルートレイアウト（AppHeader使用）
+│   └── */page.tsx             # 各ページ（Screenを呼び出し）
+├── components/ui/              # Shadcn/UIコンポーネント
+├── lib/utils.ts               # ユーティリティ関数
+├── scripts/seed.ts            # サンプルデータ投入
+└── middleware.ts              # Clerk認証ミドルウェア
 ```
+
+詳細は `PROJECT_STRUCTURE.md` を参照してください。
 
 ## 🗄️ データベース設計
 
@@ -201,8 +223,9 @@ MIT
 - [x] プロジェクト初期構築
 - [x] データベース設計
 - [x] 認証実装
-- [ ] ダッシュボードUI
-- [ ] セクション学習機能
+- [x] コンポーネント共通化
+- [x] ダッシュボードUI
+- [x] セクション学習機能
 - [ ] 模擬テスト機能
 - [ ] 学習履歴の可視化
 - [ ] Cloudflare Pages移行

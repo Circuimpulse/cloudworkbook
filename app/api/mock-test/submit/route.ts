@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { auth } from "@clerk/nextjs/server";
-import { createMockTest, insertMockTestDetails } from "@/lib/db/queries";
-import { db } from "@/lib/db/client";
-import { questions } from "@/lib/db/schema";
+import { createMockTest, insertMockTestDetails } from "@/backend/db/queries";
+import { db } from "@/backend/db/client";
+import { questions } from "@/backend/db/schema";
 import { inArray } from "drizzle-orm";
 
 // Edge Runtimeを使用

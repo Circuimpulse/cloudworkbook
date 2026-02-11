@@ -1,5 +1,5 @@
-import { db } from "../lib/db/client";
-import { sections, questions } from "../lib/db/schema";
+import { db } from "../backend/db/client";
+import { sections, questions } from "../backend/db/schema";
 
 /**
  * サンプルデータ投入スクリプト

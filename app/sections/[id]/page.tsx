@@ -1,13 +1,13 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import { getSectionById, getQuestionsBySection, getSectionProgress } from "@/lib/db/queries";
-import { SectionQuiz } from "@/components/section-quiz";
+import { getSectionById, getQuestionsBySection } from "@/backend/db/queries";
+import QuizesScreen from "@/frontend/screens/quizes";
 
 interface PageProps {
   params: Promise<{ id: string }>;
 }
 
-export default async function SectionPage({ params }: PageProps) {
+export default async function Page({ params }: PageProps) {
   const { userId } = await auth();
   const { id } = await params;
 
@@ -21,10 +21,8 @@ export default async function SectionPage({ params }: PageProps) {
     redirect("/sections");
   }
 
-  // セクションと問題を取得
   const section = await getSectionById(sectionId);
   const questions = await getQuestionsBySection(sectionId);
-  const progress = await getSectionProgress(userId, sectionId);
 
   if (!section) {
     redirect("/sections");
@@ -43,14 +41,5 @@ export default async function SectionPage({ params }: PageProps) {
     );
   }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
-      <SectionQuiz
-        section={section}
-        questions={questions}
-        userId={userId}
-        initialProgress={progress}
-      />
-    </div>
-  );
+  return <QuizesScreen section={section} questions={questions} userId={userId} />;
 }

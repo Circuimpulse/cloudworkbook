@@ -3,7 +3,7 @@ import { migrate } from "drizzle-orm/libsql/migrator";
 import { createClient } from "@libsql/client";
 
 /**
- * マイグレーション実行スクリプト
+ * マイグレーション実行スクリプト（バックエンド）
  * 
  * 使い方:
  * 1. npm run db:generate でマイグレーションファイル生成

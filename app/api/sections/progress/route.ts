@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { auth } from "@clerk/nextjs/server";
-import { upsertSectionProgress } from "@/lib/db/queries";
+import { upsertSectionProgress } from "@/backend/db/queries";
 
 // Edge Runtimeを使用
 export const runtime = "edge";

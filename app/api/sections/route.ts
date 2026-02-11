@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { auth } from "@clerk/nextjs/server";
-import { getAllSections } from "@/lib/db/queries";
+import { getAllSections } from "@/backend/db/queries";
 
 // Edge Runtimeを使用（Cloudflare移行を見据えて）
 export const runtime = "edge";

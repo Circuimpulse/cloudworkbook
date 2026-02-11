@@ -1,7 +1,7 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import { getAllSections, getAllSectionProgress, getMockTestHistory } from "@/backend/db/queries";
-import DashboardScreen from "@/frontend/screens/dashboard";
+import { getAllSections, getAllSectionProgress } from "@/backend/db/queries";
+import ListScreen from "@/frontend/screens/list";
 
 export default async function Page() {
   const { userId } = await auth();
@@ -12,7 +12,6 @@ export default async function Page() {
 
   const sections = await getAllSections();
   const progressList = await getAllSectionProgress(userId);
-  const mockTests = await getMockTestHistory(userId, 5);
 
-  return <DashboardScreen sections={sections} progressList={progressList} mockTests={mockTests} />;
+  return <ListScreen sections={sections} progressList={progressList} />;
 }
