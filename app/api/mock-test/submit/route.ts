@@ -5,13 +5,13 @@ import { db } from "@/backend/db/client";
 import { questions } from "@/backend/db/schema";
 import { inArray } from "drizzle-orm";
 
-// Edge Runtimeを使用
-export const runtime = "edge";
+// Node.js Runtimeを使用（ローカルSQLiteファイルアクセスのため）
+// export const runtime = "edge"; // Cloudflare移行時に有効化
 
 /**
  * 模擬テスト提出API
  * POST /api/mock-test/submit
- * 
+ *
  * Body: {
  *   answers: Array<{ questionId: number, userAnswer: string }>
  * }
@@ -31,7 +31,7 @@ export async function POST(request: Request) {
     if (!Array.isArray(answers) || answers.length === 0) {
       return NextResponse.json(
         { error: "Invalid request body" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -47,7 +47,7 @@ export async function POST(request: Request) {
 
     // 正解マップを作成
     const correctAnswerMap = new Map(
-      correctAnswers.map((q) => [q.id, q.correctAnswer])
+      correctAnswers.map((q) => [q.id, q.correctAnswer]),
     );
 
     // 採点
@@ -84,7 +84,7 @@ export async function POST(request: Request) {
     console.error("Error submitting mock test:", error);
     return NextResponse.json(
       { error: "Internal Server Error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

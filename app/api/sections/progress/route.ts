@@ -2,13 +2,13 @@ import { NextResponse } from "next/server";
 import { auth } from "@clerk/nextjs/server";
 import { upsertSectionProgress } from "@/backend/db/queries";
 
-// Edge Runtimeを使用
-export const runtime = "edge";
+// Node.js Runtimeを使用（ローカルSQLiteファイルアクセスのため）
+// Cloudflare移行時にEdge Runtimeに変更予定
 
 /**
  * セクション進捗保存API
  * POST /api/sections/progress
- * 
+ *
  * Body: {
  *   sectionId: number,
  *   correctCount: number,
@@ -35,15 +35,12 @@ export async function POST(request: Request) {
     ) {
       return NextResponse.json(
         { error: "Invalid request body" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     if (correctCount < 0 || totalCount < 0 || correctCount > totalCount) {
-      return NextResponse.json(
-        { error: "Invalid counts" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Invalid counts" }, { status: 400 });
     }
 
     // 進捗を保存（上書き）
@@ -51,7 +48,7 @@ export async function POST(request: Request) {
       userId,
       sectionId,
       correctCount,
-      totalCount
+      totalCount,
     );
 
     return NextResponse.json({ progress });
@@ -59,7 +56,7 @@ export async function POST(request: Request) {
     console.error("Error saving section progress:", error);
     return NextResponse.json(
       { error: "Internal Server Error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

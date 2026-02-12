@@ -1,12 +1,31 @@
 import { useMemo } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Target, BarChart3, ArrowRight } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  BookOpen,
+  Target,
+  BarChart3,
+  ArrowRight,
+  CheckCircle,
+} from "lucide-react";
 import { APP_TEXTS } from "@/frontend/constants/descriptions";
 import { StatsCard } from "@/frontend/components/features/stats-card";
 import { FeatureCard } from "@/frontend/components/features/feature-card";
-import type { Section, SectionProgress, MockTestHistory } from "@/backend/db/schema";
+import type {
+  Section,
+  SectionProgress,
+  MockTestHistory,
+  Exam,
+} from "@/backend/db/schema";
 
 /**
  * ダッシュボード画面
@@ -15,20 +34,33 @@ interface DashboardScreenProps {
   sections: Section[];
   progressList: SectionProgress[];
   mockTests: MockTestHistory[];
+  exams: Exam[];
 }
 
-export default function DashboardScreen({ sections, progressList, mockTests }: DashboardScreenProps) {
+export default function DashboardScreen({
+  sections,
+  progressList,
+  mockTests,
+  exams,
+}: DashboardScreenProps) {
+  const router = useRouter();
   const texts = APP_TEXTS.dashboard;
 
   // 統計計算（useMemoで最適化）
   const stats = useMemo(() => {
     const totalSections = sections.length;
     const studiedSections = progressList.filter((p) => p.totalCount > 0).length;
-    const completedSections = progressList.filter((p) => p.correctCount === 7).length;
+    const completedSections = progressList.filter(
+      (p) => p.correctCount === 7,
+    ).length;
     const totalMockTests = mockTests.length;
-    const averageScore = mockTests.length > 0
-      ? Math.round(mockTests.reduce((sum, test) => sum + test.score, 0) / mockTests.length)
-      : 0;
+    const averageScore =
+      mockTests.length > 0
+        ? Math.round(
+            mockTests.reduce((sum, test) => sum + test.score, 0) /
+              mockTests.length,
+          )
+        : 0;
 
     return {
       totalSections,
@@ -47,9 +79,29 @@ export default function DashboardScreen({ sections, progressList, mockTests }: D
           <h1 className="text-4xl font-bold tracking-tight mb-2">
             {texts.title}
           </h1>
-          <p className="text-muted-foreground text-lg">
-            {texts.description}
-          </p>
+          <p className="text-muted-foreground text-lg">{texts.description}</p>
+        </div>
+
+        {/* 掲載している過去問一覧 */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">掲載している過去問一覧</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {exams.map((exam) => (
+              <Card
+                key={exam.id}
+                className="cursor-pointer hover:shadow-md transition-shadow"
+                onClick={() => (window.location.href = `/exams/${exam.id}`)}
+              >
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5" />
+                    {exam.title}
+                  </CardTitle>
+                  <CardDescription>{exam.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* 統計カード */}
@@ -64,7 +116,11 @@ export default function DashboardScreen({ sections, progressList, mockTests }: D
             value={stats.studiedSections}
             description={
               stats.totalSections > 0
-                ? texts.stats.completedPercentage(Math.round((stats.studiedSections / stats.totalSections) * 100))
+                ? texts.stats.completedPercentage(
+                    Math.round(
+                      (stats.studiedSections / stats.totalSections) * 100,
+                    ),
+                  )
                 : texts.stats.completedPercentage(0)
             }
           />
@@ -107,7 +163,9 @@ export default function DashboardScreen({ sections, progressList, mockTests }: D
                 <BarChart3 className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <CardTitle className="text-2xl">{texts.features.learningHistory.title}</CardTitle>
+                <CardTitle className="text-2xl">
+                  {texts.features.learningHistory.title}
+                </CardTitle>
                 <CardDescription>
                   {texts.features.learningHistory.description}
                 </CardDescription>
@@ -127,7 +185,10 @@ export default function DashboardScreen({ sections, progressList, mockTests }: D
                   >
                     <div>
                       <p className="font-medium">
-                        {texts.features.learningHistory.correctCount(test.score, test.totalQuestions)}
+                        {texts.features.learningHistory.correctCount(
+                          test.score,
+                          test.totalQuestions,
+                        )}
                       </p>
                       <p className="text-sm text-muted-foreground">
                         {new Date(test.takenAt).toLocaleDateString("ja-JP")}

@@ -2,13 +2,13 @@ import { NextResponse } from "next/server";
 import { auth } from "@clerk/nextjs/server";
 import { getRandomQuestions } from "@/backend/db/queries";
 
-// Edge Runtimeを使用
-export const runtime = "edge";
+// Node.js Runtimeを使用（ローカルSQLiteファイルアクセスのため）
+// export const runtime = "edge"; // Cloudflare移行時に有効化
 
 /**
  * ランダム問題取得API
  * GET /api/mock-test/random?limit=50
- * 
+ *
  * SQLite互換のRANDOM()を使用しているため、D1でもそのまま動作
  */
 export async function GET(request: Request) {
@@ -22,9 +22,11 @@ export async function GET(request: Request) {
     // クエリパラメータから問題数を取得
     const { searchParams } = new URL(request.url);
     const limit = parseInt(searchParams.get("limit") || "50", 10);
+    const examIdParam = searchParams.get("examId");
+    const examId = examIdParam ? parseInt(examIdParam, 10) : undefined;
 
     // ランダム問題取得
-    const questions = await getRandomQuestions(limit);
+    const questions = await getRandomQuestions(limit, examId);
 
     // 正解を隠して返す（クライアント側で答え合わせ時に再取得）
     const questionsWithoutAnswer = questions.map((q) => ({
@@ -43,7 +45,7 @@ export async function GET(request: Request) {
     console.error("Error fetching random questions:", error);
     return NextResponse.json(
       { error: "Internal Server Error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

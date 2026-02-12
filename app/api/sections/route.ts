@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 import { auth } from "@clerk/nextjs/server";
 import { getAllSections } from "@/backend/db/queries";
 
-// Edge Runtimeを使用（Cloudflare移行を見据えて）
-export const runtime = "edge";
+// Node.js Runtimeを使用（ローカルSQLiteファイルアクセスのため）
+// export const runtime = "edge"; // Cloudflare移行時に有効化
 
 /**
  * セクション一覧取得API
@@ -25,7 +25,7 @@ export async function GET() {
     console.error("Error fetching sections:", error);
     return NextResponse.json(
       { error: "Internal Server Error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

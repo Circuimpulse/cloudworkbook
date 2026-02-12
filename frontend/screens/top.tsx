@@ -2,12 +2,17 @@ import Link from "next/link";
 import { CheckCircle2, Cloud } from "lucide-react";
 import { APP_TEXTS } from "@/frontend/constants/descriptions";
 import { PageContainer } from "@/frontend/components/common/page-container";
+import type { Exam } from "@/backend/db/schema";
 
 /**
  * トップ画面（最初に表示される画面）
  * 過去問一覧を表示し、各セクションへの導線を提供
  */
-export default function TopScreen() {
+interface TopScreenProps {
+  exams: Exam[];
+}
+
+export default function TopScreen({ exams }: TopScreenProps) {
   const texts = APP_TEXTS.top;
 
   return (
@@ -37,20 +42,20 @@ export default function TopScreen() {
         <hr className="mt-5 border-black" />
 
         <div className="mt-8 grid grid-cols-1 gap-[10px] md:grid-cols-2">
-          {texts.sections.map((item, index) => (
+          {exams.map((exam) => (
             <Link
-              key={`section-${index}`}
-              href="/sections"
+              key={exam.id}
+              href={`/sections?examId=${exam.id}`}
               className="flex flex-col gap-[10px] rounded-[10px] border border-black bg-white px-6 py-6 transition-colors hover:bg-muted/40 md:px-[46px] md:py-[23px]"
             >
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="h-[30px] w-[30px] shrink-0" />
                 <p className="text-[24px] font-extrabold leading-none md:text-[40px]">
-                  {item.title}
+                  {exam.title}
                 </p>
               </div>
               <p className="pl-[42px] text-[16px] font-normal leading-tight md:text-[24px]">
-                {item.description}
+                {exam.description || ""}
               </p>
             </Link>
           ))}

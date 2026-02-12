@@ -1,4 +1,9 @@
-import { sqliteTable, text, integer, primaryKey } from "drizzle-orm/sqlite-core";
+import {
+  sqliteTable,
+  text,
+  integer,
+  primaryKey,
+} from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
 
 /**
@@ -18,14 +23,28 @@ export const users = sqliteTable("users", {
 });
 
 /**
- * セクションテーブル
- * 7問1セットの問題グループ
+ * 試験区分テーブル
+ * 例: "応用情報試験：午前", "Fp3級"
  */
-export const sections = sqliteTable("sections", {
+export const exams = sqliteTable("exams", {
   id: integer("id").primaryKey({ autoIncrement: true }),
   title: text("title").notNull(),
   description: text("description"),
-  order: integer("order").notNull(), // 表示順序
+  slug: text("slug").unique(), // URL用 (optional)
+});
+
+/**
+ * 学習セクションテーブル
+ * 試験区分ごとの章立て (例: "セクション1", "セクション2")
+ */
+export const sections = sqliteTable("sections", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  examId: integer("exam_id").references(() => exams.id, {
+    onDelete: "cascade",
+  }), // 試験区分への紐付け
+  title: text("title").notNull(),
+  description: text("description"),
+  order: integer("order").notNull(), // 表示順
   createdAt: integer("created_at", { mode: "timestamp" })
     .notNull()
     .default(sql`(unixepoch())`),
@@ -54,7 +73,7 @@ export const questions = sqliteTable("questions", {
 
 /**
  * セクション進捗テーブル
- * ユーザーごとのセクション学習状況（上書き更新）
+ * ユーザーごとのセクション学習状況（集計データ）
  */
 export const sectionProgress = sqliteTable(
   "section_progress",
@@ -76,7 +95,60 @@ export const sectionProgress = sqliteTable(
   },
   (table) => ({
     pk: primaryKey({ columns: [table.userId, table.sectionId] }),
-  })
+  }),
+);
+
+/**
+ * セクション問題別進捗テーブル（新規追加）
+ * 個別の問題の正誤状況を管理
+ */
+export const sectionQuestionProgress = sqliteTable(
+  "section_question_progress",
+  {
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    sectionId: integer("section_id")
+      .notNull()
+      .references(() => sections.id, { onDelete: "cascade" }),
+    questionId: integer("question_id")
+      .notNull()
+      .references(() => questions.id, { onDelete: "cascade" }),
+    userAnswer: text("user_answer").notNull().default(""), // 追加: ユーザーの回答
+    isCorrect: integer("is_correct", { mode: "boolean" }).notNull(),
+    updatedAt: integer("updated_at", { mode: "timestamp" })
+      .notNull()
+      .default(sql`(unixepoch())`),
+  },
+  (table) => ({
+    pk: primaryKey({
+      columns: [table.userId, table.sectionId, table.questionId],
+    }),
+  }),
+);
+
+/**
+ * ユーザーごとの問題記録（永続的な履歴）
+ * 間違えた問題やお気に入りなどを記録
+ */
+export const userQuestionRecords = sqliteTable(
+  "user_question_records",
+  {
+    userId: text("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    questionId: integer("question_id")
+      .notNull()
+      .references(() => questions.id, { onDelete: "cascade" }),
+    isCorrect: integer("is_correct", { mode: "boolean" }),
+    isFavorite: integer("is_favorite", { mode: "boolean" }).default(false),
+    updatedAt: integer("updated_at", { mode: "timestamp" })
+      .notNull()
+      .default(sql`(unixepoch())`),
+  },
+  (table) => ({
+    pk: primaryKey({ columns: [table.userId, table.questionId] }),
+  }),
 );
 
 /**
@@ -118,6 +190,9 @@ export const mockTestDetails = sqliteTable("mock_test_details", {
 export type User = typeof users.$inferSelect;
 export type NewUser = typeof users.$inferInsert;
 
+export type Exam = typeof exams.$inferSelect;
+export type NewExam = typeof exams.$inferInsert;
+
 export type Section = typeof sections.$inferSelect;
 export type NewSection = typeof sections.$inferInsert;
 
@@ -126,6 +201,11 @@ export type NewQuestion = typeof questions.$inferInsert;
 
 export type SectionProgress = typeof sectionProgress.$inferSelect;
 export type NewSectionProgress = typeof sectionProgress.$inferInsert;
+
+export type SectionQuestionProgress =
+  typeof sectionQuestionProgress.$inferSelect;
+export type NewSectionQuestionProgress =
+  typeof sectionQuestionProgress.$inferInsert;
 
 export type MockTestHistory = typeof mockTestHistory.$inferSelect;
 export type NewMockTestHistory = typeof mockTestHistory.$inferInsert;
