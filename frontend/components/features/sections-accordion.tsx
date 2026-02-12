@@ -2,11 +2,14 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ChevronDown, ChevronRight } from "lucide-react";
 
 interface SectionItem {
   id: number;
   title: string;
+  order: number;
+  examTitle?: string | null;
 }
 
 interface SectionsAccordionProps {
@@ -18,13 +21,14 @@ const CHUNK_SIZE = 10;
 const chunkSections = (sections: SectionItem[]): SectionItem[][] => {
   return Array.from(
     { length: Math.ceil(sections.length / CHUNK_SIZE) },
-    (_, i) => sections.slice(i * CHUNK_SIZE, (i + 1) * CHUNK_SIZE)
+    (_, i) => sections.slice(i * CHUNK_SIZE, (i + 1) * CHUNK_SIZE),
   );
 };
 
 const pad2 = (value: number): string => value.toString().padStart(2, "0");
 
 export function SectionsAccordion({ sections }: SectionsAccordionProps) {
+  const router = useRouter();
   const groups = useMemo(() => chunkSections(sections), [sections]);
   const [openGroupIndex, setOpenGroupIndex] = useState<number>(0);
 
@@ -40,8 +44,9 @@ export function SectionsAccordion({ sections }: SectionsAccordionProps) {
     <div className="mt-6 space-y-4">
       {groups.map((group, groupIndex) => {
         const isOpen = groupIndex === openGroupIndex;
-        const startNo = groupIndex * CHUNK_SIZE + 1;
-        const endNo = startNo + group.length - 1;
+        // Use actual order from the first and last item in the group
+        const startNo = group.length > 0 ? group[0].order : 0;
+        const endNo = group.length > 0 ? group[group.length - 1].order : 0;
         const rangeLabel = `#${pad2(startNo)} ~ #${pad2(endNo)}`;
 
         return (
@@ -74,12 +79,28 @@ export function SectionsAccordion({ sections }: SectionsAccordionProps) {
                 <div className="space-y-3">
                   {group.map((section) => (
                     <div key={section.id}>
-                      <Link
-                        href={`/sections/${section.id}`}
-                        className="inline-block text-2xl text-[#78BFC7] hover:opacity-80 md:text-[32px]"
+                      <button
+                        type="button"
+                        onClick={async (e) => {
+                          e.preventDefault();
+                          try {
+                            await fetch(`/api/sections/${section.id}/reset`, {
+                              method: "POST",
+                            });
+                          } catch (err) {
+                            console.error("Failed to reset progress", err);
+                          }
+                          router.push(`/sections/${section.id}`);
+                        }}
+                        className="inline-block text-left text-2xl text-[#78BFC7] hover:opacity-80 md:text-[32px]"
                       >
-                        {section.title} #{pad2(section.id)}
-                      </Link>
+                        {section.examTitle && (
+                          <span className="block text-base text-gray-500 mb-1 pointer-events-none">
+                            {section.examTitle}
+                          </span>
+                        )}
+                        {section.title}
+                      </button>
                       <div className="mt-1 h-px w-[204px] bg-[#78BFC7]" />
                     </div>
                   ))}
