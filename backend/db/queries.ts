@@ -1,5 +1,15 @@
 import { db } from "./client";
-import { questions, sections, sectionProgress, mockTestHistory, mockTestDetails, users } from "./schema";
+import {
+  questions,
+  sections,
+  sectionProgress,
+  sectionQuestionProgress,
+  mockTestHistory,
+  mockTestDetails,
+  users,
+  userQuestionRecords,
+  exams,
+} from "./schema";
 import { eq, and, sql, desc } from "drizzle-orm";
 
 /**
@@ -17,14 +27,90 @@ export async function getUserById(userId: string) {
   return db.select().from(users).where(eq(users.id, userId)).get();
 }
 
+// ==================== 試験区分関連 ====================
+
+export async function getAllExams() {
+  return db.select().from(exams).all();
+}
+
+export async function getExamById(id: number) {
+  return db.select().from(exams).where(eq(exams.id, id)).get();
+}
+
+export async function getSectionsByExamId(examId: number) {
+  return db
+    .select()
+    .from(sections)
+    .where(eq(sections.examId, examId))
+    .orderBy(sections.order)
+    .all();
+}
+
+export async function getSectionWithExam(sectionId: number) {
+  const result = await db
+    .select({
+      section: sections,
+      exam: exams,
+    })
+    .from(sections)
+    .leftJoin(exams, eq(sections.examId, exams.id))
+    .where(eq(sections.id, sectionId))
+    .get();
+
+  return result;
+}
+
+export async function getAdjacentSections(sectionId: number) {
+  // 現在のセクションを取得
+  const currentSection = await db
+    .select()
+    .from(sections)
+    .where(eq(sections.id, sectionId))
+    .get();
+
+  if (!currentSection || !currentSection.examId) {
+    return { prevSection: null, nextSection: null };
+  }
+
+  // 同じ試験区分のセクションを取得
+  const examSections = await db
+    .select()
+    .from(sections)
+    .where(eq(sections.examId, currentSection.examId))
+    .orderBy(sections.order)
+    .all();
+
+  const currentIndex = examSections.findIndex((s) => s.id === sectionId);
+
+  const prevSection = currentIndex > 0 ? examSections[currentIndex - 1] : null;
+  const nextSection =
+    currentIndex < examSections.length - 1
+      ? examSections[currentIndex + 1]
+      : null;
+
+  return { prevSection, nextSection };
+}
+
+export async function getAllSectionsWithExams() {
+  return db
+    .select({
+      section: sections,
+      exam: exams,
+    })
+    .from(sections)
+    .leftJoin(exams, eq(sections.examId, exams.id))
+    .orderBy(sections.order)
+    .all();
+}
+
 // ==================== セクション関連 ====================
 
 export async function getAllSections() {
   return db.select().from(sections).orderBy(sections.order).all();
 }
 
-export async function getSectionById(sectionId: number) {
-  return db.select().from(sections).where(eq(sections.id, sectionId)).get();
+export async function getSectionById(id: number) {
+  return db.select().from(sections).where(eq(sections.id, id)).get();
 }
 
 export async function getQuestionsBySection(sectionId: number) {
@@ -45,8 +131,8 @@ export async function getSectionProgress(userId: string, sectionId: number) {
     .where(
       and(
         eq(sectionProgress.userId, userId),
-        eq(sectionProgress.sectionId, sectionId)
-      )
+        eq(sectionProgress.sectionId, sectionId),
+      ),
     )
     .get();
 }
@@ -63,7 +149,7 @@ export async function upsertSectionProgress(
   userId: string,
   sectionId: number,
   correctCount: number,
-  totalCount: number
+  totalCount: number,
 ) {
   // SQLite の INSERT OR REPLACE を使用
   return db
@@ -94,7 +180,29 @@ export async function upsertSectionProgress(
  * ランダムに50問取得
  * SQLite互換のRANDOM()を使用（D1でも動作）
  */
-export async function getRandomQuestions(limit: number = 50) {
+export async function getRandomQuestions(limit: number = 50, examId?: number) {
+  if (examId) {
+    return db
+      .select({
+        id: questions.id,
+        sectionId: questions.sectionId,
+        questionText: questions.questionText,
+        optionA: questions.optionA,
+        optionB: questions.optionB,
+        optionC: questions.optionC,
+        optionD: questions.optionD,
+        correctAnswer: questions.correctAnswer,
+        explanation: questions.explanation,
+        order: questions.order,
+        createdAt: questions.createdAt,
+      })
+      .from(questions)
+      .innerJoin(sections, eq(questions.sectionId, sections.id))
+      .where(eq(sections.examId, examId))
+      .orderBy(sql`RANDOM()`)
+      .limit(limit)
+      .all();
+  }
   return db
     .select()
     .from(questions)
@@ -106,7 +214,11 @@ export async function getRandomQuestions(limit: number = 50) {
 /**
  * 模擬テスト履歴を作成
  */
-export async function createMockTest(userId: string, score: number, totalQuestions: number = 50) {
+export async function createMockTest(
+  userId: string,
+  score: number,
+  totalQuestions: number = 50,
+) {
   const result = await db
     .insert(mockTestHistory)
     .values({
@@ -116,7 +228,7 @@ export async function createMockTest(userId: string, score: number, totalQuestio
       takenAt: new Date(),
     })
     .returning();
-  
+
   return result[0];
 }
 
@@ -129,7 +241,7 @@ export async function insertMockTestDetails(
     questionId: number;
     userAnswer: string;
     isCorrect: boolean;
-  }>
+  }>,
 ) {
   return db
     .insert(mockTestDetails)
@@ -140,7 +252,7 @@ export async function insertMockTestDetails(
         userAnswer: detail.userAnswer,
         isCorrect: detail.isCorrect,
         answeredAt: new Date(),
-      }))
+      })),
     )
     .returning();
 }
@@ -179,11 +291,12 @@ export async function getMockTestDetails(testId: number) {
 
 // ==================== 管理者用（初期データ投入など） ====================
 
-export async function createSection(title: string, description: string, order: number) {
-  return db
-    .insert(sections)
-    .values({ title, description, order })
-    .returning();
+export async function createSection(
+  title: string,
+  description: string,
+  order: number,
+) {
+  return db.insert(sections).values({ title, description, order }).returning();
 }
 
 export async function createQuestion(
@@ -195,7 +308,7 @@ export async function createQuestion(
   optionD: string,
   correctAnswer: string,
   explanation: string,
-  order: number
+  order: number,
 ) {
   return db
     .insert(questions)
@@ -211,4 +324,122 @@ export async function createQuestion(
       order,
     })
     .returning();
+}
+
+// ==================== セクション問題別進捗関連 ====================
+
+/**
+ * 特定セクションの問題ごとの進捗を取得
+ */
+export async function getSectionQuestionsProgress(
+  userId: string,
+  sectionId: number,
+) {
+  return db
+    .select()
+    .from(sectionQuestionProgress)
+    .where(
+      and(
+        eq(sectionQuestionProgress.userId, userId),
+        eq(sectionQuestionProgress.sectionId, sectionId),
+      ),
+    )
+    .all();
+}
+
+/**
+ * 問題ごとの進捗を保存（上書き）
+ */
+type UpsertSectionQuestionProgressResult = Promise<
+  {
+    updatedAt: Date;
+    userId: string;
+    sectionId: number;
+    questionId: number;
+    userAnswer: string;
+    isCorrect: boolean;
+  }[]
+>;
+
+export async function upsertSectionQuestionProgress(
+  userId: string,
+  sectionId: number,
+  questionId: number,
+  userAnswer: string,
+  isCorrect: boolean,
+): UpsertSectionQuestionProgressResult {
+  return db
+    .insert(sectionQuestionProgress)
+    .values({
+      userId,
+      sectionId,
+      questionId,
+      userAnswer,
+      isCorrect,
+      updatedAt: new Date(),
+    })
+    .onConflictDoUpdate({
+      target: [
+        sectionQuestionProgress.userId,
+        sectionQuestionProgress.sectionId,
+        sectionQuestionProgress.questionId,
+      ],
+      set: {
+        userAnswer,
+        isCorrect,
+        updatedAt: new Date(),
+      },
+    })
+    .returning();
+}
+
+/**
+ * ユーザーの全てのセクション問題別進捗を取得 (リスト画面用)
+ */
+export async function getAllSectionQuestionsProgress(userId: string) {
+  return db
+    .select()
+    .from(sectionQuestionProgress)
+    .where(eq(sectionQuestionProgress.userId, userId))
+    .all();
+}
+
+/**
+ * ユーザーごとの問題記録（履歴）を保存（上書き）
+ */
+export async function upsertUserQuestionRecord(
+  userId: string,
+  questionId: number,
+  isCorrect: boolean,
+) {
+  return db
+    .insert(userQuestionRecords)
+    .values({
+      userId,
+      questionId,
+      isCorrect,
+      updatedAt: new Date(),
+    })
+    .onConflictDoUpdate({
+      target: [userQuestionRecords.userId, userQuestionRecords.questionId],
+      set: {
+        isCorrect,
+        updatedAt: new Date(),
+      },
+    })
+    .returning();
+}
+
+/**
+ * セクション進捗のリセット（Homeに戻ったとき用）
+ */
+export async function resetSectionProgress(userId: string, sectionId: number) {
+  return db
+    .delete(sectionQuestionProgress)
+    .where(
+      and(
+        eq(sectionQuestionProgress.userId, userId),
+        eq(sectionQuestionProgress.sectionId, sectionId),
+      ),
+    );
 }

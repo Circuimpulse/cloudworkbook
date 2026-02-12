@@ -1,6 +1,11 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import { getSectionById, getQuestionsBySection } from "@/backend/db/queries";
+import {
+  getQuestionsBySection,
+  getSectionWithExam,
+  getSectionQuestionsProgress,
+  getAdjacentSections,
+} from "@/backend/db/queries";
 import QuizesScreen from "@/frontend/screens/quizes";
 
 interface PageProps {
@@ -21,12 +26,16 @@ export default async function Page({ params }: PageProps) {
     redirect("/sections");
   }
 
-  const section = await getSectionById(sectionId);
+  const data = await getSectionWithExam(sectionId);
   const questions = await getQuestionsBySection(sectionId);
+  const progress = await getSectionQuestionsProgress(userId, sectionId);
+  const { prevSection, nextSection } = await getAdjacentSections(sectionId);
 
-  if (!section) {
+  if (!data || !data.section) {
     redirect("/sections");
   }
+
+  const { section, exam } = data;
 
   if (questions.length === 0) {
     return (
@@ -41,5 +50,15 @@ export default async function Page({ params }: PageProps) {
     );
   }
 
-  return <QuizesScreen section={section} questions={questions} userId={userId} />;
+  return (
+    <QuizesScreen
+      section={section}
+      questions={questions}
+      userId={userId}
+      initialProgress={progress}
+      exam={exam || undefined}
+      prevSection={prevSection || undefined}
+      nextSection={nextSection || undefined}
+    />
+  );
 }
