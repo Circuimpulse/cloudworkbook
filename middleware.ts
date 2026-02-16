@@ -2,7 +2,6 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 // 認証が必要なルート
 const isProtectedRoute = createRouteMatcher([
-  "/dashboard(.*)",
   "/sections(.*)",
   "/mock-test(.*)",
   "/api(.*)",

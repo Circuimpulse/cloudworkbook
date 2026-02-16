@@ -19,16 +19,17 @@ export function AppHeader() {
   return (
     <header className="border-b bg-white">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="inline-flex items-center gap-2 text-xl font-bold">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-xl font-bold"
+        >
           <Cloud className="h-6 w-6" />
           {APP_TEXTS.app.name}
         </Link>
         <nav className="flex items-center gap-4">
           <SignedOut>
             <SignInButton mode="modal">
-              <button className="text-sm hover:underline">
-                {texts.login}
-              </button>
+              <button className="text-sm hover:underline">{texts.login}</button>
             </SignInButton>
             <SignUpButton mode="modal">
               <button className="text-sm bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90">
@@ -37,10 +38,7 @@ export function AppHeader() {
             </SignUpButton>
           </SignedOut>
           <SignedIn>
-            <Link
-              href="/dashboard"
-              className="text-sm hover:underline"
-            >
+            <Link href="/" className="text-sm hover:underline">
               {texts.dashboard}
             </Link>
             <UserButton afterSignOutUrl="/" />

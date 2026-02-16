@@ -84,13 +84,25 @@ export function SectionsAccordion({ sections }: SectionsAccordionProps) {
                         onClick={async (e) => {
                           e.preventDefault();
                           try {
-                            await fetch(`/api/sections/${section.id}/reset`, {
-                              method: "POST",
-                            });
+                            // 進捗をリセット
+                            const response = await fetch(
+                              `/api/learning/units/${section.id}/reset`,
+                              {
+                                method: "POST",
+                              },
+                            );
+                            
+                            if (!response.ok) {
+                              throw new Error("Failed to reset progress");
+                            }
+                            
+                            // リセット完了後、フルリロードで遷移（キャッシュを完全にバイパス）
+                            const timestamp = Date.now();
+                            window.location.href = `/sections/${section.id}?retry=${timestamp}`;
                           } catch (err) {
                             console.error("Failed to reset progress", err);
+                            alert("進捗のリセットに失敗しました");
                           }
-                          router.push(`/sections/${section.id}`);
                         }}
                         className="inline-block text-left text-2xl text-[#78BFC7] hover:opacity-80 md:text-[32px]"
                       >

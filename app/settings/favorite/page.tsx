@@ -1,6 +1,6 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import MockTestScreen from "@/frontend/screens/MockExamScreen";
+import FavoriteSettingsScreen from "@/frontend/screens/FavoriteSettingsScreen";
 
 export default async function Page() {
   const { userId } = await auth();
@@ -9,5 +9,6 @@ export default async function Page() {
     redirect("/sign-in");
   }
 
-  return <MockTestScreen />;
+  return <FavoriteSettingsScreen />;
 }
+

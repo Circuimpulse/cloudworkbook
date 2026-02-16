@@ -1,7 +1,7 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { getSectionsByExamId, getExamById } from "@/backend/db/queries";
-import SectionScreen from "@/frontend/screens/section";
+import SectionSelectScreen from "@/frontend/screens/SectionSelectScreen";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -18,16 +18,16 @@ export default async function Page({ params }: PageProps) {
   const examId = parseInt(id, 10);
 
   if (isNaN(examId)) {
-    redirect("/dashboard");
+    redirect("/");
   }
 
   const exam = await getExamById(examId);
 
   if (!exam) {
-    redirect("/dashboard");
+    redirect("/");
   }
 
   const sections = await getSectionsByExamId(examId);
 
-  return <SectionScreen sections={sections} exam={exam} />;
+  return <SectionSelectScreen sections={sections} exam={exam} />;
 }

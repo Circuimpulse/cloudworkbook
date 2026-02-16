@@ -142,6 +142,9 @@ export const userQuestionRecords = sqliteTable(
       .references(() => questions.id, { onDelete: "cascade" }),
     isCorrect: integer("is_correct", { mode: "boolean" }),
     isFavorite: integer("is_favorite", { mode: "boolean" }).default(false),
+    isFavorite1: integer("is_favorite_1", { mode: "boolean" }).default(false),
+    isFavorite2: integer("is_favorite_2", { mode: "boolean" }).default(false),
+    isFavorite3: integer("is_favorite_3", { mode: "boolean" }).default(false),
     updatedAt: integer("updated_at", { mode: "timestamp" })
       .notNull()
       .default(sql`(unixepoch())`),
@@ -212,3 +215,32 @@ export type NewMockTestHistory = typeof mockTestHistory.$inferInsert;
 
 export type MockTestDetail = typeof mockTestDetails.$inferSelect;
 export type NewMockTestDetail = typeof mockTestDetails.$inferInsert;
+
+/**
+ * お気に入り設定テーブル
+ * ユーザーごとのお気に入りフィルター設定
+ */
+export const favoriteSettings = sqliteTable("favorite_settings", {
+  userId: text("user_id")
+    .primaryKey()
+    .notNull()
+    .references(() => users.id, { onDelete: "cascade" }),
+  favorite1Enabled: integer("favorite1_enabled", { mode: "boolean" })
+    .notNull()
+    .default(true),
+  favorite2Enabled: integer("favorite2_enabled", { mode: "boolean" })
+    .notNull()
+    .default(true),
+  favorite3Enabled: integer("favorite3_enabled", { mode: "boolean" })
+    .notNull()
+    .default(true),
+  filterMode: text("filter_mode", { enum: ["or", "and"] })
+    .notNull()
+    .default("or"),
+  updatedAt: integer("updated_at", { mode: "timestamp" })
+    .notNull()
+    .default(sql`(unixepoch())`),
+});
+
+export type FavoriteSettings = typeof favoriteSettings.$inferSelect;
+export type NewFavoriteSettings = typeof favoriteSettings.$inferInsert;

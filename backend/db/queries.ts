@@ -9,8 +9,9 @@ import {
   users,
   userQuestionRecords,
   exams,
+  favoriteSettings,
 } from "./schema";
-import { eq, and, sql, desc } from "drizzle-orm";
+import { eq, and, sql, desc, or } from "drizzle-orm";
 
 /**
  * クエリ関数集
@@ -405,36 +406,45 @@ export async function getAllSectionQuestionsProgress(userId: string) {
 }
 
 /**
- * ユーザーごとの問題記録（履歴）を保存（上書き）
+ * ユーザーごとの問題記録（履歴）を保存
+ * 間違えた問題のみを記録し、正解した場合は既存のレコードを削除しない
+ * これにより、一度でも間違えた問題は学習履歴に残り続ける
  */
 export async function upsertUserQuestionRecord(
   userId: string,
   questionId: number,
   isCorrect: boolean,
 ) {
-  return db
-    .insert(userQuestionRecords)
-    .values({
-      userId,
-      questionId,
-      isCorrect,
-      updatedAt: new Date(),
-    })
-    .onConflictDoUpdate({
-      target: [userQuestionRecords.userId, userQuestionRecords.questionId],
-      set: {
-        isCorrect,
+  // 間違えた場合のみ記録を作成/更新
+  if (!isCorrect) {
+    return db
+      .insert(userQuestionRecords)
+      .values({
+        userId,
+        questionId,
+        isCorrect: false,
         updatedAt: new Date(),
-      },
-    })
-    .returning();
+      })
+      .onConflictDoUpdate({
+        target: [userQuestionRecords.userId, userQuestionRecords.questionId],
+        set: {
+          isCorrect: false,
+          updatedAt: new Date(),
+        },
+      })
+      .returning();
+  }
+  
+  // 正解した場合は何もしない（既存の間違い記録を保持）
+  return [];
 }
 
 /**
  * セクション進捗のリセット（Homeに戻ったとき用）
  */
 export async function resetSectionProgress(userId: string, sectionId: number) {
-  return db
+  // sectionQuestionProgressを削除
+  await db
     .delete(sectionQuestionProgress)
     .where(
       and(
@@ -442,4 +452,503 @@ export async function resetSectionProgress(userId: string, sectionId: number) {
         eq(sectionQuestionProgress.sectionId, sectionId),
       ),
     );
+
+  // sectionProgressも削除
+  return db
+    .delete(sectionProgress)
+    .where(
+      and(
+        eq(sectionProgress.userId, userId),
+        eq(sectionProgress.sectionId, sectionId),
+      ),
+    );
+}
+
+/**
+ * セクションの間違った問題IDを取得
+ * userQuestionRecordsから取得（永続的な履歴）
+ */
+export async function getIncorrectQuestionIds(
+  userId: string,
+  sectionId: number,
+) {
+  // userQuestionRecordsから間違えた問題を取得
+  const records = await db
+    .select()
+    .from(userQuestionRecords)
+    .innerJoin(questions, eq(userQuestionRecords.questionId, questions.id))
+    .where(
+      and(
+        eq(userQuestionRecords.userId, userId),
+        eq(userQuestionRecords.isCorrect, false),
+        eq(questions.sectionId, sectionId),
+      ),
+    )
+    .all();
+
+  return records.map((r) => r.user_question_records.questionId);
+}
+
+/**
+ * 正解した問題を除外して、間違った問題のみをリセット
+ */
+export async function resetIncorrectQuestionsOnly(
+  userId: string,
+  sectionId: number,
+) {
+  // 間違った問題の進捗を削除
+  await db
+    .delete(sectionQuestionProgress)
+    .where(
+      and(
+        eq(sectionQuestionProgress.userId, userId),
+        eq(sectionQuestionProgress.sectionId, sectionId),
+        eq(sectionQuestionProgress.isCorrect, false),
+      ),
+    );
+
+  // sectionProgressを更新（正解数のみ残す）
+  const correctCount = (
+    await db
+      .select()
+      .from(sectionQuestionProgress)
+      .where(
+        and(
+          eq(sectionQuestionProgress.userId, userId),
+          eq(sectionQuestionProgress.sectionId, sectionId),
+          eq(sectionQuestionProgress.isCorrect, true),
+        ),
+      )
+      .all()
+  ).length;
+
+  return db
+    .update(sectionProgress)
+    .set({
+      correctCount: correctCount,
+      totalCount: correctCount, // 間違った問題はリセットされたので、解答数＝正解数になるはず
+      updatedAt: new Date(),
+    })
+    .where(
+      and(
+        eq(sectionProgress.userId, userId),
+        eq(sectionProgress.sectionId, sectionId),
+      ),
+    );
+}
+
+/**
+ * 特定の問題の進捗をリセットする
+ */
+export async function resetQuestionProgress(
+  userId: string,
+  sectionId: number,
+  questionId: number,
+) {
+  // 指定された問題の進捗を削除
+  await db
+    .delete(sectionQuestionProgress)
+    .where(
+      and(
+        eq(sectionQuestionProgress.userId, userId),
+        eq(sectionQuestionProgress.sectionId, sectionId),
+        eq(sectionQuestionProgress.questionId, questionId),
+      ),
+    );
+
+  // 全進捗を取得して集計し直す
+  const allProgress = await db
+    .select()
+    .from(sectionQuestionProgress)
+    .where(
+      and(
+        eq(sectionQuestionProgress.userId, userId),
+        eq(sectionQuestionProgress.sectionId, sectionId),
+      ),
+    )
+    .all();
+
+  const correctCount = allProgress.filter((p) => p.isCorrect).length;
+  const totalCount = allProgress.length;
+
+  return db
+    .insert(sectionProgress)
+    .values({
+      userId,
+      sectionId,
+      correctCount,
+      totalCount,
+      updatedAt: new Date(),
+    })
+    .onConflictDoUpdate({
+      target: [sectionProgress.userId, sectionProgress.sectionId],
+      set: {
+        correctCount,
+        totalCount,
+        updatedAt: new Date(),
+      },
+    });
+}
+
+/**
+ * 試験ごとの間違えた問題を取得（セクションごとにグループ化）
+ * userQuestionRecordsから取得（永続的な履歴）
+ */
+export async function getIncorrectQuestionsByExam(
+  userId: string,
+  examId: number,
+) {
+  // 試験に属する全セクションを取得
+  const examSections = await getSectionsByExamId(examId);
+
+  const result = [];
+
+  for (const section of examSections) {
+    // userQuestionRecordsから間違えた問題を取得（永続的な履歴）
+    const incorrectRecords = await db
+      .select()
+      .from(userQuestionRecords)
+      .innerJoin(questions, eq(userQuestionRecords.questionId, questions.id))
+      .where(
+        and(
+          eq(userQuestionRecords.userId, userId),
+          eq(userQuestionRecords.isCorrect, false),
+          eq(questions.sectionId, section.id),
+        ),
+      )
+      .all();
+
+    if (incorrectRecords.length > 0) {
+      const incorrectQuestions = incorrectRecords.map((r) => r.questions);
+
+      result.push({
+        section,
+        questions: incorrectQuestions,
+      });
+    }
+  }
+
+  return result;
+}
+
+/**
+ * 試験ごとのお気に入り問題を取得（セクションごとにグループ化）
+ */
+export async function getFavoriteQuestionsByExam(
+  userId: string,
+  examId: number,
+) {
+  // 試験に属する全セクションを取得
+  const examSections = await getSectionsByExamId(examId);
+
+  const result = [];
+
+  for (const section of examSections) {
+    // セクションごとのお気に入り問題を取得
+    const favoriteQuestions = await getFavoriteQuestionsBySection(
+      userId,
+      section.id,
+    );
+
+    if (favoriteQuestions.length > 0) {
+      result.push({
+        section,
+        questions: favoriteQuestions,
+      });
+    }
+  }
+
+  return result;
+}
+
+// ==================== お気に入り関連 ====================
+
+/**
+ * お気に入り状態を取得
+ */
+export async function getFavoriteStatus(userId: string, questionId: number) {
+  const record = await db
+    .select()
+    .from(userQuestionRecords)
+    .where(
+      and(
+        eq(userQuestionRecords.userId, userId),
+        eq(userQuestionRecords.questionId, questionId),
+      ),
+    )
+    .get();
+
+  return {
+    isFavorite1: record?.isFavorite1 ?? false,
+    isFavorite2: record?.isFavorite2 ?? false,
+    isFavorite3: record?.isFavorite3 ?? false,
+    // Legacy support
+    isFavorite: record?.isFavorite ?? false,
+  };
+}
+
+/**
+ * お気に入り状態をトグル（レベル指定可能）
+ */
+export async function toggleFavorite(
+  userId: string,
+  questionId: number,
+  level: number = 1,
+) {
+  const existing = await db
+    .select()
+    .from(userQuestionRecords)
+    .where(
+      and(
+        eq(userQuestionRecords.userId, userId),
+        eq(userQuestionRecords.questionId, questionId),
+      ),
+    )
+    .get();
+
+  if (existing) {
+    // 既存レコードがある場合は更新
+    const updates: any = {
+      updatedAt: new Date(),
+    };
+
+    if (level === 1) updates.isFavorite1 = !existing.isFavorite1;
+    if (level === 2) updates.isFavorite2 = !existing.isFavorite2;
+    if (level === 3) updates.isFavorite3 = !existing.isFavorite3;
+    // レガシーフラグも更新（1の場合は連動させるなど）
+    if (level === 1) updates.isFavorite = !existing.isFavorite1;
+
+    return db
+      .update(userQuestionRecords)
+      .set(updates)
+      .where(
+        and(
+          eq(userQuestionRecords.userId, userId),
+          eq(userQuestionRecords.questionId, questionId),
+        ),
+      )
+      .returning();
+  } else {
+    // 新規レコードを作成
+    const newRecord: any = {
+      userId,
+      questionId,
+      updatedAt: new Date(),
+      isFavorite: false,
+      isFavorite1: false,
+      isFavorite2: false,
+      isFavorite3: false,
+    };
+
+    if (level === 1) {
+      newRecord.isFavorite1 = true;
+      newRecord.isFavorite = true;
+    }
+    if (level === 2) newRecord.isFavorite2 = true;
+    if (level === 3) newRecord.isFavorite3 = true;
+
+    return db.insert(userQuestionRecords).values(newRecord).returning();
+  }
+}
+
+/**
+ * ユーザーのお気に入り問題IDリストを取得
+ * 設定に基づいてフィルタリング
+ */
+export async function getFavoriteQuestionIds(userId: string) {
+  // 設定を取得
+  const settings = await getFavoriteSettings(userId);
+  
+  // デフォルト設定
+  const favorite1Enabled = settings?.favorite1Enabled ?? true;
+  const favorite2Enabled = settings?.favorite2Enabled ?? true;
+  const favorite3Enabled = settings?.favorite3Enabled ?? true;
+  const filterMode = settings?.filterMode ?? "or";
+
+  const records = await db
+    .select()
+    .from(userQuestionRecords)
+    .where(eq(userQuestionRecords.userId, userId))
+    .all();
+
+  return records
+    .filter((r) => {
+      const matches = [];
+      if (favorite1Enabled && r.isFavorite1) matches.push(true);
+      if (favorite2Enabled && r.isFavorite2) matches.push(true);
+      if (favorite3Enabled && r.isFavorite3) matches.push(true);
+
+      if (filterMode === "and") {
+        // ANDモード: 有効な全てのレベルに該当する必要がある
+        const enabledCount = [favorite1Enabled, favorite2Enabled, favorite3Enabled].filter(Boolean).length;
+        return matches.length === enabledCount && enabledCount > 0;
+      } else {
+        // ORモード: いずれか1つに該当すればOK
+        return matches.length > 0;
+      }
+    })
+    .map((r) => r.questionId);
+}
+
+/**
+ * セクションのお気に入り問題を取得
+ */
+export async function getFavoriteQuestionsBySection(
+  userId: string,
+  sectionId: number,
+) {
+  const favoriteIds = await getFavoriteQuestionIds(userId);
+
+  if (favoriteIds.length === 0) {
+    return [];
+  }
+
+  return db
+    .select()
+    .from(questions)
+    .where(
+      and(
+        eq(questions.sectionId, sectionId),
+        sql`${questions.id} IN (${sql.join(
+          favoriteIds.map((id) => sql`${id}`),
+          sql`, `,
+        )})`,
+      ),
+    )
+    .all();
+}
+
+/**
+ * ユーザーの全ての「間違えた問題」を取得（試験・セクション情報付き）
+ * sectionQuestionProgress で isCorrect: false のもの
+ */
+export async function getAllIncorrectQuestions(userId: string) {
+  return db
+    .select({
+      progress: sectionQuestionProgress,
+      question: questions,
+      section: sections,
+      exam: exams,
+      record: userQuestionRecords, // Add record
+    })
+    .from(sectionQuestionProgress)
+    .innerJoin(questions, eq(sectionQuestionProgress.questionId, questions.id))
+    .innerJoin(sections, eq(questions.sectionId, sections.id))
+    .leftJoin(exams, eq(sections.examId, exams.id))
+    .leftJoin(
+      userQuestionRecords,
+      and(
+        eq(userQuestionRecords.userId, userId),
+        eq(userQuestionRecords.questionId, questions.id),
+      ),
+    )
+    .where(
+      and(
+        eq(sectionQuestionProgress.userId, userId),
+        eq(sectionQuestionProgress.isCorrect, false),
+      ),
+    )
+    .orderBy(desc(sectionQuestionProgress.updatedAt))
+    .all();
+}
+
+/**
+ * ユーザーの全ての「お気に入り問題」を取得（試験・セクション情報付き）
+ * userQuestionRecords で isFavorite: true のもの
+ * 設定に基づいてフィルタリング
+ */
+export async function getAllFavoriteQuestions(userId: string) {
+  // 設定を取得
+  const settings = await getFavoriteSettings(userId);
+  
+  // デフォルト設定
+  const favorite1Enabled = settings?.favorite1Enabled ?? true;
+  const favorite2Enabled = settings?.favorite2Enabled ?? true;
+  const favorite3Enabled = settings?.favorite3Enabled ?? true;
+  const filterMode = settings?.filterMode ?? "or";
+
+  // 有効なお気に入りレベルの条件を構築
+  const favoriteConditions = [];
+  if (favorite1Enabled) {
+    favoriteConditions.push(eq(userQuestionRecords.isFavorite1, true));
+  }
+  if (favorite2Enabled) {
+    favoriteConditions.push(eq(userQuestionRecords.isFavorite2, true));
+  }
+  if (favorite3Enabled) {
+    favoriteConditions.push(eq(userQuestionRecords.isFavorite3, true));
+  }
+
+  // 条件が1つもない場合は空配列を返す
+  if (favoriteConditions.length === 0) {
+    return [];
+  }
+
+  // OR または AND で条件を結合
+  const favoriteFilter =
+    filterMode === "and" && favoriteConditions.length > 1
+      ? and(...favoriteConditions)
+      : or(...favoriteConditions);
+
+  return db
+    .select({
+      record: userQuestionRecords,
+      question: questions,
+      section: sections,
+      exam: exams,
+    })
+    .from(userQuestionRecords)
+    .innerJoin(questions, eq(userQuestionRecords.questionId, questions.id))
+    .innerJoin(sections, eq(questions.sectionId, sections.id))
+    .leftJoin(exams, eq(sections.examId, exams.id))
+    .where(and(eq(userQuestionRecords.userId, userId), favoriteFilter))
+    .orderBy(desc(userQuestionRecords.updatedAt))
+    .all();
+}
+
+// ==================== お気に入り設定関連 ====================
+
+/**
+ * お気に入り設定を取得
+ */
+export async function getFavoriteSettings(userId: string) {
+  return db
+    .select()
+    .from(favoriteSettings)
+    .where(eq(favoriteSettings.userId, userId))
+    .get();
+}
+
+/**
+ * お気に入り設定を保存
+ */
+export async function upsertFavoriteSettings(
+  userId: string,
+  favorite1Enabled: boolean,
+  favorite2Enabled: boolean,
+  favorite3Enabled: boolean,
+  filterMode: "or" | "and",
+) {
+  return db
+    .insert(favoriteSettings)
+    .values({
+      userId,
+      favorite1Enabled,
+      favorite2Enabled,
+      favorite3Enabled,
+      filterMode,
+      updatedAt: new Date(),
+    })
+    .onConflictDoUpdate({
+      target: [favoriteSettings.userId],
+      set: {
+        favorite1Enabled,
+        favorite2Enabled,
+        favorite3Enabled,
+        filterMode,
+        updatedAt: new Date(),
+      },
+    })
+    .returning()
+    .get();
 }
