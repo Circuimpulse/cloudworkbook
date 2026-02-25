@@ -161,15 +161,39 @@ npm run db:push        # スキーマをDBにプッシュ
 
 ## 📦 デプロイ
 
-### Vercelへのデプロイ
+### Vercelへのデプロイ（推奨）
 
-```bash
-vercel
+このアプリケーションはVercelへのデプロイに最適化されています。
+
+#### クイックデプロイ
+
+1. [Vercel Dashboard](https://vercel.com/new) にアクセス
+2. GitHubリポジトリを選択: `Circuimpulse/cloudworkbook`
+3. 環境変数を設定（下記参照）
+4. デプロイ
+
+#### 必要な環境変数
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+CLERK_SECRET_KEY=sk_test_...
+DATABASE_URL=libsql://your-database.turso.io
+DATABASE_AUTH_TOKEN=your_turso_token
 ```
 
-詳細は `SETUP.md` を参照してください。
+#### 詳細な手順
 
-### Cloudflare Pagesへの移行
+完全なデプロイガイドは **[VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md)** を参照してください。
+
+以下の内容が含まれています：
+- Tursoデータベースのセットアップ
+- Clerk認証の設定
+- 環境変数の設定方法
+- データベースマイグレーション
+- カスタムドメインの設定
+- トラブルシューティング
+
+### Cloudflare Pagesへの移行（将来）
 
 将来的にCloudflare Pages + D1に移行する際の手順は `MIGRATION_TO_CLOUDFLARE.md` を参照してください。
 

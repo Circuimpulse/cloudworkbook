@@ -41,3 +41,10 @@ next-env.d.ts
 *.db-shm
 *.db-wal
 /drizzle
+
+# procedures (環境固有の手順書)
+/docs/procedures/
+
+# misc
+IPA_kakomon/
+tsc_errors.log
