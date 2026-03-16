@@ -236,14 +236,9 @@ async function main() {
       : undefined;
     const finalCategoryId = catL3 || catL2 || catL1 || undefined;
 
-    // セクションの決定（5問ごとに分割）
-    const sectionIndex = Math.floor((qNum - 1) / 5) + 1;
-    let sectionTitle = "";
-    if (examSlug === "AP") {
-      sectionTitle = `応用情報${label}#${String(sectionIndex).padStart(2, "0")}`;
-    } else {
-      sectionTitle = `${examTitle}${label}#${String(sectionIndex).padStart(2, "0")}`;
-    }
+    // セクションの決定（10問ごとに分割）
+    const sectionIndex = Math.floor((qNum - 1) / 10) + 1;
+    const sectionTitle = `#${sectionIndex}`;
 
     let sectionId: number;
     const [existingSection] = await db
@@ -261,7 +256,7 @@ async function main() {
         .values({
           examId,
           title: sectionTitle,
-          description: `${label} 問${(sectionIndex - 1) * 5 + 1}〜${(sectionIndex - 1) * 5 + 5}`,
+          description: `問${(sectionIndex - 1) * 10 + 1}〜${Math.min(sectionIndex * 10, 80)}`,
           order:
             year * 100 + (seasonEnums === "spring" ? 0 : 50) + sectionIndex,
         })

@@ -19,6 +19,7 @@ import {
   Star,
   BookOpen,
   ChevronDown,
+  ChevronRight,
 } from "lucide-react";
 import { APP_TEXTS } from "@/frontend/constants/descriptions";
 import { PageContainer } from "@/frontend/components/common/page-container";
@@ -31,13 +32,13 @@ import type {
 import { useRouter } from "next/navigation";
 import FavoriteToggles from "@/frontend/components/common/FavoriteToggles";
 
-// 型定義（queries.tsの戻り値に合わせる）
+// 型定義
 interface IncorrectQuestionItem {
   progress: any;
   question: Question;
   section: Section;
   exam: Exam | null;
-  record: any; // Add record
+  record: any;
 }
 
 interface FavoriteQuestionItem {
@@ -48,6 +49,8 @@ interface FavoriteQuestionItem {
 }
 
 interface HistoryScreenProps {
+  exams: Exam[];
+  selectedExamId?: number;
   history: MockTestHistory[];
   incorrectQuestions: IncorrectQuestionItem[];
   favoriteQuestions: FavoriteQuestionItem[];
@@ -57,6 +60,8 @@ interface HistoryScreenProps {
 type TabType = "history" | "incorrect" | "favorite";
 
 export default function HistoryScreen({
+  exams,
+  selectedExamId,
   history,
   incorrectQuestions,
   favoriteQuestions,
@@ -74,9 +79,9 @@ export default function HistoryScreen({
     3: true,
   });
   const [filterMode, setFilterMode] = useState<"or" | "and">("or");
-  const texts = APP_TEXTS.dashboard.features.learningHistory; // テキスト再利用
+  const texts = APP_TEXTS.dashboard.features.learningHistory;
 
-  // Propsからのデータをローカルステートで管理して更新を即時反映させる
+  // ローカルステートで管理
   const [localFavoriteQuestions, setLocalFavoriteQuestions] =
     useState(favoriteQuestions);
   const [localIncorrectQuestions, setLocalIncorrectQuestions] =
@@ -87,12 +92,20 @@ export default function HistoryScreen({
     setLocalIncorrectQuestions(incorrectQuestions);
   }, [favoriteQuestions, incorrectQuestions]);
 
+  // タブ変更
   const handleTabChange = (newTab: TabType) => {
     setActiveTab(newTab);
-    // URLを更新して履歴に残す（リロード時にタブを維持）
     const url = new URL(window.location.href);
     url.searchParams.set("tab", newTab);
     window.history.pushState({}, "", url.toString());
+  };
+
+  // 試験区分変更
+  const handleExamChange = (newExamId: string) => {
+    const url = new URL(window.location.href);
+    url.searchParams.set("examId", newExamId);
+    url.searchParams.set("tab", activeTab);
+    router.push(url.pathname + url.search);
   };
 
   const renderTabContent = () => {
@@ -103,10 +116,14 @@ export default function HistoryScreen({
             const accuracy = Math.round(
               (item.score / item.totalQuestions) * 100,
             );
-            const isPassed = accuracy >= 60; // 仮の合格ライン 60%
+            const isPassed = accuracy >= 60;
 
             return (
-              <Card key={item.id} className="transition-all hover:shadow-md">
+              <Card
+                key={item.id}
+                className="transition-all hover:shadow-md cursor-pointer group"
+                onClick={() => router.push(`/mock-test/result/${item.id}`)}
+              >
                 <CardContent className="p-6 flex items-center justify-between">
                   <div className="space-y-1">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1">
@@ -146,6 +163,7 @@ export default function HistoryScreen({
                         {accuracy}%
                       </div>
                     </div>
+                    <ChevronRight className="h-5 w-5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 </CardContent>
               </Card>
@@ -158,7 +176,13 @@ export default function HistoryScreen({
             <History className="h-12 w-12 mx-auto text-muted-foreground mb-4 opacity-50" />
             <h3 className="text-lg font-medium mb-2">{texts.noTests}</h3>
             <Button asChild className="mt-4">
-              <Link href="/mock-test">
+              <Link
+                href={
+                  selectedExamId
+                    ? `/mock-test?examId=${selectedExamId}`
+                    : "/mock-test"
+                }
+              >
                 {APP_TEXTS.dashboard.features.mockTest.action}
               </Link>
             </Button>
@@ -170,7 +194,7 @@ export default function HistoryScreen({
     if (activeTab === "incorrect") {
       return localIncorrectQuestions.length > 0 ? (
         <div className="grid gap-4">
-          {localIncorrectQuestions.map((item, index) => (
+          {localIncorrectQuestions.map((item) => (
             <Card
               key={`incorrect-${item.question.id}`}
               className="transition-all hover:shadow-md cursor-pointer group"
@@ -180,9 +204,6 @@ export default function HistoryScreen({
                 <div className="flex items-start justify-between gap-4">
                   <div className="space-y-2 flex-1">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
-                      <span className="bg-red-100 text-red-800 px-2 py-0.5 rounded text-xs font-medium">
-                        {item.exam?.title || "試験区分なし"}
-                      </span>
                       <span>{item.section?.title}</span>
                       <FavoriteToggles
                         questionId={item.question.id}
@@ -203,7 +224,6 @@ export default function HistoryScreen({
                                 : p,
                             ),
                           );
-                          // Also update favorite list if compatible
                           setLocalFavoriteQuestions((prev) => {
                             const exists = prev.some(
                               (p) => p.question.id === item.question.id,
@@ -215,8 +235,6 @@ export default function HistoryScreen({
                                   : p,
                               );
                             }
-                            // If doesn't exist but added, tricky because we miss 'section' object details properly nested?
-                            // Actually it's cleaner to reload page or just update if exists.
                             return prev;
                           });
                         }}
@@ -239,7 +257,7 @@ export default function HistoryScreen({
             <Award className="h-12 w-12 mx-auto text-yellow-500 mb-4 opacity-50" />
             <h3 className="text-lg font-medium mb-2">素晴らしい！</h3>
             <p className="text-muted-foreground">
-              現在、間違えたままの問題はありません。
+              この試験区分では、間違えたままの問題はありません。
             </p>
           </CardContent>
         </Card>
@@ -263,13 +281,9 @@ export default function HistoryScreen({
             (has3 && favoriteFilters[3])
           );
         } else {
-          // AND mode: Must simulate all SELECTED filters
           if (favoriteFilters[1] && !has1) return false;
           if (favoriteFilters[2] && !has2) return false;
           if (favoriteFilters[3] && !has3) return false;
-          // If no filters selected, maybe show nothing or all?
-          // If all filters off, OR logic returns false (nothing). AND logic returns true (all).
-          // Let's align: if no filter selected, show nothing.
           if (!favoriteFilters[1] && !favoriteFilters[2] && !favoriteFilters[3])
             return false;
           return true;
@@ -340,13 +354,6 @@ export default function HistoryScreen({
           {filteredFavorites.length > 0 ? (
             <div className="grid gap-4">
               {filteredFavorites.map((item, index) => {
-                const r = item.record;
-                const has1 =
-                  r.isFavorite1 ||
-                  (r.isFavorite &&
-                    !r.isFavorite1 &&
-                    !r.isFavorite2 &&
-                    !r.isFavorite3);
                 return (
                   <Card
                     key={`favorite-${index}`}
@@ -357,9 +364,6 @@ export default function HistoryScreen({
                       <div className="flex items-start justify-between gap-4">
                         <div className="space-y-2 flex-1">
                           <div className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
-                            <span className="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs font-medium">
-                              {item.exam?.title || "試験区分なし"}
-                            </span>
                             <span>{item.section?.title}</span>
                             <FavoriteToggles
                               questionId={item.question.id}
@@ -438,7 +442,27 @@ export default function HistoryScreen({
           </Button>
         </div>
 
-        {/* タブ切り替え（ドロップダウン） */}
+        {/* 試験区分セレクタ */}
+        {exams.length > 0 && (
+          <div className="mb-6">
+            <div className="relative w-fit">
+              <select
+                value={selectedExamId?.toString() ?? ""}
+                onChange={(e) => handleExamChange(e.target.value)}
+                className="appearance-none bg-white border border-blue-200 rounded-lg py-2.5 pl-4 pr-10 text-sm font-medium shadow-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 cursor-pointer hover:bg-blue-50 transition-colors w-[300px]"
+              >
+                {exams.map((exam) => (
+                  <option key={exam.id} value={exam.id.toString()}>
+                    {exam.title}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="absolute right-3 top-3 h-4 w-4 text-blue-500 pointer-events-none" />
+            </div>
+          </div>
+        )}
+
+        {/* タブ切り替え */}
         <div className="mb-6">
           <div className="relative w-fit">
             <select

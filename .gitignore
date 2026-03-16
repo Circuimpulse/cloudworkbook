@@ -48,3 +48,6 @@ next-env.d.ts
 # misc
 IPA_kakomon/
 tsc_errors.log
+
+
+/rawData

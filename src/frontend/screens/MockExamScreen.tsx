@@ -143,6 +143,7 @@ export default function MockTestScreen() {
 
       const payload = {
         answers: [...answerList, ...unansweredQuestions],
+        examId: examId,
       };
 
       const response = await fetch("/api/exams/mock/submission", {

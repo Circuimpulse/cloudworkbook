@@ -221,6 +221,7 @@ export async function createMockTest(
   userId: string,
   score: number,
   totalQuestions: number = 50,
+  examId?: number,
 ) {
   const result = await db
     .insert(mockTestHistory)
@@ -228,6 +229,7 @@ export async function createMockTest(
       userId,
       score,
       totalQuestions,
+      examId: examId ?? null,
       takenAt: new Date(),
     })
     .returning();
@@ -261,13 +263,21 @@ export async function insertMockTestDetails(
 }
 
 /**
- * ユーザーの模擬テスト履歴を取得
+ * ユーザーの模擬テスト履歴を取得（examIdでフィルタ可能）
  */
-export async function getMockTestHistory(userId: string, limit: number = 10) {
+export async function getMockTestHistory(
+  userId: string,
+  limit: number = 10,
+  examId?: number,
+) {
+  const conditions = [eq(mockTestHistory.userId, userId)];
+  if (examId !== undefined) {
+    conditions.push(eq(mockTestHistory.examId, examId));
+  }
   return db
     .select()
     .from(mockTestHistory)
-    .where(eq(mockTestHistory.userId, userId))
+    .where(and(...conditions))
     .orderBy(desc(mockTestHistory.takenAt))
     .limit(limit)
     .all();
@@ -892,17 +902,27 @@ export async function getFavoriteQuestionsBySection(
 }
 
 /**
- * ユーザーの全ての「間違えた問題」を取得（試験・セクション情報付き）
- * sectionQuestionProgress で isCorrect: false のもの
+ * ユーザーの「間違えた問題」を取得（試験・セクション情報付き）
+ * examIdを指定すると該当試験のみフィルタ
  */
-export async function getAllIncorrectQuestions(userId: string) {
+export async function getAllIncorrectQuestions(
+  userId: string,
+  examId?: number,
+) {
+  const conditions = [
+    eq(sectionQuestionProgress.userId, userId),
+    eq(sectionQuestionProgress.isCorrect, false),
+  ];
+  if (examId !== undefined) {
+    conditions.push(eq(sections.examId, examId));
+  }
   return db
     .select({
       progress: sectionQuestionProgress,
       question: questions,
       section: sections,
       exam: exams,
-      record: userQuestionRecords, // Add record
+      record: userQuestionRecords,
     })
     .from(sectionQuestionProgress)
     .innerJoin(questions, eq(sectionQuestionProgress.questionId, questions.id))
@@ -915,22 +935,17 @@ export async function getAllIncorrectQuestions(userId: string) {
         eq(userQuestionRecords.questionId, questions.id),
       ),
     )
-    .where(
-      and(
-        eq(sectionQuestionProgress.userId, userId),
-        eq(sectionQuestionProgress.isCorrect, false),
-      ),
-    )
+    .where(and(...conditions))
     .orderBy(desc(sectionQuestionProgress.updatedAt))
     .all();
 }
 
 /**
- * ユーザーの全ての「お気に入り問題」を取得（試験・セクション情報付き）
- * userQuestionRecords で isFavorite: true のもの
+ * ユーザーの「お気に入り問題」を取得（試験・セクション情報付き）
+ * examIdを指定すると該当試験のみフィルタ
  * 設定に基づいてフィルタリング
  */
-export async function getAllFavoriteQuestions(userId: string) {
+export async function getAllFavoriteQuestions(userId: string, examId?: number) {
   // 設定を取得
   const settings = await getFavoriteSettings(userId);
 
@@ -963,6 +978,14 @@ export async function getAllFavoriteQuestions(userId: string) {
       ? and(...favoriteConditions)
       : or(...favoriteConditions);
 
+  const baseConditions = [
+    eq(userQuestionRecords.userId, userId),
+    favoriteFilter!,
+  ];
+  if (examId !== undefined) {
+    baseConditions.push(eq(sections.examId, examId));
+  }
+
   return db
     .select({
       record: userQuestionRecords,
@@ -974,7 +997,7 @@ export async function getAllFavoriteQuestions(userId: string) {
     .innerJoin(questions, eq(userQuestionRecords.questionId, questions.id))
     .innerJoin(sections, eq(questions.sectionId, sections.id))
     .leftJoin(exams, eq(sections.examId, exams.id))
-    .where(and(eq(userQuestionRecords.userId, userId), favoriteFilter))
+    .where(and(...baseConditions))
     .orderBy(desc(userQuestionRecords.updatedAt))
     .all();
 }

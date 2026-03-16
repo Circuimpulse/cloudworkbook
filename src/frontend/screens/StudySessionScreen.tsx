@@ -14,6 +14,7 @@ import type {
 } from "@/backend/db/schema";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import FavoriteToggles from "@/frontend/components/common/FavoriteToggles";
 
 /**
@@ -90,6 +91,11 @@ export default function QuizesScreen({
   const [selectedAnswer, setSelectedAnswer] = useState<string>("");
   const [showResult, setShowResult] = useState(false);
   const [showCompletionScreen, setShowCompletionScreen] = useState(false);
+
+  // 記述式回答用のstate
+  const [fillInAnswer, setFillInAnswer] = useState<string>("");
+  // 複数空欄回答用のstate (語群選択/○×複数)
+  const [multiAnswers, setMultiAnswers] = useState<Record<string, string>>({});
 
   // 初期進捗データから回答履歴を生成
   const [answers, setAnswers] = useState<
@@ -245,7 +251,7 @@ export default function QuizesScreen({
     router.replace(`?${params.toString()}`, { scroll: false });
   }, [currentQuestionIndex, router, searchParams]);
 
-  // 問題が変わったときに、既存の回答を復元
+  // 問題が変わったときに、既存の回答を復元 + 記述式stateリセット
   useEffect(() => {
     const existingAnswer = answers.find(
       (a) => a.questionId === currentQuestion.id,
@@ -253,9 +259,25 @@ export default function QuizesScreen({
     if (existingAnswer) {
       setSelectedAnswer(existingAnswer.answer);
       setShowResult(true);
+      // 記述式の回答を復元
+      try {
+        const parsed = JSON.parse(existingAnswer.answer);
+        if (typeof parsed === "object" && parsed !== null) {
+          setMultiAnswers(parsed);
+          setFillInAnswer("");
+        } else {
+          setFillInAnswer(existingAnswer.answer);
+          setMultiAnswers({});
+        }
+      } catch {
+        setFillInAnswer(existingAnswer.answer);
+        setMultiAnswers({});
+      }
     } else {
       setSelectedAnswer("");
       setShowResult(false);
+      setFillInAnswer("");
+      setMultiAnswers({});
     }
   }, [currentQuestionIndex, currentQuestion.id]);
 
@@ -419,23 +441,112 @@ export default function QuizesScreen({
     }
   };
 
-  // Helper to render option indicator (A, B, C, D circle or Check/X icon)
+  // questionTypeに基づく表示設定
+  const questionType = (currentQuestion as any).questionType || "choice";
+  const isTrueFalse = questionType === "true_false";
+  const isFillIn = questionType === "fill_in";
+  const isSelect = questionType === "select";
+  const isDescriptive = isFillIn || isSelect;
+
+  // 複数空欄の正解データを取得
+  const getCorrectAnswerDetail = (): Record<string, string> | null => {
+    const detail = (currentQuestion as any).correctAnswerDetail;
+    if (!detail) return null;
+    try {
+      return typeof detail === "string" ? JSON.parse(detail) : detail;
+    } catch { return null; }
+  };
+
+  // 複数空欄の空欄キー一覧
+  const getMultiAnswerKeys = (): string[] => {
+    const detail = getCorrectAnswerDetail();
+    if (!detail) return [];
+    return Object.keys(detail);
+  };
+
+  // 記述式の回答を提出
+  const handleDescriptiveSubmit = () => {
+    if (showResult) return;
+
+    const detail = getCorrectAnswerDetail();
+    let isCorrect = false;
+    let answerStr = "";
+
+    if (detail && Object.keys(detail).length > 0) {
+      // 複数空欄の採点
+      isCorrect = Object.entries(detail).every(([key, correctVal]) => {
+        const userVal = (multiAnswers[key] || "").replace(/,/g, "").trim();
+        const correctClean = String(correctVal).replace(/[()（）万円%㎡,]/g, "").trim();
+        return userVal === correctClean;
+      });
+      answerStr = JSON.stringify(multiAnswers);
+    } else {
+      // 単一回答の採点
+      const userAnswer = fillInAnswer.replace(/,/g, "").trim();
+      const correctAnswer = currentQuestion.correctAnswer.replace(/,/g, "").trim();
+      isCorrect = userAnswer === correctAnswer;
+      answerStr = fillInAnswer.trim();
+    }
+
+    setSelectedAnswer(answerStr);
+    setShowResult(true);
+
+    // DBに保存
+    fetch("/api/user/progress/questions", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        sectionId: section.id,
+        questionId: currentQuestion.id,
+        userAnswer: answerStr,
+        isCorrect,
+      }),
+    }).catch((error) => console.error("Failed to save:", error));
+
+    setAnswers((prev) => {
+      const idx = prev.findIndex((a) => a.questionId === currentQuestion.id);
+      const entry = { questionId: currentQuestion.id, answer: answerStr, isCorrect };
+      if (idx >= 0) { const n = [...prev]; n[idx] = entry; return n; }
+      return [...prev, entry];
+    });
+  };
+
+  // 表示する選択肢キーを動的に決定
+  const getOptionKeys = (): string[] => {
+    if (isDescriptive) return []; // 記述式は選択肢なし
+    if (isTrueFalse) return ["A", "B"];
+    const keys = ["A", "B"];
+    if (currentQuestion.optionC) keys.push("C");
+    if (currentQuestion.optionD) keys.push("D");
+    return keys;
+  };
+
+  // ○×表示用のラベル
+  const getTrueFalseLabel = (key: string) => {
+    return key === "A" ? "○" : "×";
+  };
+
+  // Helper to render option indicator
   const renderOptionIndicator = (optionKey: string) => {
     const isSelected = selectedAnswer === optionKey;
     const isCorrectAnswer = currentQuestion.correctAnswer === optionKey;
 
     if (showResult) {
       if (isCorrectAnswer) {
-        // Correct answer always shows check
         return (
           <Check className="w-8 h-8 text-green-600 font-bold" strokeWidth={4} />
         );
       }
       if (isSelected && !isCorrectAnswer) {
-        // Wrong selection shows X
         return <X className="w-8 h-8 text-red-500 font-bold" strokeWidth={4} />;
       }
-      // Other options show letter in circle
+      if (isTrueFalse) {
+        return (
+          <span className="text-4xl font-bold text-slate-400">
+            {getTrueFalseLabel(optionKey)}
+          </span>
+        );
+      }
       return (
         <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white text-xl font-medium">
           {optionKey}
@@ -443,7 +554,22 @@ export default function QuizesScreen({
       );
     }
 
-    // Default state: Letter in circle
+    // Default state
+    if (isTrueFalse) {
+      return (
+        <span
+          className={cn(
+            "text-4xl font-bold transition-all",
+            isSelected
+              ? optionKey === "A" ? "text-blue-700 scale-110" : "text-red-600 scale-110"
+              : optionKey === "A" ? "text-blue-500" : "text-red-400",
+          )}
+        >
+          {getTrueFalseLabel(optionKey)}
+        </span>
+      );
+    }
+
     return (
       <div
         className={cn(
@@ -810,10 +936,18 @@ export default function QuizesScreen({
                     ✓ この問題は既に正解済みです。説明を確認できます。
                   </div>
                 )}
+                {/* 出典情報 */}
+                {currentQuestion.sourceNote && (
+                  <div className="mb-2 text-xs text-slate-400 font-medium">
+                    {currentQuestion.sourceNote}
+                  </div>
+                )}
                 <div className="flex items-start justify-between gap-4">
-                  <p className="text-lg leading-relaxed font-medium flex-1">
-                    {currentQuestion.questionText}
-                  </p>
+                  <div className="prose prose-sm max-w-none flex-1 text-lg leading-relaxed font-medium [&_table]:text-base [&_table]:font-normal [&_th]:bg-slate-100 [&_th]:px-3 [&_th]:py-2 [&_td]:px-3 [&_td]:py-2 [&_img]:rounded-lg [&_img]:shadow-md [&_img]:my-4">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {currentQuestion.questionText}
+                    </ReactMarkdown>
+                  </div>
                   <FavoriteToggles
                     key={currentQuestion.id}
                     questionId={currentQuestion.id}
@@ -841,55 +975,157 @@ export default function QuizesScreen({
         </div>
 
         {/* Options Area */}
-        <div className="relative rounded-lg overflow-hidden border border-slate-200 mb-8 shadow-sm">
-          {/* Left Blue Bar Background */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-blue-300/50 z-0" />
-
-          {/* Options List */}
-          <div className="relative z-10">
-            {["A", "B", "C", "D"].map((optionKey) => {
-              const optionText = currentQuestion[
-                `option${optionKey}` as keyof Question
-              ] as string;
-              const isSelected = selectedAnswer === optionKey;
-
-              // 現在の問題が正解済みかチェック
-              const currentAnswer = answers.find(
-                (a) => a.questionId === currentQuestion.id,
-              );
+        {isDescriptive ? (
+          /* ── 記述式回答UI ── */
+          <div className="rounded-lg border border-slate-200 mb-8 shadow-sm p-6">
+            {(() => {
+              const detail = getCorrectAnswerDetail();
+              const multiKeys = getMultiAnswerKeys();
+              const currentAnswer = answers.find((a) => a.questionId === currentQuestion.id);
               const isAlreadyCorrect = currentAnswer?.isCorrect === true;
 
-              return (
-                <div
-                  key={optionKey}
-                  onClick={() => {
-                    // 正解済みの問題は選択できない
-                    if (!isAlreadyCorrect) {
-                      handleAnswerSelect(optionKey);
-                    }
-                  }}
-                  className={cn(
-                    "flex items-center min-h-[80px] transition-colors border-b last:border-0 border-slate-100",
-                    isAlreadyCorrect
-                      ? "cursor-not-allowed opacity-60"
-                      : "cursor-pointer",
-                    isSelected && !showResult
-                      ? "bg-blue-50"
-                      : !isAlreadyCorrect && "hover:bg-slate-50",
-                  )}
-                >
-                  {/* Indicator Column */}
-                  <div className="w-20 flex-shrink-0 flex items-center justify-center">
-                    {renderOptionIndicator(optionKey)}
+              if (multiKeys.length > 0) {
+                // 複数空欄の入力フォーム
+                return (
+                  <div className="space-y-4">
+                    <div className="text-sm font-medium text-slate-500 mb-2">
+                      {isSelect ? "語群から選んで入力してください" : "各空欄に回答を入力してください"}
+                    </div>
+                    {multiKeys.map((key) => (
+                      <div key={key} className="flex items-center gap-3">
+                        <span className="text-lg font-bold text-blue-600 w-8 text-center">({key})</span>
+                        <input
+                          type="text"
+                          value={multiAnswers[key] || ""}
+                          onChange={(e) => setMultiAnswers((prev) => ({ ...prev, [key]: e.target.value }))}
+                          disabled={showResult || isAlreadyCorrect}
+                          placeholder={`(${key}) の回答`}
+                          className={cn(
+                            "flex-1 px-4 py-3 border-2 rounded-lg text-lg transition-all",
+                            showResult
+                              ? detail && (multiAnswers[key] || "").replace(/,/g, "").trim() === String(detail[key]).replace(/[()（）万円%㎡,]/g, "").trim()
+                                ? "border-green-400 bg-green-50"
+                                : "border-red-400 bg-red-50"
+                              : "border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200",
+                            isAlreadyCorrect && "opacity-60",
+                          )}
+                        />
+                        {showResult && detail && (
+                          <span className="text-sm font-medium text-green-700 min-w-[60px]">
+                            正解: {detail[key]}
+                          </span>
+                        )}
+                      </div>
+                    ))}
+                    {!showResult && !isAlreadyCorrect && (
+                      <Button
+                        onClick={handleDescriptiveSubmit}
+                        disabled={multiKeys.some((k) => !(multiAnswers[k] || "").trim())}
+                        className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg"
+                      >
+                        回答する
+                      </Button>
+                    )}
                   </div>
-
-                  {/* Text Column */}
-                  <div className="flex-1 p-4 text-base">{optionText}</div>
-                </div>
-              );
-            })}
+                );
+              } else {
+                // 単一回答の入力フォーム（計算問題等）
+                return (
+                  <div className="space-y-4">
+                    <div className="text-sm font-medium text-slate-500 mb-2">
+                      回答を入力してください（数値・記号等）
+                    </div>
+                    <input
+                      type="text"
+                      value={fillInAnswer}
+                      onChange={(e) => setFillInAnswer(e.target.value)}
+                      onKeyDown={(e) => { if (e.key === "Enter" && fillInAnswer.trim()) handleDescriptiveSubmit(); }}
+                      disabled={showResult || isAlreadyCorrect}
+                      placeholder="回答を入力"
+                      className={cn(
+                        "w-full px-4 py-4 border-2 rounded-lg text-xl text-center font-medium transition-all",
+                        showResult
+                          ? fillInAnswer.replace(/,/g, "").trim() === currentQuestion.correctAnswer.replace(/,/g, "").trim()
+                            ? "border-green-400 bg-green-50"
+                            : "border-red-400 bg-red-50"
+                          : "border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200",
+                        isAlreadyCorrect && "opacity-60",
+                      )}
+                    />
+                    {showResult && (
+                      <div className="text-center text-sm font-medium text-green-700 bg-green-50 rounded-lg p-3">
+                        正解: {currentQuestion.correctAnswer}
+                      </div>
+                    )}
+                    {!showResult && !isAlreadyCorrect && (
+                      <Button
+                        onClick={handleDescriptiveSubmit}
+                        disabled={!fillInAnswer.trim()}
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg"
+                      >
+                        回答する
+                      </Button>
+                    )}
+                  </div>
+                );
+              }
+            })()}
           </div>
-        </div>
+        ) : (
+          /* ── 選択式回答UI（既存） ── */
+          <div className="relative rounded-lg overflow-hidden border border-slate-200 mb-8 shadow-sm">
+            {/* Left Blue Bar Background */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-blue-300/50 z-0" />
+
+            {/* Options List */}
+            <div className="relative z-10">
+              {getOptionKeys().map((optionKey) => {
+                const optionText = currentQuestion[
+                  `option${optionKey}` as keyof Question
+                ] as string;
+                if (!optionText && !isTrueFalse) return null;
+                const isSelected = selectedAnswer === optionKey;
+
+                // 現在の問題が正解済みかチェック
+                const currentAnswer = answers.find(
+                  (a) => a.questionId === currentQuestion.id,
+                );
+                const isAlreadyCorrect = currentAnswer?.isCorrect === true;
+
+                return (
+                  <div
+                    key={optionKey}
+                    onClick={() => {
+                      if (!isAlreadyCorrect) {
+                        handleAnswerSelect(optionKey);
+                      }
+                    }}
+                    className={cn(
+                      "flex items-center transition-colors border-b last:border-0 border-slate-100",
+                      isTrueFalse ? "min-h-[100px]" : "min-h-[80px]",
+                      isAlreadyCorrect
+                        ? "cursor-not-allowed opacity-60"
+                        : "cursor-pointer",
+                      isSelected && !showResult
+                        ? "bg-blue-50"
+                        : !isAlreadyCorrect && "hover:bg-slate-50",
+                    )}
+                  >
+                    {/* Indicator Column */}
+                    <div className={cn("flex-shrink-0 flex items-center justify-center", isTrueFalse ? "w-24" : "w-20")}>
+                      {renderOptionIndicator(optionKey)}
+                    </div>
+
+                    {/* Text Column */}
+                    <div className={cn("flex-1 p-4", isTrueFalse ? "text-lg font-medium" : "text-base")}>
+                      {optionText}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Explanation Section */}
         {showResult && (
@@ -898,7 +1134,7 @@ export default function QuizesScreen({
               問題{currentQuestionIndex + 1}の説明及び補足
             </h3>
             <div className="prose prose-sm max-w-none text-slate-600 leading-relaxed">
-              <ReactMarkdown>
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {currentQuestion.explanation || "解説は準備中です。"}
               </ReactMarkdown>
             </div>
