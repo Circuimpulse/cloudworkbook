@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle2, Cloud, Key } from "lucide-react";
+import { CheckCircle2, Cloud } from "lucide-react";
 import { APP_TEXTS } from "@/frontend/constants/descriptions";
 import { PageContainer } from "@/frontend/components/common/page-container";
 import type { Exam } from "@/backend/db/schema";
@@ -82,35 +82,8 @@ export default function TopScreen({ exams }: TopScreenProps) {
           </div>
         </section>
 
-        {/* 設定セクション */}
-        <section className="mt-16 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-500 fill-mode-both md:mt-24 pb-12">
-          <div className="flex items-center gap-3 mb-6">
-            <h3 className="text-xl font-extrabold tracking-tight text-slate-900 md:text-2xl">
-              設定
-            </h3>
-            <div className="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent" />
-          </div>
-
-          <Link
-            href="/settings/api-key"
-            className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-slate-200 bg-white/60 p-5 text-left shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-purple-400/50 hover:bg-white hover:shadow-lg md:p-6"
-          >
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 shadow-md transition-shadow group-hover:shadow-lg">
-              <Key className="h-5 w-5 text-white" />
-            </div>
-            <div>
-              <p className="text-base font-bold text-slate-900 md:text-lg">
-                AI採点設定
-              </p>
-              <p className="text-sm text-slate-500">
-                Gemini APIキーを設定して、記述式問題のAI採点を利用
-              </p>
-            </div>
-            <div className="ml-auto text-sm font-bold text-purple-600 opacity-0 transition-all duration-300 group-hover:opacity-100">
-              →
-            </div>
-          </Link>
-        </section>
+        {/* 下部余白 */}
+        <div className="pb-12" />
       </div>
     </PageContainer>
   );
