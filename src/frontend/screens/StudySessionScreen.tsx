@@ -1048,14 +1048,27 @@ export default function QuizesScreen({
                 // IPA午後等の自由記述問題 → テキストエリア + 模範解答表示
                 return (
                   <div className="space-y-4">
-                    <div className="text-sm font-medium text-slate-500 mb-2">
-                      回答を入力してください
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="text-sm font-medium text-slate-500">
+                        回答を入力してください
+                      </div>
+                      {!showResult && (
+                        <div className={cn(
+                          "text-xs font-medium",
+                          fillInAnswer.length > 500 ? "text-red-500" : "text-slate-400",
+                        )}>
+                          {fillInAnswer.length}/500
+                        </div>
+                      )}
                     </div>
                     <textarea
                       value={fillInAnswer}
-                      onChange={(e) => setFillInAnswer(e.target.value)}
+                      onChange={(e) => {
+                        if (e.target.value.length <= 500) setFillInAnswer(e.target.value);
+                      }}
                       disabled={showResult || isAlreadyCorrect}
                       placeholder="回答を入力..."
+                      maxLength={500}
                       rows={4}
                       className={cn(
                         "w-full px-4 py-3 border-2 rounded-lg text-base transition-all resize-y",

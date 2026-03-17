@@ -44,11 +44,11 @@ export const favoriteSettingsSchema = z.object({
 // ==================== AI採点 ====================
 
 export const aiScoreSchema = z.object({
-  questionText: z.string().min(1),
-  correctAnswer: z.string().min(1),
-  userAnswer: z.string().min(1),
-  explanation: z.string().optional(),
-  examType: z.string().optional(), // "fp", "ap-gogo", "sc" etc.
+  questionText: z.string().min(1).max(10000),
+  correctAnswer: z.string().min(1).max(5000),
+  userAnswer: z.string().min(1).max(500),
+  explanation: z.string().max(5000).optional(),
+  examType: z.string().max(50).optional(),
 });
 
 // ==================== API Key ====================
