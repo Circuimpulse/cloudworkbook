@@ -47,6 +47,9 @@ export const exams = sqliteTable("exams", {
   title: text("title").notNull(),
   description: text("description"),
   slug: text("slug").unique(), // URL用 (optional)
+  questionFormat: text("question_format", {
+    enum: ["choice_only", "mixed"],
+  }).default("choice_only"), // choice_only=4択のみ, mixed=混合形式
 });
 
 /**
@@ -61,7 +64,7 @@ export const examYears = sqliteTable(
       .notNull()
       .references(() => exams.id, { onDelete: "cascade" }),
     year: integer("year").notNull(), // 例: 2024
-    season: text("season", { enum: ["spring", "autumn"] }).notNull(),
+    season: text("season", { enum: ["spring", "autumn", "jan", "may", "sep"] }).notNull(),
     label: text("label").notNull(), // 例: "令和6年度 秋期"
   },
   (table) => ({
@@ -96,11 +99,20 @@ export const questions = sqliteTable("questions", {
     .notNull()
     .references(() => sections.id, { onDelete: "cascade" }),
   questionText: text("question_text").notNull(),
+  // 問題形式
+  questionType: text("question_type", {
+    enum: ["choice", "true_false", "fill_in", "select", "descriptive"],
+  })
+    .notNull()
+    .default("choice"),
+  // 4択選択肢（choice, true_false で使用）
   optionA: text("option_a").notNull(),
   optionB: text("option_b").notNull(),
   optionC: text("option_c"), // NULL = 2択問題
   optionD: text("option_d"), // NULL = 2択・3択問題
-  correctAnswer: text("correct_answer").notNull(), // 'A', 'B', 'C', 'D'
+  correctAnswer: text("correct_answer").notNull(), // 4択:'A'〜'D', ○×:'○'/'×', 記述:正解値
+  // 記述式・語群選択の詳細正解データ（JSON）
+  correctAnswerDetail: text("correct_answer_detail"), // 例: {"ア":"○","イ":"×","ウ":"○"}
   explanation: text("explanation"),
   order: integer("order").notNull(),
   // 過去問メタデータ
@@ -211,6 +223,9 @@ export const mockTestHistory = sqliteTable("mock_test_history", {
   userId: text("user_id")
     .notNull()
     .references(() => users.id, { onDelete: "cascade" }),
+  examId: integer("exam_id").references(() => exams.id, {
+    onDelete: "set null",
+  }),
   score: integer("score").notNull(), // 50問中の正解数
   totalQuestions: integer("total_questions").notNull().default(50),
   takenAt: integer("taken_at", { mode: "timestamp" })

@@ -1,175 +1,127 @@
-# 模擬テスト画面の改善設計書
+# 学習履歴 examId 別分離 + 模擬試験結果の再表示
 
 ## 概要
 
-現在の `MockExamScreen` を改善し、以下の機能を追加する：
+学習履歴画面のデータを試験区分(examId)ごとに分離し、混在を解消する。
+また、模擬試験の過去結果を学習履歴から再表示可能にする。
 
-1. **問題リストボタン** — 模擬テスト中に問題一覧を表示し、任意の問題にジャンプ可能
-2. **採点ボタン** — 任意のタイミングで採点できるボタン
-3. **試験結果画面** — `/mock-test/result` に新ルートとして独立
-4. **お気に入り一括登録** — 間違えた問題をレベル1/2/3の任意組み合わせで一括登録
+## 変更内容
 
 ---
 
-## 画面設計
+### 1. DBスキーマ変更
 
-### 1. 模擬テスト出題画面の改善（既存 `MockExamScreen`）
+#### [MODIFY] [schema.ts](file:///c:/Users/shugo/cloudworkbook/src/backend/db/schema.ts)
 
-#### 追加するUI要素
+`mockTestHistory` テーブルに `examId` カラムを追加（NULL許容、既存データ互換）。
 
-| 要素             | 位置                                 | 説明                         |
-| ---------------- | ------------------------------------ | ---------------------------- |
-| **リストボタン** | ヘッダー右上（「中断して戻る」の左） | モーダルで問題リストを表示   |
-| **採点ボタン**   | ヘッダーまたはフッター               | 解答を採点して結果画面へ遷移 |
+```diff
+ export const mockTestHistory = sqliteTable("mock_test_history", {
+   id: integer("id").primaryKey({ autoIncrement: true }),
+   userId: text("user_id").notNull().references(() => users.id),
++  examId: integer("exam_id").references(() => exams.id),
+   score: integer("score").notNull(),
+   totalQuestions: integer("total_questions").notNull().default(50),
+   takenAt: integer("taken_at", { mode: "timestamp" }).notNull().default(sql`(unixepoch())`),
+ });
+```
 
-#### 問題リスト（モーダル）
+#### [NEW] マイグレーションスクリプト (`scripts/add-exam-id-to-mock-test.ts`)
 
-- 問題番号のグリッド表示
-- 各問題の状態を色分け：
-  - 🟦 **解答済み** → 青
-  - ⬜ **未回答** → 白/グレー
-- 問題番号クリックでその問題にジャンプ
-
-#### 採点ボタンの仕様
-
-- 未回答の問題がある場合は確認ダイアログ：
-  - 「未回答の問題が{n}問あります。採点しますか？（未回答は不正解扱い）」
-- 採点完了後、結果データをURLパラメータ経由で `/mock-test/result` へ遷移
-  - 結果データは `sessionStorage` に保存して渡す
+既存テーブルに `exam_id` カラムを追加する ALTER TABLE スクリプト。
 
 ---
 
-### 2. 試験結果画面（`/mock-test/result`）— 新規ルート
+### 2. バックエンド クエリ修正
 
-#### 画面構成
+#### [MODIFY] [queries.ts](file:///c:/Users/shugo/cloudworkbook/src/backend/db/queries.ts)
+
+| 関数                       | 変更内容                                      |
+| -------------------------- | --------------------------------------------- |
+| `createMockTest`           | `examId` パラメータを追加して保存             |
+| `getMockTestHistory`       | `examId` パラメータを追加してフィルタ         |
+| `getAllIncorrectQuestions` | `examId` パラメータ（任意）を追加してフィルタ |
+| `getAllFavoriteQuestions`  | `examId` パラメータ（任意）を追加してフィルタ |
+
+---
+
+### 3. 提出API修正
+
+#### [MODIFY] [submission/route.ts](file:///c:/Users/shugo/cloudworkbook/src/app/api/exams/mock/submission/route.ts)
+
+- リクエストボディに `examId` を追加
+- `createMockTest` に `examId` を渡す
+
+---
+
+### 4. 模擬試験結果の再表示
+
+#### [NEW] `/mock-test/result/[testId]/page.tsx`
+
+- 過去の模擬試験結果をDBから取得して表示するルート
+- `getMockTestHistory` + `getMockTestDetails` でデータ取得
+
+#### [MODIFY] [MockTestResultScreen.tsx](file:///c:/Users/shugo/cloudworkbook/src/frontend/screens/MockTestResultScreen.tsx)
+
+- 2つのデータソースに対応:
+  - **新規テスト**: `sessionStorage` から取得（現在の動作）
+  - **過去の結果**: props として直接受け取る（学習履歴からの表示）
+
+#### [NEW] 結果取得API (`/api/exams/mock/result/[testId]/route.ts`)
 
 ```
-┌──────────────────────────────────┐
-│  ヘッダー: 模擬テスト結果        │
-├──────────────────────────────────┤
-│  スコアサマリー                  │
-│  ┌────────────────────────┐     │
-│  │  正解数 / 総問題数      │     │
-│  │  正答率 ○○%            │     │
-│  └────────────────────────┘     │
-├──────────────────────────────────┤
-│  間違えた問題一覧               │
-│  ┌────────────────────────┐     │
-│  │ Q1: 問題文(抜粋)       │     │
-│  │ あなたの回答: B         │     │
-│  │ 正解: D                │     │
-│  │ 解説: ○○○              │     │
-│  ├────────────────────────┤     │
-│  │ Q5: 問題文(抜粋)       │     │
-│  └────────────────────────┘     │
-├──────────────────────────────────┤
-│  お気に入り一括登録             │
-│  ┌────────────────────────┐     │
-│  │ [①] [②] [③]  ← タップ  │     │
-│  │ 選択中: ①③             │     │
-│  │ [一括登録する]          │     │
-│  └────────────────────────┘     │
-├──────────────────────────────────┤
-│  [学習履歴へ]  [もう一度挑戦]   │
-└──────────────────────────────────┘
+GET /api/exams/mock/result/[testId]
 ```
 
-#### お気に入りレベル選択UI
+- `getMockTestDetails(testId)` でテスト詳細を取得
+- `mockTestHistory` からスコア情報も取得
 
-- **トグルボタン形式** で ①②③ を直感的にタップで選択
-- 複数選択可（例: ①と③を同時にON）
-- 選択中のボタンはハイライト表示
-- 最低1つ選択した状態で「一括登録する」ボタンが有効化
-- 登録完了後に成功メッセージを表示
+---
 
-#### データの受け渡し
+### 5. 学習履歴画面の改修
 
-- `MockExamScreen` で採点後、結果データを `sessionStorage` に保存
-- `/mock-test/result` ページで `sessionStorage` から結果データを読み取り
-- `sessionStorage` にデータがない場合は `/mock-test` にリダイレクト
+#### [MODIFY] [LearningHistoryScreen.tsx](file:///c:/Users/shugo/cloudworkbook/src/frontend/screens/LearningHistoryScreen.tsx)
+
+- Props に `exams: Exam[]` と `selectedExamId: number` を追加
+- **試験区分セレクタ**（ドロップダウン）をヘッダーに追加
+- 選択変更で `router.push(/history?examId={id}&tab={tab})` してサーバー再フェッチ
+- 模擬試験結果カードをクリック → `/mock-test/result/{testId}` へ遷移
+
+#### [MODIFY] [history/page.tsx](file:///c:/Users/shugo/cloudworkbook/src/app/history/page.tsx)
+
+- `searchParams` から `examId` を取得
+- デフォルトは最初の試験 (examId=1)
+- 試験一覧 `getAllExams()` を取得して props に渡す
+- 各データ取得関数に `examId` を渡す
+
+---
+
+### 6. MockExamScreen の修正
+
+#### [MODIFY] [MockExamScreen.tsx](file:///c:/Users/shugo/cloudworkbook/src/frontend/screens/MockExamScreen.tsx)
+
+- 提出時に `examId` もAPIに送信するよう修正
 
 ---
 
 ## ルーティング
 
 ```
-/mock-test?examId={id}
-  loading → ready（出題中）
-  ├→ リストボタン → 問題リストモーダル表示
-  └→ 採点ボタン → submitting → /mock-test/result へ遷移
+/history?examId={id}&tab=history     ← 模擬試験結果（試験別）
+/history?examId={id}&tab=incorrect   ← 間違えた問題（試験別）
+/history?examId={id}&tab=favorite    ← お気に入り（試験別）
 
-/mock-test/result  ← 新規ルート
-  ├→ 学習履歴へ → /history
-  └→ もう一度挑戦 → /mock-test?examId={id}
+/mock-test/result                    ← 新規テスト結果（sessionStorage）
+/mock-test/result/{testId}           ← 過去テスト結果（DB）
 ```
-
-> [!IMPORTANT]
-> 採点時（`handleSubmit`）に既存のAPI `POST /api/exams/mock/submission` で履歴が自動保存される。画面遷移前に保存が完了するため、結果画面や学習履歴画面で常に最新データが参照可能。
-
----
-
-## ファイル変更一覧
-
-### フロントエンド
-
-#### [MODIFY] [MockExamScreen.tsx](file:///c:/Users/shugo/cloudworkbook/src/frontend/screens/MockExamScreen.tsx)
-
-- 出題画面にリストボタンと採点ボタンを追加
-- 問題リストモーダルの実装
-- 採点前の確認ダイアログ
-- 結果画面のインライン実装を削除し、`/mock-test/result` へ遷移するよう変更
-- 採点完了後に結果データを `sessionStorage` に保存
-
-#### [NEW] MockTestResultScreen.tsx (`src/frontend/screens/MockTestResultScreen.tsx`)
-
-- 試験結果画面の新規コンポーネント
-- スコアサマリー表示（正解数/総問題数、正答率%）
-- 間違えた問題一覧（問題文抜粋、回答、正解、解説）
-- お気に入りレベル選択UI（①②③トグルボタン）
-- お気に入り一括登録ボタン
-- 「学習履歴へ」「もう一度挑戦」ナビゲーション
-
-#### [NEW] result/page.tsx (`src/app/mock-test/result/page.tsx`)
-
-- `/mock-test/result` ルート用のページファイル
-
-#### [NEW] MockTestQuestionListModal.tsx (`src/frontend/components/mock-test/MockTestQuestionListModal.tsx`)
-
-- 模擬テスト用の問題リストモーダルコンポーネント
-
-### 画面設計書
-
-#### [NEW] MockTestResultScreen.md (`docs/design/screens/MockTestResultScreen.md`)
-
-- 試験結果画面の設計書
-
-#### [MODIFY] [routing-structure.md](file:///c:/Users/shugo/cloudworkbook/docs/design/routing-structure.md)
-
-- `/mock-test/result` ルートを追加
-
-### バックエンド
-
-#### [NEW] 一括お気に入り登録API (`src/app/api/questions/bulk-favorite/route.ts`)
-
-```
-POST /api/questions/bulk-favorite
-Body: { questionIds: number[], levels: number[] }
-```
-
-- 複数の問題を指定レベルで一括お気に入り登録
-- `levels: [1, 3]` なら ①③をON、②は変更しない
-
-#### [MODIFY] [queries.ts](file:///c:/Users/shugo/cloudworkbook/src/backend/db/queries.ts)
-
-- `bulkSetFavorite(userId, questionIds, levels)` 関数を追加
 
 ---
 
 ## 検証計画
 
-1. `/mock-test?examId=1` で数問解答後、**リストボタン** → 問題リストモーダル表示・ジャンプ確認
-2. **採点ボタン** → 未回答確認ダイアログ → `/mock-test/result` へ遷移確認
-3. 結果画面でスコア・間違えた問題一覧の表示確認
-4. お気に入りレベル①②③のトグル選択 → **一括登録** → 成功メッセージ確認
-5. 学習履歴画面でお気に入り登録済みの問題が表示されることを確認
-6. `/history` で模擬テスト履歴が表示されることを確認
+1. `npm run build` でビルド確認
+2. `/history?examId=1&tab=history` にアクセスして試験区分セレクタが表示されること
+3. 試験区分を切り替えるとデータがフィルタされること
+4. 模擬テスト実施→結果画面→「学習履歴へ」→ 結果が試験別に表示されること
+5. 学習履歴の模擬試験結果カードをクリック→ `/mock-test/result/{testId}` で過去結果が表示されること
+6. 過去結果画面でお気に入り一括登録が動作すること

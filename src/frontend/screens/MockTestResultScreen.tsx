@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -12,20 +12,8 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
-import { CheckCircle, XCircle, Star, Loader2 } from "lucide-react";
+import { CheckCircle, XCircle, Star, Loader2, ArrowLeft } from "lucide-react";
 import { PageContainer } from "@/frontend/components/common/page-container";
-
-// 問題の型定義（正解は含まない）
-interface PublicQuestion {
-  id: number;
-  sectionId: number;
-  questionText: string;
-  optionA: string;
-  optionB: string;
-  optionC: string;
-  optionD: string;
-  explanation?: string;
-}
 
 // テスト結果詳細の型定義
 interface TestResultDetail {
@@ -33,7 +21,16 @@ interface TestResultDetail {
   userAnswer: string;
   isCorrect: boolean;
   correctAnswer: string;
-  question: PublicQuestion;
+  question: {
+    id: number;
+    sectionId: number;
+    questionText: string;
+    optionA: string;
+    optionB: string;
+    optionC: string;
+    optionD: string;
+    explanation?: string;
+  };
 }
 
 // テスト結果の型定義
@@ -41,35 +38,51 @@ interface TestResult {
   testId: number;
   score: number;
   totalQuestions: number;
+  examId?: number;
+  takenAt?: string;
   details: TestResultDetail[];
 }
 
-export default function MockTestResultScreen() {
+interface MockTestResultScreenProps {
+  /** propsで直接受け取る場合（DB読み込みモード） */
+  result?: TestResult;
+  /** sessionStorage読み込みモードかどうか */
+  fromSession?: boolean;
+}
+
+export default function MockTestResultScreen({
+  result: propsResult,
+  fromSession = false,
+}: MockTestResultScreenProps) {
   const router = useRouter();
   const [selectedLevels, setSelectedLevels] = useState<number[]>([1]);
   const [isRegistering, setIsRegistering] = useState(false);
   const [registrationDone, setRegistrationDone] = useState(false);
-  const [result, setResult] = useState<TestResult | null>(null);
-  const [examId, setExamId] = useState<number | null>(null);
-  const [loaded, setLoaded] = useState(false);
+  const [result, setResult] = useState<TestResult | null>(propsResult ?? null);
+  const [examId, setExamId] = useState<number | null>(
+    propsResult?.examId ?? null,
+  );
+  const [loaded, setLoaded] = useState(!fromSession);
 
-  // sessionStorageからデータを読み込み
-  if (!loaded) {
-    if (typeof window !== "undefined") {
-      try {
-        const stored = sessionStorage.getItem("mockTestResult");
-        const storedExamId = sessionStorage.getItem("mockTestExamId");
-        if (stored) {
-          setResult(JSON.parse(stored));
-          if (storedExamId) setExamId(parseInt(storedExamId, 10));
-        }
-      } catch {
-        // parse error
+  // sessionStorageからデータを読み込み（fromSession時のみ）
+  useEffect(() => {
+    if (!fromSession || loaded) return;
+    if (typeof window === "undefined") return;
+
+    try {
+      const stored = sessionStorage.getItem("mockTestResult");
+      const storedExamId = sessionStorage.getItem("mockTestExamId");
+      if (stored) {
+        setResult(JSON.parse(stored));
+        if (storedExamId) setExamId(parseInt(storedExamId, 10));
       }
-      setLoaded(true);
+    } catch {
+      // parse error
     }
-    return null;
-  }
+    setLoaded(true);
+  }, [fromSession, loaded]);
+
+  if (!loaded) return null;
 
   if (!result) {
     // データがない場合はリダイレクト
@@ -79,6 +92,7 @@ export default function MockTestResultScreen() {
 
   const accuracy = Math.round((result.score / result.totalQuestions) * 100);
   const incorrectDetails = result.details.filter((d) => !d.isCorrect);
+  const isHistoryView = !fromSession; // 学習履歴からの表示
 
   const toggleLevel = (level: number) => {
     setSelectedLevels((prev) =>
@@ -113,11 +127,32 @@ export default function MockTestResultScreen() {
   return (
     <PageContainer>
       <div className="mx-auto max-w-3xl space-y-8 py-4">
+        {/* 戻るボタン（履歴表示時） */}
+        {isHistoryView && (
+          <Button variant="outline" size="sm" onClick={() => router.back()}>
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            学習履歴に戻る
+          </Button>
+        )}
+
         {/* 結果サマリー */}
         <Card className="text-center py-8">
           <CardHeader>
             <CardTitle className="text-3xl">模擬テスト結果</CardTitle>
-            <CardDescription>お疲れ様でした！</CardDescription>
+            <CardDescription>
+              {isHistoryView && result.takenAt
+                ? `受験日: ${new Date(result.takenAt).toLocaleDateString(
+                    "ja-JP",
+                    {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    },
+                  )}`
+                : "お疲れ様でした！"}
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex flex-col items-center justify-center space-y-4">
@@ -140,7 +175,7 @@ export default function MockTestResultScreen() {
             <h3 className="text-xl font-semibold">
               間違えた問題 ({incorrectDetails.length}問)
             </h3>
-            {incorrectDetails.map((detail, index) => {
+            {incorrectDetails.map((detail) => {
               const questionIndex = result.details.findIndex(
                 (d) => d.questionId === detail.questionId,
               );
@@ -301,13 +336,19 @@ export default function MockTestResultScreen() {
         {/* ナビゲーション */}
         <div className="flex justify-center gap-4 pb-8">
           <Button asChild variant="outline">
-            <Link href="/history">学習履歴へ</Link>
-          </Button>
-          <Button asChild>
-            <Link href={examId ? `/mock-test?examId=${examId}` : "/mock-test"}>
-              もう一度挑戦する
+            <Link href={examId ? `/history?examId=${examId}` : "/history"}>
+              学習履歴へ
             </Link>
           </Button>
+          {fromSession && (
+            <Button asChild>
+              <Link
+                href={examId ? `/mock-test?examId=${examId}` : "/mock-test"}
+              >
+                もう一度挑戦する
+              </Link>
+            </Button>
+          )}
         </div>
       </div>
     </PageContainer>

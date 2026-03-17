@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
     // リクエストボディ取得
     const body = await request.json();
-    const { answers } = body;
+    const { answers, examId } = body;
 
     if (!Array.isArray(answers) || answers.length === 0) {
       return NextResponse.json(
@@ -65,7 +65,12 @@ export async function POST(request: Request) {
     });
 
     // テスト履歴を保存
-    const mockTest = await createMockTest(userId, score, answers.length);
+    const mockTest = await createMockTest(
+      userId,
+      score,
+      answers.length,
+      examId,
+    );
 
     // テスト詳細を保存
     await insertMockTestDetails(mockTest.id, details);
