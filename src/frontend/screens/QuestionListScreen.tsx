@@ -122,51 +122,14 @@ export default function ListScreen({
   const accuracyRate =
     totalAnswered > 0 ? Math.round((correctCount / totalAnswered) * 100) : 0;
 
-  /* eslint-disable @typescript-eslint/no-unused-vars */
   const handleQuestionClick = (questionNumber: number) => {
     // セクションの問題画面に遷移（問題番号は1-indexed）
     router.push(`/sections/${currentSection.id}?question=${questionNumber}`);
   };
 
-  const lastQuestion = searchParams.get("lastQuestion");
-
   const handleBackToDashboard = () => {
-    // 完了画面から来た場合は、完了画面に戻る
-    if (fromCompletion) {
-      // 完了画面を表示するために、全問題を解いた状態で問題画面に戻る
-      // 問題画面は自動的に完了画面を表示する
-      router.push(
-        `/sections/${currentSection.id}?question=${questions.length}`,
-      );
-      return;
-    }
-
-    // 通常の戻る処理
-    // 最後に解いた問題を見つける
-    // lastQuestionパラメータがある場合はそれを使用
-    // なければ、回答済みの問題の中で最後の問題を使用
-    let targetQuestion = lastQuestion;
-
-    if (!targetQuestion && questions.length > 0) {
-      // 回答済みの問題の中で最後の問題番号を見つける
-      const answeredQuestions = questions.filter((q) => q.status !== "pending");
-      if (answeredQuestions.length > 0) {
-        // 最後に回答した問題
-        const lastAnswered = answeredQuestions[answeredQuestions.length - 1];
-        targetQuestion = lastAnswered.id.toString();
-      } else {
-        // 回答済みの問題がない場合は最初の問題
-        targetQuestion = "1";
-      }
-    }
-
-    if (targetQuestion) {
-      // 問題画面に戻る（リセットしない）
-      router.push(`/sections/${currentSection.id}?question=${targetQuestion}`);
-    } else {
-      // フォールバック: 最初の問題に戻る
-      router.push(`/sections/${currentSection.id}?question=1`);
-    }
+    // ブラウザ履歴で直前の画面に戻る（問題を解いていた画面に正確に戻る）
+    router.back();
   };
 
   return (
