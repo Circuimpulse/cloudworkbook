@@ -454,7 +454,8 @@ export default function QuizesScreen({
   const isTrueFalse = questionType === "true_false";
   const isFillIn = questionType === "fill_in";
   const isSelect = questionType === "select";
-  const isDescriptive = isFillIn || isSelect;
+  const isDescriptiveType = questionType === "descriptive";
+  const isDescriptive = isFillIn || isSelect || isDescriptiveType;
 
   // 複数空欄の正解データを取得
   const getCorrectAnswerDetail = (): Record<string, string> | null => {
@@ -488,8 +489,13 @@ export default function QuizesScreen({
         return userVal === correctClean;
       });
       answerStr = JSON.stringify(multiAnswers);
+    } else if (isDescriptiveType) {
+      // 自由記述式 → 完全一致採点は不可能、回答済みとして記録
+      // AI採点がある場合はそちらで判定
+      isCorrect = false; // デフォルトは不正解扱い（AI採点で上書き可能）
+      answerStr = fillInAnswer.trim();
     } else {
-      // 単一回答の採点
+      // 単一回答の採点（FP計算問題等）
       const userAnswer = fillInAnswer.replace(/,/g, "").trim();
       const correctAnswer = currentQuestion.correctAnswer.replace(/,/g, "").trim();
       isCorrect = userAnswer === correctAnswer;
@@ -1037,8 +1043,60 @@ export default function QuizesScreen({
                     )}
                   </div>
                 );
+              } else if (isDescriptiveType) {
+                // IPA午後等の自由記述問題 → テキストエリア + 模範解答表示
+                return (
+                  <div className="space-y-4">
+                    <div className="text-sm font-medium text-slate-500 mb-2">
+                      回答を入力してください
+                    </div>
+                    <textarea
+                      value={fillInAnswer}
+                      onChange={(e) => setFillInAnswer(e.target.value)}
+                      disabled={showResult || isAlreadyCorrect}
+                      placeholder="回答を入力..."
+                      rows={4}
+                      className={cn(
+                        "w-full px-4 py-3 border-2 rounded-lg text-base transition-all resize-y",
+                        showResult
+                          ? "border-slate-300 bg-slate-50"
+                          : "border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200",
+                        isAlreadyCorrect && "opacity-60",
+                      )}
+                    />
+                    {showResult && (
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <div className="text-sm font-bold text-green-800 mb-2">模範解答:</div>
+                        <div className="text-sm text-green-900 whitespace-pre-wrap">
+                          {currentQuestion.correctAnswer}
+                        </div>
+                      </div>
+                    )}
+                    {!showResult && !isAlreadyCorrect && (
+                      <div className="flex gap-3">
+                        <Button
+                          onClick={handleDescriptiveSubmit}
+                          disabled={!fillInAnswer.trim()}
+                          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg"
+                        >
+                          回答して模範解答を見る
+                        </Button>
+                        <Button
+                          onClick={() => {
+                            setFillInAnswer("（未回答）");
+                            handleDescriptiveSubmit();
+                          }}
+                          variant="outline"
+                          className="py-3 text-base"
+                        >
+                          模範解答だけ見る
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+                );
               } else {
-                // 単一回答の入力フォーム（計算問題等）
+                // 単一回答の入力フォーム（FP計算問題等）
                 return (
                   <div className="space-y-4">
                     <div className="text-sm font-medium text-slate-500 mb-2">
