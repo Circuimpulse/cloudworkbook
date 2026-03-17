@@ -1,11 +1,9 @@
 "use client";
 
-import { useState, useCallback, lazy, Suspense } from "react";
+import { useState, useCallback } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import ImageModal from "./ImageModal";
-
-const MermaidBlock = lazy(() => import("./MermaidBlock"));
 
 interface MarkdownRendererProps {
   content: string;
@@ -45,15 +43,6 @@ export default function MarkdownRenderer({
             );
           },
           code: ({ className: codeClassName, children }) => {
-            const match = /language-mermaid/.exec(codeClassName || "");
-            if (match) {
-              const chart = String(children).replace(/\n$/, "");
-              return (
-                <Suspense fallback={<div className="my-4 text-center text-slate-400 text-sm">図を読み込み中...</div>}>
-                  <MermaidBlock chart={chart} />
-                </Suspense>
-              );
-            }
             return <code className={codeClassName}>{children}</code>;
           },
         }}
