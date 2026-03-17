@@ -65,8 +65,10 @@ export const examYears = sqliteTable(
       .notNull()
       .references(() => exams.id, { onDelete: "cascade" }),
     year: integer("year").notNull(), // 例: 2024
-    season: text("season", { enum: ["spring", "autumn", "jan", "may", "sep"] }).notNull(),
-    label: text("label").notNull(), // 例: "令和6年度 秋期"
+    season: text("season", {
+      enum: ["spring", "autumn", "jan", "may", "sep"],
+    }).notNull(), // IPA: spring/autumn, FP: jan/may/sep
+    label: text("label").notNull(), // 表示用ラベル 例: "令和6年度 秋期", "2024年9月"
   },
   (table) => ({
     uniqYearSeason: unique().on(table.examId, table.year, table.season),
@@ -126,8 +128,8 @@ export const questions = sqliteTable("questions", {
     onDelete: "set null",
   }),
   questionNumber: integer("question_number"), // 問1〜問80等
-  imageUrl: text("image_url"), // 図表を含む問題の画像パス
-  hasImage: integer("has_image", { mode: "boolean" }).notNull().default(false),
+  imageUrl: text("image_url"), // 非推奨: 画像はquestionText内のMarkdown記法で管理
+  hasImage: integer("has_image", { mode: "boolean" }).notNull().default(false), // questionText/explanation内に画像参照があるか
   sourceNote: text("source_note"), // 出典メモ 例: "R6秋 問12"
   createdAt: integer("created_at", { mode: "timestamp" })
     .notNull()
