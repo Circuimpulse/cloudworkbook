@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-    const { questionText, userAnswer, correctAnswer, explanation: correctAnswerDetail } = parsed.data;
+    const { questionText, userAnswer, correctAnswer, explanation: correctAnswerDetail, examType } = parsed.data;
 
     // Clerk privateMetadata からAPIキーを取得
     const client = await clerkClient();
@@ -51,11 +51,16 @@ export async function POST(request: NextRequest) {
 
     // 採点プロンプト構築
     const detailStr = correctAnswerDetail
-      ? `\n【模範解答の詳細】\n${typeof correctAnswerDetail === "string" ? correctAnswerDetail : JSON.stringify(correctAnswerDetail, null, 2)}`
+      ? `\n【模範解答の詳細・解説】\n${typeof correctAnswerDetail === "string" ? correctAnswerDetail : JSON.stringify(correctAnswerDetail, null, 2)}`
       : "";
 
-    const prompt = `あなたはFP（ファイナンシャルプランナー）試験の採点官です。
-以下の問題に対するユーザーの回答を採点してください。
+    // 試験種別に応じた採点官の役割設定
+    const isIpaGogo = examType && !examType.startsWith("fp");
+    const roleDescription = isIpaGogo
+      ? "あなたはIPA情報処理技術者試験の午後問題の採点官です。記述式問題を厳密かつ公正に採点してください。"
+      : "あなたは資格試験の採点官です。以下の問題に対するユーザーの回答を採点してください。";
+
+    const prompt = `${roleDescription}
 
 【問題文】
 ${questionText}
@@ -66,19 +71,25 @@ ${correctAnswer}${detailStr}
 【ユーザーの回答】
 ${userAnswer}
 
-## 採点基準
-- 数値回答の場合：単位の有無は問わないが、数値が正確に一致しているか確認
-- 語群選択の場合：各空欄の選択が正しいか確認
-- ○×判定の場合：各項目の○×が一致しているか確認
-- 計算問題の場合：計算過程が正しく、最終値が一致しているか確認
-- 部分点も考慮（一部正解の場合はscoreに反映）
+## 採点方法
+以下の観点で採点してください：
 
-## 出力形式
-以下のJSON形式で回答してください。他の文字は含めないこと：
+### 記述式問題の場合
+1. **キーワード採点**: 模範解答に含まれる重要なキーワード・専門用語がユーザーの回答に含まれているか
+2. **本質の一致**: 模範解答と表現が異なっていても、言っていることの本質が同じであれば正解として扱う
+3. **部分点**: 一部のキーワードが含まれている、方向性は合っているが不十分な場合は部分点を付与
+4. **字数制限**: 問題文に字数制限がある場合、大幅に超過していれば減点
+
+### 選択・計算問題の場合
+- 数値回答：単位の有無は問わないが数値が正確に一致しているか
+- 語群選択：各空欄の選択が正しいか
+- ○×判定：各項目の○×が一致しているか
+
+## 出力形式（JSON）
 {
   "score": 0から100の整数（100=完全正解、0=完全不正解、部分点あり）,
-  "isCorrect": boolean（score >= 80 ならtrue）,
-  "explanation": "採点理由の解説を日本語で丁寧に記述。ユーザーの回答がどこが正しくどこが間違っているか、模範解答との比較を含める。"
+  "isCorrect": true（score>=80）またはfalse,
+  "explanation": "採点理由を日本語で解説。以下を含めること：\\n・ユーザーの回答の良い点\\n・不足しているキーワードや要素\\n・模範解答との具体的な比較\\n・改善のためのアドバイス"
 }`;
 
     // Gemini API呼び出し

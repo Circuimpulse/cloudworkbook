@@ -48,6 +48,7 @@ export const aiScoreSchema = z.object({
   correctAnswer: z.string().min(1),
   userAnswer: z.string().min(1),
   explanation: z.string().optional(),
+  examType: z.string().optional(), // "fp", "ap-gogo", "sc" etc.
 });
 
 // ==================== API Key ====================

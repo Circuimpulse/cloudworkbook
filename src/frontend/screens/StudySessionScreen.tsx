@@ -1227,7 +1227,8 @@ export default function QuizesScreen({
                   questionText: currentQuestion.questionText,
                   userAnswer: selectedAnswer || fillInAnswer,
                   correctAnswer: currentQuestion.correctAnswer,
-                  correctAnswerDetail: detail ? JSON.stringify(detail) : undefined,
+                  explanation: detail ? JSON.stringify(detail) : undefined,
+                  examType: exam?.slug || "",
                 }),
               });
 
