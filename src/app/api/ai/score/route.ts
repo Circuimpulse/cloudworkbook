@@ -54,6 +54,14 @@ export async function POST(request: NextRequest) {
       ? `\n【模範解答の詳細・解説】\n${typeof correctAnswerDetail === "string" ? correctAnswerDetail : JSON.stringify(correctAnswerDetail, null, 2)}`
       : "";
 
+    // 問題文中の図表説明を抽出（![alt](url) パターン）
+    const imageDescriptions = [...questionText.matchAll(/!\[([^\]]+)\]\([^)]+\)/g)]
+      .map((m) => m[1])
+      .filter((alt) => alt && alt !== "");
+    const figureContext = imageDescriptions.length > 0
+      ? `\n【問題に含まれる図表】\n${imageDescriptions.map((d, i) => `- 図${i + 1}: ${d}`).join("\n")}\n※図表の内容は上記の説明テキストを基に判断してください。`
+      : "";
+
     // 試験種別に応じた採点官の役割設定
     const isIpaGogo = examType && !examType.startsWith("fp");
     const roleDescription = isIpaGogo
@@ -66,7 +74,7 @@ export async function POST(request: NextRequest) {
 ${questionText}
 
 【模範解答】
-${correctAnswer}${detailStr}
+${correctAnswer}${detailStr}${figureContext}
 
 【ユーザーの回答】
 ${userAnswer}

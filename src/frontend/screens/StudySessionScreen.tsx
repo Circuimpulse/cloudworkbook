@@ -13,8 +13,7 @@ import type {
   Exam,
 } from "@/backend/db/schema";
 import { cn } from "@/lib/utils";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import MarkdownRenderer from "@/frontend/components/common/MarkdownRenderer";
 import FavoriteToggles from "@/frontend/components/common/FavoriteToggles";
 
 /**
@@ -959,9 +958,7 @@ export default function QuizesScreen({
                 )}
                 <div className="flex items-start justify-between gap-4">
                   <div className="prose prose-sm max-w-none flex-1 text-sm md:text-lg leading-relaxed font-medium overflow-x-auto [&_table]:text-xs [&_table]:md:text-base [&_table]:font-normal [&_table]:w-full [&_table]:table-fixed [&_th]:bg-slate-100 [&_th]:px-2 [&_th]:py-1 [&_th]:md:px-3 [&_th]:md:py-2 [&_td]:px-2 [&_td]:py-1 [&_td]:md:px-3 [&_td]:md:py-2 [&_td]:break-words [&_img]:rounded-lg [&_img]:shadow-md [&_img]:my-3 [&_img]:max-w-full [&_pre]:overflow-x-auto [&_code]:break-words">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                      {currentQuestion.questionText}
-                    </ReactMarkdown>
+                    <MarkdownRenderer content={currentQuestion.questionText} />
                   </div>
                   <FavoriteToggles
                     key={currentQuestion.id}
@@ -1201,9 +1198,7 @@ export default function QuizesScreen({
               問題{currentQuestionIndex + 1}の説明及び補足
             </h3>
             <div className="prose prose-sm max-w-none text-slate-600 leading-relaxed">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {currentQuestion.explanation || "解説は準備中です。"}
-              </ReactMarkdown>
+              <MarkdownRenderer content={currentQuestion.explanation || "解説は準備中です。"} />
             </div>
           </div>
         )}
@@ -1341,9 +1336,7 @@ export default function QuizesScreen({
                   {/* 解説 */}
                   <div className="px-6 pb-5 pt-2">
                     <div className="prose prose-sm max-w-none text-slate-700 leading-relaxed">
-                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                        {aiState.explanation || ""}
-                      </ReactMarkdown>
+                      <MarkdownRenderer content={aiState.explanation || ""} />
                     </div>
                   </div>
                   {/* 再採点ボタン */}
