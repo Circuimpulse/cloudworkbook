@@ -28,58 +28,55 @@ export default function TopScreen({ exams }: TopScreenProps) {
           </h1>
         </div>
 
-        {/* 説明セクション */}
-        <section className="mt-12 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150 fill-mode-both md:mt-16">
+        {/* 説明セクション（PCのみ） */}
+        <section className="hidden md:block mt-16 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150 fill-mode-both">
           <div className="h-1 w-20 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400" />
-          <p className="mt-6 text-lg font-medium leading-relaxed text-slate-600 md:text-2xl text-balance max-w-3xl">
+          <p className="mt-6 text-2xl font-medium leading-relaxed text-slate-600 text-balance max-w-3xl">
             {texts.description.line1}
-            <br className="hidden md:block" />
+            <br />
             {texts.description.line2}
           </p>
         </section>
 
         {/* 過去問一覧セクション */}
-        <section className="mt-16 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-both md:mt-24">
+        <section className="mt-8 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-150 fill-mode-both md:mt-24 md:delay-300">
           <div className="flex items-center gap-3">
-            <h3 className="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl">
+            <h3 className="text-lg font-extrabold tracking-tight text-slate-900 md:text-3xl">
               {texts.sectionListTitle}
             </h3>
             <div className="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent" />
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {exams.map((exam, index) => (
+          {/* スマホ: 横長カード(4:1), PC: 従来のカードグリッド */}
+          <div className="mt-4 flex flex-col gap-2 md:mt-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+            {exams.map((exam) => (
               <Link
                 key={exam.id}
                 href={`/exams/${exam.id}`}
-                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-200 bg-white/60 p-6 text-left shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/50 hover:bg-white hover:shadow-xl md:p-8"
+                className="group relative flex items-center overflow-hidden rounded-xl border border-slate-200 bg-white/80 px-4 py-3 shadow-sm transition-all duration-200 active:scale-[0.98] hover:border-blue-400/50 hover:bg-white hover:shadow-md md:flex-col md:items-start md:rounded-2xl md:p-8 md:hover:-translate-y-1 md:hover:shadow-xl"
               >
-                {/* 
-                  ホバー時の背景の微細な光芒エフェクト (decoration)
-                */}
-                <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-blue-100/50 opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
-                <div className="absolute -bottom-20 -left-20 h-40 w-40 rounded-full bg-cyan-100/50 opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
+                {/* PC用ホバーエフェクト */}
+                <div className="absolute -right-20 -top-20 hidden h-40 w-40 rounded-full bg-blue-100/50 opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-100 md:block" />
 
-                <div className="relative z-10 flex flex-col">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-100 group-hover:text-blue-700 md:h-14 md:w-14">
-                      <CheckCircle2 className="h-6 w-6 md:h-7 md:w-7" />
-                    </div>
-                    <div>
-                      <p className="text-xl font-bold leading-tight text-slate-900 md:text-2xl">
-                        {exam.title}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="mt-4 pl-16 text-base font-medium leading-relaxed text-slate-500 md:pl-18 md:text-lg">
-                    {exam.description || "この試験区分の過去問題を学習します"}
-                  </p>
+                {/* アイコン */}
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-100 md:h-14 md:w-14">
+                  <CheckCircle2 className="h-5 w-5 md:h-7 md:w-7" />
                 </div>
 
-                {/* アクセントの矢印 */}
-                <div className="relative z-10 mt-6 flex items-center justify-end text-sm font-bold text-blue-600 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 -translate-x-4">
-                  学習を始める &rarr;
-                </div>
+                {/* タイトル */}
+                <p className="relative z-10 ml-3 text-sm font-bold text-slate-900 md:ml-0 md:mt-4 md:text-2xl">
+                  {exam.title}
+                </p>
+
+                {/* 説明（PCのみ） */}
+                <p className="relative z-10 mt-3 hidden text-base font-medium leading-relaxed text-slate-500 md:block md:text-lg">
+                  {exam.description || "この試験区分の過去問題を学習します"}
+                </p>
+
+                {/* 矢印（スマホ: 常時表示, PC: ホバー時） */}
+                <span className="relative z-10 ml-auto text-sm font-bold text-blue-500 md:mt-6 md:self-end md:text-blue-600 md:opacity-0 md:transition-all md:duration-300 md:group-hover:opacity-100">
+                  →
+                </span>
               </Link>
             ))}
           </div>
