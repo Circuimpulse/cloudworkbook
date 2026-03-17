@@ -950,16 +950,13 @@ export default function QuizesScreen({
                     ✓ この問題は既に正解済みです。説明を確認できます。
                   </div>
                 )}
-                {/* 出典情報 */}
-                {currentQuestion.sourceNote && (
-                  <div className="mb-2 text-xs text-slate-400 font-medium">
-                    {currentQuestion.sourceNote}
-                  </div>
-                )}
-                <div className="flex items-start justify-between gap-4">
-                  <div className="prose prose-sm max-w-none flex-1 text-sm md:text-lg leading-relaxed font-medium overflow-x-auto [&_table]:text-xs [&_table]:md:text-base [&_table]:font-normal [&_table]:w-full [&_table]:table-fixed [&_th]:bg-slate-100 [&_th]:px-2 [&_th]:py-1 [&_th]:md:px-3 [&_th]:md:py-2 [&_td]:px-2 [&_td]:py-1 [&_td]:md:px-3 [&_td]:md:py-2 [&_td]:break-words [&_img]:rounded-lg [&_img]:shadow-md [&_img]:my-3 [&_img]:max-w-full [&_pre]:overflow-x-auto [&_code]:break-words">
-                    <MarkdownRenderer content={currentQuestion.questionText} />
-                  </div>
+                {/* 出典情報 + お気に入り */}
+                <div className="flex items-center justify-between mb-2">
+                  {currentQuestion.sourceNote && (
+                    <div className="text-xs text-slate-400 font-medium">
+                      {currentQuestion.sourceNote}
+                    </div>
+                  )}
                   <FavoriteToggles
                     key={currentQuestion.id}
                     questionId={currentQuestion.id}
@@ -967,7 +964,7 @@ export default function QuizesScreen({
                       isFavorite1: isFavorite.isFavorite1 || false,
                       isFavorite2: isFavorite.isFavorite2 || false,
                       isFavorite3: isFavorite.isFavorite3 || false,
-                      isFavorite: false, // Legacy flag not tracked in local state but required by component
+                      isFavorite: false,
                     }}
                     onUpdate={(newStatus) => {
                       setFavorites((prev) => ({
@@ -980,6 +977,10 @@ export default function QuizesScreen({
                       }));
                     }}
                   />
+                </div>
+                {/* 問題文（全幅） */}
+                <div className="prose prose-sm max-w-none text-sm md:text-lg leading-relaxed font-medium overflow-x-auto [&_table]:text-xs [&_table]:md:text-base [&_table]:font-normal [&_table]:w-full [&_table]:table-fixed [&_th]:bg-slate-100 [&_th]:px-2 [&_th]:py-1 [&_th]:md:px-3 [&_th]:md:py-2 [&_td]:px-2 [&_td]:py-1 [&_td]:md:px-3 [&_td]:md:py-2 [&_td]:break-words [&_img]:rounded-lg [&_img]:shadow-md [&_img]:my-3 [&_img]:max-w-full [&_pre]:overflow-x-auto [&_code]:break-words">
+                  <MarkdownRenderer content={currentQuestion.questionText} />
                 </div>
               </>
             );
