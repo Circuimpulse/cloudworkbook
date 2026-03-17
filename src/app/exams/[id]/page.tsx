@@ -1,4 +1,3 @@
-import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { getSectionsByExamId, getExamById } from "@/backend/db/queries";
 import SectionSelectScreen from "@/frontend/screens/SectionSelectScreen";
@@ -7,13 +6,8 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
+// 認証はmiddleware.tsで処理（/exams(.*)はprotectedRoute）
 export default async function Page({ params }: PageProps) {
-  const { userId } = await auth();
-
-  if (!userId) {
-    redirect("/sign-in");
-  }
-
   const { id } = await params;
   const examId = parseInt(id, 10);
 
