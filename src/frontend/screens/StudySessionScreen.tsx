@@ -602,7 +602,7 @@ export default function QuizesScreen({
   if (showCompletionScreen) {
     return (
       <div className="min-h-screen bg-white font-sans text-slate-800">
-        <div className="container mx-auto px-4 py-12 max-w-4xl">
+        <div className="mx-auto px-3 py-8 md:px-6 md:py-12 max-w-4xl w-full">
           {/* ページナビゲーション */}
           <div className="text-center mb-8 text-sm">
             {prevSection && (
@@ -775,8 +775,8 @@ export default function QuizesScreen({
   }
 
   return (
-    <div className="min-h-screen bg-white font-sans text-slate-800">
-      <div className="container mx-auto px-3 py-4 md:px-4 md:py-6 max-w-4xl">
+    <div className="min-h-screen bg-white font-sans text-slate-800 overflow-x-hidden">
+      <div className="mx-auto px-3 py-4 md:px-6 md:py-6 max-w-4xl w-full">
         {/* Progress bar */}
         <div className="mb-6">
           <div className="flex justify-between items-center mb-2">
@@ -958,7 +958,7 @@ export default function QuizesScreen({
                   </div>
                 )}
                 <div className="flex items-start justify-between gap-4">
-                  <div className="prose prose-sm max-w-none flex-1 text-sm md:text-lg leading-relaxed font-medium [&_table]:text-xs [&_table]:md:text-base [&_table]:font-normal [&_th]:bg-slate-100 [&_th]:px-2 [&_th]:py-1 [&_th]:md:px-3 [&_th]:md:py-2 [&_td]:px-2 [&_td]:py-1 [&_td]:md:px-3 [&_td]:md:py-2 [&_img]:rounded-lg [&_img]:shadow-md [&_img]:my-3 [&_img]:max-w-full">
+                  <div className="prose prose-sm max-w-none flex-1 text-sm md:text-lg leading-relaxed font-medium overflow-x-auto [&_table]:text-xs [&_table]:md:text-base [&_table]:font-normal [&_table]:w-full [&_table]:table-fixed [&_th]:bg-slate-100 [&_th]:px-2 [&_th]:py-1 [&_th]:md:px-3 [&_th]:md:py-2 [&_td]:px-2 [&_td]:py-1 [&_td]:md:px-3 [&_td]:md:py-2 [&_td]:break-words [&_img]:rounded-lg [&_img]:shadow-md [&_img]:my-3 [&_img]:max-w-full [&_pre]:overflow-x-auto [&_code]:break-words">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>
                       {currentQuestion.questionText}
                     </ReactMarkdown>
