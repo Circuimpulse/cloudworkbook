@@ -25,7 +25,13 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-    const { questionText, userAnswer, correctAnswer, explanation: correctAnswerDetail, examType } = parsed.data;
+    // XSS/インジェクション対策: HTMLタグとスクリプト参照を除去
+    const sanitize = (s: string) => s.replace(/<[^>]*>/g, "").replace(/javascript:/gi, "");
+    const questionText = sanitize(parsed.data.questionText);
+    const userAnswer = sanitize(parsed.data.userAnswer);
+    const correctAnswer = sanitize(parsed.data.correctAnswer);
+    const correctAnswerDetail = parsed.data.explanation ? sanitize(parsed.data.explanation) : undefined;
+    const examType = parsed.data.examType;
 
     // Clerk privateMetadata からAPIキーを取得
     const client = await clerkClient();

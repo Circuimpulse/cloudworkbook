@@ -490,9 +490,12 @@ export default function QuizesScreen({
       answerStr = JSON.stringify(multiAnswers);
     } else if (isDescriptiveType) {
       // 自由記述式 → 完全一致採点は不可能、回答済みとして記録
-      // AI採点がある場合はそちらで判定
-      isCorrect = false; // デフォルトは不正解扱い（AI採点で上書き可能）
-      answerStr = fillInAnswer.trim();
+      isCorrect = false;
+      // XSS対策: HTMLタグを除去（ReactのJSX表示で基本安全だが、DB保存時にも防御）
+      answerStr = fillInAnswer
+        .replace(/<[^>]*>/g, "")
+        .replace(/javascript:/gi, "")
+        .trim() || "（未回答）";
     } else {
       // 単一回答の採点（FP計算問題等）
       const userAnswer = fillInAnswer.replace(/,/g, "").trim();
@@ -1063,25 +1066,44 @@ export default function QuizesScreen({
                       )}
                     />
                     {showResult && (
-                      <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                        <div className="text-sm font-bold text-green-800 mb-2">模範解答:</div>
-                        <div className="text-sm text-green-900 whitespace-pre-wrap">
-                          {currentQuestion.correctAnswer}
+                      <>
+                        {/* ユーザーの回答を表示（XSS安全: JSXテキストノード） */}
+                        {fillInAnswer && fillInAnswer !== "（未回答）" && (
+                          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                            <div className="text-sm font-bold text-blue-800 mb-2">あなたの回答:</div>
+                            <div className="text-sm text-blue-900 whitespace-pre-wrap break-words">
+                              {fillInAnswer}
+                            </div>
+                          </div>
+                        )}
+                        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                          <div className="text-sm font-bold text-green-800 mb-2">模範解答:</div>
+                          <div className="text-sm text-green-900 whitespace-pre-wrap">
+                            {currentQuestion.correctAnswer}
+                          </div>
                         </div>
-                      </div>
+                      </>
                     )}
                     {!showResult && !isAlreadyCorrect && (
                       <div className="flex flex-col sm:flex-row gap-2">
                         <Button
-                          onClick={handleDescriptiveSubmit}
+                          onClick={() => {
+                            handleDescriptiveSubmit();
+                            // 回答送信後にAI採点を自動実行
+                            setTimeout(() => {
+                              const aiBtn = document.querySelector("[data-ai-score-btn]") as HTMLButtonElement;
+                              if (aiBtn) aiBtn.click();
+                            }, 300);
+                          }}
                           disabled={!fillInAnswer.trim()}
-                          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 text-sm md:text-base"
+                          className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white py-3 text-sm md:text-base shadow-md"
                         >
-                          回答して模範解答を見る
+                          <Sparkles className="w-4 h-4 mr-1.5" />
+                          AIで採点してフィードバック
                         </Button>
                         <Button
                           onClick={() => {
-                            setFillInAnswer("（未回答）");
+                            // 空文字でも模範解答を表示
                             handleDescriptiveSubmit();
                           }}
                           variant="outline"
@@ -1267,6 +1289,7 @@ export default function QuizesScreen({
                 /* AI採点ボタン */
                 <Button
                   onClick={handleAiScore}
+                  data-ai-score-btn
                   className="w-full rounded-xl py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-base shadow-lg transition-all hover:shadow-xl active:scale-[0.98]"
                 >
                   <Sparkles className="w-5 h-5 mr-2" />
