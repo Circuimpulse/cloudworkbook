@@ -776,7 +776,7 @@ export default function QuizesScreen({
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-800">
-      <div className="container mx-auto px-4 py-6 max-w-4xl">
+      <div className="container mx-auto px-3 py-4 md:px-4 md:py-6 max-w-4xl">
         {/* Progress bar */}
         <div className="mb-6">
           <div className="flex justify-between items-center mb-2">
@@ -798,9 +798,9 @@ export default function QuizesScreen({
           <Progress value={(currentQuestionIndex / questions.length) * 100} />
         </div>
         {/* Header Section */}
-        <header className="mb-8">
-          <div className="flex items-center gap-2 mb-6">
-            <span className="font-bold text-xl flex items-center gap-2">
+        <header className="mb-4 md:mb-8">
+          <div className="flex items-center gap-2 mb-3 md:mb-6">
+            <span className="font-bold text-base md:text-xl flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -811,7 +811,7 @@ export default function QuizesScreen({
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="w-6 h-6"
+                className="w-5 h-5 md:w-6 md:h-6"
               >
                 <path d="M17.5 19c0-1.7-1.3-3-3-3h-11c-1.7 0-3-1.3-3-3v-6c0-1.7 1.3-3 3-3h11c1.7 0 3 1.3 3 3v2" />
                 <path d="M20.665 14.83a2.5 2.5 0 0 0-3.665-4" />
@@ -823,15 +823,15 @@ export default function QuizesScreen({
           </div>
 
           <div className="flex flex-col gap-1">
-            <h1 className="text-2xl font-bold">
+            <h1 className="text-lg md:text-2xl font-bold">
               {exam?.title || section.title}
             </h1>
-            <div className="flex items-center justify-between text-sm mt-1">
+            <div className="flex items-center justify-between text-xs md:text-sm mt-1">
               <div className="flex items-center">
-                <span className="font-medium mr-4">
+                <span className="font-medium mr-2 md:mr-4">
                   問題{currentQuestionIndex + 1}
                 </span>
-                <span className="text-slate-500 text-xs sm:text-sm">
+                <span className="text-slate-500 text-xs truncate max-w-[180px] md:max-w-none">
                   {section.title} - {section.description?.slice(0, 20)}...
                 </span>
               </div>
@@ -958,7 +958,7 @@ export default function QuizesScreen({
                   </div>
                 )}
                 <div className="flex items-start justify-between gap-4">
-                  <div className="prose prose-sm max-w-none flex-1 text-lg leading-relaxed font-medium [&_table]:text-base [&_table]:font-normal [&_th]:bg-slate-100 [&_th]:px-3 [&_th]:py-2 [&_td]:px-3 [&_td]:py-2 [&_img]:rounded-lg [&_img]:shadow-md [&_img]:my-4">
+                  <div className="prose prose-sm max-w-none flex-1 text-sm md:text-lg leading-relaxed font-medium [&_table]:text-xs [&_table]:md:text-base [&_table]:font-normal [&_th]:bg-slate-100 [&_th]:px-2 [&_th]:py-1 [&_th]:md:px-3 [&_th]:md:py-2 [&_td]:px-2 [&_td]:py-1 [&_td]:md:px-3 [&_td]:md:py-2 [&_img]:rounded-lg [&_img]:shadow-md [&_img]:my-3 [&_img]:max-w-full">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>
                       {currentQuestion.questionText}
                     </ReactMarkdown>
@@ -992,7 +992,7 @@ export default function QuizesScreen({
         {/* Options Area */}
         {isDescriptive ? (
           /* ── 記述式回答UI ── */
-          <div className="rounded-lg border border-slate-200 mb-8 shadow-sm p-6">
+          <div className="rounded-lg border border-slate-200 mb-8 shadow-sm p-3 md:p-6">
             {(() => {
               const detail = getCorrectAnswerDetail();
               const multiKeys = getMultiAnswerKeys();
@@ -1073,11 +1073,11 @@ export default function QuizesScreen({
                       </div>
                     )}
                     {!showResult && !isAlreadyCorrect && (
-                      <div className="flex gap-3">
+                      <div className="flex flex-col sm:flex-row gap-2">
                         <Button
                           onClick={handleDescriptiveSubmit}
                           disabled={!fillInAnswer.trim()}
-                          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg"
+                          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 text-sm md:text-base"
                         >
                           回答して模範解答を見る
                         </Button>
@@ -1087,7 +1087,7 @@ export default function QuizesScreen({
                             handleDescriptiveSubmit();
                           }}
                           variant="outline"
-                          className="py-3 text-base"
+                          className="py-3 text-sm md:text-base whitespace-nowrap"
                         >
                           模範解答だけ見る
                         </Button>
