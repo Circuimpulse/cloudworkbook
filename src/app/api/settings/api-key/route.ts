@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth, clerkClient } from "@clerk/nextjs/server";
+import { getPrivateMetadata } from "@/backend/types";
 
 /**
  * APIキー設定APIルート
@@ -16,16 +17,16 @@ export async function GET() {
 
     const client = await clerkClient();
     const user = await client.users.getUser(userId);
-    const hasApiKey = !!(user.privateMetadata as any)?.geminiApiKey;
+    const hasApiKey = !!getPrivateMetadata(user.privateMetadata)?.geminiApiKey;
 
     return NextResponse.json({
       hasApiKey,
       // セキュリティ上、キーの値そのものは返さない
       maskedKey: hasApiKey
-        ? maskApiKey((user.privateMetadata as any).geminiApiKey)
+        ? maskApiKey(getPrivateMetadata(user.privateMetadata).geminiApiKey ?? "")
         : null,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("API key GET error:", error);
     return NextResponse.json(
       { error: "APIキーの取得に失敗しました" },
@@ -50,7 +51,7 @@ export async function POST(request: NextRequest) {
     if (!apiKey || !apiKey.trim()) {
       // キーを削除
       const user = await client.users.getUser(userId);
-      const currentMetadata = (user.privateMetadata as any) || {};
+      const currentMetadata = getPrivateMetadata(user.privateMetadata) || {};
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { geminiApiKey, ...rest } = currentMetadata;
 
@@ -63,7 +64,7 @@ export async function POST(request: NextRequest) {
 
     // キーを保存
     const user = await client.users.getUser(userId);
-    const currentMetadata = (user.privateMetadata as any) || {};
+    const currentMetadata = getPrivateMetadata(user.privateMetadata) || {};
 
     await client.users.updateUser(userId, {
       privateMetadata: {
@@ -77,7 +78,7 @@ export async function POST(request: NextRequest) {
       hasApiKey: true,
       maskedKey: maskApiKey(apiKey.trim()),
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("API key POST error:", error);
     return NextResponse.json(
       { error: "APIキーの保存に失敗しました" },
@@ -96,7 +97,7 @@ export async function DELETE() {
 
     const client = await clerkClient();
     const user = await client.users.getUser(userId);
-    const currentMetadata = (user.privateMetadata as any) || {};
+    const currentMetadata = getPrivateMetadata(user.privateMetadata) || {};
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { geminiApiKey, ...rest } = currentMetadata;
 
@@ -105,7 +106,7 @@ export async function DELETE() {
     });
 
     return NextResponse.json({ success: true, hasApiKey: false });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("API key DELETE error:", error);
     return NextResponse.json(
       { error: "APIキーの削除に失敗しました" },

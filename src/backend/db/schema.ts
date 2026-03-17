@@ -4,6 +4,7 @@ import {
   integer,
   primaryKey,
   unique,
+  index,
 } from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
 
@@ -87,7 +88,9 @@ export const sections = sqliteTable("sections", {
   createdAt: integer("created_at", { mode: "timestamp" })
     .notNull()
     .default(sql`(unixepoch())`),
-});
+}, (table) => ({
+  examIdIdx: index("sections_exam_id_idx").on(table.examId),
+}));
 
 /**
  * 問題テーブル
@@ -129,7 +132,10 @@ export const questions = sqliteTable("questions", {
   createdAt: integer("created_at", { mode: "timestamp" })
     .notNull()
     .default(sql`(unixepoch())`),
-});
+}, (table) => ({
+  sectionIdIdx: index("questions_section_id_idx").on(table.sectionId),
+  examYearIdIdx: index("questions_exam_year_id_idx").on(table.examYearId),
+}));
 
 /**
  * セクション進捗テーブル
@@ -231,7 +237,9 @@ export const mockTestHistory = sqliteTable("mock_test_history", {
   takenAt: integer("taken_at", { mode: "timestamp" })
     .notNull()
     .default(sql`(unixepoch())`),
-});
+}, (table) => ({
+  userIdIdx: index("mock_test_history_user_id_idx").on(table.userId),
+}));
 
 /**
  * 模擬テスト詳細テーブル
@@ -250,7 +258,9 @@ export const mockTestDetails = sqliteTable("mock_test_details", {
   answeredAt: integer("answered_at", { mode: "timestamp" })
     .notNull()
     .default(sql`(unixepoch())`),
-});
+}, (table) => ({
+  testIdIdx: index("mock_test_details_test_id_idx").on(table.testId),
+}));
 
 // 型エクスポート
 export type User = typeof users.$inferSelect;

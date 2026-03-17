@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth, clerkClient } from "@clerk/nextjs/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { aiScoreSchema } from "@/backend/validations";
+import { getPrivateMetadata } from "@/backend/types";
 
 /**
  * AI採点APIルート
@@ -16,25 +18,19 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const {
-      questionText,
-      userAnswer,
-      correctAnswer,
-      correctAnswerDetail,
-    } = body;
-
-    // バリデーション
-    if (!questionText || !userAnswer || !correctAnswer) {
+    const parsed = aiScoreSchema.safeParse(body);
+    if (!parsed.success) {
       return NextResponse.json(
-        { error: "問題文、ユーザー回答、正解のいずれかが不足しています" },
+        { error: "問題文、ユーザー回答、正解のいずれかが不足しています", details: parsed.error.flatten() },
         { status: 400 }
       );
     }
+    const { questionText, userAnswer, correctAnswer, explanation: correctAnswerDetail } = parsed.data;
 
     // Clerk privateMetadata からAPIキーを取得
     const client = await clerkClient();
     const user = await client.users.getUser(userId);
-    const apiKey = (user.privateMetadata as any)?.geminiApiKey;
+    const apiKey = getPrivateMetadata(user.privateMetadata)?.geminiApiKey;
 
     if (!apiKey) {
       return NextResponse.json(
@@ -90,14 +86,14 @@ ${userAnswer}
     const responseText = result.response.text();
 
     // JSONパース
-    let parsed;
+    let aiResult;
     try {
-      parsed = JSON.parse(responseText);
+      aiResult = JSON.parse(responseText);
     } catch {
       // JSONパースに失敗した場合、テキストから抽出を試みる
       const jsonMatch = responseText.match(/\{[\s\S]*\}/);
       if (jsonMatch) {
-        parsed = JSON.parse(jsonMatch[0]);
+        aiResult = JSON.parse(jsonMatch[0]);
       } else {
         return NextResponse.json(
           {
@@ -111,24 +107,26 @@ ${userAnswer}
 
     // レスポンスの正規化
     const response = {
-      score: Math.max(0, Math.min(100, Number(parsed.score) || 0)),
-      isCorrect: Boolean(parsed.isCorrect),
-      explanation: String(parsed.explanation || "採点結果を取得できませんでした"),
+      score: Math.max(0, Math.min(100, Number(aiResult.score) || 0)),
+      isCorrect: Boolean(aiResult.isCorrect),
+      explanation: String(aiResult.explanation || "採点結果を取得できませんでした"),
     };
 
     return NextResponse.json(response);
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("AI scoring error:", error);
 
     // Gemini API固有のエラーハンドリング
-    if (error.message?.includes("API_KEY_INVALID") || error.status === 400) {
+    const errMsg = error instanceof Error ? error.message : String(error);
+    const errStatus = (error as { status?: number }).status;
+    if (errMsg.includes("API_KEY_INVALID") || errStatus === 400) {
       return NextResponse.json(
         { error: "APIキーが無効です。正しいGemini APIキーを設定してください。" },
         { status: 401 }
       );
     }
 
-    if (error.message?.includes("QUOTA") || error.status === 429) {
+    if (errMsg.includes("QUOTA") || errStatus === 429) {
       return NextResponse.json(
         { error: "APIの利用上限に達しました。しばらく待ってから再試行してください。" },
         { status: 429 }
@@ -136,7 +134,7 @@ ${userAnswer}
     }
 
     return NextResponse.json(
-      { error: `AI採点でエラーが発生しました: ${error.message || "不明なエラー"}` },
+      { error: `AI採点でエラーが発生しました: ${errMsg || "不明なエラー"}` },
       { status: 500 }
     );
   }

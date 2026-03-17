@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@clerk/nextjs/server";
 import { bulkSetFavorite } from "@/backend/db/queries";
+import { bulkFavoriteSchema } from "@/backend/validations";
 
 /**
  * お気に入り一括登録API
@@ -19,35 +20,20 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { questionIds, levels } = body;
-
-    if (
-      !Array.isArray(questionIds) ||
-      questionIds.length === 0 ||
-      !Array.isArray(levels) ||
-      levels.length === 0
-    ) {
+    const parsed = bulkFavoriteSchema.safeParse(body);
+    if (!parsed.success) {
       return NextResponse.json(
-        { error: "Invalid request body. questionIds and levels are required." },
+        { error: "Invalid request body", details: parsed.error.flatten() },
         { status: 400 },
       );
     }
 
-    // レベルのバリデーション（1,2,3のみ許可）
-    const validLevels = levels.filter((l: number) => l >= 1 && l <= 3);
-    if (validLevels.length === 0) {
-      return NextResponse.json(
-        { error: "Invalid levels. Must be 1, 2, or 3." },
-        { status: 400 },
-      );
-    }
-
-    const results = await bulkSetFavorite(userId, questionIds, validLevels);
+    const results = await bulkSetFavorite(userId, parsed.data.questionIds, parsed.data.levels);
 
     return NextResponse.json({
       success: true,
-      count: results.length,
-      levels: validLevels,
+      count: results.updated + results.inserted,
+      levels: parsed.data.levels,
     });
   } catch (error) {
     console.error("Error bulk setting favorites:", error);

@@ -4,6 +4,7 @@ import { createMockTest, insertMockTestDetails } from "@/backend/db/queries";
 import { db } from "@/backend/db/client";
 import { questions } from "@/backend/db/schema";
 import { inArray } from "drizzle-orm";
+import { mockTestSubmissionSchema } from "@/backend/validations";
 
 // Node.js Runtimeを使用（ローカルSQLiteファイルアクセスのため）
 // export const runtime = "edge"; // Cloudflare移行時に有効化
@@ -24,16 +25,16 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    // リクエストボディ取得
+    // リクエストボディ取得・バリデーション
     const body = await request.json();
-    const { answers, examId } = body;
-
-    if (!Array.isArray(answers) || answers.length === 0) {
+    const parsed = mockTestSubmissionSchema.safeParse(body);
+    if (!parsed.success) {
       return NextResponse.json(
-        { error: "Invalid request body" },
+        { error: "Invalid request body", details: parsed.error.flatten() },
         { status: 400 },
       );
     }
+    const { answers, examId } = parsed.data;
 
     // 問題IDリストを取得
     const questionIds = answers.map((a) => a.questionId);

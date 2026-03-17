@@ -4,6 +4,7 @@ import {
   getFavoriteSettings,
   upsertFavoriteSettings,
 } from "@/backend/db/queries";
+import { favoriteSettingsSchema } from "@/backend/validations";
 
 /**
  * お気に入り設定API
@@ -46,21 +47,14 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { favorite1Enabled, favorite2Enabled, favorite3Enabled, filterMode } =
-      body;
-
-    // バリデーション
-    if (
-      typeof favorite1Enabled !== "boolean" ||
-      typeof favorite2Enabled !== "boolean" ||
-      typeof favorite3Enabled !== "boolean" ||
-      (filterMode !== "or" && filterMode !== "and")
-    ) {
+    const parsed = favoriteSettingsSchema.safeParse(body);
+    if (!parsed.success) {
       return NextResponse.json(
-        { error: "Invalid request body" },
+        { error: "Invalid request body", details: parsed.error.flatten() },
         { status: 400 },
       );
     }
+    const { favorite1Enabled = true, favorite2Enabled = true, favorite3Enabled = true, filterMode = "or" } = parsed.data;
 
     const settings = await upsertFavoriteSettings(
       userId,

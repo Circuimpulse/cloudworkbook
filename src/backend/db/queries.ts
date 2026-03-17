@@ -612,35 +612,38 @@ export async function getIncorrectQuestionsByExam(
 ) {
   // 試験に属する全セクションを取得
   const examSections = await getSectionsByExamId(examId);
+  if (examSections.length === 0) return [];
 
-  const result = [];
+  // 全セクションの間違えた問題を1クエリで取得
+  const sectionIds = examSections.map((s) => s.id);
+  const incorrectRecords = await db
+    .select()
+    .from(userQuestionRecords)
+    .innerJoin(questions, eq(userQuestionRecords.questionId, questions.id))
+    .where(
+      and(
+        eq(userQuestionRecords.userId, userId),
+        eq(userQuestionRecords.isCorrect, false),
+        sql`${questions.sectionId} IN (${sql.join(sectionIds.map((id) => sql`${id}`), sql`, `)})`,
+      ),
+    )
+    .all();
 
-  for (const section of examSections) {
-    // userQuestionRecordsから間違えた問題を取得（永続的な履歴）
-    const incorrectRecords = await db
-      .select()
-      .from(userQuestionRecords)
-      .innerJoin(questions, eq(userQuestionRecords.questionId, questions.id))
-      .where(
-        and(
-          eq(userQuestionRecords.userId, userId),
-          eq(userQuestionRecords.isCorrect, false),
-          eq(questions.sectionId, section.id),
-        ),
-      )
-      .all();
-
-    if (incorrectRecords.length > 0) {
-      const incorrectQuestions = incorrectRecords.map((r) => r.questions);
-
-      result.push({
-        section,
-        questions: incorrectQuestions,
-      });
-    }
+  // セクションごとにグループ化
+  const sectionMap = new Map(examSections.map((s) => [s.id, s]));
+  const grouped = new Map<number, typeof incorrectRecords>();
+  for (const r of incorrectRecords) {
+    const sid = r.questions.sectionId;
+    if (!grouped.has(sid)) grouped.set(sid, []);
+    grouped.get(sid)!.push(r);
   }
 
-  return result;
+  return Array.from(grouped.entries())
+    .map(([sid, records]) => ({
+      section: sectionMap.get(sid)!,
+      questions: records.map((r) => r.questions),
+    }))
+    .filter((g) => g.section);
 }
 
 /**
@@ -652,25 +655,39 @@ export async function getFavoriteQuestionsByExam(
 ) {
   // 試験に属する全セクションを取得
   const examSections = await getSectionsByExamId(examId);
+  if (examSections.length === 0) return [];
 
-  const result = [];
+  // お気に入りIDを1回で取得
+  const favoriteIds = await getFavoriteQuestionIds(userId);
+  if (favoriteIds.length === 0) return [];
 
-  for (const section of examSections) {
-    // セクションごとのお気に入り問題を取得
-    const favoriteQuestions = await getFavoriteQuestionsBySection(
-      userId,
-      section.id,
-    );
+  // 全セクションのお気に入り問題を1クエリで取得
+  const sectionIds = examSections.map((s) => s.id);
+  const favoriteQuestions = await db
+    .select()
+    .from(questions)
+    .where(
+      and(
+        sql`${questions.sectionId} IN (${sql.join(sectionIds.map((id) => sql`${id}`), sql`, `)})`,
+        sql`${questions.id} IN (${sql.join(favoriteIds.map((id) => sql`${id}`), sql`, `)})`,
+      ),
+    )
+    .all();
 
-    if (favoriteQuestions.length > 0) {
-      result.push({
-        section,
-        questions: favoriteQuestions,
-      });
-    }
+  // セクションごとにグループ化
+  const sectionMap = new Map(examSections.map((s) => [s.id, s]));
+  const grouped = new Map<number, (typeof favoriteQuestions)>();
+  for (const q of favoriteQuestions) {
+    if (!grouped.has(q.sectionId)) grouped.set(q.sectionId, []);
+    grouped.get(q.sectionId)!.push(q);
   }
 
-  return result;
+  return Array.from(grouped.entries())
+    .map(([sid, qs]) => ({
+      section: sectionMap.get(sid)!,
+      questions: qs,
+    }))
+    .filter((g) => g.section);
 }
 
 // ==================== お気に入り関連 ====================
@@ -772,48 +789,56 @@ export async function bulkSetFavorite(
   userId: string,
   questionIds: number[],
   levels: number[],
-) {
+): Promise<{ updated: number; inserted: number }> {
+  if (questionIds.length === 0) return { updated: 0, inserted: 0 };
+
+  // 既存レコードを1クエリで取得
+  const existingRecords = await db
+    .select()
+    .from(userQuestionRecords)
+    .where(
+      and(
+        eq(userQuestionRecords.userId, userId),
+        sql`${userQuestionRecords.questionId} IN (${sql.join(questionIds.map((id) => sql`${id}`), sql`, `)})`,
+      ),
+    )
+    .all();
+
+  const existingMap = new Map(existingRecords.map((r) => [r.questionId, r]));
+
+  const updates: Partial<typeof userQuestionRecords.$inferInsert> = {
+    updatedAt: new Date(),
+  };
+  if (levels.includes(1)) {
+    updates.isFavorite1 = true;
+    updates.isFavorite = true;
+  }
+  if (levels.includes(2)) updates.isFavorite2 = true;
+  if (levels.includes(3)) updates.isFavorite3 = true;
+
   const results = [];
 
-  for (const questionId of questionIds) {
-    const existing = await db
-      .select()
-      .from(userQuestionRecords)
+  // 既存レコード: バッチUPDATE
+  const existingIds = questionIds.filter((id) => existingMap.has(id));
+  if (existingIds.length > 0) {
+    await db
+      .update(userQuestionRecords)
+      .set(updates)
       .where(
         and(
           eq(userQuestionRecords.userId, userId),
-          eq(userQuestionRecords.questionId, questionId),
+          sql`${userQuestionRecords.questionId} IN (${sql.join(existingIds.map((id) => sql`${id}`), sql`, `)})`,
         ),
-      )
-      .get();
+      );
+  }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const updates: any = {
-      updatedAt: new Date(),
-    };
-    if (levels.includes(1)) {
-      updates.isFavorite1 = true;
-      updates.isFavorite = true;
-    }
-    if (levels.includes(2)) updates.isFavorite2 = true;
-    if (levels.includes(3)) updates.isFavorite3 = true;
-
-    if (existing) {
-      const result = await db
-        .update(userQuestionRecords)
-        .set(updates)
-        .where(
-          and(
-            eq(userQuestionRecords.userId, userId),
-            eq(userQuestionRecords.questionId, questionId),
-          ),
-        )
-        .returning();
-      results.push(result[0]);
-    } else {
-      const result = await db
-        .insert(userQuestionRecords)
-        .values({
+  // 新規レコード: バッチINSERT
+  const newIds = questionIds.filter((id) => !existingMap.has(id));
+  if (newIds.length > 0) {
+    await db
+      .insert(userQuestionRecords)
+      .values(
+        newIds.map((questionId) => ({
           userId,
           questionId,
           isFavorite: levels.includes(1),
@@ -821,13 +846,11 @@ export async function bulkSetFavorite(
           isFavorite2: levels.includes(2),
           isFavorite3: levels.includes(3),
           updatedAt: new Date(),
-        })
-        .returning();
-      results.push(result[0]);
-    }
+        })),
+      );
   }
 
-  return results;
+  return { updated: existingIds.length, inserted: newIds.length };
 }
 
 /**
@@ -838,39 +861,36 @@ export async function getFavoriteQuestionIds(userId: string) {
   // 設定を取得
   const settings = await getFavoriteSettings(userId);
 
-  // デフォルト設定
-  const favorite1Enabled = settings?.favorite1Enabled ?? true;
-  const favorite2Enabled = settings?.favorite2Enabled ?? true;
-  const favorite3Enabled = settings?.favorite3Enabled ?? true;
+  const fav1 = settings?.favorite1Enabled ?? true;
+  const fav2 = settings?.favorite2Enabled ?? true;
+  const fav3 = settings?.favorite3Enabled ?? true;
   const filterMode = settings?.filterMode ?? "or";
 
+  // SQLでフィルタリング条件を構築
+  const conditions = [];
+  if (fav1) conditions.push(sql`${userQuestionRecords.isFavorite1} = 1`);
+  if (fav2) conditions.push(sql`${userQuestionRecords.isFavorite2} = 1`);
+  if (fav3) conditions.push(sql`${userQuestionRecords.isFavorite3} = 1`);
+
+  if (conditions.length === 0) return [];
+
+  const favoriteCondition =
+    filterMode === "and"
+      ? sql.join(conditions, sql` AND `)
+      : sql.join(conditions, sql` OR `);
+
   const records = await db
-    .select()
+    .select({ questionId: userQuestionRecords.questionId })
     .from(userQuestionRecords)
-    .where(eq(userQuestionRecords.userId, userId))
+    .where(
+      and(
+        eq(userQuestionRecords.userId, userId),
+        favoriteCondition,
+      ),
+    )
     .all();
 
-  return records
-    .filter((r) => {
-      const matches = [];
-      if (favorite1Enabled && r.isFavorite1) matches.push(true);
-      if (favorite2Enabled && r.isFavorite2) matches.push(true);
-      if (favorite3Enabled && r.isFavorite3) matches.push(true);
-
-      if (filterMode === "and") {
-        // ANDモード: 有効な全てのレベルに該当する必要がある
-        const enabledCount = [
-          favorite1Enabled,
-          favorite2Enabled,
-          favorite3Enabled,
-        ].filter(Boolean).length;
-        return matches.length === enabledCount && enabledCount > 0;
-      } else {
-        // ORモード: いずれか1つに該当すればOK
-        return matches.length > 0;
-      }
-    })
-    .map((r) => r.questionId);
+  return records.map((r) => r.questionId);
 }
 
 /**
