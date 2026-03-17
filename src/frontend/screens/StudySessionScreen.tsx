@@ -675,9 +675,10 @@ export default function QuizesScreen({
                     throw new Error("Failed to reset progress");
                   }
 
-                  // 間違えた問題モードで遷移
+                  // 間違えた問題の進捗のみリセットして同じセクションを再表示
+                  // mode指定なし → 全5問表示、正解済みは保持、間違えた問題だけ未回答に戻る
                   const timestamp = Date.now();
-                  window.location.href = `/sections/${section.id}?retry=${timestamp}&mode=incorrect`;
+                  window.location.href = `/sections/${section.id}?retry=${timestamp}`;
                 } catch (error) {
                   console.error("Failed to retry incorrect questions:", error);
                   alert("進捗のリセットに失敗しました");
@@ -685,7 +686,7 @@ export default function QuizesScreen({
               }}
               className="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-8 py-8 text-lg font-bold shadow-lg h-auto whitespace-normal"
             >
-              同じ問題を挑戦（間違った問題）
+              同じ問題を挑戦
             </Button>
 
             <Button
