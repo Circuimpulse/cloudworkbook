@@ -266,10 +266,11 @@ async function main() {
         .where(and(eq(sections.examId, exam.id), eq(sections.title, secTitle)));
       if (es) { sectionId = es.id; }
       else {
-        const s = (secIdx - 1) * QUESTIONS_PER_SECTION + 1;
-        const e = secIdx * QUESTIONS_PER_SECTION;
+        const perYearSecIdx = Math.floor((q.number - 1) / QUESTIONS_PER_SECTION) + 1;
+        const s = (perYearSecIdx - 1) * QUESTIONS_PER_SECTION + 1;
+        const e = perYearSecIdx * QUESTIONS_PER_SECTION;
         const [ns] = await db.insert(sections)
-          .values({ examId: exam.id, title: secTitle, description: `問${s}〜${e}`, order: secIdx })
+          .values({ examId: exam.id, title: secTitle, description: `${label} 問${s}〜${e}`, order: secIdx })
           .returning({ id: sections.id });
         sectionId = ns.id;
       }

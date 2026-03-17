@@ -417,14 +417,15 @@ async function main() {
       if (existingSection) {
         sectionId = existingSection.id;
       } else {
-        const startQ = (sectionIndex - 1) * QUESTIONS_PER_SECTION + 1;
-        const endQ = sectionIndex * QUESTIONS_PER_SECTION;
+        const perYearSecIdx = Math.floor((q.number - 1) / QUESTIONS_PER_SECTION) + 1;
+        const startQ = (perYearSecIdx - 1) * QUESTIONS_PER_SECTION + 1;
+        const endQ = perYearSecIdx * QUESTIONS_PER_SECTION;
         const [newSection] = await db
           .insert(sections)
           .values({
             examId: exam.id,
             title: sectionTitle,
-            description: `問${startQ}〜${endQ}`,
+            description: `${label} 問${startQ}〜${endQ}`,
             order: sectionIndex,
           })
           .returning({ id: sections.id });

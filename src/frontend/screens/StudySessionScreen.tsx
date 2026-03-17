@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { ArrowRight, ArrowLeft, Check, X, Menu, Star } from "lucide-react";
+import { ArrowRight, ArrowLeft, Check, X, Menu, Star, Loader2, Sparkles, LinkIcon } from "lucide-react";
 import { APP_TEXTS } from "@/frontend/constants/descriptions";
 import type {
   Section,
@@ -94,6 +94,14 @@ export default function QuizesScreen({
 
   // 記述式回答用のstate
   const [fillInAnswer, setFillInAnswer] = useState<string>("");
+  // AI採点用のstate
+  const [aiScoring, setAiScoring] = useState<Record<number, {
+    status: "idle" | "loading" | "success" | "error" | "no_key";
+    score?: number;
+    isCorrect?: boolean;
+    explanation?: string;
+    error?: string;
+  }>>({});
   // 複数空欄回答用のstate (語群選択/○×複数)
   const [multiAnswers, setMultiAnswers] = useState<Record<string, string>>({});
 
@@ -1140,6 +1148,179 @@ export default function QuizesScreen({
             </div>
           </div>
         )}
+
+        {/* AI採点セクション（記述式のみ） */}
+        {showResult && isDescriptive && (() => {
+          const aiState = aiScoring[currentQuestion.id] || { status: "idle" };
+
+          const handleAiScore = async () => {
+            setAiScoring(prev => ({
+              ...prev,
+              [currentQuestion.id]: { status: "loading" }
+            }));
+
+            try {
+              const detail = getCorrectAnswerDetail();
+              const response = await fetch("/api/ai/score", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  questionText: currentQuestion.questionText,
+                  userAnswer: selectedAnswer || fillInAnswer,
+                  correctAnswer: currentQuestion.correctAnswer,
+                  correctAnswerDetail: detail ? JSON.stringify(detail) : undefined,
+                }),
+              });
+
+              if (response.ok) {
+                const data = await response.json();
+                setAiScoring(prev => ({
+                  ...prev,
+                  [currentQuestion.id]: {
+                    status: "success",
+                    score: data.score,
+                    isCorrect: data.isCorrect,
+                    explanation: data.explanation,
+                  }
+                }));
+              } else {
+                const errorData = await response.json().catch(() => ({}));
+                const isNoApiKey = response.status === 400 && errorData.error?.includes("APIキーが設定されていません");
+                setAiScoring(prev => ({
+                  ...prev,
+                  [currentQuestion.id]: {
+                    status: isNoApiKey ? "no_key" : "error",
+                    error: errorData.error || `エラー (${response.status})`,
+                  }
+                }));
+              }
+            } catch (error) {
+              setAiScoring(prev => ({
+                ...prev,
+                [currentQuestion.id]: {
+                  status: "error",
+                  error: "接続エラー: サーバーに接続できませんでした",
+                }
+              }));
+            }
+          };
+
+          return (
+            <div className="mb-8">
+              {aiState.status === "idle" ? (
+                /* AI採点ボタン */
+                <Button
+                  onClick={handleAiScore}
+                  className="w-full rounded-xl py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-base shadow-lg transition-all hover:shadow-xl active:scale-[0.98]"
+                >
+                  <Sparkles className="w-5 h-5 mr-2" />
+                  AIで採点する
+                </Button>
+              ) : aiState.status === "no_key" ? (
+                /* APIキー未設定メッセージ（サーバー応答で判明） */
+                <div className="rounded-xl border border-dashed border-slate-300 p-5 text-center bg-slate-50/50">
+                  <Sparkles className="w-6 h-6 text-indigo-400 mx-auto mb-2" />
+                  <p className="text-sm text-slate-600 mb-3">
+                    AI採点機能を使うにはGemini APIキーの設定が必要です
+                  </p>
+                  <a
+                    href="/settings/api-key"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 hover:text-indigo-800 underline underline-offset-2 transition-colors"
+                  >
+                    <LinkIcon className="w-3.5 h-3.5" />
+                    APIキー設定画面へ
+                  </a>
+                </div>
+              ) : aiState.status === "loading" ? (
+                /* ローディング */
+                <div className="rounded-xl border border-indigo-200 bg-indigo-50/50 p-6 text-center">
+                  <Loader2 className="w-8 h-8 text-indigo-500 mx-auto mb-3 animate-spin" />
+                  <p className="text-sm font-medium text-indigo-700">AIが採点中です...</p>
+                  <p className="text-xs text-indigo-500 mt-1">数秒お待ちください</p>
+                </div>
+              ) : aiState.status === "success" ? (
+                /* 採点結果 */
+                <div className="rounded-xl border border-slate-200 bg-white shadow-md overflow-hidden">
+                  {/* スコアヘッダー */}
+                  <div className={cn(
+                    "px-6 py-4 flex items-center justify-between",
+                    aiState.score !== undefined && aiState.score >= 80
+                      ? "bg-gradient-to-r from-green-500 to-emerald-500"
+                      : aiState.score !== undefined && aiState.score >= 50
+                        ? "bg-gradient-to-r from-yellow-500 to-amber-500"
+                        : "bg-gradient-to-r from-red-500 to-rose-500"
+                  )}>
+                    <div className="flex items-center gap-3">
+                      <Sparkles className="w-5 h-5 text-white/80" />
+                      <span className="text-white font-bold text-lg">AI採点結果</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-white/80 text-sm font-medium">スコア</span>
+                      <span className="text-white text-3xl font-extrabold">
+                        {aiState.score}
+                      </span>
+                      <span className="text-white/80 text-sm font-medium">/100</span>
+                    </div>
+                  </div>
+                  {/* スコアバー */}
+                  <div className="px-6 pt-4 pb-2">
+                    <div className="w-full bg-slate-100 rounded-full h-2.5">
+                      <div
+                        className={cn(
+                          "h-2.5 rounded-full transition-all duration-1000 ease-out",
+                          aiState.score !== undefined && aiState.score >= 80
+                            ? "bg-green-500"
+                            : aiState.score !== undefined && aiState.score >= 50
+                              ? "bg-yellow-500"
+                              : "bg-red-500"
+                        )}
+                        style={{ width: `${aiState.score || 0}%` }}
+                      />
+                    </div>
+                  </div>
+                  {/* 解説 */}
+                  <div className="px-6 pb-5 pt-2">
+                    <div className="prose prose-sm max-w-none text-slate-700 leading-relaxed">
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {aiState.explanation || ""}
+                      </ReactMarkdown>
+                    </div>
+                  </div>
+                  {/* 再採点ボタン */}
+                  <div className="px-6 pb-4">
+                    <button
+                      onClick={handleAiScore}
+                      className="text-sm text-indigo-600 hover:text-indigo-800 font-medium underline underline-offset-2 transition-colors"
+                    >
+                      もう一度採点する
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                /* エラー */
+                <div className="rounded-xl border border-red-200 bg-red-50/80 p-5">
+                  <p className="text-sm font-medium text-red-800 mb-3">
+                    {aiState.error || "AI採点でエラーが発生しました"}
+                  </p>
+                  <div className="flex gap-3">
+                    <button
+                      onClick={handleAiScore}
+                      className="text-sm text-indigo-600 hover:text-indigo-800 font-medium underline underline-offset-2 transition-colors"
+                    >
+                      再試行
+                    </button>
+                    <a
+                      href="/settings/api-key"
+                      className="text-sm text-slate-600 hover:text-slate-800 font-medium underline underline-offset-2 transition-colors"
+                    >
+                      APIキー設定を確認
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })()}
 
         {/* Footer / Navigation */}
         <div className="mt-12 flex flex-col items-center justify-center gap-6">

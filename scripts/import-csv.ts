@@ -49,6 +49,8 @@ if (!fs.existsSync(markdownFile)) {
   process.exit(1);
 }
 
+const QUESTIONS_PER_SECTION = 5;
+
 // ------------------------------------------------------------------
 // ヘルパー関数群
 // ------------------------------------------------------------------
@@ -221,6 +223,16 @@ async function main() {
   let insertCount = 0;
   let updateCount = 0;
 
+  // セクション管理: 既存の最大orderを取得し、そこから連番を続ける
+  const existingSections = await db
+    .select({ order: sections.order })
+    .from(sections)
+    .where(eq(sections.examId, examId));
+  let nextSectionOrder = existingSections.length > 0
+    ? Math.max(...existingSections.map(s => s.order))
+    : 0;
+  const sectionCache = new Map<number, number>(); // sectionIndexInYear -> sectionId
+
   // 5. 行ごとの処理
   for (const row of rows) {
     const qNum = parseInt(row.questionNumber, 10);
@@ -236,33 +248,41 @@ async function main() {
       : undefined;
     const finalCategoryId = catL3 || catL2 || catL1 || undefined;
 
-    // セクションの決定（10問ごとに分割）
-    const sectionIndex = Math.floor((qNum - 1) / 10) + 1;
-    const sectionTitle = `#${sectionIndex}`;
+    // セクションの決定（5問ごとに分割）
+    const sectionIndexInYear = Math.floor((qNum - 1) / QUESTIONS_PER_SECTION) + 1;
+    const startQ = (sectionIndexInYear - 1) * QUESTIONS_PER_SECTION + 1;
+    const endQ = Math.min(sectionIndexInYear * QUESTIONS_PER_SECTION, 80);
+    const sectionDesc = `${label} 問${startQ}〜${endQ}`;
 
     let sectionId: number;
-    const [existingSection] = await db
-      .select({ id: sections.id })
-      .from(sections)
-      .where(
-        and(eq(sections.examId, examId), eq(sections.title, sectionTitle)),
-      );
+    if (!sectionCache.has(sectionIndexInYear)) {
+      const [existingSection] = await db
+        .select({ id: sections.id })
+        .from(sections)
+        .where(
+          and(eq(sections.examId, examId), eq(sections.description, sectionDesc)),
+        );
 
-    if (existingSection) {
-      sectionId = existingSection.id;
-    } else {
-      const [newSection] = await db
-        .insert(sections)
-        .values({
-          examId,
-          title: sectionTitle,
-          description: `問${(sectionIndex - 1) * 10 + 1}〜${Math.min(sectionIndex * 10, 80)}`,
-          order:
-            year * 100 + (seasonEnums === "spring" ? 0 : 50) + sectionIndex,
-        })
-        .returning({ id: sections.id });
-      sectionId = newSection.id;
+      if (existingSection) {
+        // orderとtitleを連番に更新
+        nextSectionOrder++;
+        await db.update(sections).set({ order: nextSectionOrder, title: `#${nextSectionOrder}` }).where(eq(sections.id, existingSection.id));
+        sectionCache.set(sectionIndexInYear, existingSection.id);
+      } else {
+        nextSectionOrder++;
+        const [newSection] = await db
+          .insert(sections)
+          .values({
+            examId,
+            title: `#${nextSectionOrder}`,
+            description: sectionDesc,
+            order: nextSectionOrder,
+          })
+          .returning({ id: sections.id });
+        sectionCache.set(sectionIndexInYear, newSection.id);
+      }
     }
+    sectionId = sectionCache.get(sectionIndexInYear)!;
 
     // Markdown内の画像を処理
     const [qText, optA, optB, optC, optD, exp] = await Promise.all([
