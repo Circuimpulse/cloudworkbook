@@ -48,12 +48,25 @@
 | `handleSubmit()`                    | テスト提出・sessionStorage保存・結果画面へ遷移 |
 | `handleJumpToQuestion(index)`       | 問題リストモーダルからのジャンプ               |
 
+## 主要State
+
+| State | 型 | 説明 |
+|:---|:---|:---|
+| status | "loading" \| "ready" \| "submitting" \| "error" | 画面フェーズ |
+| questions | PublicQuestion[] | 出題された問題一覧 |
+| answers | Record<number, string> | 問題ID → 選択肢のマップ |
+| currentIndex | number | 現在の問題インデックス |
+| showQuestionList | boolean | 問題リストモーダルの表示 |
+| showConfirmDialog | boolean | 未回答確認ダイアログの表示 |
+
 ## 使用コンポーネント
 
 - `MockTestQuestionListModal` — 問題リストモーダル
+- `PageContainer` — 共通レイアウト
+- shadcn/ui: RadioGroup, Button, Progress
 
 ## ルーティング
 
 - **表示パス**: `/mock-test`（`src/app/mock-test/page.tsx`）
 - **クエリパラメータ**: `examId` (試験区分の絞り込み)
-- **遷移先**: `/mock-test/result`（採点後）
+- **遷移先**: `/mock-test/result`（採点後）、`/`（中断時）
