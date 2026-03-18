@@ -2,204 +2,223 @@
 
 ## 1. 概要
 
-本システムは、学習の進捗状況、過去問データ、ユーザーの解答履歴を管理するためにSQLite（Drizzle ORM経由でTurso等に接続）を採用する。
-以下は主要なテーブルとその関連を示すスキーマ設計である。
+SQLite（Drizzle ORM経由でTurso/LibSQLに接続）を採用。
+ローカル開発は `local.db`、本番は Turso。
 
-## 2. ER図 (Mermaid)
+## 2. テーブル一覧（12テーブル）
 
-```mermaid
-erDiagram
-    users ||--o{ learning_history : "持つ"
-    users ||--o{ favorites : "持つ"
-    users ||--o{ mock_test_results : "受ける"
+| # | テーブル名 | 説明 |
+|:--|:---|:---|
+| 1 | users | ユーザー（Clerk userId = PK） |
+| 2 | ipa_categories | IPA公式3階層分類（大→中→小分類） |
+| 3 | exams | 試験区分（応用情報午前、FP3級等） |
+| 4 | exam_years | 試験年度・季節（2024春期等） |
+| 5 | sections | セクション（試験区分ごとの章立て） |
+| 6 | questions | 問題（5形式対応） |
+| 7 | section_progress | セクション進捗（集計データ、上書き更新） |
+| 8 | section_question_progress | 個別問題の正誤・回答記録 |
+| 9 | user_question_records | お気に入り（3段階）・正誤履歴 |
+| 10 | mock_test_history | 模擬テスト履歴（追記型） |
+| 11 | mock_test_details | 模擬テスト各問の解答記録 |
+| 12 | favorite_settings | お気に入りフィルター設定（OR/AND） |
 
-    exams ||--o{ sections : "含む"
-    exams ||--o{ learning_history : "対象"
+## 3. テーブル定義
 
-    sections ||--o{ questions : "含む"
+### 3.1. users
 
-    questions ||--o{ favorites : "対象"
+| カラム | 型 | 制約 | 説明 |
+|:---|:---|:---|:---|
+| id | text | PK | Clerk userId |
+| email | text | NOT NULL | メールアドレス |
+| name | text | | 表示名 |
+| created_at | integer | NOT NULL, DEFAULT | UNIXタイムスタンプ |
+| updated_at | integer | NOT NULL, DEFAULT | 更新日時 |
 
-    mock_test_results ||--o{ mock_test_details : "詳細"
-    questions ||--o{ mock_test_details : "出題される"
+### 3.2. ipa_categories
 
-    users {
-        string id PK "ユーザーID(Clerk IDなど)"
-        string email "メールアドレス"
-        datetime created_at "作成日時"
-    }
+| カラム | 型 | 制約 | 説明 |
+|:---|:---|:---|:---|
+| id | integer | PK, AUTO | |
+| parent_id | integer | FK(ipa_categories.id), CASCADE | 親カテゴリ |
+| name | text | NOT NULL | 分類名 |
+| level | integer | NOT NULL | 1=大分類, 2=中分類, 3=小分類 |
 
-    exams {
-        string id PK "試験ID"
-        string title "試験名 (例:応用情報試験:午前)"
-        string description "試験の説明"
-        datetime created_at "作成日時"
-    }
+### 3.3. exams
 
-    sections {
-        string id PK "セクションID"
-        string exam_id FK "試験ID"
-        string title "セクション名 (例:#01)"
-        int order "並び順"
-        datetime created_at "作成日時"
-    }
+| カラム | 型 | 制約 | 説明 |
+|:---|:---|:---|:---|
+| id | integer | PK, AUTO | |
+| title | text | NOT NULL | 試験名（例: "応用情報 午前"） |
+| description | text | | 説明文 |
+| slug | text | UNIQUE | URL用スラッグ（例: "ap-gozen"） |
+| question_format | text | DEFAULT "choice_only" | "choice_only" or "mixed" |
 
-    questions {
-        string id PK "問題ID"
-        string section_id FK "セクションID"
-        string year "出題年・時期"
-        string text "問題文本文"
-        string image_url "問題画像URL(任意)"
-        string option1 "選択肢ア"
-        string option2 "選択肢イ"
-        string option3 "選択肢ウ"
-        string option4 "選択肢エ"
-        string answer "正答 (例:ア)"
-        string explanation "解説本文"
-        datetime created_at "作成日時"
-    }
+### 3.4. exam_years
 
-    learning_history {
-        string id PK "履歴ID"
-        string user_id FK "ユーザーID"
-        string exam_id FK "試験ID"
-        string section_id FK "セクションID(任意)"
-        string question_id FK "問題ID"
-        int status "状態 (1=正解, 0=不正解)"
-        datetime answered_at "解答日時"
-    }
+| カラム | 型 | 制約 | 説明 |
+|:---|:---|:---|:---|
+| id | integer | PK, AUTO | |
+| exam_id | integer | FK(exams.id), CASCADE, NOT NULL | |
+| year | integer | NOT NULL | 例: 2024 |
+| season | text | NOT NULL | "spring", "autumn", "jan", "may", "sep" |
+| label | text | NOT NULL | 表示用（例: "令和6年度 秋期"） |
 
-    favorites {
-        string id PK "お気に入りID"
-        string user_id FK "ユーザーID"
-        string question_id FK "問題ID"
-        datetime created_at "登録日時"
-    }
+UNIQUE制約: (exam_id, year, season)
 
-    mock_test_results {
-        string id PK "模擬テスト結果ID"
-        string user_id FK "ユーザーID"
-        string exam_id FK "試験ID"
-        int score "正答数"
-        int total_questions "総出題数"
-        datetime taken_at "実施日時"
-    }
+### 3.5. sections
 
-    mock_test_details {
-        string id PK "詳細ID"
-        string test_result_id FK "模擬テスト結果ID"
-        string question_id FK "問題ID"
-        boolean is_correct "正解したか"
-        string user_answer "ユーザーの解答"
-    }
+| カラム | 型 | 制約 | 説明 |
+|:---|:---|:---|:---|
+| id | integer | PK, AUTO | |
+| exam_id | integer | FK(exams.id), CASCADE | |
+| title | text | NOT NULL | 例: "#1" |
+| description | text | | 例: "令和6年度 秋期 午後 問1 情報セキュリティ" |
+| order | integer | NOT NULL | 表示順 |
+| created_at | integer | NOT NULL, DEFAULT | |
+
+### 3.6. questions
+
+| カラム | 型 | 制約 | 説明 |
+|:---|:---|:---|:---|
+| id | integer | PK, AUTO | |
+| section_id | integer | FK(sections.id), CASCADE, NOT NULL | |
+| question_text | text | NOT NULL | 問題文（Markdown） |
+| question_type | text | NOT NULL, DEFAULT "choice" | choice/true_false/fill_in/select/descriptive |
+| option_a | text | NOT NULL | 選択肢A（記述式: "記述式"） |
+| option_b | text | NOT NULL | 選択肢B |
+| option_c | text | | NULL=2択 |
+| option_d | text | | NULL=2択/3択 |
+| correct_answer | text | NOT NULL | 4択:"A"〜"D", ○×:"○"/"×", 記述:正解テキスト |
+| correct_answer_detail | text | | JSON（複数空欄の詳細正解） |
+| explanation | text | | 解説（Markdown） |
+| order | integer | NOT NULL | |
+| category_id | integer | FK(ipa_categories.id), SET NULL | IPA分類 |
+| exam_year_id | integer | FK(exam_years.id), SET NULL | 出題年度 |
+| question_number | integer | | 問1〜問80等 |
+| image_url | text | | 非推奨（Markdown内で管理） |
+| has_image | integer | NOT NULL, DEFAULT false | 画像参照の有無 |
+| source_note | text | | 出典メモ（例: "R6秋 問12"） |
+| created_at | integer | NOT NULL, DEFAULT | |
+
+### 3.7. section_progress
+
+セクション単位の学習集計（上書き更新）。
+
+| カラム | 型 | 制約 | 説明 |
+|:---|:---|:---|:---|
+| user_id | text | PK, FK(users.id), CASCADE | |
+| section_id | integer | PK, FK(sections.id), CASCADE | |
+| correct_count | integer | NOT NULL, DEFAULT 0 | 正解数 |
+| total_count | integer | NOT NULL, DEFAULT 0 | 解答数 |
+| last_studied_at | integer | NOT NULL, DEFAULT | |
+| updated_at | integer | NOT NULL, DEFAULT | |
+
+### 3.8. section_question_progress
+
+個別問題の正誤記録（上書き更新）。
+
+| カラム | 型 | 制約 | 説明 |
+|:---|:---|:---|:---|
+| user_id | text | PK, FK(users.id), CASCADE | |
+| section_id | integer | PK, FK(sections.id), CASCADE | |
+| question_id | integer | PK, FK(questions.id), CASCADE | |
+| user_answer | text | NOT NULL, DEFAULT "" | ユーザーの回答 |
+| is_correct | integer | NOT NULL | boolean |
+| updated_at | integer | NOT NULL, DEFAULT | |
+
+### 3.9. user_question_records
+
+お気に入り・正誤の永続的な履歴。
+
+| カラム | 型 | 制約 | 説明 |
+|:---|:---|:---|:---|
+| user_id | text | PK, FK(users.id), CASCADE | |
+| question_id | integer | PK, FK(questions.id), CASCADE | |
+| is_correct | integer | | boolean |
+| is_favorite | integer | DEFAULT false | 一般お気に入り |
+| is_favorite_1 | integer | DEFAULT false | レベル1 |
+| is_favorite_2 | integer | DEFAULT false | レベル2 |
+| is_favorite_3 | integer | DEFAULT false | レベル3 |
+| updated_at | integer | NOT NULL, DEFAULT | |
+
+### 3.10. mock_test_history
+
+模擬テスト結果（追記型）。
+
+| カラム | 型 | 制約 | 説明 |
+|:---|:---|:---|:---|
+| id | integer | PK, AUTO | |
+| user_id | text | FK(users.id), CASCADE, NOT NULL | |
+| exam_id | integer | FK(exams.id), SET NULL | |
+| score | integer | NOT NULL | 正解数 |
+| total_questions | integer | NOT NULL, DEFAULT 50 | |
+| taken_at | integer | NOT NULL, DEFAULT | |
+
+### 3.11. mock_test_details
+
+模擬テスト各問の解答記録。
+
+| カラム | 型 | 制約 | 説明 |
+|:---|:---|:---|:---|
+| id | integer | PK, AUTO | |
+| test_id | integer | FK(mock_test_history.id), CASCADE, NOT NULL | |
+| question_id | integer | FK(questions.id), CASCADE, NOT NULL | |
+| user_answer | text | NOT NULL | |
+| is_correct | integer | NOT NULL | boolean |
+| answered_at | integer | NOT NULL, DEFAULT | |
+
+### 3.12. favorite_settings
+
+ユーザーごとのお気に入りフィルター設定。
+
+| カラム | 型 | 制約 | 説明 |
+|:---|:---|:---|:---|
+| user_id | text | PK, FK(users.id), CASCADE | |
+| favorite1_enabled | integer | NOT NULL, DEFAULT true | |
+| favorite2_enabled | integer | NOT NULL, DEFAULT true | |
+| favorite3_enabled | integer | NOT NULL, DEFAULT true | |
+| filter_mode | text | NOT NULL, DEFAULT "or" | "or" or "and" |
+| updated_at | integer | NOT NULL, DEFAULT | |
+
+## 4. インデックス
+
+| インデックス名 | テーブル | カラム |
+|:---|:---|:---|
+| sections_exam_id_idx | sections | exam_id |
+| questions_section_id_idx | questions | section_id |
+| questions_exam_year_id_idx | questions | exam_year_id |
+| mock_test_history_user_id_idx | mock_test_history | user_id |
+| mock_test_details_test_id_idx | mock_test_details | test_id |
+
+## 5. リレーション（テキストER図）
+
+```
+users ──1:N── section_progress
+users ──1:N── section_question_progress
+users ──1:N── user_question_records
+users ──1:N── mock_test_history
+users ──1:1── favorite_settings
+
+exams ──1:N── exam_years
+exams ──1:N── sections
+
+sections ──1:N── questions
+sections ──1:N── section_progress
+sections ──1:N── section_question_progress
+
+questions ──N:1── sections
+questions ──N:1── ipa_categories (optional)
+questions ──N:1── exam_years (optional)
+questions ──1:N── section_question_progress
+questions ──1:N── user_question_records
+questions ──1:N── mock_test_details
+
+mock_test_history ──1:N── mock_test_details
+
+ipa_categories ──1:N── ipa_categories (self-ref: parent_id)
 ```
 
-## 3. テーブル定義詳細
-
-### 3.1. `users` テーブル
-
-ユーザー情報を管理する。認証自体はClerkで行うため、アプリケーション内で必要なメタデータのみ保持する。
-
-| カラム名     | データ型 | 制約         | 論理名・説明                            |
-| :----------- | :------- | :----------- | :-------------------------------------- |
-| `id`         | text     | PK           | Clerk等が発行する一意の識別子           |
-| `email`      | text     | Unique       | ユーザーの連絡先メールアドレス          |
-| `created_at` | integer  | Default(Now) | レコード作成日時 (UNIXタイムスタンプ等) |
-
-### 3.2. `exams` テーブル
-
-大分類である「試験」（例: 応用情報技術者試験 早朝、午後など）を定義する。
-
-| カラム名      | データ型 | 制約         | 論理名・説明       |
-| :------------ | :------- | :----------- | :----------------- |
-| `id`          | text     | PK           | UUIDなどの一意のID |
-| `title`       | text     | Not Null     | 試験タイトル       |
-| `description` | text     |              | 試験の説明文       |
-| `created_at`  | integer  | Default(Now) |                    |
-
-### 3.3. `sections` テーブル
-
-試験ごとの問題セット（例：第1回、あるいは10問ごとの区切りなど）を管理する。
-
-| カラム名     | データ型 | 制約         | 論理名・説明                            |
-| :----------- | :------- | :----------- | :-------------------------------------- |
-| `id`         | text     | PK           | UUID                                    |
-| `exam_id`    | text     | FK(exams.id) | 親となる試験のID                        |
-| `title`      | text     | Not Null     | セクション名 (例: 一問一答セクション#1) |
-| `order`      | integer  | Not Null     | 表示順序                                |
-| `created_at` | integer  | Default(Now) |                                         |
-
-### 3.4. `questions` テーブル
-
-実際の問題データ。4択問題ベースの構造を前提としている。
-
-| カラム名      | データ型 | 制約            | 論理名・説明                                   |
-| :------------ | :------- | :-------------- | :--------------------------------------------- |
-| `id`          | text     | PK              | UUID                                           |
-| `section_id`  | text     | FK(sections.id) | 属するセクションID                             |
-| `year`        | text     |                 | 出題年度・期                                   |
-| `text`        | text     | Not Null        | 問題文（マークダウンまたはプレーンテキスト）   |
-| `image_url`   | text     |                 | 問題文に付随する画像のURL                      |
-| `option1`     | text     | Not Null        | 選択肢1 (ア)                                   |
-| `option2`     | text     | Not Null        | 選択肢2 (イ)                                   |
-| `option3`     | text     | Not Null        | 選択肢3 (ウ)                                   |
-| `option4`     | text     | Not Null        | 選択肢4 (エ)                                   |
-| `answer`      | text     | Not Null        | 正解となる選択肢のキー (例: option1 または ア) |
-| `explanation` | text     |                 | 正解の解説文                                   |
-| `created_at`  | integer  | Default(Now)    |                                                |
-
-### 3.5. `learning_history` テーブル
-
-一問一答（セクション学習）を含む、全般的な個別の解答履歴を管理する。
-
-| カラム名      | データ型 | 制約             | 論理名・説明                                                          |
-| :------------ | :------- | :--------------- | :-------------------------------------------------------------------- |
-| `id`          | text     | PK               | UUID                                                                  |
-| `user_id`     | text     | FK(users.id)     | 解答したユーザー                                                      |
-| `exam_id`     | text     | FK(exams.id)     | 対象試験                                                              |
-| `section_id`  | text     | FK(sections.id)  | 対象セクション (模擬テストなど特定セクションに属さない場合はNull許容) |
-| `question_id` | text     | FK(questions.id) | 解答した問題                                                          |
-| `status`      | integer  | Not Null         | 1=正解, 0=不正解                                                      |
-| `answered_at` | integer  | Default(Now)     | 解答日時                                                              |
-
-### 3.6. `favorites` テーブル
-
-ユーザーが後から復習したい見直し用（ブックマーク）問題を管理する。
-
-| カラム名      | データ型 | 制約             | 論理名・説明             |
-| :------------ | :------- | :--------------- | :----------------------- |
-| `id`          | text     | PK               | UUID                     |
-| `user_id`     | text     | FK(users.id)     | ユーザーID               |
-| `question_id` | text     | FK(questions.id) | お気に入り登録した問題ID |
-| `created_at`  | integer  | Default(Now)     | 登録日時                 |
-
-### 3.7. `mock_test_results` テーブル
-
-本番形式の「模擬テスト」全体のスコア・サマリを管理する。
-
-| カラム名          | データ型 | 制約         | 論理名・説明               |
-| :---------------- | :------- | :----------- | :------------------------- |
-| `id`              | text     | PK           | UUID                       |
-| `user_id`         | text     | FK(users.id) | 受験したユーザー           |
-| `exam_id`         | text     | FK(exams.id) | 全範囲模擬テストの対象試験 |
-| `score`           | integer  | Not Null     | 正解した問題数             |
-| `total_questions` | integer  | Not Null     | 総出題数 (例: 50)          |
-| `taken_at`        | integer  | Default(Now) | 受験日時                   |
-
-### 3.8. `mock_test_details` テーブル
-
-1回の模擬テストで出題された各問題に対する解答詳細を管理する。
-
-| カラム名         | データ型 | 制約                     | 論理名・説明           |
-| :--------------- | :------- | :----------------------- | :--------------------- |
-| `id`             | text     | PK                       | UUID                   |
-| `test_result_id` | text     | FK(mock_test_results.id) | 属する模擬テストID     |
-| `question_id`    | text     | FK(questions.id)         | 出題された問題         |
-| `is_correct`     | boolean  | Not Null                 | 正解/不正解フラグ      |
-| `user_answer`    | text     |                          | ユーザーが選択した解答 |
-
-
-## 4. セクション構成ルール
+## 6. セクション構成ルール
 
 詳細は [docs/import_rules/task.md](../import_rules/task.md) を参照。
 
@@ -213,7 +232,6 @@ erDiagram
 - 応用情報午後は問1〜11が分野固定（情報セキュリティ/経営戦略/プログラミング等）
 
 ### 現在のDB登録状況
-- 15試験区分、6,872問
-- 選択式: FP4種 + 応用情報午前 = 1,760問
-- 記述式: 応用情報午後 + IPA高度9区分 = 5,112問
-
+- 15試験区分、約6,900問
+- 選択式: FP4種 + 応用情報午前
+- 記述式: 応用情報午後 + IPA高度9区分

@@ -10,7 +10,10 @@
 
 ## Props
 
-なし（Client Component。結果データは `sessionStorage` から読み込み）
+| Prop | 型 | 必須 | 説明 |
+|:---|:---|:---|:---|
+| fromSession | boolean | - | true: sessionStorageからデータ取得 |
+| testId | number | - | DB保存済みテスト結果のID |
 
 ## 画面構成
 
@@ -22,10 +25,11 @@
 
 ## データフロー
 
-- `sessionStorage` から `mockTestResult` と `mockTestExamId` を読み取り
+- **fromSession=true**: `sessionStorage` から `mockTestResult` と `mockTestExamId` を読み取り
+- **testId指定**: `GET /api/exams/mock/result/[testId]` からDB取得
 - お気に入り一括登録: `POST /api/questions/bulk-favorite`
 
 ## ルーティング
 
-- **表示パス**: `/mock-test/result`（`src/app/mock-test/result/page.tsx`）
+- **表示パス**: `/mock-test/result`（sessionStorage経由）、`/mock-test/result/[testId]`（DB経由）
 - **遷移先**: `/history`（学習履歴）、`/mock-test?examId={id}`（再挑戦）

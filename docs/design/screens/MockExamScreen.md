@@ -23,7 +23,7 @@
 ### 1. 問題取得中 (`loading`)
 
 - ローディングスピナー表示
-- `GET /api/exams/{examId}/mock-test` で問題取得
+- `GET /api/exams/mock/questions?examId={examId}` で問題取得
 
 ### 2. 出題中 (`ready`)
 
