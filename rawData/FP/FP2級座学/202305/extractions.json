@@ -1,0 +1,41 @@
+[
+  {
+    "question_number": 25,
+    "filename": "問題25.png",
+    "page_number": 10,
+    "box_2d": [
+      448,
+      87,
+      567,
+      419
+    ],
+    "type": "table",
+    "caption": "X社のデータ"
+  },
+  {
+    "question_number": 28,
+    "filename": "問題28.png",
+    "page_number": 12,
+    "box_2d": [
+      205,
+      93,
+      313,
+      879
+    ],
+    "type": "table",
+    "caption": "Aさんのポートフォリオの見直し前後の構成比と期待収益率、標準偏差"
+  },
+  {
+    "question_number": 56,
+    "filename": "問題56.png",
+    "page_number": 22,
+    "box_2d": [
+      195,
+      94,
+      424,
+      907
+    ],
+    "type": "figure",
+    "caption": "親族関係図"
+  }
+]

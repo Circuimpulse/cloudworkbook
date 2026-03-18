@@ -1,0 +1,41 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      384,
+      185,
+      479,
+      516
+    ],
+    "type": "table",
+    "caption": "問題番号と選択方法の表"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 1,
+    "box_2d": [
+      702,
+      192,
+      783,
+      497
+    ],
+    "type": "figure",
+    "caption": "選択した問題の記入例"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 8,
+    "box_2d": [
+      508,
+      227,
+      532,
+      522
+    ],
+    "type": "table",
+    "caption": "退室可能時間の表"
+  }
+]

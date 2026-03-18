@@ -1,0 +1,93 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      614,
+      561,
+      845,
+      781
+    ],
+    "type": "table",
+    "caption": "問題選択欄の例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 5,
+    "box_2d": [
+      213,
+      124,
+      438,
+      829
+    ],
+    "type": "figure",
+    "caption": "参照するデータベースのE-R図"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 5,
+    "box_2d": [
+      488,
+      123,
+      837,
+      889
+    ],
+    "type": "figure",
+    "caption": "修正後の情報選択機能のソースコード"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 6,
+    "box_2d": [
+      219,
+      122,
+      583,
+      889
+    ],
+    "type": "figure",
+    "caption": "修正後の情報表示機能のソースコード"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      163,
+      285,
+      243,
+      717
+    ],
+    "type": "figure",
+    "caption": "A社のネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 10,
+    "box_2d": [
+      518,
+      103,
+      908,
+      891
+    ],
+    "type": "figure",
+    "caption": "脆弱性1及び脆弱性2の概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 11,
+    "box_2d": [
+      427,
+      267,
+      477,
+      732
+    ],
+    "type": "figure",
+    "caption": "パッチM適用後の認証なしアクセスの処理の流れ"
+  }
+]

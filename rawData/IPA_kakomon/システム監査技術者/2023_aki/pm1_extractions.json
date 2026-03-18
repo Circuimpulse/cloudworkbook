@@ -1,0 +1,67 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 4,
+    "box_2d": [
+      109,
+      121,
+      372,
+      878
+    ],
+    "type": "figure",
+    "caption": "リダイレクト型の非通過方式によるカード決済の流れ"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 5,
+    "box_2d": [
+      439,
+      111,
+      702,
+      891
+    ],
+    "type": "table",
+    "caption": "A社ECサイトにおける情報セキュリティ対策の項目、内容及び運用状況(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      408,
+      111,
+      811,
+      891
+    ],
+    "type": "table",
+    "caption": "管理ルール案の概要(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 10,
+    "box_2d": [
+      368,
+      103,
+      745,
+      891
+    ],
+    "type": "table",
+    "caption": "アプリ開発のリスクと管理ルール案の内容(抜粋)"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 12,
+    "box_2d": [
+      450,
+      154,
+      809,
+      878
+    ],
+    "type": "figure",
+    "caption": "人材管理システムの概要"
+  }
+]

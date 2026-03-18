@@ -1,0 +1,236 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      638,
+      597,
+      790,
+      798
+    ],
+    "type": "figure",
+    "caption": "問1,問3を選択した場合の例の選択欄"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      187,
+      269,
+      219,
+      798
+    ],
+    "type": "figure",
+    "caption": "OAuth を用いた認可における三つの主体の説明"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 3,
+    "box_2d": [
+      239,
+      220,
+      477,
+      868
+    ],
+    "type": "figure",
+    "caption": "OAuth を用いた認可のシーケンス"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 3,
+    "box_2d": [
+      582,
+      166,
+      680,
+      725
+    ],
+    "type": "figure",
+    "caption": "Tサービスが提供する権限"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 4,
+    "box_2d": [
+      420,
+      222,
+      706,
+      843
+    ],
+    "type": "figure",
+    "caption": "攻撃のシーケンス"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 7,
+    "box_2d": [
+      261,
+      126,
+      452,
+      874
+    ],
+    "type": "figure",
+    "caption": "A社のネットワーク構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 7,
+    "box_2d": [
+      496,
+      129,
+      746,
+      880
+    ],
+    "type": "table",
+    "caption": "図1中の主な機器とその概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 8,
+    "box_2d": [
+      94,
+      150,
+      345,
+      875
+    ],
+    "type": "table",
+    "caption": "FWのフィルタリングルール"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_3.png",
+    "page_number": 9,
+    "box_2d": [
+      104,
+      276,
+      219,
+      739
+    ],
+    "type": "table",
+    "caption": "変更後のFWのフィルタリングルール"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 10,
+    "box_2d": [
+      472,
+      169,
+      686,
+      732
+    ],
+    "type": "figure",
+    "caption": "DNS-Kの正引きゾーンファイル (抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_4.png",
+    "page_number": 11,
+    "box_2d": [
+      94,
+      237,
+      240,
+      770
+    ],
+    "type": "table",
+    "caption": "ゾーン転送要求に対する許可を必要最小限にするための設定"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_5.png",
+    "page_number": 11,
+    "box_2d": [
+      438,
+      172,
+      532,
+      856
+    ],
+    "type": "table",
+    "caption": "二つ目の案の場合のFWのフィルタリングルール"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 13,
+    "box_2d": [
+      342,
+      127,
+      682,
+      882
+    ],
+    "type": "figure",
+    "caption": "G社のシステム構成 (概要)"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1_p1.png",
+    "page_number": 13,
+    "box_2d": [
+      735,
+      118,
+      920,
+      882
+    ],
+    "type": "table",
+    "caption": "G社の機器及びソフトウェアの概要(抜粋) (FW)"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1_p2.png",
+    "page_number": 14,
+    "box_2d": [
+      94,
+      118,
+      410,
+      882
+    ],
+    "type": "table",
+    "caption": "G社の機器及びソフトウェアの概要(抜粋) (続き)"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 15,
+    "box_2d": [
+      94,
+      118,
+      376,
+      882
+    ],
+    "type": "figure",
+    "caption": "解説記事の要約"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 15,
+    "box_2d": [
+      564,
+      118,
+      638,
+      882
+    ],
+    "type": "figure",
+    "caption": "必要な対策"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_5.png",
+    "page_number": 16,
+    "box_2d": [
+      773,
+      118,
+      884,
+      882
+    ],
+    "type": "figure",
+    "caption": "マルウェアRの記事(抜粋)"
+  }
+]

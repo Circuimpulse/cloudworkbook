@@ -1,0 +1,301 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      664,
+      138,
+      867,
+      860
+    ],
+    "type": "figure",
+    "caption": "納品書 PDF ダウンロードクラスのソースコード"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 4,
+    "box_2d": [
+      92,
+      91,
+      457,
+      907
+    ],
+    "type": "figure",
+    "caption": "納品書 PDF ダウンロードクラスのソースコード(続き)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 4,
+    "box_2d": [
+      500,
+      91,
+      661,
+      907
+    ],
+    "type": "table",
+    "caption": "静的解析の結果"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 4,
+    "box_2d": [
+      784,
+      210,
+      895,
+      795
+    ],
+    "type": "figure",
+    "caption": "納品書 PDF ダウンロードクラスの修正後のソースコード"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 5,
+    "box_2d": [
+      503,
+      95,
+      786,
+      903
+    ],
+    "type": "figure",
+    "caption": "注文情報照会機能が参照するデータベースの E-R 図"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 6,
+    "box_2d": [
+      297,
+      144,
+      632,
+      853
+    ],
+    "type": "figure",
+    "caption": "ビジネスロジッククラスのソースコード"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_6.png",
+    "page_number": 6,
+    "box_2d": [
+      695,
+      144,
+      791,
+      853
+    ],
+    "type": "figure",
+    "caption": "サーブレットクラスのソースコード"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_7.png",
+    "page_number": 7,
+    "box_2d": [
+      170,
+      206,
+      224,
+      792
+    ],
+    "type": "figure",
+    "caption": "ビジネスロジッククラスの修正後のソースコード"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_8.png",
+    "page_number": 7,
+    "box_2d": [
+      308,
+      210,
+      377,
+      788
+    ],
+    "type": "figure",
+    "caption": "サーブレットクラスの修正後のソースコード"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 8,
+    "box_2d": [
+      223,
+      132,
+      472,
+      866
+    ],
+    "type": "figure",
+    "caption": "R 社のネットワーク構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      374,
+      90,
+      705,
+      908
+    ],
+    "type": "table",
+    "caption": "FW のログ"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 10,
+    "box_2d": [
+      366,
+      91,
+      493,
+      907
+    ],
+    "type": "table",
+    "caption": "ps コマンドの実行結果（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_3.png",
+    "page_number": 10,
+    "box_2d": [
+      576,
+      178,
+      722,
+      820
+    ],
+    "type": "table",
+    "caption": "netstat コマンドの実行結果（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 11,
+    "box_2d": [
+      790,
+      130,
+      832,
+      868
+    ],
+    "type": "figure",
+    "caption": "ΔΔΔ.com の DNS サーバから取得されたリソースデータ"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 13,
+    "box_2d": [
+      388,
+      123,
+      597,
+      875
+    ],
+    "type": "figure",
+    "caption": "Q 社のネットワーク構成"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1.png",
+    "page_number": 13,
+    "box_2d": [
+      771,
+      91,
+      889,
+      907
+    ],
+    "type": "table",
+    "caption": "図1中の主な構成要素並びにその機能概要及び設定"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_2.png",
+    "page_number": 14,
+    "box_2d": [
+      122,
+      91,
+      560,
+      907
+    ],
+    "type": "table",
+    "caption": "図1中の主な構成要素並びにその機能概要及び設定（続き）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 14,
+    "box_2d": [
+      711,
+      138,
+      896,
+      860
+    ],
+    "type": "figure",
+    "caption": "SAML 認証の流れ"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_3.png",
+    "page_number": 15,
+    "box_2d": [
+      542,
+      104,
+      731,
+      894
+    ],
+    "type": "table",
+    "caption": "ネットワーク構成の見直しの要件"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_4.png",
+    "page_number": 16,
+    "box_2d": [
+      231,
+      104,
+      648,
+      894
+    ],
+    "type": "table",
+    "caption": "P サービスの主な機能"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 17,
+    "box_2d": [
+      91,
+      123,
+      301,
+      875
+    ],
+    "type": "figure",
+    "caption": "P サービスを導入する場合の Q 社のネットワーク構成"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_5.png",
+    "page_number": 17,
+    "box_2d": [
+      367,
+      179,
+      537,
+      819
+    ],
+    "type": "table",
+    "caption": "ネットワーク構成の見直し案（抜粋）"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_6.png",
+    "page_number": 17,
+    "box_2d": [
+      637,
+      179,
+      729,
+      819
+    ],
+    "type": "table",
+    "caption": "要件5に対する設定"
+  }
+]

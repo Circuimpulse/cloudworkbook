@@ -1,0 +1,41 @@
+[
+  {
+    "question_number": 25,
+    "filename": "問題25.png",
+    "page_number": 11,
+    "box_2d": [
+      205,
+      96,
+      290,
+      442
+    ],
+    "type": "table",
+    "caption": "X社のデータ"
+  },
+  {
+    "question_number": 26,
+    "filename": "問題26.png",
+    "page_number": 11,
+    "box_2d": [
+      648,
+      137,
+      703,
+      582
+    ],
+    "type": "table",
+    "caption": "為替レート(米ドル/円)"
+  },
+  {
+    "question_number": 59,
+    "filename": "問題59.png",
+    "page_number": 23,
+    "box_2d": [
+      191,
+      360,
+      335,
+      638
+    ],
+    "type": "figure",
+    "caption": "資料"
+  }
+]

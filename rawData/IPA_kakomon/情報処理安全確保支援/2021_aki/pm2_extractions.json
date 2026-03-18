@@ -1,0 +1,418 @@
+[
+  {
+    "question_number": 0,
+    "filename": "表1_1.png",
+    "page_number": 1,
+    "box_2d": [
+      365,
+      120,
+      420,
+      340
+    ],
+    "type": "table",
+    "caption": "問題番号と選択方法"
+  },
+  {
+    "question_number": 0,
+    "filename": "図1_1.png",
+    "page_number": 1,
+    "box_2d": [
+      620,
+      580,
+      750,
+      680
+    ],
+    "type": "figure",
+    "caption": "問2を選択した場合の例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図2_1.png",
+    "page_number": 2,
+    "box_2d": [
+      440,
+      130,
+      540,
+      850
+    ],
+    "type": "figure",
+    "caption": "図1 Dシステムに関係する機器の全体構成"
+  },
+  {
+    "question_number": 1,
+    "filename": "図4_1.png",
+    "page_number": 4,
+    "box_2d": [
+      75,
+      80,
+      360,
+      900
+    ],
+    "type": "figure",
+    "caption": "図2 XSS 脆弱性が発見された箇所"
+  },
+  {
+    "question_number": 1,
+    "filename": "図5_1.png",
+    "page_number": 5,
+    "box_2d": [
+      75,
+      110,
+      110,
+      880
+    ],
+    "type": "figure",
+    "caption": "図4 診断用 URL1"
+  },
+  {
+    "question_number": 1,
+    "filename": "図5_2.png",
+    "page_number": 5,
+    "box_2d": [
+      160,
+      110,
+      270,
+      880
+    ],
+    "type": "figure",
+    "caption": "図5 診断用 URL1を入力した時のHTTP レスポンスのボディ部"
+  },
+  {
+    "question_number": 1,
+    "filename": "図5_3.png",
+    "page_number": 5,
+    "box_2d": [
+      310,
+      110,
+      350,
+      880
+    ],
+    "type": "figure",
+    "caption": "図6 診断用 URL2"
+  },
+  {
+    "question_number": 1,
+    "filename": "図5_4.png",
+    "page_number": 5,
+    "box_2d": [
+      400,
+      110,
+      500,
+      880
+    ],
+    "type": "figure",
+    "caption": "図7 診断用 URL2を入力した時のHTTP レスポンスのボディ部"
+  },
+  {
+    "question_number": 1,
+    "filename": "図5_5.png",
+    "page_number": 5,
+    "box_2d": [
+      540,
+      110,
+      580,
+      880
+    ],
+    "type": "figure",
+    "caption": "図8 診断用 URL3"
+  },
+  {
+    "question_number": 1,
+    "filename": "図5_6.png",
+    "page_number": 5,
+    "box_2d": [
+      620,
+      110,
+      730,
+      880
+    ],
+    "type": "figure",
+    "caption": "図9 診断用 URL3 を入力した時の HTTP レスポンスのボディ部"
+  },
+  {
+    "question_number": 1,
+    "filename": "表7_1.png",
+    "page_number": 7,
+    "box_2d": [
+      75,
+      110,
+      315,
+      880
+    ],
+    "type": "table",
+    "caption": "表1 Gサービスの概要"
+  },
+  {
+    "question_number": 1,
+    "filename": "表7_2.png",
+    "page_number": 7,
+    "box_2d": [
+      530,
+      110,
+      790,
+      880
+    ],
+    "type": "table",
+    "caption": "表2 項目1の検討結果"
+  },
+  {
+    "question_number": 1,
+    "filename": "表8_1.png",
+    "page_number": 8,
+    "box_2d": [
+      600,
+      150,
+      740,
+      840
+    ],
+    "type": "table",
+    "caption": "表3 提供しているログ"
+  },
+  {
+    "question_number": 1,
+    "filename": "表9_1.png",
+    "page_number": 9,
+    "box_2d": [
+      100,
+      170,
+      270,
+      820
+    ],
+    "type": "table",
+    "caption": "表4 ログから不正アクセスを検知する方法(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表10_1.png",
+    "page_number": 10,
+    "box_2d": [
+      70,
+      110,
+      260,
+      890
+    ],
+    "type": "table",
+    "caption": "表5 FIDO認証器の仕組み"
+  },
+  {
+    "question_number": 1,
+    "filename": "図10_1.png",
+    "page_number": 10,
+    "box_2d": [
+      310,
+      150,
+      780,
+      850
+    ],
+    "type": "figure",
+    "caption": "図10 利用者認証の流れ"
+  },
+  {
+    "question_number": 1,
+    "filename": "表11_1.png",
+    "page_number": 11,
+    "box_2d": [
+      270,
+      110,
+      430,
+      880
+    ],
+    "type": "table",
+    "caption": "表6 認証器の取扱い"
+  },
+  {
+    "question_number": 1,
+    "filename": "表11_2.png",
+    "page_number": 11,
+    "box_2d": [
+      490,
+      110,
+      760,
+      880
+    ],
+    "type": "table",
+    "caption": "表7 運用上のリスクと対策(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図14_1.png",
+    "page_number": 14,
+    "box_2d": [
+      580,
+      110,
+      730,
+      890
+    ],
+    "type": "figure",
+    "caption": "図1 A社のネットワーク構成(概要)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表15_1.png",
+    "page_number": 15,
+    "box_2d": [
+      60,
+      140,
+      520,
+      880
+    ],
+    "type": "table",
+    "caption": "表1 構成要素の説明(概要)"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      82,
+      107,
+      230,
+      882
+    ],
+    "type": "figure",
+    "caption": "図2 ガイドライン(抜粋)"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 1,
+    "box_2d": [
+      308,
+      77,
+      563,
+      893
+    ],
+    "type": "figure",
+    "caption": "図3 情報連携システムの構成"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 1,
+    "box_2d": [
+      628,
+      93,
+      822,
+      886
+    ],
+    "type": "figure",
+    "caption": "図4 情報連携の手順と連携サーバの運用"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_4.png",
+    "page_number": 2,
+    "box_2d": [
+      415,
+      101,
+      826,
+      887
+    ],
+    "type": "figure",
+    "caption": "図5 テレワークセキュリティ規程(抜粋)"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_5.png",
+    "page_number": 3,
+    "box_2d": [
+      390,
+      114,
+      442,
+      884
+    ],
+    "type": "figure",
+    "caption": "図6 新NWの内容"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_6.png",
+    "page_number": 3,
+    "box_2d": [
+      478,
+      113,
+      706,
+      874
+    ],
+    "type": "figure",
+    "caption": "図7 新NWの構成"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_7.png",
+    "page_number": 4,
+    "box_2d": [
+      395,
+      104,
+      792,
+      885
+    ],
+    "type": "figure",
+    "caption": "図8 初期調査結果(概要)"
+  },
+  {
+    "question_number": 0,
+    "filename": "表0_1.png",
+    "page_number": 5,
+    "box_2d": [
+      194,
+      116,
+      597,
+      887
+    ],
+    "type": "table",
+    "caption": "表2 マルウェアの特徴"
+  },
+  {
+    "question_number": 0,
+    "filename": "表0_2.png",
+    "page_number": 6,
+    "box_2d": [
+      100,
+      319,
+      192,
+      884
+    ],
+    "type": "table",
+    "caption": "表3 優先すべき対策 (抜粋)"
+  },
+  {
+    "question_number": 0,
+    "filename": "表0_3.png",
+    "page_number": 8,
+    "box_2d": [
+      306,
+      126,
+      386,
+      885
+    ],
+    "type": "table",
+    "caption": "表4 感染調査項目"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_8.png",
+    "page_number": 8,
+    "box_2d": [
+      419,
+      119,
+      584,
+      883
+    ],
+    "type": "figure",
+    "caption": "図9 P氏からのレビュー回答"
+  },
+  {
+    "question_number": 0,
+    "filename": "表0_4.png",
+    "page_number": 8,
+    "box_2d": [
+      688,
+      128,
+      804,
+      883
+    ],
+    "type": "table",
+    "caption": "表5 追加感染調査項目"
+  }
+]

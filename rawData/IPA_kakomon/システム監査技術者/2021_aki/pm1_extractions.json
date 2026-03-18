@@ -1,0 +1,80 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      384,
+      185,
+      491,
+      811
+    ],
+    "type": "figure",
+    "caption": "図1 チャットボット開発の流れ"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 5,
+    "box_2d": [
+      293,
+      103,
+      674,
+      893
+    ],
+    "type": "table",
+    "caption": "表1 修正した監査手続書(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 7,
+    "box_2d": [
+      417,
+      117,
+      698,
+      893
+    ],
+    "type": "table",
+    "caption": "表1 再構築方式の概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 8,
+    "box_2d": [
+      618,
+      85,
+      915,
+      897
+    ],
+    "type": "table",
+    "caption": "表2 企画段階でのリスク及びコントロール(抜粋)"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 11,
+    "box_2d": [
+      257,
+      178,
+      541,
+      848
+    ],
+    "type": "figure",
+    "caption": "図1 当プロジェクトの開発体制"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1.png",
+    "page_number": 12,
+    "box_2d": [
+      227,
+      85,
+      474,
+      897
+    ],
+    "type": "table",
+    "caption": "表1 結合テスト完了基準と根拠資料"
+  }
+]

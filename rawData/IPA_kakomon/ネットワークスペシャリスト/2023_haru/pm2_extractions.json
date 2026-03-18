@@ -1,0 +1,158 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      343,
+      125,
+      627,
+      875
+    ],
+    "type": "figure",
+    "caption": "現在のA社のネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 4,
+    "box_2d": [
+      253,
+      125,
+      567,
+      882
+    ],
+    "type": "figure",
+    "caption": "可用性向上後のA社のネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 6,
+    "box_2d": [
+      668,
+      143,
+      830,
+      861
+    ],
+    "type": "figure",
+    "caption": "D社担当者から説明を受けたマルチホーム接続構成（抜粋）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 9,
+    "box_2d": [
+      121,
+      123,
+      293,
+      878
+    ],
+    "type": "figure",
+    "caption": "インターネット接続の切替え期間中の構成（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 12,
+    "box_2d": [
+      303,
+      222,
+      563,
+      714
+    ],
+    "type": "figure",
+    "caption": "ECサイトに関連するシステムの構成（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 12,
+    "box_2d": [
+      606,
+      128,
+      797,
+      868
+    ],
+    "type": "table",
+    "caption": "DNSサーバに設定されているゾーン情報（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 14,
+    "box_2d": [
+      659,
+      188,
+      837,
+      819
+    ],
+    "type": "figure",
+    "caption": "ECサーバの増強構成（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 15,
+    "box_2d": [
+      97,
+      126,
+      177,
+      819
+    ],
+    "type": "table",
+    "caption": "DNSサーバに追加する社内向けドメインのリソースレコード"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 15,
+    "box_2d": [
+      348,
+      169,
+      421,
+      838
+    ],
+    "type": "figure",
+    "caption": "既設ECサーバに振り分けられたときのパケットの転送経路"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_6.png",
+    "page_number": 15,
+    "box_2d": [
+      651,
+      122,
+      868,
+      897
+    ],
+    "type": "table",
+    "caption": "図5中の(i)～(vi)でのIPヘッダーのIPアドレスの内容"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_7.png",
+    "page_number": 19,
+    "box_2d": [
+      233,
+      243,
+      398,
+      710
+    ],
+    "type": "figure",
+    "caption": "会員企業e社のシステム構成（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_8.png",
+    "page_number": 20,
+    "box_2d": [
+      125,
+      142,
+      393,
+      812
+    ],
+    "type": "figure",
+    "caption": "e社内のPCからECサーバにSSOでアクセスするときの通信手順（抜粋）"
+  }
+]

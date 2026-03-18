@@ -1,0 +1,41 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      659,
+      642,
+      809,
+      726
+    ],
+    "type": "figure",
+    "caption": "選択欄の問題番号を〇印で囲む例"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      697,
+      137,
+      882,
+      863
+    ],
+    "type": "table",
+    "caption": "顧客ニーズへの対応"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      719,
+      183,
+      865,
+      815
+    ],
+    "type": "figure",
+    "caption": "旅館管理システムの概要"
+  }
+]

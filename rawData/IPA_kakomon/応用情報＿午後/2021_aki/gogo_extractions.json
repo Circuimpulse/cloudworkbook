@@ -1,0 +1,236 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 4,
+    "box_2d": [
+      419,
+      149,
+      602,
+      852
+    ],
+    "type": "figure",
+    "caption": "A社のオフィスレイアウト"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      303,
+      205,
+      423,
+      472
+    ],
+    "type": "figure",
+    "caption": "強連結な有向グラフの例"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 15,
+    "box_2d": [
+      462,
+      118,
+      591,
+      850
+    ],
+    "type": "figure",
+    "caption": "図1のグラフで点aを出発点とした一筆書きの経路の求め方"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 17,
+    "box_2d": [
+      107,
+      301,
+      208,
+      837
+    ],
+    "type": "figure",
+    "caption": "図1のグラフの場合の配列 edgefirst, edgenext"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 18,
+    "box_2d": [
+      77,
+      118,
+      506,
+      825
+    ],
+    "type": "figure",
+    "caption": "関数 directedE のプログラム"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 23,
+    "box_2d": [
+      105,
+      123,
+      303,
+      887
+    ],
+    "type": "figure",
+    "caption": "クラウドストレージの実現方式（案）"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_2.png",
+    "page_number": 24,
+    "box_2d": [
+      132,
+      137,
+      294,
+      874
+    ],
+    "type": "figure",
+    "caption": "グループごとの移行スケジュール"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_1.png",
+    "page_number": 26,
+    "box_2d": [
+      606,
+      137,
+      744,
+      858
+    ],
+    "type": "figure",
+    "caption": "現在のK社ネットワーク構成"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_2.png",
+    "page_number": 27,
+    "box_2d": [
+      541,
+      137,
+      758,
+      858
+    ],
+    "type": "figure",
+    "caption": "サブネットワーク分割後のK社ネットワーク構成案"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_3.png",
+    "page_number": 29,
+    "box_2d": [
+      704,
+      195,
+      843,
+      837
+    ],
+    "type": "figure",
+    "caption": "現状の部署の配置を前提としたネットワークスイッチのフロア配置"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_1.png",
+    "page_number": 33,
+    "box_2d": [
+      103,
+      121,
+      540,
+      883
+    ],
+    "type": "figure",
+    "caption": "検討したデータベースのE-R図（抜粋）"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_2.png",
+    "page_number": 34,
+    "box_2d": [
+      677,
+      121,
+      864,
+      883
+    ],
+    "type": "figure",
+    "caption": "閲覧可能な重複を含まない書籍の一覧を取得するSQL文"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_1.png",
+    "page_number": 36,
+    "box_2d": [
+      343,
+      201,
+      489,
+      848
+    ],
+    "type": "figure",
+    "caption": "スマート生け簀の概観"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_2.png",
+    "page_number": 36,
+    "box_2d": [
+      552,
+      176,
+      634,
+      845
+    ],
+    "type": "figure",
+    "caption": "スマート生け簀のシステム構成"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_3.png",
+    "page_number": 39,
+    "box_2d": [
+      94,
+      142,
+      581,
+      855
+    ],
+    "type": "figure",
+    "caption": "給餌処理フロー"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_1.png",
+    "page_number": 43,
+    "box_2d": [
+      592,
+      152,
+      756,
+      845
+    ],
+    "type": "figure",
+    "caption": "Y君が設計した概念データモデル（抜粋）"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_2.png",
+    "page_number": 44,
+    "box_2d": [
+      240,
+      119,
+      531,
+      885
+    ],
+    "type": "figure",
+    "caption": "Y君が設計した顧客管理機能の論理テーブルとソフトウェアのクラス図（抜粋）"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_3.png",
+    "page_number": 45,
+    "box_2d": [
+      109,
+      119,
+      417,
+      883
+    ],
+    "type": "figure",
+    "caption": "Y君が設計した商品表示機能の論理テーブルとソフトウェアのクラス図（抜粋）"
+  }
+]

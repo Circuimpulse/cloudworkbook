@@ -1,0 +1,184 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 3,
+    "box_2d": [
+      461,
+      286,
+      617,
+      713
+    ],
+    "type": "figure",
+    "caption": "エンティティタイプとリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 4,
+    "box_2d": [
+      91,
+      518,
+      251,
+      846
+    ],
+    "type": "figure",
+    "caption": "対応関係にゼロを含むか否かを区別して表現する場合の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 4,
+    "box_2d": [
+      500,
+      174,
+      691,
+      824
+    ],
+    "type": "figure",
+    "caption": "スーパータイプとサブタイプの間のリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_4.png",
+    "page_number": 5,
+    "box_2d": [
+      156,
+      383,
+      258,
+      616
+    ],
+    "type": "figure",
+    "caption": "エンティティタイプの属性の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_5.png",
+    "page_number": 5,
+    "box_2d": [
+      374,
+      293,
+      396,
+      706
+    ],
+    "type": "figure",
+    "caption": "関係スキーマの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_6.png",
+    "page_number": 5,
+    "box_2d": [
+      701,
+      311,
+      724,
+      688
+    ],
+    "type": "figure",
+    "caption": "関係データベースのテーブル（表）構造の表記ルール"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 8,
+    "box_2d": [
+      210,
+      122,
+      873,
+      857
+    ],
+    "type": "figure",
+    "caption": "在庫管理業務の概念データモデル"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 10,
+    "box_2d": [
+      240,
+      110,
+      450,
+      830
+    ],
+    "type": "figure",
+    "caption": "Zチャートの例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 11,
+    "box_2d": [
+      183,
+      172,
+      565,
+      859
+    ],
+    "type": "figure",
+    "caption": "依頼2の問合せを実装したSQL文（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 11,
+    "box_2d": [
+      620,
+      138,
+      811,
+      891
+    ],
+    "type": "figure",
+    "caption": "ヒートマップの例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 14,
+    "box_2d": [
+      624,
+      116,
+      711,
+      882
+    ],
+    "type": "figure",
+    "caption": "計数を格納するテーブルのテーブル構造"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 26,
+    "box_2d": [
+      106,
+      138,
+      538,
+      859
+    ],
+    "type": "figure",
+    "caption": "マスター及び在庫の領域の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 26,
+    "box_2d": [
+      606,
+      181,
+      834,
+      815
+    ],
+    "type": "figure",
+    "caption": "トランザクションの領域の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 27,
+    "box_2d": [
+      106,
+      132,
+      780,
+      867
+    ],
+    "type": "figure",
+    "caption": "関係スキーマ（未完成）"
+  }
+]

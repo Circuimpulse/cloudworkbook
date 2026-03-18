@@ -1,0 +1,574 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      464,
+      702,
+      855,
+      843
+    ],
+    "type": "figure",
+    "caption": "選択欄の例"
+  },
+  {
+    "question_number": 0,
+    "filename": "表0_1.png",
+    "page_number": 2,
+    "box_2d": [
+      79,
+      322,
+      226,
+      856
+    ],
+    "type": "table",
+    "caption": "令和6年4月21日実施 正誤表"
+  },
+  {
+    "question_number": 0,
+    "filename": "表0_2.png",
+    "page_number": 5,
+    "box_2d": [
+      233,
+      126,
+      896,
+      893
+    ],
+    "type": "table",
+    "caption": "擬似言語の記述形式"
+  },
+  {
+    "question_number": 0,
+    "filename": "表0_3.png",
+    "page_number": 6,
+    "box_2d": [
+      106,
+      172,
+      354,
+      692
+    ],
+    "type": "table",
+    "caption": "演算子と優先順位"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 7,
+    "box_2d": [
+      318,
+      115,
+      522,
+      883
+    ],
+    "type": "figure",
+    "caption": "Q社のネットワーク構成(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 9,
+    "box_2d": [
+      557,
+      169,
+      715,
+      710
+    ],
+    "type": "figure",
+    "caption": "リモート環境構築案(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 10,
+    "box_2d": [
+      162,
+      175,
+      321,
+      898
+    ],
+    "type": "table",
+    "caption": "R課長が懸念したセキュリティインシデント (抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 13,
+    "box_2d": [
+      577,
+      135,
+      892,
+      889
+    ],
+    "type": "table",
+    "caption": "B社のPEST 分析の結果"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 14,
+    "box_2d": [
+      188,
+      138,
+      453,
+      890
+    ],
+    "type": "table",
+    "caption": "B社のファイブフォース分析の結果"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 19,
+    "box_2d": [
+      761,
+      334,
+      888,
+      664
+    ],
+    "type": "figure",
+    "caption": "ノードが五つのグラフの例"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1.png",
+    "page_number": 20,
+    "box_2d": [
+      726,
+      126,
+      885,
+      897
+    ],
+    "type": "table",
+    "caption": "図1の例における最短距離を求める手順と始点ノード距離"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 21,
+    "box_2d": [
+      99,
+      109,
+      715,
+      900
+    ],
+    "type": "figure",
+    "caption": "関数 distance のプログラム"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 22,
+    "box_2d": [
+      325,
+      112,
+      382,
+      748
+    ],
+    "type": "figure",
+    "caption": "最短経路を出力するために関数 distance に挿入する変数宣言"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 22,
+    "box_2d": [
+      419,
+      119,
+      497,
+      804
+    ],
+    "type": "figure",
+    "caption": "最短経路を出力するために関数 distance に挿入するプログラム"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 25,
+    "box_2d": [
+      731,
+      140,
+      909,
+      882
+    ],
+    "type": "figure",
+    "caption": "Web アプリを実装するシステムの構成案"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_2.png",
+    "page_number": 26,
+    "box_2d": [
+      609,
+      153,
+      844,
+      533
+    ],
+    "type": "figure",
+    "caption": "日誌一覧の表示画面"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_3.png",
+    "page_number": 26,
+    "box_2d": [
+      610,
+      573,
+      840,
+      900
+    ],
+    "type": "figure",
+    "caption": "Web API からの応答データ"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_1.png",
+    "page_number": 27,
+    "box_2d": [
+      159,
+      138,
+      443,
+      894
+    ],
+    "type": "table",
+    "caption": "処理ごとに所要時間を測定した結果"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_2.png",
+    "page_number": 28,
+    "box_2d": [
+      146,
+      149,
+      354,
+      841
+    ],
+    "type": "table",
+    "caption": "整理した結果"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_1.png",
+    "page_number": 31,
+    "box_2d": [
+      462,
+      158,
+      618,
+      888
+    ],
+    "type": "figure",
+    "caption": "新システムの構成案"
+  },
+  {
+    "question_number": 5,
+    "filename": "表5_1.png",
+    "page_number": 31,
+    "box_2d": [
+      667,
+      125,
+      830,
+      895
+    ],
+    "type": "table",
+    "caption": "新システムが備えるべき主な機能"
+  },
+  {
+    "question_number": 5,
+    "filename": "表5_2.png",
+    "page_number": 33,
+    "box_2d": [
+      143,
+      155,
+      402,
+      890
+    ],
+    "type": "table",
+    "caption": "FWの許可ルール"
+  },
+  {
+    "question_number": 6,
+    "filename": "表6_1.png",
+    "page_number": 35,
+    "box_2d": [
+      424,
+      124,
+      747,
+      889
+    ],
+    "type": "table",
+    "caption": "人事評価システムの機能概要"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_1.png",
+    "page_number": 36,
+    "box_2d": [
+      87,
+      145,
+      536,
+      886
+    ],
+    "type": "figure",
+    "caption": "E-R図"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_2.png",
+    "page_number": 36,
+    "box_2d": [
+      689,
+      114,
+      908,
+      887
+    ],
+    "type": "figure",
+    "caption": "国民の祝日と会社記念日の一覧を日付の昇順に出力する SQL 文"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_3.png",
+    "page_number": 37,
+    "box_2d": [
+      204,
+      116,
+      386,
+      887
+    ],
+    "type": "figure",
+    "caption": "従業員の一覧を部署番号、従業員番号の昇順に出力する SQL 文"
+  },
+  {
+    "question_number": 6,
+    "filename": "表6_2.png",
+    "page_number": 38,
+    "box_2d": [
+      66,
+      267,
+      173,
+      867
+    ],
+    "type": "table",
+    "caption": "スキーマを整理した結果"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_4.png",
+    "page_number": 38,
+    "box_2d": [
+      282,
+      116,
+      351,
+      650
+    ],
+    "type": "figure",
+    "caption": "国民の祝日ビューを作成する SQL 文"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_1.png",
+    "page_number": 41,
+    "box_2d": [
+      255,
+      125,
+      509,
+      498
+    ],
+    "type": "figure",
+    "caption": "コーヒーマシンの外観"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_2.png",
+    "page_number": 41,
+    "box_2d": [
+      267,
+      561,
+      468,
+      886
+    ],
+    "type": "figure",
+    "caption": "コーヒーマシンの内部構成"
+  },
+  {
+    "question_number": 7,
+    "filename": "表7_1.png",
+    "page_number": 41,
+    "box_2d": [
+      538,
+      115,
+      805,
+      889
+    ],
+    "type": "table",
+    "caption": "コーヒーマシンの主な構成要素"
+  },
+  {
+    "question_number": 7,
+    "filename": "表7_2.png",
+    "page_number": 42,
+    "box_2d": [
+      96,
+      115,
+      247,
+      889
+    ],
+    "type": "table",
+    "caption": "カップ判定の結果一覧"
+  },
+  {
+    "question_number": 7,
+    "filename": "表7_3.png",
+    "page_number": 43,
+    "box_2d": [
+      292,
+      105,
+      609,
+      894
+    ],
+    "type": "table",
+    "caption": "制御部の主なタスクの処理概要"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_3.png",
+    "page_number": 44,
+    "box_2d": [
+      282,
+      110,
+      440,
+      887
+    ],
+    "type": "figure",
+    "caption": "開閉センサーの出力と、ドアタスクの動作タイミングの例"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_4.png",
+    "page_number": 44,
+    "box_2d": [
+      531,
+      235,
+      765,
+      849
+    ],
+    "type": "figure",
+    "caption": "メインタスクの状態遷移"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_1.png",
+    "page_number": 45,
+    "box_2d": [
+      404,
+      113,
+      575,
+      890
+    ],
+    "type": "figure",
+    "caption": "データモデル(抜粋)"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_2.png",
+    "page_number": 45,
+    "box_2d": [
+      635,
+      116,
+      805,
+      889
+    ],
+    "type": "figure",
+    "caption": "ダッシュボードのイメージ(一部)"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_3.png",
+    "page_number": 46,
+    "box_2d": [
+      139,
+      105,
+      793,
+      894
+    ],
+    "type": "figure",
+    "caption": "クラス図"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_1.png",
+    "page_number": 47,
+    "box_2d": [
+      65,
+      125,
+      291,
+      892
+    ],
+    "type": "table",
+    "caption": "表示できるグラフの種類"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_2.png",
+    "page_number": 47,
+    "box_2d": [
+      327,
+      125,
+      609,
+      892
+    ],
+    "type": "table",
+    "caption": "主なクラスの説明"
+  },
+  {
+    "question_number": 9,
+    "filename": "図9_1.png",
+    "page_number": 52,
+    "box_2d": [
+      555,
+      113,
+      716,
+      890
+    ],
+    "type": "figure",
+    "caption": "本サービスを導入したシステムの全体の概要"
+  },
+  {
+    "question_number": 10,
+    "filename": "表10_1.png",
+    "page_number": 59,
+    "box_2d": [
+      617,
+      140,
+      798,
+      890
+    ],
+    "type": "table",
+    "caption": "統合管理ツールの機能と概要"
+  },
+  {
+    "question_number": 11,
+    "filename": "図11_1.png",
+    "page_number": 63,
+    "box_2d": [
+      341,
+      158,
+      501,
+      894
+    ],
+    "type": "figure",
+    "caption": "支払管理システム及び関連システムの概要"
+  },
+  {
+    "question_number": 11,
+    "filename": "表11_1.png",
+    "page_number": 65,
+    "box_2d": [
+      535,
+      135,
+      805,
+      889
+    ],
+    "type": "table",
+    "caption": "監査手続案(抜粋)"
+  }
+]

@@ -1,0 +1,379 @@
+[
+  {
+    "question_number": 3,
+    "filename": "問題3.png",
+    "page_number": 3,
+    "box_2d": [
+      257,
+      96,
+      658,
+      898
+    ],
+    "type": "table",
+    "caption": "外貨定期預金の契約締結前交付書面の一部"
+  },
+  {
+    "question_number": 7,
+    "filename": "問題7.png",
+    "page_number": 6,
+    "box_2d": [
+      251,
+      91,
+      588,
+      907
+    ],
+    "type": "figure",
+    "caption": "土地の区画図と建築条件"
+  },
+  {
+    "question_number": 10,
+    "filename": "問題10.png",
+    "page_number": 8,
+    "box_2d": [
+      194,
+      102,
+      353,
+      899
+    ],
+    "type": "table",
+    "caption": "中古マンションのインターネット広告抜粋"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12_1.png",
+    "page_number": 10,
+    "box_2d": [
+      199,
+      44,
+      810,
+      898
+    ],
+    "type": "table",
+    "caption": "生命保険提案書（主契約および5疾病就業不能特約）"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12_2.png",
+    "page_number": 11,
+    "box_2d": [
+      79,
+      116,
+      334,
+      898
+    ],
+    "type": "table",
+    "caption": "生命保険提案書（がん診断特約、通院特約、先進医療特約）"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15.png",
+    "page_number": 14,
+    "box_2d": [
+      269,
+      90,
+      419,
+      899
+    ],
+    "type": "table",
+    "caption": "志田さんの2022年分の所得等データ"
+  },
+  {
+    "question_number": 18,
+    "filename": "問題18_1.png",
+    "page_number": 16,
+    "box_2d": [
+      477,
+      106,
+      689,
+      888
+    ],
+    "type": "table",
+    "caption": "贈与税の速算表（特例贈与財産、特例税率）"
+  },
+  {
+    "question_number": 18,
+    "filename": "問題18_2.png",
+    "page_number": 16,
+    "box_2d": [
+      704,
+      106,
+      894,
+      888
+    ],
+    "type": "table",
+    "caption": "贈与税の速算表（一般贈与財産、一般税率）"
+  },
+  {
+    "question_number": 19,
+    "filename": "問題19.png",
+    "page_number": 17,
+    "box_2d": [
+      179,
+      106,
+      381,
+      897
+    ],
+    "type": "figure",
+    "caption": "親族関係図"
+  },
+  {
+    "question_number": 20,
+    "filename": "問題20.png",
+    "page_number": 18,
+    "box_2d": [
+      189,
+      237,
+      513,
+      895
+    ],
+    "type": "figure",
+    "caption": "土地の区画図（路線価方式）"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_1.png",
+    "page_number": 20,
+    "box_2d": [
+      256,
+      91,
+      715,
+      899
+    ],
+    "type": "table",
+    "caption": "谷口家のキャッシュフロー表"
+  },
+  {
+    "question_number": 25,
+    "filename": "問題25.png",
+    "page_number": 22,
+    "box_2d": [
+      141,
+      106,
+      520,
+      898
+    ],
+    "type": "table",
+    "caption": "係数早見表（年利1.0%）"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29.png",
+    "page_number": 24,
+    "box_2d": [
+      336,
+      119,
+      560,
+      898
+    ],
+    "type": "figure",
+    "caption": "所得税の基本的な仕組み（イメージ図）"
+  },
+  {
+    "question_number": 30,
+    "filename": "問題30_1.png",
+    "page_number": 25,
+    "box_2d": [
+      221,
+      99,
+      439,
+      477
+    ],
+    "type": "figure",
+    "caption": "解約返戻金相当額推移のイメージ図1"
+  },
+  {
+    "question_number": 30,
+    "filename": "問題30_2.png",
+    "page_number": 25,
+    "box_2d": [
+      221,
+      513,
+      440,
+      896
+    ],
+    "type": "figure",
+    "caption": "解約返戻金相当額推移のイメージ図2"
+  },
+  {
+    "question_number": 30,
+    "filename": "問題30_3.png",
+    "page_number": 25,
+    "box_2d": [
+      463,
+      101,
+      680,
+      480
+    ],
+    "type": "figure",
+    "caption": "解約返戻金相当額推移のイメージ図3"
+  },
+  {
+    "question_number": 30,
+    "filename": "問題30_4.png",
+    "page_number": 25,
+    "box_2d": [
+      463,
+      515,
+      680,
+      896
+    ],
+    "type": "figure",
+    "caption": "解約返戻金相当額推移のイメージ図4"
+  },
+  {
+    "question_number": 31,
+    "filename": "問題31.png",
+    "page_number": 26,
+    "box_2d": [
+      195,
+      96,
+      478,
+      901
+    ],
+    "type": "figure",
+    "caption": "年金受取総額の推移イメージ図"
+  },
+  {
+    "question_number": 32,
+    "filename": "問題32.png",
+    "page_number": 27,
+    "box_2d": [
+      269,
+      102,
+      563,
+      898
+    ],
+    "type": "figure",
+    "caption": "公的年金の遺族給付イメージ図"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_1.png",
+    "page_number": 30,
+    "box_2d": [
+      346,
+      281,
+      511,
+      866
+    ],
+    "type": "figure",
+    "caption": "西山家の親族関係図"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_2.png",
+    "page_number": 30,
+    "box_2d": [
+      590,
+      102,
+      762,
+      888
+    ],
+    "type": "table",
+    "caption": "西山さんの保有資産（時価）"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_3.png",
+    "page_number": 31,
+    "box_2d": [
+      195,
+      109,
+      286,
+      889
+    ],
+    "type": "table",
+    "caption": "生命保険契約データ"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_4.png",
+    "page_number": 31,
+    "box_2d": [
+      578,
+      101,
+      794,
+      898
+    ],
+    "type": "table",
+    "caption": "西山裕子さんのバランスシート"
+  },
+  {
+    "question_number": 36,
+    "filename": "問題36_1.png",
+    "page_number": 32,
+    "box_2d": [
+      231,
+      91,
+      532,
+      898
+    ],
+    "type": "table",
+    "caption": "令和4年分給与所得の源泉徴収票（一部省略）"
+  },
+  {
+    "question_number": 36,
+    "filename": "問題36_2.png",
+    "page_number": 32,
+    "box_2d": [
+      612,
+      107,
+      781,
+      887
+    ],
+    "type": "table",
+    "caption": "所得税の速算表"
+  },
+  {
+    "question_number": 37,
+    "filename": "問題37_1.png",
+    "page_number": 33,
+    "box_2d": [
+      326,
+      107,
+      495,
+      887
+    ],
+    "type": "table",
+    "caption": "所得税の速算表"
+  },
+  {
+    "question_number": 38,
+    "filename": "問題38.png",
+    "page_number": 34,
+    "box_2d": [
+      221,
+      91,
+      680,
+      898
+    ],
+    "type": "table",
+    "caption": "特定口座年間取引報告書（一部）"
+  },
+  {
+    "question_number": 40,
+    "filename": "問題40_1.png",
+    "page_number": 36,
+    "box_2d": [
+      300,
+      102,
+      428,
+      898
+    ],
+    "type": "figure",
+    "caption": "2023年3月分の高額療養費の算定イメージ"
+  },
+  {
+    "question_number": 40,
+    "filename": "問題40_2.png",
+    "page_number": 36,
+    "box_2d": [
+      463,
+      107,
+      612,
+      888
+    ],
+    "type": "table",
+    "caption": "医療費の1ヵ月当たりの自己負担限度額（70歳未満の人）"
+  }
+]

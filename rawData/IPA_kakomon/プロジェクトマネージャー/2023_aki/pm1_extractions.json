@@ -1,0 +1,119 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      378,
+      358,
+      444,
+      650
+    ],
+    "type": "table",
+    "caption": "問題選択表"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 1,
+    "box_2d": [
+      652,
+      656,
+      788,
+      746
+    ],
+    "type": "figure",
+    "caption": "選択欄の解答例"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 16,
+    "box_2d": [
+      151,
+      189,
+      174,
+      424
+    ],
+    "type": "table",
+    "caption": "退室可能時間"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 10,
+    "box_2d": [
+      259,
+      657,
+      286,
+      776
+    ],
+    "type": "figure",
+    "caption": "空欄a（ループ図）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 10,
+    "box_2d": [
+      339,
+      212,
+      363,
+      276
+    ],
+    "type": "figure",
+    "caption": "空欄b（能力項目）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 10,
+    "box_2d": [
+      339,
+      634,
+      698,
+      698
+    ],
+    "type": "figure",
+    "caption": "空欄b（能力項目・重複）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 10,
+    "box_2d": [
+      433,
+      189,
+      455,
+      253
+    ],
+    "type": "figure",
+    "caption": "空欄c（契約類型）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 10,
+    "box_2d": [
+      652,
+      551,
+      675,
+      615
+    ],
+    "type": "figure",
+    "caption": "空欄d（インセンティブ）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_6.png",
+    "page_number": 11,
+    "box_2d": [
+      353,
+      424,
+      375,
+      551
+    ],
+    "type": "figure",
+    "caption": "設問4(3) 穴埋め範囲"
+  }
+]

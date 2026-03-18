@@ -1,0 +1,80 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      378,
+      284,
+      435,
+      520
+    ],
+    "type": "table",
+    "caption": "問題番号と選択方法の対応表"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 1,
+    "box_2d": [
+      641,
+      586,
+      778,
+      705
+    ],
+    "type": "figure",
+    "caption": "選択欄のマーク例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      670,
+      149,
+      800,
+      883
+    ],
+    "type": "table",
+    "caption": "DX検討システムの構成要素"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 7,
+    "box_2d": [
+      738,
+      118,
+      873,
+      901
+    ],
+    "type": "figure",
+    "caption": "プロジェクトのスケジュール"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      184,
+      118,
+      401,
+      901
+    ],
+    "type": "table",
+    "caption": "標準機能及び効果"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 15,
+    "box_2d": [
+      643,
+      122,
+      897,
+      875
+    ],
+    "type": "table",
+    "caption": "B社のビジネス向けチャットツールの運用ルール"
+  }
+]

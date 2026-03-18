@@ -1,0 +1,197 @@
+[
+  {
+    "question_number": 4,
+    "filename": "問題4.png",
+    "page_number": 5,
+    "box_2d": [
+      195,
+      410,
+      344,
+      611
+    ],
+    "type": "figure",
+    "caption": "16ビットのデータを4x4の正方形状に並べたパリティビットの図"
+  },
+  {
+    "question_number": 5,
+    "filename": "問題5.png",
+    "page_number": 6,
+    "box_2d": [
+      396,
+      160,
+      632,
+      497
+    ],
+    "type": "figure",
+    "caption": "双方向リストの配列表現とHead/Tail変数"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17_1.png",
+    "page_number": 11,
+    "box_2d": [
+      628,
+      172,
+      740,
+      490
+    ],
+    "type": "table",
+    "caption": "選択肢ア・ウのタスク実行時間と周期の表"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17_2.png",
+    "page_number": 11,
+    "box_2d": [
+      628,
+      542,
+      740,
+      860
+    ],
+    "type": "table",
+    "caption": "選択肢イ・エのタスク実行時間と周期の表"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22.png",
+    "page_number": 13,
+    "box_2d": [
+      452,
+      410,
+      557,
+      656
+    ],
+    "type": "figure",
+    "caption": "フリップフロップのような論理回路図"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_1.png",
+    "page_number": 14,
+    "box_2d": [
+      151,
+      374,
+      364,
+      611
+    ],
+    "type": "table",
+    "caption": "3入力多数決回路の真理値表"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_2.png",
+    "page_number": 14,
+    "box_2d": [
+      396,
+      141,
+      653,
+      889
+    ],
+    "type": "figure",
+    "caption": "選択肢ア〜エの論理回路図一覧"
+  },
+  {
+    "question_number": 30,
+    "filename": "問題30_1.png",
+    "page_number": 18,
+    "box_2d": [
+      203,
+      188,
+      304,
+      808
+    ],
+    "type": "table",
+    "caption": "トランザクションのRead/Write回数表"
+  },
+  {
+    "question_number": 30,
+    "filename": "問題30_2.png",
+    "page_number": 18,
+    "box_2d": [
+      331,
+      244,
+      528,
+      719
+    ],
+    "type": "figure",
+    "caption": "チェックポイントと障害発生のタイムチャート"
+  },
+  {
+    "question_number": 32,
+    "filename": "問題32.png",
+    "page_number": 19,
+    "box_2d": [
+      272,
+      143,
+      409,
+      890
+    ],
+    "type": "table",
+    "caption": "NAPT機能におけるヘッダー情報の書き換えフィールド表"
+  },
+  {
+    "question_number": 38,
+    "filename": "問題38.png",
+    "page_number": 21,
+    "box_2d": [
+      538,
+      160,
+      732,
+      890
+    ],
+    "type": "table",
+    "caption": "メール送信ログの選択肢表"
+  },
+  {
+    "question_number": 39,
+    "filename": "問題39.png",
+    "page_number": 22,
+    "box_2d": [
+      240,
+      121,
+      466,
+      890
+    ],
+    "type": "table",
+    "caption": "CSIRTの機能とサービス対象の組合せ表"
+  },
+  {
+    "question_number": 53,
+    "filename": "問題53_1.png",
+    "page_number": 28,
+    "box_2d": [
+      203,
+      190,
+      344,
+      933
+    ],
+    "type": "figure",
+    "caption": "図1 当初の計画（アローダイアグラム）"
+  },
+  {
+    "question_number": 53,
+    "filename": "問題53_2.png",
+    "page_number": 28,
+    "box_2d": [
+      362,
+      190,
+      535,
+      933
+    ],
+    "type": "figure",
+    "caption": "図2 変更後の計画（アローダイアグラム）"
+  },
+  {
+    "question_number": 80,
+    "filename": "問題80.png",
+    "page_number": 39,
+    "box_2d": [
+      178,
+      356,
+      284,
+      657
+    ],
+    "type": "figure",
+    "caption": "企業と労働者の関係を表す図"
+  }
+]

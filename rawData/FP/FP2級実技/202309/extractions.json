@@ -1,0 +1,626 @@
+[
+  {
+    "question_number": 3,
+    "filename": "問題3.png",
+    "page_number": 3,
+    "box_2d": [
+      205,
+      93,
+      467,
+      888
+    ],
+    "type": "figure",
+    "caption": "証券口座の概要"
+  },
+  {
+    "question_number": 4,
+    "filename": "問題4_1.png",
+    "page_number": 4,
+    "box_2d": [
+      189,
+      93,
+      342,
+      908
+    ],
+    "type": "table",
+    "caption": "個人向け国債に関する表"
+  },
+  {
+    "question_number": 4,
+    "filename": "問題4_2.png",
+    "page_number": 4,
+    "box_2d": [
+      392,
+      93,
+      477,
+      908
+    ],
+    "type": "table",
+    "caption": "語群"
+  },
+  {
+    "question_number": 5,
+    "filename": "問題5.png",
+    "page_number": 4,
+    "box_2d": [
+      628,
+      93,
+      755,
+      908
+    ],
+    "type": "table",
+    "caption": "HG投資信託の収益分配金受取時の状況"
+  },
+  {
+    "question_number": 6,
+    "filename": "問題6.png",
+    "page_number": 5,
+    "box_2d": [
+      202,
+      95,
+      459,
+      908
+    ],
+    "type": "table",
+    "caption": "HT社 iDeCoの運用商品ラインアップ"
+  },
+  {
+    "question_number": 7,
+    "filename": "問題7.png",
+    "page_number": 6,
+    "box_2d": [
+      253,
+      93,
+      532,
+      907
+    ],
+    "type": "figure",
+    "caption": "建築基準法に関する土地資料"
+  },
+  {
+    "question_number": 8,
+    "filename": "問題8_1.png",
+    "page_number": 7,
+    "box_2d": [
+      195,
+      93,
+      429,
+      908
+    ],
+    "type": "table",
+    "caption": "登記事項証明書の一部"
+  },
+  {
+    "question_number": 9,
+    "filename": "問題9.png",
+    "page_number": 7,
+    "box_2d": [
+      804,
+      93,
+      915,
+      908
+    ],
+    "type": "table",
+    "caption": "語群"
+  },
+  {
+    "question_number": 10,
+    "filename": "問題10.png",
+    "page_number": 8,
+    "box_2d": [
+      211,
+      95,
+      344,
+      907
+    ],
+    "type": "table",
+    "caption": "居住用財産譲渡の資料"
+  },
+  {
+    "question_number": 11,
+    "filename": "問題11.png",
+    "page_number": 9,
+    "box_2d": [
+      260,
+      93,
+      332,
+      461
+    ],
+    "type": "table",
+    "caption": "細川さんが契約している生命保険"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12_1.png",
+    "page_number": 10,
+    "box_2d": [
+      221,
+      108,
+      597,
+      888
+    ],
+    "type": "table",
+    "caption": "生命保険提案書（概要とご提案内容）"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12_2.png",
+    "page_number": 11,
+    "box_2d": [
+      55,
+      108,
+      281,
+      888
+    ],
+    "type": "table",
+    "caption": "生命保険提案書（入院総合保険）"
+  },
+  {
+    "question_number": 13,
+    "filename": "問題13.png",
+    "page_number": 12,
+    "box_2d": [
+      195,
+      93,
+      298,
+      538
+    ],
+    "type": "table",
+    "caption": "養老保険のハーフタックスプラン資料"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14.png",
+    "page_number": 13,
+    "box_2d": [
+      202,
+      93,
+      535,
+      908
+    ],
+    "type": "table",
+    "caption": "自動車保険の契約更新案内"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15.png",
+    "page_number": 14,
+    "box_2d": [
+      283,
+      93,
+      401,
+      908
+    ],
+    "type": "table",
+    "caption": "医療費等に関する資料"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16.png",
+    "page_number": 14,
+    "box_2d": [
+      767,
+      93,
+      891,
+      908
+    ],
+    "type": "table",
+    "caption": "所得等に関する資料"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17_1.png",
+    "page_number": 15,
+    "box_2d": [
+      194,
+      93,
+      269,
+      442
+    ],
+    "type": "table",
+    "caption": "収入等に関する資料"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17_2.png",
+    "page_number": 15,
+    "box_2d": [
+      428,
+      93,
+      698,
+      908
+    ],
+    "type": "table",
+    "caption": "公的年金等控除額の速算表"
+  },
+  {
+    "question_number": 18,
+    "filename": "問題18.png",
+    "page_number": 16,
+    "box_2d": [
+      231,
+      93,
+      310,
+      381
+    ],
+    "type": "table",
+    "caption": "養老保険の資料"
+  },
+  {
+    "question_number": 19,
+    "filename": "問題19_1.png",
+    "page_number": 17,
+    "box_2d": [
+      205,
+      93,
+      335,
+      617
+    ],
+    "type": "table",
+    "caption": "相続税評価額の資料"
+  },
+  {
+    "question_number": 19,
+    "filename": "問題19_2.png",
+    "page_number": 17,
+    "box_2d": [
+      374,
+      126,
+      497,
+      439
+    ],
+    "type": "figure",
+    "caption": "親族関係図"
+  },
+  {
+    "question_number": 20,
+    "filename": "問題20_1.png",
+    "page_number": 18,
+    "box_2d": [
+      179,
+      107,
+      502,
+      909
+    ],
+    "type": "figure",
+    "caption": "親族関係図"
+  },
+  {
+    "question_number": 20,
+    "filename": "問題20_2.png",
+    "page_number": 18,
+    "box_2d": [
+      653,
+      93,
+      742,
+      908
+    ],
+    "type": "table",
+    "caption": "語群"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_1.png",
+    "page_number": 20,
+    "box_2d": [
+      135,
+      93,
+      222,
+      775
+    ],
+    "type": "table",
+    "caption": "福岡家の家族データ"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_2.png",
+    "page_number": 20,
+    "box_2d": [
+      261,
+      93,
+      735,
+      908
+    ],
+    "type": "table",
+    "caption": "福岡家のキャッシュフロー表"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_3.png",
+    "page_number": 21,
+    "box_2d": [
+      176,
+      93,
+      215,
+      608
+    ],
+    "type": "table",
+    "caption": "2022年分の洋司さんの給与収入"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_4.png",
+    "page_number": 21,
+    "box_2d": [
+      248,
+      93,
+      318,
+      908
+    ],
+    "type": "table",
+    "caption": "2022年に洋司さんの給与から天引きされた支出の年間合計金額"
+  },
+  {
+    "question_number": 25,
+    "filename": "問題25.png",
+    "page_number": 22,
+    "box_2d": [
+      141,
+      93,
+      532,
+      908
+    ],
+    "type": "table",
+    "caption": "係数早見表(年利1.0%)"
+  },
+  {
+    "question_number": 28,
+    "filename": "問題28_1.png",
+    "page_number": 24,
+    "box_2d": [
+      256,
+      115,
+      360,
+      772
+    ],
+    "type": "table",
+    "caption": "長岡家の家族構成"
+  },
+  {
+    "question_number": 28,
+    "filename": "問題28_2.png",
+    "page_number": 24,
+    "box_2d": [
+      459,
+      115,
+      620,
+      485
+    ],
+    "type": "table",
+    "caption": "長岡家の金融資産(時価)"
+  },
+  {
+    "question_number": 28,
+    "filename": "問題28_3.png",
+    "page_number": 25,
+    "box_2d": [
+      397,
+      93,
+      735,
+      908
+    ],
+    "type": "table",
+    "caption": "長岡家の住宅ローンの償還予定表の一部"
+  },
+  {
+    "question_number": 30,
+    "filename": "問題30.png",
+    "page_number": 26,
+    "box_2d": [
+      536,
+      93,
+      755,
+      908
+    ],
+    "type": "table",
+    "caption": "年間保険料例（地震保険）"
+  },
+  {
+    "question_number": 32,
+    "filename": "問題32_1.png",
+    "page_number": 28,
+    "box_2d": [
+      250,
+      107,
+      467,
+      894
+    ],
+    "type": "figure",
+    "caption": "2023年8月分の高額療養費の算定"
+  },
+  {
+    "question_number": 32,
+    "filename": "問題32_2.png",
+    "page_number": 28,
+    "box_2d": [
+      431,
+      126,
+      563,
+      888
+    ],
+    "type": "table",
+    "caption": "医療費の1ヵ月当たりの自己負担限度額(70歳未満)"
+  },
+  {
+    "question_number": 33,
+    "filename": "問題33.png",
+    "page_number": 29,
+    "box_2d": [
+      524,
+      93,
+      743,
+      908
+    ],
+    "type": "table",
+    "caption": "語群"
+  },
+  {
+    "question_number": 34,
+    "filename": "問題34.png",
+    "page_number": 30,
+    "box_2d": [
+      433,
+      93,
+      549,
+      908
+    ],
+    "type": "table",
+    "caption": "語群"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_1.png",
+    "page_number": 32,
+    "box_2d": [
+      248,
+      115,
+      379,
+      775
+    ],
+    "type": "table",
+    "caption": "関根家の家族構成(同居家族)"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_2.png",
+    "page_number": 32,
+    "box_2d": [
+      426,
+      281,
+      584,
+      887
+    ],
+    "type": "figure",
+    "caption": "関根家の親族関係図"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_3.png",
+    "page_number": 32,
+    "box_2d": [
+      633,
+      108,
+      880,
+      888
+    ],
+    "type": "table",
+    "caption": "関根家の保有資産(時価)"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_4.png",
+    "page_number": 33,
+    "box_2d": [
+      80,
+      115,
+      134,
+      888
+    ],
+    "type": "table",
+    "caption": "関根家の負債残高"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_5.png",
+    "page_number": 33,
+    "box_2d": [
+      162,
+      115,
+      344,
+      888
+    ],
+    "type": "table",
+    "caption": "関根家の生命保険"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_6.png",
+    "page_number": 33,
+    "box_2d": [
+      586,
+      93,
+      878,
+      908
+    ],
+    "type": "table",
+    "caption": "関根家のバランスシート"
+  },
+  {
+    "question_number": 36,
+    "filename": "問題36.png",
+    "page_number": 34,
+    "box_2d": [
+      208,
+      93,
+      526,
+      908
+    ],
+    "type": "table",
+    "caption": "損益計算書"
+  },
+  {
+    "question_number": 37,
+    "filename": "問題37_1.png",
+    "page_number": 35,
+    "box_2d": [
+      198,
+      93,
+      313,
+      672
+    ],
+    "type": "table",
+    "caption": "宅地等の区分と適用限度面積・減額割合"
+  },
+  {
+    "question_number": 38,
+    "filename": "問題38.png",
+    "page_number": 35,
+    "box_2d": [
+      620,
+      93,
+      725,
+      517
+    ],
+    "type": "table",
+    "caption": "債券の資料"
+  },
+  {
+    "question_number": 39,
+    "filename": "問題39.png",
+    "page_number": 36,
+    "box_2d": [
+      263,
+      115,
+      545,
+      908
+    ],
+    "type": "table",
+    "caption": "老齢基礎年金に関する資料"
+  },
+  {
+    "question_number": 40,
+    "filename": "問題40_1.png",
+    "page_number": 37,
+    "box_2d": [
+      291,
+      107,
+      467,
+      894
+    ],
+    "type": "figure",
+    "caption": "介護(在宅)サービス利用時の自己負担額の算定"
+  },
+  {
+    "question_number": 40,
+    "filename": "問題40_2.png",
+    "page_number": 37,
+    "box_2d": [
+      500,
+      115,
+      680,
+      488
+    ],
+    "type": "table",
+    "caption": "在宅サービスの1ヵ月当たりの区分支給限度基準額"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 21,
+    "box_2d": [
+      670,
+      215,
+      897,
+      808
+    ],
+    "type": "figure",
+    "caption": "現行システムの概要"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 25,
+    "box_2d": [
+      80,
+      140,
+      323,
+      889
+    ],
+    "type": "figure",
+    "caption": "新システムの概要"
+  }
+]

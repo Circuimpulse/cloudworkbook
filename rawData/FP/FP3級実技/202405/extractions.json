@@ -1,0 +1,275 @@
+[
+  {
+    "question_number": 2,
+    "filename": "問題2.png",
+    "page_number": 2,
+    "box_2d": [
+      202,
+      88,
+      584,
+      909
+    ],
+    "type": "table",
+    "caption": "東条家のキャッシュフロー表"
+  },
+  {
+    "question_number": 3,
+    "filename": "問題3_1.png",
+    "page_number": 3,
+    "box_2d": [
+      195,
+      96,
+      385,
+      908
+    ],
+    "type": "table",
+    "caption": "山本家のバランスシート"
+  },
+  {
+    "question_number": 3,
+    "filename": "問題3_2.png",
+    "page_number": 3,
+    "box_2d": [
+      422,
+      97,
+      663,
+      908
+    ],
+    "type": "table",
+    "caption": "山本家の保有財産と負債残高"
+  },
+  {
+    "question_number": 4,
+    "filename": "問題4.png",
+    "page_number": 4,
+    "box_2d": [
+      208,
+      93,
+      276,
+      609
+    ],
+    "type": "table",
+    "caption": "係数早見表(年利2.0%)"
+  },
+  {
+    "question_number": 6,
+    "filename": "問題6.png",
+    "page_number": 5,
+    "box_2d": [
+      195,
+      93,
+      292,
+      701
+    ],
+    "type": "table",
+    "caption": "WA株式会社とWB株式会社の投資指標"
+  },
+  {
+    "question_number": 7,
+    "filename": "問題7.png",
+    "page_number": 5,
+    "box_2d": [
+      484,
+      96,
+      583,
+      908
+    ],
+    "type": "table",
+    "caption": "投資信託の運用スタイル"
+  },
+  {
+    "question_number": 8,
+    "filename": "問題8.png",
+    "page_number": 6,
+    "box_2d": [
+      169,
+      93,
+      350,
+      907
+    ],
+    "type": "table",
+    "caption": "外貨定期預金と為替レート"
+  },
+  {
+    "question_number": 9,
+    "filename": "問題9.png",
+    "page_number": 6,
+    "box_2d": [
+      586,
+      92,
+      828,
+      908
+    ],
+    "type": "figure",
+    "caption": "土地の図と建築条件"
+  },
+  {
+    "question_number": 10,
+    "filename": "問題10.png",
+    "page_number": 7,
+    "box_2d": [
+      162,
+      95,
+      270,
+      909
+    ],
+    "type": "table",
+    "caption": "公的な土地評価に関する表"
+  },
+  {
+    "question_number": 11,
+    "filename": "問題11.png",
+    "page_number": 7,
+    "box_2d": [
+      446,
+      95,
+      563,
+      907
+    ],
+    "type": "table",
+    "caption": "定期借地権の比較表"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12.png",
+    "page_number": 8,
+    "box_2d": [
+      209,
+      107,
+      565,
+      894
+    ],
+    "type": "table",
+    "caption": "大下秀雄さんの生命保険契約内容"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15_1.png",
+    "page_number": 10,
+    "box_2d": [
+      195,
+      93,
+      279,
+      458
+    ],
+    "type": "table",
+    "caption": "中岡さんの収入"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15_2.png",
+    "page_number": 10,
+    "box_2d": [
+      346,
+      92,
+      488,
+      897
+    ],
+    "type": "table",
+    "caption": "給与所得控除額の速算表"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15_3.png",
+    "page_number": 10,
+    "box_2d": [
+      512,
+      92,
+      694,
+      908
+    ],
+    "type": "table",
+    "caption": "公的年金等控除額の速算表"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16.png",
+    "page_number": 11,
+    "box_2d": [
+      209,
+      93,
+      255,
+      458
+    ],
+    "type": "table",
+    "caption": "近藤さんの退職に係るデータ"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17.png",
+    "page_number": 11,
+    "box_2d": [
+      466,
+      93,
+      584,
+      907
+    ],
+    "type": "table",
+    "caption": "高橋さんの自宅売却に係る状況"
+  },
+  {
+    "question_number": 18,
+    "filename": "問題18.png",
+    "page_number": 12,
+    "box_2d": [
+      179,
+      93,
+      350,
+      908
+    ],
+    "type": "figure",
+    "caption": "森隆男さんの親族関係図"
+  },
+  {
+    "question_number": 19,
+    "filename": "問題19_1.png",
+    "page_number": 13,
+    "box_2d": [
+      179,
+      92,
+      305,
+      908
+    ],
+    "type": "figure",
+    "caption": "藤田信二さんの親族関係図"
+  },
+  {
+    "question_number": 19,
+    "filename": "問題19_2.png",
+    "page_number": 13,
+    "box_2d": [
+      385,
+      94,
+      583,
+      896
+    ],
+    "type": "table",
+    "caption": "相続税の速算表"
+  },
+  {
+    "question_number": 20,
+    "filename": "問題20_1.png",
+    "page_number": 14,
+    "box_2d": [
+      271,
+      93,
+      467,
+      908
+    ],
+    "type": "table",
+    "caption": "贈与税の速算表 (特例贈与財産、特例税率)"
+  },
+  {
+    "question_number": 20,
+    "filename": "問題20_2.png",
+    "page_number": 14,
+    "box_2d": [
+      484,
+      93,
+      680,
+      908
+    ],
+    "type": "table",
+    "caption": "贈与税の速算表 (一般贈与財産、一般税率)"
+  }
+]

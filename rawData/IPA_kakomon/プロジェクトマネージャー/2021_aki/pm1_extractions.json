@@ -1,0 +1,54 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      380,
+      240,
+      428,
+      477
+    ],
+    "type": "table",
+    "caption": "問題選択方法の表"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 5,
+    "box_2d": [
+      333,
+      76,
+      563,
+      921
+    ],
+    "type": "table",
+    "caption": "表1 リスク対応計画における戦略選択の方針"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      303,
+      76,
+      342,
+      921
+    ],
+    "type": "table",
+    "caption": "表1 構築プロジェクトと改善プロジェクトの目的及びQCDに対する考え方の違い"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 11,
+    "box_2d": [
+      471,
+      76,
+      650,
+      921
+    ],
+    "type": "table",
+    "caption": "表1 構築プロジェクトの作業,役割分担及びベンダとの契約形態"
+  }
+]

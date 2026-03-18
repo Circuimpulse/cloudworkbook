@@ -1,0 +1,28 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      386,
+      168,
+      448,
+      470
+    ],
+    "type": "table",
+    "caption": "問題番号と選択方法の対応表"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 1,
+    "box_2d": [
+      720,
+      194,
+      786,
+      451
+    ],
+    "type": "figure",
+    "caption": "選択欄の記入例"
+  }
+]

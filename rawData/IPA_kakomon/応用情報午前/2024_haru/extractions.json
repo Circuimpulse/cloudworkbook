@@ -1,0 +1,184 @@
+[
+  {
+    "question_number": 5,
+    "filename": "問題5.png",
+    "page_number": 6,
+    "box_2d": [
+      164,
+      138,
+      468,
+      858
+    ],
+    "type": "figure",
+    "caption": "アルゴリズムの流れ図"
+  },
+  {
+    "question_number": 6,
+    "filename": "問題6.png",
+    "page_number": 7,
+    "box_2d": [
+      363,
+      264,
+      657,
+      748
+    ],
+    "type": "figure",
+    "caption": "2分木の図"
+  },
+  {
+    "question_number": 8,
+    "filename": "問題8.png",
+    "page_number": 9,
+    "box_2d": [
+      290,
+      265,
+      510,
+      735
+    ],
+    "type": "figure",
+    "caption": "メモリ転送の実行前・後の状態図"
+  },
+  {
+    "question_number": 21,
+    "filename": "問題21_1.png",
+    "page_number": 14,
+    "box_2d": [
+      450,
+      283,
+      607,
+      678
+    ],
+    "type": "figure",
+    "caption": "タイムチャート"
+  },
+  {
+    "question_number": 21,
+    "filename": "問題21_2.png",
+    "page_number": 14,
+    "box_2d": [
+      644,
+      147,
+      725,
+      836
+    ],
+    "type": "figure",
+    "caption": "論理回路の選択肢図"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22.png",
+    "page_number": 15,
+    "box_2d": [
+      417,
+      171,
+      689,
+      835
+    ],
+    "type": "figure",
+    "caption": "グラフィックLCDのメモリ割り当て図"
+  },
+  {
+    "question_number": 26,
+    "filename": "問題26.png",
+    "page_number": 17,
+    "box_2d": [
+      177,
+      143,
+      354,
+      874
+    ],
+    "type": "figure",
+    "caption": "部品表・在庫表・結果表"
+  },
+  {
+    "question_number": 47,
+    "filename": "問題47.png",
+    "page_number": 25,
+    "box_2d": [
+      171,
+      146,
+      500,
+      866
+    ],
+    "type": "figure",
+    "caption": "ゴンペルツ曲線の候補グラフ"
+  },
+  {
+    "question_number": 51,
+    "filename": "問題51.png",
+    "page_number": 27,
+    "box_2d": [
+      195,
+      291,
+      385,
+      738
+    ],
+    "type": "figure",
+    "caption": "EVMの状況図"
+  },
+  {
+    "question_number": 52,
+    "filename": "問題52.png",
+    "page_number": 27,
+    "box_2d": [
+      665,
+      237,
+      858,
+      795
+    ],
+    "type": "figure",
+    "caption": "アローダイアグラム"
+  },
+  {
+    "question_number": 64,
+    "filename": "問題64.png",
+    "page_number": 34,
+    "box_2d": [
+      515,
+      249,
+      842,
+      735
+    ],
+    "type": "figure",
+    "caption": "キャッシュインのシナリオ表"
+  },
+  {
+    "question_number": 75,
+    "filename": "問題75.png",
+    "page_number": 39,
+    "box_2d": [
+      421,
+      357,
+      562,
+      683
+    ],
+    "type": "table",
+    "caption": "製品製造に必要な部品数"
+  },
+  {
+    "question_number": 76,
+    "filename": "問題76.png",
+    "page_number": 39,
+    "box_2d": [
+      745,
+      349,
+      869,
+      655
+    ],
+    "type": "table",
+    "caption": "販売実績と費用データ"
+  },
+  {
+    "question_number": 77,
+    "filename": "問題77.png",
+    "page_number": 40,
+    "box_2d": [
+      137,
+      351,
+      310,
+      653
+    ],
+    "type": "table",
+    "caption": "損益計算資料"
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      264,
+      136,
+      367,
+      466
+    ],
+    "type": "figure",
+    "caption": "整理機の概観"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 2,
+    "box_2d": [
+      274,
+      475,
+      364,
+      818
+    ],
+    "type": "figure",
+    "caption": "整理機のシステム構成"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 3,
+    "box_2d": [
+      433,
+      205,
+      777,
+      808
+    ],
+    "type": "figure",
+    "caption": "機構部の構造"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 4,
+    "box_2d": [
+      606,
+      102,
+      741,
+      805
+    ],
+    "type": "figure",
+    "caption": "反転機構1及び2の動作の様子"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 5,
+    "box_2d": [
+      94,
+      129,
+      271,
+      801
+    ],
+    "type": "figure",
+    "caption": "S1通過直後の搬送路を流れる紙幣の様子"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      417,
+      196,
+      630,
+      782
+    ],
+    "type": "figure",
+    "caption": "スーツケースの外観"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 9,
+    "box_2d": [
+      781,
+      185,
+      901,
+      818
+    ],
+    "type": "figure",
+    "caption": "スーツケースのシステム構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 12,
+    "box_2d": [
+      77,
+      280,
+      205,
+      716
+    ],
+    "type": "figure",
+    "caption": "制御部の主なタスク構成"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 15,
+    "box_2d": [
+      518,
+      156,
+      762,
+      897
+    ],
+    "type": "figure",
+    "caption": "遊具システムの概要"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 16,
+    "box_2d": [
+      347,
+      152,
+      593,
+      892
+    ],
+    "type": "figure",
+    "caption": "フィールドの構成とルート表示"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 16,
+    "box_2d": [
+      701,
+      234,
+      845,
+      670
+    ],
+    "type": "figure",
+    "caption": "乗り物の外観"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 18,
+    "box_2d": [
+      515,
+      148,
+      695,
+      856
+    ],
+    "type": "figure",
+    "caption": "乗り物の主要部のブロック図"
+  }
+]

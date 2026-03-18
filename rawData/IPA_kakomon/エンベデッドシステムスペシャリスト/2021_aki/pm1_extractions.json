@@ -1,0 +1,145 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      247,
+      135,
+      356,
+      868
+    ],
+    "type": "figure",
+    "caption": "Sポンプの外観"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 2,
+    "box_2d": [
+      709,
+      335,
+      888,
+      674
+    ],
+    "type": "figure",
+    "caption": "Sポンプの機構概要"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 3,
+    "box_2d": [
+      753,
+      138,
+      855,
+      836
+    ],
+    "type": "figure",
+    "caption": "表示部の表示例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 5,
+    "box_2d": [
+      606,
+      204,
+      699,
+      845
+    ],
+    "type": "figure",
+    "caption": "Sポンプの主なタスク構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 8,
+    "box_2d": [
+      371,
+      192,
+      536,
+      839
+    ],
+    "type": "figure",
+    "caption": "DXレストランのシステム構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 10,
+    "box_2d": [
+      705,
+      173,
+      829,
+      837
+    ],
+    "type": "figure",
+    "caption": "制御装置の主なタスク構成"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      368,
+      131,
+      475,
+      894
+    ],
+    "type": "figure",
+    "caption": "畜産システムの構成"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 15,
+    "box_2d": [
+      94,
+      140,
+      240,
+      860
+    ],
+    "type": "figure",
+    "caption": "首輪デバイスの構成"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 16,
+    "box_2d": [
+      572,
+      207,
+      690,
+      830
+    ],
+    "type": "figure",
+    "caption": "首輪デバイスの取付け位置と加速度センサの軸方向"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 18,
+    "box_2d": [
+      177,
+      178,
+      511,
+      873
+    ],
+    "type": "figure",
+    "caption": "ある牛の活動状態の判定における各センサ値の変化"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_5.png",
+    "page_number": 19,
+    "box_2d": [
+      531,
+      210,
+      782,
+      821
+    ],
+    "type": "figure",
+    "caption": "ビーコンの配置と区画"
+  }
+]

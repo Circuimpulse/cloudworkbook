@@ -1,0 +1,262 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      672,
+      597,
+      755,
+      712
+    ],
+    "type": "figure",
+    "caption": "〔問2を選択した場合の例〕選択欄"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      312,
+      142,
+      451,
+      856
+    ],
+    "type": "figure",
+    "caption": "図1 N社の組織図"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 3,
+    "box_2d": [
+      260,
+      150,
+      810,
+      848
+    ],
+    "type": "figure",
+    "caption": "図2 N社が利用するシステム及びネットワークの概要"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 4,
+    "box_2d": [
+      94,
+      116,
+      290,
+      897
+    ],
+    "type": "figure",
+    "caption": "図3 開発用システムの概要(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 4,
+    "box_2d": [
+      304,
+      115,
+      387,
+      897
+    ],
+    "type": "figure",
+    "caption": "図4 N社の脆弱性管理プロセス"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 5,
+    "box_2d": [
+      337,
+      127,
+      843,
+      897
+    ],
+    "type": "figure",
+    "caption": "図5 判明した被害状況及び対応の概要"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 6,
+    "box_2d": [
+      743,
+      122,
+      853,
+      897
+    ],
+    "type": "table",
+    "caption": "表1 T氏の指摘事項と対策案(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_6.png",
+    "page_number": 7,
+    "box_2d": [
+      198,
+      121,
+      502,
+      897
+    ],
+    "type": "figure",
+    "caption": "図6 N社インシデント対応ポリシ案(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_2.png",
+    "page_number": 7,
+    "box_2d": [
+      533,
+      121,
+      696,
+      897
+    ],
+    "type": "table",
+    "caption": "表2 N-CSIRT の構成部門"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_7.png",
+    "page_number": 8,
+    "box_2d": [
+      122,
+      203,
+      237,
+      792
+    ],
+    "type": "figure",
+    "caption": "図7 インシデント対応のライフサイクル"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_8.png",
+    "page_number": 8,
+    "box_2d": [
+      738,
+      118,
+      835,
+      897
+    ],
+    "type": "figure",
+    "caption": "図8 インシデントQの調査結果(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_9.png",
+    "page_number": 9,
+    "box_2d": [
+      180,
+      120,
+      642,
+      880
+    ],
+    "type": "figure",
+    "caption": "図9 FW2での通信量の集計"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_3.png",
+    "page_number": 10,
+    "box_2d": [
+      101,
+      117,
+      437,
+      897
+    ],
+    "type": "table",
+    "caption": "表3 脆弱性Lと脆弱性Mの概要、及びそれぞれの対応を見送った経緯とその理由"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_10.png",
+    "page_number": 10,
+    "box_2d": [
+      463,
+      115,
+      837,
+      897
+    ],
+    "type": "figure",
+    "caption": "図10 PTによる調査結果"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 14,
+    "box_2d": [
+      572,
+      232,
+      810,
+      770
+    ],
+    "type": "figure",
+    "caption": "図1 C社の現在の情報システム概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 18,
+    "box_2d": [
+      101,
+      120,
+      467,
+      897
+    ],
+    "type": "table",
+    "caption": "表1 次期ITのセキュリティ要件"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 18,
+    "box_2d": [
+      499,
+      137,
+      680,
+      874
+    ],
+    "type": "figure",
+    "caption": "図2 802.1Xのシーケンス (概要)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 19,
+    "box_2d": [
+      169,
+      290,
+      430,
+      809
+    ],
+    "type": "table",
+    "caption": "表2 サービスQの概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_3.png",
+    "page_number": 20,
+    "box_2d": [
+      302,
+      121,
+      680,
+      897
+    ],
+    "type": "table",
+    "caption": "表3 サービスNの機能(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 20,
+    "box_2d": [
+      704,
+      150,
+      792,
+      872
+    ],
+    "type": "figure",
+    "caption": "図3 サービスQとサービスNを利用した場合の動作の概要"
+  }
+]

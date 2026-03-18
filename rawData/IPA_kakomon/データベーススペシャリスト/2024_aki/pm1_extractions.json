@@ -1,0 +1,301 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 3,
+    "box_2d": [
+      462,
+      339,
+      615,
+      753
+    ],
+    "type": "figure",
+    "caption": "図1 エンティティタイプとリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 4,
+    "box_2d": [
+      97,
+      522,
+      252,
+      875
+    ],
+    "type": "figure",
+    "caption": "図2 対応関係にゼロを含むか否かを区別して表現する場合の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 4,
+    "box_2d": [
+      502,
+      176,
+      689,
+      820
+    ],
+    "type": "figure",
+    "caption": "図3 スーパータイプとサブタイプの間のリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_4.png",
+    "page_number": 5,
+    "box_2d": [
+      147,
+      344,
+      244,
+      651
+    ],
+    "type": "figure",
+    "caption": "図4 エンティティタイプの属性の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_5.png",
+    "page_number": 5,
+    "box_2d": [
+      362,
+      316,
+      396,
+      683
+    ],
+    "type": "figure",
+    "caption": "図5 関係スキーマの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_6.png",
+    "page_number": 5,
+    "box_2d": [
+      676,
+      303,
+      710,
+      693
+    ],
+    "type": "figure",
+    "caption": "図6 関係データベースのテーブル（表）構造の表記ルール"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 10,
+    "box_2d": [
+      466,
+      112,
+      897,
+      887
+    ],
+    "type": "figure",
+    "caption": "図1 現行業務の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 11,
+    "box_2d": [
+      104,
+      115,
+      487,
+      883
+    ],
+    "type": "figure",
+    "caption": "図2 現行業務の関係スキーマ（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 11,
+    "box_2d": [
+      622,
+      211,
+      855,
+      788
+    ],
+    "type": "figure",
+    "caption": "図3 企業向けサービスの追加部分の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 12,
+    "box_2d": [
+      104,
+      115,
+      334,
+      705
+    ],
+    "type": "figure",
+    "caption": "図4 企業向けサービスの追加部分の関係スキーマ（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 15,
+    "box_2d": [
+      208,
+      111,
+      298,
+      891
+    ],
+    "type": "figure",
+    "caption": "図1 主なテーブルのテーブル構造（一部省略）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 15,
+    "box_2d": [
+      563,
+      115,
+      703,
+      892
+    ],
+    "type": "figure",
+    "caption": "図2 入退室ログ登録処理の概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 16,
+    "box_2d": [
+      207,
+      112,
+      401,
+      891
+    ],
+    "type": "figure",
+    "caption": "図3 所在情報更新処理の概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 16,
+    "box_2d": [
+      447,
+      106,
+      827,
+      896
+    ],
+    "type": "table",
+    "caption": "表1 所在情報更新処理に用いるSQL文（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 17,
+    "box_2d": [
+      508,
+      106,
+      569,
+      897
+    ],
+    "type": "figure",
+    "caption": "図4 監査機能に関するテーブルのテーブル構造"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 18,
+    "box_2d": [
+      101,
+      114,
+      642,
+      889
+    ],
+    "type": "figure",
+    "caption": "図5 監査機能の処理の流れとSQL文（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 19,
+    "box_2d": [
+      343,
+      141,
+      605,
+      862
+    ],
+    "type": "table",
+    "caption": "表2 ロック状況（未完成）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 21,
+    "box_2d": [
+      503,
+      112,
+      661,
+      891
+    ],
+    "type": "figure",
+    "caption": "図1 主なテーブルのテーブル構造"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1.png",
+    "page_number": 21,
+    "box_2d": [
+      704,
+      115,
+      920,
+      891
+    ],
+    "type": "table",
+    "caption": "表1 主な列の意味・制約"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_2.png",
+    "page_number": 22,
+    "box_2d": [
+      107,
+      117,
+      243,
+      891
+    ],
+    "type": "table",
+    "caption": "表2 \"従業員\"テーブルの主な統計情報・索引定義（一部省略）"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_3.png",
+    "page_number": 22,
+    "box_2d": [
+      272,
+      117,
+      409,
+      891
+    ],
+    "type": "table",
+    "caption": "表3 \"稼働実績\"テーブルの主な統計情報・索引定義"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 23,
+    "box_2d": [
+      93,
+      103,
+      248,
+      881
+    ],
+    "type": "figure",
+    "caption": "図2 \"組織\"テーブルを定義するCREATE TABLE文"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_4.png",
+    "page_number": 24,
+    "box_2d": [
+      106,
+      112,
+      357,
+      891
+    ],
+    "type": "table",
+    "caption": "表4 稼働計画の立案及び稼働実績の確認を支援するSQL文の例"
+  }
+]

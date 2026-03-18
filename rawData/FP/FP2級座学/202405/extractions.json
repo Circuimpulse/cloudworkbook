@@ -1,0 +1,41 @@
+[
+  {
+    "question_number": 26,
+    "filename": "問題26.png",
+    "page_number": 11,
+    "box_2d": [
+      448,
+      93,
+      565,
+      500
+    ],
+    "type": "table",
+    "caption": "X社のデータ"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29.png",
+    "page_number": 13,
+    "box_2d": [
+      195,
+      93,
+      275,
+      625
+    ],
+    "type": "table",
+    "caption": "ファンドAとファンドBの過去5年間の運用パフォーマンス"
+  },
+  {
+    "question_number": 53,
+    "filename": "問題53.png",
+    "page_number": 22,
+    "box_2d": [
+      189,
+      93,
+      353,
+      908
+    ],
+    "type": "figure",
+    "caption": "親族関係図"
+  }
+]

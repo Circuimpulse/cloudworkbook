@@ -1,0 +1,496 @@
+[
+  {
+    "question_number": 3,
+    "filename": "問題3.png",
+    "page_number": 2,
+    "box_2d": [
+      205,
+      96,
+      335,
+      908
+    ],
+    "type": "table",
+    "caption": "RM投資信託の収益分配金受取時の状況"
+  },
+  {
+    "question_number": 4,
+    "filename": "問題4.png",
+    "page_number": 2,
+    "box_2d": [
+      570,
+      96,
+      808,
+      908
+    ],
+    "type": "table",
+    "caption": "外貨定期預金の詳細と為替レート"
+  },
+  {
+    "question_number": 5,
+    "filename": "問題5.png",
+    "page_number": 3,
+    "box_2d": [
+      162,
+      107,
+      308,
+      437
+    ],
+    "type": "table",
+    "caption": "株価と1株当たり利益等の状況"
+  },
+  {
+    "question_number": 6,
+    "filename": "問題6.png",
+    "page_number": 3,
+    "box_2d": [
+      452,
+      95,
+      805,
+      908
+    ],
+    "type": "table",
+    "caption": "財形貯蓄制度における財形年金貯蓄と財形住宅貯蓄の比較"
+  },
+  {
+    "question_number": 8,
+    "filename": "問題8.png",
+    "page_number": 4,
+    "box_2d": [
+      439,
+      93,
+      765,
+      908
+    ],
+    "type": "figure",
+    "caption": "土地の状況と建築規制"
+  },
+  {
+    "question_number": 9,
+    "filename": "問題9.png",
+    "page_number": 5,
+    "box_2d": [
+      162,
+      95,
+      360,
+      908
+    ],
+    "type": "table",
+    "caption": "公的な土地評価に関する表"
+  },
+  {
+    "question_number": 10,
+    "filename": "問題10.png",
+    "page_number": 5,
+    "box_2d": [
+      539,
+      95,
+      715,
+      908
+    ],
+    "type": "table",
+    "caption": "借地借家法に基づく借家契約に関する表"
+  },
+  {
+    "question_number": 11,
+    "filename": "問題11.png",
+    "page_number": 6,
+    "box_2d": [
+      230,
+      96,
+      439,
+      908
+    ],
+    "type": "table",
+    "caption": "投資用マンションの概要"
+  },
+  {
+    "question_number": 13,
+    "filename": "問題13_1.png",
+    "page_number": 7,
+    "box_2d": [
+      232,
+      96,
+      642,
+      908
+    ],
+    "type": "table",
+    "caption": "無配当定期保険特約付終身保険の保障内容"
+  },
+  {
+    "question_number": 13,
+    "filename": "問題13_2.png",
+    "page_number": 8,
+    "box_2d": [
+      106,
+      107,
+      477,
+      887
+    ],
+    "type": "table",
+    "caption": "終身がん保険の保障内容"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14.png",
+    "page_number": 9,
+    "box_2d": [
+      162,
+      95,
+      290,
+      908
+    ],
+    "type": "table",
+    "caption": "生命保険契約の一覧"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16.png",
+    "page_number": 10,
+    "box_2d": [
+      206,
+      95,
+      508,
+      908
+    ],
+    "type": "table",
+    "caption": "自動車保険の契約更新案内"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17.png",
+    "page_number": 11,
+    "box_2d": [
+      248,
+      95,
+      469,
+      908
+    ],
+    "type": "table",
+    "caption": "年間保険料例（地震保険金額100万円当たり、割引適用なしの場合）"
+  },
+  {
+    "question_number": 18,
+    "filename": "問題18_1.png",
+    "page_number": 12,
+    "box_2d": [
+      195,
+      96,
+      252,
+      532
+    ],
+    "type": "table",
+    "caption": "収入等"
+  },
+  {
+    "question_number": 18,
+    "filename": "問題18_2.png",
+    "page_number": 12,
+    "box_2d": [
+      352,
+      96,
+      608,
+      908
+    ],
+    "type": "table",
+    "caption": "公的年金等控除額の速算表"
+  },
+  {
+    "question_number": 19,
+    "filename": "問題19.png",
+    "page_number": 13,
+    "box_2d": [
+      230,
+      96,
+      287,
+      442
+    ],
+    "type": "table",
+    "caption": "退職に係るデータ"
+  },
+  {
+    "question_number": 20,
+    "filename": "問題20.png",
+    "page_number": 13,
+    "box_2d": [
+      539,
+      95,
+      687,
+      908
+    ],
+    "type": "table",
+    "caption": "所得の種類と金額"
+  },
+  {
+    "question_number": 21,
+    "filename": "問題21_1.png",
+    "page_number": 14,
+    "box_2d": [
+      256,
+      107,
+      342,
+      400
+    ],
+    "type": "table",
+    "caption": "器具・備品の状況"
+  },
+  {
+    "question_number": 21,
+    "filename": "問題21_2.png",
+    "page_number": 14,
+    "box_2d": [
+      378,
+      107,
+      420,
+      569
+    ],
+    "type": "table",
+    "caption": "耐用年数表(抜粋)"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23.png",
+    "page_number": 15,
+    "box_2d": [
+      154,
+      219,
+      360,
+      843
+    ],
+    "type": "figure",
+    "caption": "相続人等関係図"
+  },
+  {
+    "question_number": 24,
+    "filename": "問題24.png",
+    "page_number": 16,
+    "box_2d": [
+      309,
+      137,
+      440,
+      448
+    ],
+    "type": "figure",
+    "caption": "相続人等関係図"
+  },
+  {
+    "question_number": 25,
+    "filename": "問題25_1.png",
+    "page_number": 17,
+    "box_2d": [
+      314,
+      96,
+      497,
+      908
+    ],
+    "type": "table",
+    "caption": "18歳以上の者が直系尊属から贈与を受けた財産の場合（特例贈与財産、特例税率）"
+  },
+  {
+    "question_number": 25,
+    "filename": "問題25_2.png",
+    "page_number": 17,
+    "box_2d": [
+      513,
+      96,
+      695,
+      908
+    ],
+    "type": "table",
+    "caption": "上記(イ)以外の場合（一般贈与財産、一般税率）"
+  },
+  {
+    "question_number": 26,
+    "filename": "問題26.png",
+    "page_number": 18,
+    "box_2d": [
+      162,
+      95,
+      277,
+      715
+    ],
+    "type": "table",
+    "caption": "相続税における小規模宅地等の特例に関する表"
+  },
+  {
+    "question_number": 28,
+    "filename": "問題28.png",
+    "page_number": 19,
+    "box_2d": [
+      206,
+      95,
+      625,
+      908
+    ],
+    "type": "table",
+    "caption": "島田家のキャッシュフロー表（一部抜粋）"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29.png",
+    "page_number": 20,
+    "box_2d": [
+      206,
+      95,
+      625,
+      908
+    ],
+    "type": "table",
+    "caption": "中村家のキャッシュフロー表（一部抜粋）"
+  },
+  {
+    "question_number": 30,
+    "filename": "問題30.png",
+    "page_number": 21,
+    "box_2d": [
+      352,
+      95,
+      477,
+      735
+    ],
+    "type": "table",
+    "caption": "元利定額リボルビング払い返済表"
+  },
+  {
+    "question_number": 31,
+    "filename": "問題31.png",
+    "page_number": 22,
+    "box_2d": [
+      206,
+      95,
+      517,
+      908
+    ],
+    "type": "table",
+    "caption": "係数早見表（年利率1.0%）"
+  },
+  {
+    "question_number": 32,
+    "filename": "問題32.png",
+    "page_number": 23,
+    "box_2d": [
+      206,
+      95,
+      517,
+      908
+    ],
+    "type": "table",
+    "caption": "係数早見表（年利率1.0%）"
+  },
+  {
+    "question_number": 33,
+    "filename": "問題33.png",
+    "page_number": 24,
+    "box_2d": [
+      206,
+      95,
+      517,
+      908
+    ],
+    "type": "table",
+    "caption": "係数早見表（年利率1.0%）"
+  },
+  {
+    "question_number": 34,
+    "filename": "問題34_1.png",
+    "page_number": 25,
+    "box_2d": [
+      216,
+      95,
+      420,
+      887
+    ],
+    "type": "table",
+    "caption": "保有資産（時価）"
+  },
+  {
+    "question_number": 34,
+    "filename": "問題34_2.png",
+    "page_number": 25,
+    "box_2d": [
+      540,
+      95,
+      715,
+      908
+    ],
+    "type": "table",
+    "caption": "藤原家（高志さんと陽子さん）のバランスシート"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35.png",
+    "page_number": 26,
+    "box_2d": [
+      210,
+      95,
+      565,
+      908
+    ],
+    "type": "table",
+    "caption": "湯川さんの住宅ローンの償還予定表の一部"
+  },
+  {
+    "question_number": 37,
+    "filename": "問題37.png",
+    "page_number": 27,
+    "box_2d": [
+      256,
+      95,
+      335,
+      660
+    ],
+    "type": "table",
+    "caption": "家族構成等"
+  },
+  {
+    "question_number": 38,
+    "filename": "問題38_1.png",
+    "page_number": 27,
+    "box_2d": [
+      612,
+      95,
+      660,
+      620
+    ],
+    "type": "table",
+    "caption": "村上さんに関するデータ"
+  },
+  {
+    "question_number": 38,
+    "filename": "問題38_2.png",
+    "page_number": 27,
+    "box_2d": [
+      692,
+      95,
+      735,
+      620
+    ],
+    "type": "table",
+    "caption": "健康保険の保険料率"
+  },
+  {
+    "question_number": 39,
+    "filename": "問題39_1.png",
+    "page_number": 28,
+    "box_2d": [
+      256,
+      95,
+      360,
+      500
+    ],
+    "type": "table",
+    "caption": "支払った医療費等および標準報酬月額"
+  },
+  {
+    "question_number": 39,
+    "filename": "問題39_2.png",
+    "page_number": 28,
+    "box_2d": [
+      380,
+      95,
+      517,
+      908
+    ],
+    "type": "table",
+    "caption": "医療費の1ヵ月当たりの自己負担限度額（70歳未満）"
+  }
+]

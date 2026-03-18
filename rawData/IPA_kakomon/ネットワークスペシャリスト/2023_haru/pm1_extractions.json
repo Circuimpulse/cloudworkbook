@@ -1,0 +1,158 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      638,
+      597,
+      796,
+      706
+    ],
+    "type": "figure",
+    "caption": "問1, 問3を選択した場合の例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      336,
+      292,
+      693,
+      786
+    ],
+    "type": "figure",
+    "caption": "図1 G社のシステム構成 (抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 3,
+    "box_2d": [
+      739,
+      266,
+      893,
+      747
+    ],
+    "type": "figure",
+    "caption": "図2 Web ブラウザからサーバへのリクエスト"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 5,
+    "box_2d": [
+      76,
+      280,
+      452,
+      792
+    ],
+    "type": "figure",
+    "caption": "図3 h2の通信シーケンス(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 5,
+    "box_2d": [
+      557,
+      105,
+      874,
+      879
+    ],
+    "type": "figure",
+    "caption": "図4 新 Webシステム構成(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 6,
+    "box_2d": [
+      267,
+      289,
+      362,
+      781
+    ],
+    "type": "table",
+    "caption": "表1 静的経路設定"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_2.png",
+    "page_number": 6,
+    "box_2d": [
+      742,
+      335,
+      824,
+      735
+    ],
+    "type": "table",
+    "caption": "表2 仮想LBの動作モード"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      88,
+      107,
+      396,
+      882
+    ],
+    "type": "figure",
+    "caption": "図1 N主任が考えたK市のネットワーク構成(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 11,
+    "box_2d": [
+      53,
+      178,
+      335,
+      831
+    ],
+    "type": "figure",
+    "caption": "図2 IPカメラ11からレシーバ11への配信イメージ (抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 12,
+    "box_2d": [
+      238,
+      169,
+      342,
+      856
+    ],
+    "type": "table",
+    "caption": "表1 ユニキャスト通信の許可ルール"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1.png",
+    "page_number": 15,
+    "box_2d": [
+      412,
+      142,
+      638,
+      874
+    ],
+    "type": "table",
+    "caption": "表1 Wi-Fiの世代の仕様比較"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 16,
+    "box_2d": [
+      463,
+      107,
+      887,
+      882
+    ],
+    "type": "figure",
+    "caption": "図1 新校舎ビルのLAN システム提案構成(抜粋)"
+  }
+]

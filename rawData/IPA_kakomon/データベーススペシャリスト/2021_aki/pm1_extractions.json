@@ -1,0 +1,197 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 3,
+    "box_2d": [
+      467,
+      246,
+      617,
+      725
+    ],
+    "type": "figure",
+    "caption": "エンティティタイプとリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 4,
+    "box_2d": [
+      90,
+      489,
+      235,
+      874
+    ],
+    "type": "figure",
+    "caption": "対応関係にゼロを含むか否かを区別して表現する場合の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 4,
+    "box_2d": [
+      488,
+      169,
+      627,
+      866
+    ],
+    "type": "figure",
+    "caption": "スーパタイプとサブタイプの間のリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_4.png",
+    "page_number": 5,
+    "box_2d": [
+      146,
+      373,
+      226,
+      654
+    ],
+    "type": "figure",
+    "caption": "エンティティタイプの属性の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_5.png",
+    "page_number": 5,
+    "box_2d": [
+      363,
+      292,
+      377,
+      654
+    ],
+    "type": "figure",
+    "caption": "関係スキーマの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_6.png",
+    "page_number": 5,
+    "box_2d": [
+      684,
+      309,
+      701,
+      654
+    ],
+    "type": "figure",
+    "caption": "関係データベースのテーブル（表）構造の表記ルール"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 10,
+    "box_2d": [
+      632,
+      126,
+      834,
+      882
+    ],
+    "type": "figure",
+    "caption": "概念データモデル（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 11,
+    "box_2d": [
+      91,
+      140,
+      439,
+      886
+    ],
+    "type": "figure",
+    "caption": "関係スキーマ（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 15,
+    "box_2d": [
+      776,
+      171,
+      843,
+      822
+    ],
+    "type": "figure",
+    "caption": "主なテーブルのテーブル構造（一部省略）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 16,
+    "box_2d": [
+      584,
+      116,
+      686,
+      876
+    ],
+    "type": "figure",
+    "caption": "利用明細抽出処理のSQL文"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 18,
+    "box_2d": [
+      409,
+      115,
+      474,
+      877
+    ],
+    "type": "figure",
+    "caption": "区分化に対応したSQL文のWHERE句"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 18,
+    "box_2d": [
+      673,
+      116,
+      770,
+      877
+    ],
+    "type": "figure",
+    "caption": "更新処理のSQL文"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 21,
+    "box_2d": [
+      91,
+      143,
+      134,
+      881
+    ],
+    "type": "figure",
+    "caption": "“物件”テーブルのテーブル構造（一部省略）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 22,
+    "box_2d": [
+      798,
+      144,
+      884,
+      881
+    ],
+    "type": "figure",
+    "caption": "追加・変更するテーブルのテーブル構造"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 25,
+    "box_2d": [
+      93,
+      145,
+      252,
+      878
+    ],
+    "type": "figure",
+    "caption": "ビュー“物件”の定義（未完成）"
+  }
+]

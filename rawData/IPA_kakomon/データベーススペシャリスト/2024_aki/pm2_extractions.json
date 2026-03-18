@@ -1,0 +1,197 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 3,
+    "box_2d": [
+      472,
+      281,
+      617,
+      715
+    ],
+    "type": "figure",
+    "caption": "図1 エンティティタイプとリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 4,
+    "box_2d": [
+      97,
+      518,
+      244,
+      891
+    ],
+    "type": "figure",
+    "caption": "図2 対応関係にゼロを含むか否かを区別して表現する場合の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 4,
+    "box_2d": [
+      512,
+      185,
+      683,
+      829
+    ],
+    "type": "figure",
+    "caption": "図3 スーパータイプとサブタイプの間のリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_4.png",
+    "page_number": 5,
+    "box_2d": [
+      156,
+      377,
+      241,
+      646
+    ],
+    "type": "figure",
+    "caption": "図4 エンティティタイプの属性の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_5.png",
+    "page_number": 5,
+    "box_2d": [
+      376,
+      281,
+      396,
+      730
+    ],
+    "type": "figure",
+    "caption": "図5 関係スキーマの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_6.png",
+    "page_number": 5,
+    "box_2d": [
+      697,
+      296,
+      720,
+      712
+    ],
+    "type": "figure",
+    "caption": "図6 関係データベースのテーブル（表）構造の表記ルール"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 7,
+    "box_2d": [
+      103,
+      114,
+      347,
+      888
+    ],
+    "type": "figure",
+    "caption": "図1 車両保守システムのテーブル構造（一部省略）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 9,
+    "box_2d": [
+      104,
+      137,
+      273,
+      866
+    ],
+    "type": "figure",
+    "caption": "図2 バッチ処理の実行スケジュール"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 15,
+    "box_2d": [
+      510,
+      108,
+      843,
+      892
+    ],
+    "type": "figure",
+    "caption": "図3 “予約登録” AP の処理内容"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 15,
+    "box_2d": [
+      757,
+      108,
+      839,
+      889
+    ],
+    "type": "figure",
+    "caption": "図4 “進捗更新” AP の処理内容"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 16,
+    "box_2d": [
+      242,
+      108,
+      353,
+      889
+    ],
+    "type": "figure",
+    "caption": "図5 “点検率更新” AP の処理内容"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 26,
+    "box_2d": [
+      117,
+      243,
+      404,
+      755
+    ],
+    "type": "figure",
+    "caption": "図1 マスター及び在庫の領域の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 26,
+    "box_2d": [
+      447,
+      137,
+      831,
+      891
+    ],
+    "type": "figure",
+    "caption": "図2 トランザクションの領域の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 27,
+    "box_2d": [
+      103,
+      113,
+      354,
+      888
+    ],
+    "type": "figure",
+    "caption": "図3 マスター及び在庫の領域の関係スキーマ（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 27,
+    "box_2d": [
+      412,
+      126,
+      757,
+      888
+    ],
+    "type": "figure",
+    "caption": "図4 トランザクションの領域の関係スキーマ（未完成）"
+  }
+]

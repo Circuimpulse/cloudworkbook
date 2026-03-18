@@ -1,0 +1,41 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      641,
+      607,
+      794,
+      749
+    ],
+    "type": "figure",
+    "caption": "[問1, 問3を選択した場合の例] 選択欄"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 4,
+    "box_2d": [
+      645,
+      178,
+      667,
+      276
+    ],
+    "type": "figure",
+    "caption": "第1次開発の進め方の検討における空欄a"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 5,
+    "box_2d": [
+      126,
+      98,
+      252,
+      897
+    ],
+    "type": "table",
+    "caption": "表1 マーケティング部署の機能に対する要求と機能が創出する成果"
+  }
+]

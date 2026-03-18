@@ -1,0 +1,197 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 6,
+    "box_2d": [
+      433,
+      188,
+      610,
+      810
+    ],
+    "type": "figure",
+    "caption": "本システムの開発環境のネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 12,
+    "box_2d": [
+      370,
+      113,
+      561,
+      885
+    ],
+    "type": "figure",
+    "caption": "Q社のサービスプロフィットチェーン"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      278,
+      111,
+      811,
+      886
+    ],
+    "type": "figure",
+    "caption": "関数prime1のプログラム"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 15,
+    "box_2d": [
+      371,
+      111,
+      878,
+      886
+    ],
+    "type": "figure",
+    "caption": "関数prime2のプログラム"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 16,
+    "box_2d": [
+      431,
+      111,
+      929,
+      886
+    ],
+    "type": "figure",
+    "caption": "関数prime3のプログラム"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 19,
+    "box_2d": [
+      112,
+      154,
+      302,
+      869
+    ],
+    "type": "figure",
+    "caption": "新システムのサーバ構成（抜粋）"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_1.png",
+    "page_number": 24,
+    "box_2d": [
+      622,
+      118,
+      870,
+      883
+    ],
+    "type": "figure",
+    "caption": "E社のネットワーク構成"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_2.png",
+    "page_number": 26,
+    "box_2d": [
+      264,
+      118,
+      512,
+      883
+    ],
+    "type": "figure",
+    "caption": "サービスZ導入後のE社のネットワーク構成案"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_1.png",
+    "page_number": 31,
+    "box_2d": [
+      333,
+      143,
+      840,
+      854
+    ],
+    "type": "figure",
+    "caption": "本システムの概念データモデル（抜粋）"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_2.png",
+    "page_number": 32,
+    "box_2d": [
+      264,
+      119,
+      557,
+      882
+    ],
+    "type": "figure",
+    "caption": "作成したSQL文"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_1.png",
+    "page_number": 36,
+    "box_2d": [
+      564,
+      248,
+      705,
+      716
+    ],
+    "type": "figure",
+    "caption": "スマホ及びSイヤホンの概要"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_2.png",
+    "page_number": 37,
+    "box_2d": [
+      291,
+      146,
+      423,
+      852
+    ],
+    "type": "figure",
+    "caption": "左イヤホンのハードウェア構成"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_1.png",
+    "page_number": 42,
+    "box_2d": [
+      624,
+      203,
+      771,
+      770
+    ],
+    "type": "figure",
+    "caption": "データ連携ハブを用いた組織データの送信の例"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_2.png",
+    "page_number": 43,
+    "box_2d": [
+      473,
+      111,
+      918,
+      886
+    ],
+    "type": "figure",
+    "caption": "N君が設計したクラス図（抜粋）"
+  },
+  {
+    "question_number": 11,
+    "filename": "図11_1.png",
+    "page_number": 59,
+    "box_2d": [
+      447,
+      159,
+      608,
+      855
+    ],
+    "type": "figure",
+    "caption": "新CBの機能構成"
+  }
+]

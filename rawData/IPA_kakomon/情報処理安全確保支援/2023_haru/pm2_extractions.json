@@ -1,0 +1,314 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      378,
+      212,
+      427,
+      515
+    ],
+    "type": "table",
+    "caption": "選択方法の表"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      257,
+      83,
+      509,
+      892
+    ],
+    "type": "table",
+    "caption": "表1 Sプロジェクトの進め方"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 4,
+    "box_2d": [
+      85,
+      116,
+      819,
+      879
+    ],
+    "type": "figure",
+    "caption": "図1 ツールVの仕様(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 5,
+    "box_2d": [
+      104,
+      116,
+      269,
+      892
+    ],
+    "type": "table",
+    "caption": "表2 診断対象URLの自動登録機能及び手動登録機能の特徴"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 5,
+    "box_2d": [
+      486,
+      116,
+      610,
+      879
+    ],
+    "type": "figure",
+    "caption": "図2 サイトMの画面遷移(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 6,
+    "box_2d": [
+      88,
+      88,
+      339,
+      879
+    ],
+    "type": "figure",
+    "caption": "図3 サイトMのアンケート入力1からの画面遷移"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_6.png",
+    "page_number": 6,
+    "box_2d": [
+      515,
+      191,
+      749,
+      811
+    ],
+    "type": "table",
+    "caption": "表3 ツールVが送ったパラメータと検索結果の件数(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_7.png",
+    "page_number": 8,
+    "box_2d": [
+      101,
+      83,
+      326,
+      879
+    ],
+    "type": "figure",
+    "caption": "図4 サイトNの画面遷移(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_8.png",
+    "page_number": 9,
+    "box_2d": [
+      614,
+      151,
+      858,
+      855
+    ],
+    "type": "figure",
+    "caption": "図5 正常なリクエストとそのレスポンス"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_9.png",
+    "page_number": 10,
+    "box_2d": [
+      90,
+      151,
+      397,
+      855
+    ],
+    "type": "figure",
+    "caption": "図6 脆弱性を検出するのに使ったリクエストとそのレスポンス"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 13,
+    "box_2d": [
+      403,
+      116,
+      762,
+      892
+    ],
+    "type": "table",
+    "caption": "表1 D社に委託している運用(概要)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 14,
+    "box_2d": [
+      284,
+      142,
+      426,
+      866
+    ],
+    "type": "table",
+    "caption": "表2 W社が管理、運用する必要のある範囲"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 14,
+    "box_2d": [
+      632,
+      111,
+      895,
+      892
+    ],
+    "type": "table",
+    "caption": "表3 L社が提供しているクラウドサービス"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 15,
+    "box_2d": [
+      126,
+      111,
+      232,
+      892
+    ],
+    "type": "table",
+    "caption": "表3 L社が提供しているクラウドサービス(続き)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 15,
+    "box_2d": [
+      366,
+      111,
+      767,
+      892
+    ],
+    "type": "table",
+    "caption": "表4 イベント検知のルールに記述するパラメータ"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_6.png",
+    "page_number": 16,
+    "box_2d": [
+      184,
+      242,
+      286,
+      762
+    ],
+    "type": "figure",
+    "caption": "図1 イベント検知のルールの例"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_7.png",
+    "page_number": 16,
+    "box_2d": [
+      447,
+      151,
+      556,
+      855
+    ],
+    "type": "figure",
+    "caption": "図2 移行後の日記サービスの仮想ネットワーク構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_8.png",
+    "page_number": 16,
+    "box_2d": [
+      696,
+      201,
+      847,
+      801
+    ],
+    "type": "table",
+    "caption": "表5 図2中の主な構成要素"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_9.png",
+    "page_number": 17,
+    "box_2d": [
+      186,
+      96,
+      626,
+      906
+    ],
+    "type": "table",
+    "caption": "表6 L社の各クラウドサービスにおける権限ごとに可能な操作(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_10.png",
+    "page_number": 17,
+    "box_2d": [
+      762,
+      171,
+      887,
+      830
+    ],
+    "type": "table",
+    "caption": "表7 D社向けの権限のセット(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_11.png",
+    "page_number": 18,
+    "box_2d": [
+      610,
+      116,
+      892,
+      879
+    ],
+    "type": "figure",
+    "caption": "図3 サービス要求から記事投稿結果取得までの流れ"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_12.png",
+    "page_number": 19,
+    "box_2d": [
+      127,
+      116,
+      275,
+      892
+    ],
+    "type": "table",
+    "caption": "表8 送信されるデータ(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_13.png",
+    "page_number": 20,
+    "box_2d": [
+      104,
+      83,
+      822,
+      916
+    ],
+    "type": "table",
+    "caption": "表9 サービスEの仕様とF社のソースコード管理プロセス"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_14.png",
+    "page_number": 22,
+    "box_2d": [
+      88,
+      116,
+      357,
+      879
+    ],
+    "type": "figure",
+    "caption": "図4 要件2を実装する場合のサービス要求から記事投稿結果取得までの流れ"
+  }
+]

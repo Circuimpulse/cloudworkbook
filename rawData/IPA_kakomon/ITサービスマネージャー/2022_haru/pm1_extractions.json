@@ -1,0 +1,223 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      368,
+      233,
+      450,
+      562
+    ],
+    "type": "table",
+    "caption": "問題番号と選択方法の対応表"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 1,
+    "box_2d": [
+      652,
+      624,
+      785,
+      765
+    ],
+    "type": "figure",
+    "caption": "問題選択欄のマーク例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 4,
+    "box_2d": [
+      111,
+      161,
+      277,
+      838
+    ],
+    "type": "table",
+    "caption": "表1 主要なサービスレベル目標（仮）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 4,
+    "box_2d": [
+      640,
+      146,
+      763,
+      853
+    ],
+    "type": "table",
+    "caption": "表2 新サービスに関わる組織"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 5,
+    "box_2d": [
+      177,
+      133,
+      254,
+      863
+    ],
+    "type": "table",
+    "caption": "表3 システム部とR社との主な契約事項"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 5,
+    "box_2d": [
+      291,
+      133,
+      405,
+      863
+    ],
+    "type": "table",
+    "caption": "表4 システム部とS社との主な契約事項"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 5,
+    "box_2d": [
+      685,
+      241,
+      757,
+      755
+    ],
+    "type": "table",
+    "caption": "表5 3月の計画外のサービス停止状況"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_6.png",
+    "page_number": 6,
+    "box_2d": [
+      228,
+      131,
+      691,
+      865
+    ],
+    "type": "table",
+    "caption": "表6 3月4日のインシデントの回復手順"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      203,
+      131,
+      374,
+      865
+    ],
+    "type": "table",
+    "caption": "表1 Eサービスの容量・能力計画の概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 9,
+    "box_2d": [
+      552,
+      131,
+      864,
+      865
+    ],
+    "type": "table",
+    "caption": "表2 容量・能力管理に関する主な役割"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 10,
+    "box_2d": [
+      258,
+      131,
+      438,
+      865
+    ],
+    "type": "table",
+    "caption": "表3 サービス運営会議の議題"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 11,
+    "box_2d": [
+      127,
+      131,
+      254,
+      865
+    ],
+    "type": "table",
+    "caption": "表4 今後3年間の会員数と最大スループットの見通し"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      762,
+      143,
+      881,
+      873
+    ],
+    "type": "table",
+    "caption": "表1 現行の販売サービスのサービスレベル目標（抜粋）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 15,
+    "box_2d": [
+      291,
+      143,
+      353,
+      873
+    ],
+    "type": "table",
+    "caption": "表2 トランザクション処理量の見通し"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 15,
+    "box_2d": [
+      541,
+      143,
+      622,
+      873
+    ],
+    "type": "table",
+    "caption": "表3 オンプレミス費用の見通し"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 16,
+    "box_2d": [
+      111,
+      143,
+      277,
+      873
+    ],
+    "type": "table",
+    "caption": "表4 PaaSのサービスカタログの内容"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_5.png",
+    "page_number": 17,
+    "box_2d": [
+      354,
+      154,
+      414,
+      861
+    ],
+    "type": "table",
+    "caption": "表5 PaaSの年間費用"
+  }
+]

@@ -1,0 +1,145 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      269,
+      183,
+      506,
+      816
+    ],
+    "type": "figure",
+    "caption": "PAスーツの外観"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 2,
+    "box_2d": [
+      776,
+      259,
+      885,
+      739
+    ],
+    "type": "figure",
+    "caption": "PAスーツの構成"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 3,
+    "box_2d": [
+      504,
+      136,
+      686,
+      863
+    ],
+    "type": "figure",
+    "caption": "横から見た姿勢と角度センサー及び背中にあるIMUの値との関係"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 4,
+    "box_2d": [
+      354,
+      236,
+      527,
+      761
+    ],
+    "type": "figure",
+    "caption": "PAスーツの状態遷移"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 5,
+    "box_2d": [
+      195,
+      227,
+      337,
+      816
+    ],
+    "type": "figure",
+    "caption": "制御部の主なタスクの構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 8,
+    "box_2d": [
+      329,
+      141,
+      569,
+      856
+    ],
+    "type": "figure",
+    "caption": "本システムの概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 9,
+    "box_2d": [
+      129,
+      184,
+      312,
+      815
+    ],
+    "type": "figure",
+    "caption": "審判計時機の構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 11,
+    "box_2d": [
+      592,
+      136,
+      700,
+      816
+    ],
+    "type": "figure",
+    "caption": "審判計時機の主なタスク構成"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 15,
+    "box_2d": [
+      368,
+      118,
+      806,
+      881
+    ],
+    "type": "figure",
+    "caption": "無人店舗システムの概略図"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 18,
+    "box_2d": [
+      99,
+      185,
+      308,
+      815
+    ],
+    "type": "figure",
+    "caption": "複数LIDARの照射範囲の例"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 20,
+    "box_2d": [
+      676,
+      183,
+      845,
+      849
+    ],
+    "type": "figure",
+    "caption": "各コアの処理の流れ"
+  }
+]

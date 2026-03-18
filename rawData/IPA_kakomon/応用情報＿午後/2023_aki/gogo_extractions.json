@@ -1,0 +1,574 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 4,
+    "box_2d": [
+      378,
+      138,
+      477,
+      816
+    ],
+    "type": "figure",
+    "caption": "添付ファイル圧縮サーバ導入後のメール送信手順"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 6,
+    "box_2d": [
+      396,
+      140,
+      578,
+      895
+    ],
+    "type": "table",
+    "caption": "メールへの電子署名の付加及びメール内容の検証の手順"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_2.png",
+    "page_number": 6,
+    "box_2d": [
+      624,
+      140,
+      789,
+      895
+    ],
+    "type": "table",
+    "caption": "メール内容の暗号化と復号の手順"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 10,
+    "box_2d": [
+      164,
+      124,
+      917,
+      899
+    ],
+    "type": "table",
+    "caption": "バランスクアコード案"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 11,
+    "box_2d": [
+      272,
+      143,
+      456,
+      881
+    ],
+    "type": "table",
+    "caption": "SECIモデルの活動"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_3.png",
+    "page_number": 12,
+    "box_2d": [
+      124,
+      115,
+      350,
+      447
+    ],
+    "type": "table",
+    "caption": "年度別損益の比較"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_4.png",
+    "page_number": 12,
+    "box_2d": [
+      124,
+      460,
+      286,
+      898
+    ],
+    "type": "table",
+    "caption": "年度別財務分析指標の比較"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      353,
+      391,
+      481,
+      595
+    ],
+    "type": "figure",
+    "caption": "2分探索木の例"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      622,
+      333,
+      705,
+      688
+    ],
+    "type": "table",
+    "caption": "構造体 Node の構成要素"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 15,
+    "box_2d": [
+      559,
+      145,
+      807,
+      495
+    ],
+    "type": "figure",
+    "caption": "探索を行う関数 search のプログラム"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 15,
+    "box_2d": [
+      562,
+      515,
+      798,
+      873
+    ],
+    "type": "figure",
+    "caption": "挿入を行う関数 insert のプログラム"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 16,
+    "box_2d": [
+      509,
+      144,
+      699,
+      820
+    ],
+    "type": "figure",
+    "caption": "木の回転の様子"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_5.png",
+    "page_number": 17,
+    "box_2d": [
+      94,
+      142,
+      267,
+      494
+    ],
+    "type": "figure",
+    "caption": "右回転を行う関数 rotateR のプログラム"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_6.png",
+    "page_number": 17,
+    "box_2d": [
+      94,
+      514,
+      269,
+      878
+    ],
+    "type": "figure",
+    "caption": "左回転を行う関数 rotateL のプログラム"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_7.png",
+    "page_number": 18,
+    "box_2d": [
+      90,
+      140,
+      432,
+      504
+    ],
+    "type": "figure",
+    "caption": "関数 balance のプログラム"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_8.png",
+    "page_number": 18,
+    "box_2d": [
+      90,
+      511,
+      335,
+      856
+    ],
+    "type": "figure",
+    "caption": "関数 insertB のプログラム"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_1.png",
+    "page_number": 20,
+    "box_2d": [
+      298,
+      92,
+      918,
+      895
+    ],
+    "type": "table",
+    "caption": "合併前のC社の基幹システム（抜粋）"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_2.png",
+    "page_number": 21,
+    "box_2d": [
+      606,
+      89,
+      926,
+      895
+    ],
+    "type": "table",
+    "caption": "合併前のD社の基幹システム（抜粋）"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 23,
+    "box_2d": [
+      120,
+      234,
+      354,
+      785
+    ],
+    "type": "figure",
+    "caption": "合併後のシステム間連携（一部省略）"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_3.png",
+    "page_number": 23,
+    "box_2d": [
+      413,
+      161,
+      610,
+      853
+    ],
+    "type": "table",
+    "caption": "新たなシステム間連携の一覧"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_1.png",
+    "page_number": 26,
+    "box_2d": [
+      571,
+      118,
+      767,
+      885
+    ],
+    "type": "figure",
+    "caption": "ネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_2.png",
+    "page_number": 27,
+    "box_2d": [
+      592,
+      146,
+      703,
+      889
+    ],
+    "type": "figure",
+    "caption": "DNSサーバに設定するゾーン情報（抜粋）"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_1.png",
+    "page_number": 31,
+    "box_2d": [
+      203,
+      131,
+      581,
+      879
+    ],
+    "type": "figure",
+    "caption": "現状の在庫管理システムの E-R 図（抜粋）"
+  },
+  {
+    "question_number": 6,
+    "filename": "表6_1.png",
+    "page_number": 32,
+    "box_2d": [
+      171,
+      135,
+      233,
+      875
+    ],
+    "type": "table",
+    "caption": "追加するエンティティ"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_2.png",
+    "page_number": 32,
+    "box_2d": [
+      252,
+      129,
+      541,
+      879
+    ],
+    "type": "figure",
+    "caption": "改修後の在庫管理システムの E-R 図（抜粋）"
+  },
+  {
+    "question_number": 6,
+    "filename": "表6_2.png",
+    "page_number": 32,
+    "box_2d": [
+      648,
+      124,
+      930,
+      892
+    ],
+    "type": "table",
+    "caption": "予約注文を受けた商品の個数に関する処理内容"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_3.png",
+    "page_number": 33,
+    "box_2d": [
+      349,
+      122,
+      572,
+      836
+    ],
+    "type": "figure",
+    "caption": "ウィンドウ関数で使用する構文（抜粋）"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_4.png",
+    "page_number": 34,
+    "box_2d": [
+      97,
+      143,
+      284,
+      725
+    ],
+    "type": "figure",
+    "caption": "各年月日および平均在庫数及び売上個数を集計する SQL 文"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_1.png",
+    "page_number": 36,
+    "box_2d": [
+      300,
+      157,
+      526,
+      488
+    ],
+    "type": "figure",
+    "caption": "収穫ロボットの外観"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_2.png",
+    "page_number": 36,
+    "box_2d": [
+      278,
+      543,
+      530,
+      883
+    ],
+    "type": "figure",
+    "caption": "収穫ロボットのシステム構成"
+  },
+  {
+    "question_number": 7,
+    "filename": "表7_1.png",
+    "page_number": 36,
+    "box_2d": [
+      583,
+      243,
+      778,
+      768
+    ],
+    "type": "table",
+    "caption": "収穫ロボットの主な構成要素"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_3.png",
+    "page_number": 36,
+    "box_2d": [
+      796,
+      218,
+      876,
+      793
+    ],
+    "type": "figure",
+    "caption": "収穫ロボットの状態遷移の一部"
+  },
+  {
+    "question_number": 7,
+    "filename": "表7_2.png",
+    "page_number": 38,
+    "box_2d": [
+      511,
+      339,
+      604,
+      717
+    ],
+    "type": "table",
+    "caption": "サーボモーターの仕様"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_4.png",
+    "page_number": 38,
+    "box_2d": [
+      622,
+      305,
+      892,
+      729
+    ],
+    "type": "figure",
+    "caption": "各サーボモーターの制御角とアームの可動範囲"
+  },
+  {
+    "question_number": 7,
+    "filename": "表7_3.png",
+    "page_number": 39,
+    "box_2d": [
+      227,
+      112,
+      544,
+      912
+    ],
+    "type": "table",
+    "caption": "制御部の主なタスクの処理概要"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_5.png",
+    "page_number": 40,
+    "box_2d": [
+      368,
+      255,
+      548,
+      784
+    ],
+    "type": "figure",
+    "caption": "サーボモーターへの入力制御パルス"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_1.png",
+    "page_number": 42,
+    "box_2d": [
+      541,
+      136,
+      734,
+      449
+    ],
+    "type": "figure",
+    "caption": "新サービスのトップ画面"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_1.png",
+    "page_number": 44,
+    "box_2d": [
+      211,
+      140,
+      510,
+      895
+    ],
+    "type": "table",
+    "caption": "おすすめの髪型機能の実現に必要な処理"
+  },
+  {
+    "question_number": 9,
+    "filename": "表9_1.png",
+    "page_number": 47,
+    "box_2d": [
+      112,
+      126,
+      334,
+      888
+    ],
+    "type": "table",
+    "caption": "プロジェクト立ち上げのメンバー"
+  },
+  {
+    "question_number": 9,
+    "filename": "表9_2.png",
+    "page_number": 48,
+    "box_2d": [
+      462,
+      132,
+      642,
+      878
+    ],
+    "type": "table",
+    "caption": "ベンダー比較表"
+  },
+  {
+    "question_number": 10,
+    "filename": "表10_1.png",
+    "page_number": 52,
+    "box_2d": [
+      220,
+      119,
+      388,
+      895
+    ],
+    "type": "table",
+    "caption": "販売部と情報システム部との間のサービスレベル項目と目標（案）"
+  },
+  {
+    "question_number": 10,
+    "filename": "表10_2.png",
+    "page_number": 53,
+    "box_2d": [
+      218,
+      124,
+      354,
+      889
+    ],
+    "type": "table",
+    "caption": "サービス課とシステム開発課との間の主要なサービスレベル項目と目標（案）"
+  },
+  {
+    "question_number": 11,
+    "filename": "図11_1.png",
+    "page_number": 57,
+    "box_2d": [
+      211,
+      120,
+      418,
+      903
+    ],
+    "type": "figure",
+    "caption": "東・西センターの現状のサーバ構成"
+  },
+  {
+    "question_number": 11,
+    "filename": "表11_1.png",
+    "page_number": 58,
+    "box_2d": [
+      571,
+      102,
+      739,
+      895
+    ],
+    "type": "table",
+    "caption": "想定されるリスクと監査手続（抜粋）"
+  }
+]

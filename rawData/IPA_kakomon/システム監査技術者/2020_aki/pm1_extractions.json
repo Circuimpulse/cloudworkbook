@@ -1,0 +1,28 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      618,
+      126,
+      734,
+      874
+    ],
+    "type": "figure",
+    "caption": "“デジタル経営構想”における DX の捉え方"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 10,
+    "box_2d": [
+      754,
+      204,
+      876,
+      821
+    ],
+    "type": "figure",
+    "caption": "情シス委員会の体制"
+  }
+]

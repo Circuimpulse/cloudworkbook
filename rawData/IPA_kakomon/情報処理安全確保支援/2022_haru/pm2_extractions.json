@@ -1,0 +1,236 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 4,
+    "box_2d": [
+      559,
+      159,
+      712,
+      842
+    ],
+    "type": "figure",
+    "caption": "ライブラリMのコード"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 5,
+    "box_2d": [
+      447,
+      133,
+      668,
+      843
+    ],
+    "type": "figure",
+    "caption": "リクエストの内容"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 6,
+    "box_2d": [
+      334,
+      228,
+      495,
+      754
+    ],
+    "type": "figure",
+    "caption": "攻撃者が用いる画面"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 6,
+    "box_2d": [
+      836,
+      134,
+      917,
+      842
+    ],
+    "type": "figure",
+    "caption": "A社のニューストピックを取得するリクエスト"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 7,
+    "box_2d": [
+      439,
+      134,
+      846,
+      846
+    ],
+    "type": "figure",
+    "caption": "登録されている駅名である“東京”を入力したときの流れ"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_6.png",
+    "page_number": 8,
+    "box_2d": [
+      94,
+      134,
+      514,
+      846
+    ],
+    "type": "figure",
+    "caption": "登録されていない駅名である“abc”を入力したときの流れ"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_7.png",
+    "page_number": 9,
+    "box_2d": [
+      531,
+      114,
+      841,
+      865
+    ],
+    "type": "figure",
+    "caption": "B社の開発プロセスの概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 13,
+    "box_2d": [
+      347,
+      134,
+      604,
+      874
+    ],
+    "type": "figure",
+    "caption": "X社のシステム構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 14,
+    "box_2d": [
+      202,
+      134,
+      357,
+      845
+    ],
+    "type": "figure",
+    "caption": "X社動画サーバのクラウドサービスへの移行及びCDNの利用案（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 14,
+    "box_2d": [
+      820,
+      133,
+      918,
+      846
+    ],
+    "type": "figure",
+    "caption": "M社CDNの利用手順（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 15,
+    "box_2d": [
+      94,
+      134,
+      310,
+      846
+    ],
+    "type": "figure",
+    "caption": "動画配信時の動作（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 15,
+    "box_2d": [
+      503,
+      134,
+      781,
+      846
+    ],
+    "type": "figure",
+    "caption": "ドメインフロンティング攻撃が成功する例"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_6.png",
+    "page_number": 16,
+    "box_2d": [
+      644,
+      134,
+      723,
+      842
+    ],
+    "type": "figure",
+    "caption": "他のサーバのクラウドサービスへの移行案（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_7.png",
+    "page_number": 17,
+    "box_2d": [
+      94,
+      134,
+      424,
+      846
+    ],
+    "type": "figure",
+    "caption": "XPCからGrWサーバにアクセスする場合のKerberos認証の流れ"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_8.png",
+    "page_number": 18,
+    "box_2d": [
+      583,
+      114,
+      891,
+      855
+    ],
+    "type": "figure",
+    "caption": "SAML認証の流れ"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_9.png",
+    "page_number": 21,
+    "box_2d": [
+      94,
+      134,
+      509,
+      846
+    ],
+    "type": "figure",
+    "caption": "OAuth 2.0を利用したサービス要求からスケジュール情報の取得までの流れ"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_10.png",
+    "page_number": 23,
+    "box_2d": [
+      94,
+      134,
+      429,
+      846
+    ],
+    "type": "figure",
+    "caption": "OIDCを用いたT社投稿サイトとX社動画サーバの連携の流れ"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_n.png",
+    "page_number": 25,
+    "box_2d": [
+      310,
+      134,
+      714,
+      846
+    ],
+    "type": "figure",
+    "caption": "設問4(2)の解答群（シーケンス図）"
+  }
+]

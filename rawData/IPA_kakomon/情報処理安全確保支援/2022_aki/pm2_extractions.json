@@ -1,0 +1,223 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      310,
+      131,
+      451,
+      885
+    ],
+    "type": "figure",
+    "caption": "ネットワークの概要"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 3,
+    "box_2d": [
+      89,
+      114,
+      273,
+      887
+    ],
+    "type": "figure",
+    "caption": "Dシステムの概要"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 5,
+    "box_2d": [
+      693,
+      114,
+      835,
+      882
+    ],
+    "type": "figure",
+    "caption": "検体を持ち込んで実行する手順"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 6,
+    "box_2d": [
+      201,
+      114,
+      396,
+      885
+    ],
+    "type": "figure",
+    "caption": "ファイル転送手順"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 7,
+    "box_2d": [
+      85,
+      120,
+      301,
+      879
+    ],
+    "type": "figure",
+    "caption": "新しいファイル転送手順"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_6.png",
+    "page_number": 9,
+    "box_2d": [
+      174,
+      143,
+      386,
+      876
+    ],
+    "type": "figure",
+    "caption": "作成したネットワーク図"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_7.png",
+    "page_number": 11,
+    "box_2d": [
+      85,
+      114,
+      442,
+      885
+    ],
+    "type": "figure",
+    "caption": "整理した情報"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_8.png",
+    "page_number": 12,
+    "box_2d": [
+      89,
+      143,
+      274,
+      879
+    ],
+    "type": "figure",
+    "caption": "オフライン攻撃の流れ"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_9.png",
+    "page_number": 12,
+    "box_2d": [
+      426,
+      120,
+      726,
+      885
+    ],
+    "type": "figure",
+    "caption": "運用に関する改善提案の報告書（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 15,
+    "box_2d": [
+      278,
+      140,
+      439,
+      871
+    ],
+    "type": "figure",
+    "caption": "K社のネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 17,
+    "box_2d": [
+      638,
+      128,
+      856,
+      868
+    ],
+    "type": "figure",
+    "caption": "検知ルールの仕様"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 18,
+    "box_2d": [
+      91,
+      111,
+      230,
+      887
+    ],
+    "type": "figure",
+    "caption": "製品Cの製品出荷時に組み込まれている検知ルール"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 19,
+    "box_2d": [
+      297,
+      134,
+      730,
+      874
+    ],
+    "type": "figure",
+    "caption": "製品Cが記録したPC1〜3のイベント（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 21,
+    "box_2d": [
+      640,
+      108,
+      786,
+      887
+    ],
+    "type": "figure",
+    "caption": "レベル判定基準（案）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_6.png",
+    "page_number": 22,
+    "box_2d": [
+      92,
+      101,
+      579,
+      889
+    ],
+    "type": "figure",
+    "caption": "インシデント対応の流れ（案）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_7.png",
+    "page_number": 24,
+    "box_2d": [
+      89,
+      137,
+      250,
+      876
+    ],
+    "type": "figure",
+    "caption": "想定4の調査計画"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_8.png",
+    "page_number": 25,
+    "box_2d": [
+      251,
+      137,
+      521,
+      879
+    ],
+    "type": "figure",
+    "caption": "規程案（抜粋）"
+  }
+]

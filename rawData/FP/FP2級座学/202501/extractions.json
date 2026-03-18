@@ -1,0 +1,28 @@
+[
+  {
+    "question_number": 23,
+    "filename": "問題23.png",
+    "page_number": 9,
+    "box_2d": [
+      655,
+      126,
+      856,
+      552
+    ],
+    "type": "figure",
+    "caption": "問題23の計算式"
+  },
+  {
+    "question_number": 26,
+    "filename": "問題26.png",
+    "page_number": 11,
+    "box_2d": [
+      199,
+      93,
+      302,
+      532
+    ],
+    "type": "table",
+    "caption": "問題26のX社およびY社の株式の投資指標に関する資料"
+  }
+]

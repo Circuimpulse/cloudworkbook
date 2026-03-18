@@ -1,0 +1,171 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      610,
+      135,
+      882,
+      887
+    ],
+    "type": "figure",
+    "caption": "A社ネットワークの構成(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 5,
+    "box_2d": [
+      338,
+      131,
+      547,
+      883
+    ],
+    "type": "figure",
+    "caption": "ベンダが提案したA社ネットワークの構成(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 6,
+    "box_2d": [
+      97,
+      108,
+      322,
+      893
+    ],
+    "type": "table",
+    "caption": "FTAの利用時の流れ"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      541,
+      232,
+      808,
+      791
+    ],
+    "type": "figure",
+    "caption": "N社の現行のネットワーク構成(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 10,
+    "box_2d": [
+      586,
+      112,
+      854,
+      888
+    ],
+    "type": "table",
+    "caption": "ネットワーク機器のVRFとインタフェース情報(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 11,
+    "box_2d": [
+      84,
+      124,
+      303,
+      892
+    ],
+    "type": "table",
+    "caption": "ネットワーク機器に設定しているVRFと経路情報(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 12,
+    "box_2d": [
+      97,
+      203,
+      349,
+      812
+    ],
+    "type": "figure",
+    "caption": "R主任が考えた新規ネットワーク構成と通信の流れ(抜粋)"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 15,
+    "box_2d": [
+      559,
+      126,
+      863,
+      837
+    ],
+    "type": "figure",
+    "caption": "本社ネットワーク構成(抜粋)"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1.png",
+    "page_number": 16,
+    "box_2d": [
+      581,
+      142,
+      806,
+      869
+    ],
+    "type": "table",
+    "caption": "FWに設定されている通信を許可するルール"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 17,
+    "box_2d": [
+      555,
+      234,
+      845,
+      831
+    ],
+    "type": "figure",
+    "caption": "PCの起動から営業支援サーバアクセスまでの通信手順(抜粋)"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 19,
+    "box_2d": [
+      88,
+      197,
+      126,
+      733
+    ],
+    "type": "figure",
+    "caption": "SRVレコードのフォーマット"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 19,
+    "box_2d": [
+      494,
+      117,
+      581,
+      885
+    ],
+    "type": "figure",
+    "caption": "ケルベロス認証向けのSRVレコードの内容"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_5.png",
+    "page_number": 20,
+    "box_2d": [
+      612,
+      116,
+      666,
+      888
+    ],
+    "type": "figure",
+    "caption": "変更後のSRVレコードの内容"
+  }
+]

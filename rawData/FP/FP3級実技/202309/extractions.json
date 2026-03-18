@@ -1,0 +1,262 @@
+[
+  {
+    "question_number": 2,
+    "filename": "問題2.png",
+    "page_number": 3,
+    "box_2d": [
+      197,
+      85,
+      574,
+      908
+    ],
+    "type": "table",
+    "caption": "小山家のキャッシュフロー表"
+  },
+  {
+    "question_number": 3,
+    "filename": "問題3_1.png",
+    "page_number": 4,
+    "box_2d": [
+      237,
+      98,
+      432,
+      908
+    ],
+    "type": "table",
+    "caption": "株式市場に関するデータ 投資指標"
+  },
+  {
+    "question_number": 3,
+    "filename": "問題3_2.png",
+    "page_number": 4,
+    "box_2d": [
+      462,
+      108,
+      552,
+      571
+    ],
+    "type": "table",
+    "caption": "HX株式会社に関するデータ"
+  },
+  {
+    "question_number": 4,
+    "filename": "問題4.png",
+    "page_number": 5,
+    "box_2d": [
+      167,
+      98,
+      245,
+      815
+    ],
+    "type": "table",
+    "caption": "2023年9月/10月カレンダー"
+  },
+  {
+    "question_number": 6,
+    "filename": "問題6.png",
+    "page_number": 6,
+    "box_2d": [
+      208,
+      106,
+      342,
+      909
+    ],
+    "type": "table",
+    "caption": "定期借地権についてまとめた表"
+  },
+  {
+    "question_number": 7,
+    "filename": "問題7.png",
+    "page_number": 6,
+    "box_2d": [
+      572,
+      103,
+      715,
+      909
+    ],
+    "type": "table",
+    "caption": "宅地建物の売買・交換における媒介契約の種類とその概要"
+  },
+  {
+    "question_number": 8,
+    "filename": "問題8.png",
+    "page_number": 7,
+    "box_2d": [
+      266,
+      108,
+      694,
+      909
+    ],
+    "type": "table",
+    "caption": "定期保険特約付終身保険の契約内容"
+  },
+  {
+    "question_number": 9,
+    "filename": "問題9_1.png",
+    "page_number": 8,
+    "box_2d": [
+      224,
+      108,
+      368,
+      888
+    ],
+    "type": "table",
+    "caption": "生命保険料控除に関する資料"
+  },
+  {
+    "question_number": 9,
+    "filename": "問題9_2.png",
+    "page_number": 8,
+    "box_2d": [
+      433,
+      108,
+      517,
+      908
+    ],
+    "type": "table",
+    "caption": "所得税の生命保険料控除額の速算表"
+  },
+  {
+    "question_number": 11,
+    "filename": "問題11_1.png",
+    "page_number": 9,
+    "box_2d": [
+      247,
+      108,
+      334,
+      377
+    ],
+    "type": "table",
+    "caption": "給与所得控除に関する資料"
+  },
+  {
+    "question_number": 11,
+    "filename": "問題11_2.png",
+    "page_number": 9,
+    "box_2d": [
+      390,
+      108,
+      517,
+      816
+    ],
+    "type": "table",
+    "caption": "給与所得控除額の速算表"
+  },
+  {
+    "question_number": 11,
+    "filename": "問題11_3.png",
+    "page_number": 9,
+    "box_2d": [
+      571,
+      108,
+      825,
+      908
+    ],
+    "type": "table",
+    "caption": "公的年金等控除額の速算表"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12.png",
+    "page_number": 10,
+    "box_2d": [
+      257,
+      93,
+      396,
+      907
+    ],
+    "type": "table",
+    "caption": "医療費控除に関する資料"
+  },
+  {
+    "question_number": 13,
+    "filename": "問題13.png",
+    "page_number": 11,
+    "box_2d": [
+      221,
+      114,
+      439,
+      905
+    ],
+    "type": "figure",
+    "caption": "親族関係図"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15_1.png",
+    "page_number": 13,
+    "box_2d": [
+      320,
+      93,
+      477,
+      907
+    ],
+    "type": "table",
+    "caption": "贈与税の速算表（特例贈与）"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15_2.png",
+    "page_number": 13,
+    "box_2d": [
+      580,
+      93,
+      735,
+      908
+    ],
+    "type": "table",
+    "caption": "贈与税の速算表（一般贈与）"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16_1.png",
+    "page_number": 14,
+    "box_2d": [
+      247,
+      93,
+      345,
+      715
+    ],
+    "type": "table",
+    "caption": "家族構成（同居家族）"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16_2.png",
+    "page_number": 14,
+    "box_2d": [
+      389,
+      93,
+      563,
+      537
+    ],
+    "type": "table",
+    "caption": "保有財産（時価）"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16_3.png",
+    "page_number": 15,
+    "box_2d": [
+      197,
+      93,
+      357,
+      908
+    ],
+    "type": "table",
+    "caption": "安藤家のバランスシート"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17.png",
+    "page_number": 15,
+    "box_2d": [
+      628,
+      93,
+      694,
+      760
+    ],
+    "type": "table",
+    "caption": "係数早見表（5年）"
+  }
+]

@@ -1,0 +1,444 @@
+[
+  {
+    "question_number": 4,
+    "filename": "問題4.png",
+    "page_number": 4,
+    "box_2d": [
+      274,
+      142,
+      416,
+      654
+    ],
+    "type": "table",
+    "caption": "符号化のビット列の表"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12.png",
+    "page_number": 8,
+    "box_2d": [
+      464,
+      188,
+      639,
+      657
+    ],
+    "type": "table",
+    "caption": "更新後のノード数と総理論ピーク演算性能の選択肢"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17.png",
+    "page_number": 11,
+    "box_2d": [
+      218,
+      304,
+      364,
+      591
+    ],
+    "type": "table",
+    "caption": "プロセスの資源占有順序"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_1.png",
+    "page_number": 13,
+    "box_2d": [
+      203,
+      222,
+      279,
+      655
+    ],
+    "type": "figure",
+    "caption": "PWM駆動波形ア"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_2.png",
+    "page_number": 13,
+    "box_2d": [
+      299,
+      222,
+      374,
+      655
+    ],
+    "type": "figure",
+    "caption": "PWM駆動波形イ"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_3.png",
+    "page_number": 13,
+    "box_2d": [
+      394,
+      222,
+      469,
+      655
+    ],
+    "type": "figure",
+    "caption": "PWM駆動波形ウ"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_4.png",
+    "page_number": 13,
+    "box_2d": [
+      501,
+      222,
+      576,
+      655
+    ],
+    "type": "figure",
+    "caption": "PWM駆動波形エ"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_1.png",
+    "page_number": 14,
+    "box_2d": [
+      240,
+      233,
+      327,
+      481
+    ],
+    "type": "figure",
+    "caption": "LUTの構成図"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_2.png",
+    "page_number": 14,
+    "box_2d": [
+      192,
+      608,
+      418,
+      746
+    ],
+    "type": "table",
+    "caption": "LUTの入出力値"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_3.png",
+    "page_number": 14,
+    "box_2d": [
+      442,
+      204,
+      506,
+      444
+    ],
+    "type": "figure",
+    "caption": "論理回路ア"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_4.png",
+    "page_number": 14,
+    "box_2d": [
+      442,
+      572,
+      506,
+      812
+    ],
+    "type": "figure",
+    "caption": "論理回路イ"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_5.png",
+    "page_number": 14,
+    "box_2d": [
+      518,
+      204,
+      582,
+      444
+    ],
+    "type": "figure",
+    "caption": "論理回路ウ"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_6.png",
+    "page_number": 14,
+    "box_2d": [
+      518,
+      572,
+      582,
+      812
+    ],
+    "type": "figure",
+    "caption": "論理回路エ"
+  },
+  {
+    "question_number": 27,
+    "filename": "問題27.png",
+    "page_number": 15,
+    "box_2d": [
+      629,
+      298,
+      719,
+      738
+    ],
+    "type": "figure",
+    "caption": "部品・納入・メーカのUMLデータモデル"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_1.png",
+    "page_number": 17,
+    "box_2d": [
+      180,
+      210,
+      274,
+      461
+    ],
+    "type": "table",
+    "caption": "東京在庫表"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_2.png",
+    "page_number": 17,
+    "box_2d": [
+      180,
+      530,
+      274,
+      781
+    ],
+    "type": "table",
+    "caption": "大阪在庫表"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_3.png",
+    "page_number": 17,
+    "box_2d": [
+      422,
+      188,
+      530,
+      446
+    ],
+    "type": "table",
+    "caption": "SQL実行結果ア"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_4.png",
+    "page_number": 17,
+    "box_2d": [
+      422,
+      558,
+      530,
+      816
+    ],
+    "type": "table",
+    "caption": "SQL実行結果イ"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_5.png",
+    "page_number": 17,
+    "box_2d": [
+      568,
+      188,
+      710,
+      446
+    ],
+    "type": "table",
+    "caption": "SQL実行結果ウ"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_6.png",
+    "page_number": 17,
+    "box_2d": [
+      568,
+      558,
+      736,
+      816
+    ],
+    "type": "table",
+    "caption": "SQL実行結果エ"
+  },
+  {
+    "question_number": 32,
+    "filename": "問題32.png",
+    "page_number": 19,
+    "box_2d": [
+      338,
+      308,
+      429,
+      662
+    ],
+    "type": "figure",
+    "caption": "ネットワーク構成図"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35.png",
+    "page_number": 20,
+    "box_2d": [
+      494,
+      142,
+      624,
+      622
+    ],
+    "type": "table",
+    "caption": "送信元・宛先IPアドレスの組み合わせ"
+  },
+  {
+    "question_number": 47,
+    "filename": "問題47.png",
+    "page_number": 26,
+    "box_2d": [
+      222,
+      234,
+      505,
+      793
+    ],
+    "type": "figure",
+    "caption": "アルゴリズムの流れ図"
+  },
+  {
+    "question_number": 48,
+    "filename": "問題48_1.png",
+    "page_number": 27,
+    "box_2d": [
+      195,
+      152,
+      328,
+      740
+    ],
+    "type": "table",
+    "caption": "保守のタイプの分類表"
+  },
+  {
+    "question_number": 48,
+    "filename": "問題48_2.png",
+    "page_number": 27,
+    "box_2d": [
+      356,
+      152,
+      499,
+      740
+    ],
+    "type": "table",
+    "caption": "選択肢の組み合わせ表"
+  },
+  {
+    "question_number": 53,
+    "filename": "問題53.png",
+    "page_number": 29,
+    "box_2d": [
+      188,
+      288,
+      422,
+      746
+    ],
+    "type": "figure",
+    "caption": "プレシデンスダイアグラム"
+  },
+  {
+    "question_number": 55,
+    "filename": "問題55_1.png",
+    "page_number": 30,
+    "box_2d": [
+      170,
+      165,
+      335,
+      465
+    ],
+    "type": "figure",
+    "caption": "課金グラフア"
+  },
+  {
+    "question_number": 55,
+    "filename": "問題55_2.png",
+    "page_number": 30,
+    "box_2d": [
+      170,
+      520,
+      335,
+      820
+    ],
+    "type": "figure",
+    "caption": "課金グラフイ"
+  },
+  {
+    "question_number": 55,
+    "filename": "問題55_3.png",
+    "page_number": 30,
+    "box_2d": [
+      365,
+      165,
+      530,
+      465
+    ],
+    "type": "figure",
+    "caption": "課金グラフウ"
+  },
+  {
+    "question_number": 55,
+    "filename": "問題55_4.png",
+    "page_number": 30,
+    "box_2d": [
+      365,
+      520,
+      530,
+      820
+    ],
+    "type": "figure",
+    "caption": "課金グラフエ"
+  },
+  {
+    "question_number": 56,
+    "filename": "問題56.png",
+    "page_number": 30,
+    "box_2d": [
+      779,
+      158,
+      855,
+      873
+    ],
+    "type": "table",
+    "caption": "サービス停止状況表"
+  },
+  {
+    "question_number": 74,
+    "filename": "問題74.png",
+    "page_number": 38,
+    "box_2d": [
+      684,
+      188,
+      736,
+      824
+    ],
+    "type": "table",
+    "caption": "製品別不良品個数表"
+  },
+  {
+    "question_number": 75,
+    "filename": "問題75.png",
+    "page_number": 39,
+    "box_2d": [
+      226,
+      325,
+      422,
+      720
+    ],
+    "type": "figure",
+    "caption": "費用と発注量の関係図"
+  },
+  {
+    "question_number": 77,
+    "filename": "問題77.png",
+    "page_number": 40,
+    "box_2d": [
+      218,
+      348,
+      406,
+      650
+    ],
+    "type": "table",
+    "caption": "今年度の損益実績資料"
+  }
+]

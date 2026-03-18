@@ -1,0 +1,145 @@
+[
+  {
+    "question_number": 4,
+    "filename": "問題4.png",
+    "page_number": 5,
+    "box_2d": [
+      576,
+      389,
+      737,
+      554
+    ],
+    "type": "figure",
+    "caption": "16ビットのデータとパリティビットの行列"
+  },
+  {
+    "question_number": 10,
+    "filename": "問題10.png",
+    "page_number": 7,
+    "box_2d": [
+      754,
+      149,
+      907,
+      740
+    ],
+    "type": "figure",
+    "caption": "USB Type-Cプラグ側コネクタの断面図の選択肢"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_1.png",
+    "page_number": 12,
+    "box_2d": [
+      171,
+      154,
+      258,
+      415
+    ],
+    "type": "figure",
+    "caption": "論理回路選択肢ア"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_2.png",
+    "page_number": 12,
+    "box_2d": [
+      171,
+      515,
+      258,
+      775
+    ],
+    "type": "figure",
+    "caption": "論理回路選択肢イ"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_3.png",
+    "page_number": 12,
+    "box_2d": [
+      284,
+      154,
+      370,
+      415
+    ],
+    "type": "figure",
+    "caption": "論理回路選択肢ウ"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_4.png",
+    "page_number": 12,
+    "box_2d": [
+      284,
+      515,
+      370,
+      775
+    ],
+    "type": "figure",
+    "caption": "論理回路選択肢エ"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23.png",
+    "page_number": 13,
+    "box_2d": [
+      273,
+      264,
+      506,
+      684
+    ],
+    "type": "figure",
+    "caption": "マイコンの汎用入出力ポートとLEDの接続図"
+  },
+  {
+    "question_number": 48,
+    "filename": "問題48.png",
+    "page_number": 25,
+    "box_2d": [
+      213,
+      141,
+      894,
+      792
+    ],
+    "type": "figure",
+    "caption": "クラス図のリファクタリング前後"
+  },
+  {
+    "question_number": 49,
+    "filename": "問題49.png",
+    "page_number": 26,
+    "box_2d": [
+      164,
+      139,
+      521,
+      850
+    ],
+    "type": "figure",
+    "caption": "バーンダウンチャートの選択肢"
+  },
+  {
+    "question_number": 52,
+    "filename": "問題52.png",
+    "page_number": 28,
+    "box_2d": [
+      195,
+      140,
+      899,
+      850
+    ],
+    "type": "figure",
+    "caption": "プレシデンスダイアグラムとアローダイアグラムの選択肢"
+  },
+  {
+    "question_number": 62,
+    "filename": "問題62.png",
+    "page_number": 33,
+    "box_2d": [
+      180,
+      201,
+      489,
+      741
+    ],
+    "type": "figure",
+    "caption": "物流業務の改善プロセスフロー"
+  }
+]

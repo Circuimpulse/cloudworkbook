@@ -1,0 +1,106 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      384,
+      163,
+      444,
+      483
+    ],
+    "type": "table",
+    "caption": "問題選択表"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 1,
+    "box_2d": [
+      564,
+      608,
+      792,
+      875
+    ],
+    "type": "figure",
+    "caption": "解答欄の選択例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      600,
+      114,
+      866,
+      882
+    ],
+    "type": "figure",
+    "caption": "A社オンラインショッピングシステムの概要"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 4,
+    "box_2d": [
+      347,
+      126,
+      649,
+      888
+    ],
+    "type": "table",
+    "caption": "表1 改正法による影響及びシステム対応の内容（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 8,
+    "box_2d": [
+      624,
+      131,
+      725,
+      875
+    ],
+    "type": "figure",
+    "caption": "図1 ワークフローに関わるシステムの概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 9,
+    "box_2d": [
+      588,
+      114,
+      931,
+      887
+    ],
+    "type": "table",
+    "caption": "表1 申請書等の見直し一覧表（抜粋）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 11,
+    "box_2d": [
+      611,
+      121,
+      747,
+      881
+    ],
+    "type": "figure",
+    "caption": "図1 運用業務の体制"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 13,
+    "box_2d": [
+      595,
+      114,
+      921,
+      885
+    ],
+    "type": "table",
+    "caption": "表1 監査手続書案（抜粋）"
+  }
+]

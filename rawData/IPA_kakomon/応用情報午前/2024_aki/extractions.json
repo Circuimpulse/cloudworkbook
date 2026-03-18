@@ -1,0 +1,171 @@
+[
+  {
+    "question_number": 0,
+    "filename": "問題0_1.png",
+    "page_number": 2,
+    "box_2d": [
+      220,
+      203,
+      680,
+      786
+    ],
+    "type": "table",
+    "caption": "論理回路の図記号と説明"
+  },
+  {
+    "question_number": 0,
+    "filename": "問題0_2.png",
+    "page_number": 3,
+    "box_2d": [
+      110,
+      203,
+      430,
+      786
+    ],
+    "type": "table",
+    "caption": "回路記号の図記号と説明"
+  },
+  {
+    "question_number": 5,
+    "filename": "問題5.png",
+    "page_number": 5,
+    "box_2d": [
+      390,
+      250,
+      750,
+      750
+    ],
+    "type": "figure",
+    "caption": "2分探索木の例"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14.png",
+    "page_number": 9,
+    "box_2d": [
+      530,
+      160,
+      670,
+      840
+    ],
+    "type": "figure",
+    "caption": "装置Xの直列並列組み合わせ"
+  },
+  {
+    "question_number": 21,
+    "filename": "問題21_1.png",
+    "page_number": 12,
+    "box_2d": [
+      260,
+      300,
+      430,
+      700
+    ],
+    "type": "figure",
+    "caption": "スイッチA及びBとLEDの回路"
+  },
+  {
+    "question_number": 21,
+    "filename": "問題21_2.png",
+    "page_number": 12,
+    "box_2d": [
+      440,
+      100,
+      840,
+      900
+    ],
+    "type": "figure",
+    "caption": "回路動作のタイミングチャート"
+  },
+  {
+    "question_number": 25,
+    "filename": "問題25.png",
+    "page_number": 14,
+    "box_2d": [
+      230,
+      170,
+      350,
+      820
+    ],
+    "type": "figure",
+    "caption": "Webページの画像スクロール表示例"
+  },
+  {
+    "question_number": 28,
+    "filename": "問題28_1.png",
+    "page_number": 15,
+    "box_2d": [
+      540,
+      220,
+      580,
+      780
+    ],
+    "type": "table",
+    "caption": "顧客テーブル"
+  },
+  {
+    "question_number": 28,
+    "filename": "問題28_2.png",
+    "page_number": 15,
+    "box_2d": [
+      590,
+      220,
+      630,
+      780
+    ],
+    "type": "table",
+    "caption": "販売代理店別日別販売テーブル"
+  },
+  {
+    "question_number": 28,
+    "filename": "問題28_3.png",
+    "page_number": 15,
+    "box_2d": [
+      640,
+      220,
+      680,
+      780
+    ],
+    "type": "table",
+    "caption": "商品購入テーブル"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_1.png",
+    "page_number": 16,
+    "box_2d": [
+      170,
+      200,
+      360,
+      800
+    ],
+    "type": "figure",
+    "caption": "地域、仕入先、仕入、部品の関係を示すオブジェクト図"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_2.png",
+    "page_number": 16,
+    "box_2d": [
+      360,
+      170,
+      840,
+      840
+    ],
+    "type": "figure",
+    "caption": "概念データモデルの選択肢"
+  },
+  {
+    "question_number": 72,
+    "filename": "問題72.png",
+    "page_number": 34,
+    "box_2d": [
+      620,
+      150,
+      790,
+      840
+    ],
+    "type": "table",
+    "caption": "各仕事間の段取り時間表"
+  }
+]

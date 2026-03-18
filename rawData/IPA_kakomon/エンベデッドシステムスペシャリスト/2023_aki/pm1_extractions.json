@@ -1,0 +1,119 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      531,
+      137,
+      906,
+      903
+    ],
+    "type": "figure",
+    "caption": "SDシステムのシステム構成"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 6,
+    "box_2d": [
+      394,
+      129,
+      813,
+      875
+    ],
+    "type": "figure",
+    "caption": "ACブルドーザの外観"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 7,
+    "box_2d": [
+      100,
+      137,
+      390,
+      875
+    ],
+    "type": "figure",
+    "caption": "ACブルドーザのシステム構成"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 8,
+    "box_2d": [
+      417,
+      215,
+      556,
+      793
+    ],
+    "type": "figure",
+    "caption": "ACブルドーザの敷均し"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 10,
+    "box_2d": [
+      495,
+      245,
+      584,
+      763
+    ],
+    "type": "figure",
+    "caption": "排土された土砂山の外観"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_6.png",
+    "page_number": 11,
+    "box_2d": [
+      396,
+      243,
+      303,
+      770
+    ],
+    "type": "figure",
+    "caption": "ストロークセンサーの値の変化"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_7.png",
+    "page_number": 12,
+    "box_2d": [
+      515,
+      220,
+      683,
+      817
+    ],
+    "type": "figure",
+    "caption": "ACダンプの3Dマップ作成の様子"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 13,
+    "box_2d": [
+      333,
+      129,
+      455,
+      897
+    ],
+    "type": "figure",
+    "caption": "訓練システムの概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 17,
+    "box_2d": [
+      701,
+      173,
+      887,
+      867
+    ],
+    "type": "figure",
+    "caption": "データ収集装置の制御部のタスク構造"
+  }
+]

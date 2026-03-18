@@ -1,0 +1,548 @@
+[
+  {
+    "question_number": 4,
+    "filename": "問題4.png",
+    "page_number": 4,
+    "box_2d": [
+      208,
+      93,
+      329,
+      447
+    ],
+    "type": "table",
+    "caption": "RT投資信託のファンド別収益率と標準偏差"
+  },
+  {
+    "question_number": 5,
+    "filename": "問題5.png",
+    "page_number": 5,
+    "box_2d": [
+      221,
+      95,
+      342,
+      785
+    ],
+    "type": "table",
+    "caption": "RA株式会社の株式の取引明細"
+  },
+  {
+    "question_number": 6,
+    "filename": "問題6.png",
+    "page_number": 5,
+    "box_2d": [
+      586,
+      96,
+      735,
+      786
+    ],
+    "type": "table",
+    "caption": "個人向け国債の商品概要"
+  },
+  {
+    "question_number": 7,
+    "filename": "問題7.png",
+    "page_number": 6,
+    "box_2d": [
+      248,
+      93,
+      584,
+      908
+    ],
+    "type": "figure",
+    "caption": "建築基準法に関する土地の資料"
+  },
+  {
+    "question_number": 9,
+    "filename": "問題9.png",
+    "page_number": 8,
+    "box_2d": [
+      189,
+      93,
+      465,
+      899
+    ],
+    "type": "table",
+    "caption": "登記事項証明書の一部"
+  },
+  {
+    "question_number": 10,
+    "filename": "問題10_1.png",
+    "page_number": 9,
+    "box_2d": [
+      229,
+      99,
+      589,
+      898
+    ],
+    "type": "table",
+    "caption": "区分所有建物売買契約書"
+  },
+  {
+    "question_number": 11,
+    "filename": "問題11_1.png",
+    "page_number": 10,
+    "box_2d": [
+      286,
+      100,
+      608,
+      899
+    ],
+    "type": "table",
+    "caption": "医療治療保険Aの保険提案書"
+  },
+  {
+    "question_number": 11,
+    "filename": "問題11_2.png",
+    "page_number": 11,
+    "box_2d": [
+      110,
+      100,
+      432,
+      899
+    ],
+    "type": "table",
+    "caption": "終身医療保険Bの保険提案書"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12_1.png",
+    "page_number": 12,
+    "box_2d": [
+      178,
+      93,
+      275,
+      563
+    ],
+    "type": "table",
+    "caption": "吉弘さんの家族構成"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12_2.png",
+    "page_number": 12,
+    "box_2d": [
+      307,
+      95,
+      423,
+      903
+    ],
+    "type": "table",
+    "caption": "吉弘さんが契約している生命保険契約の一覧"
+  },
+  {
+    "question_number": 13,
+    "filename": "問題13.png",
+    "page_number": 13,
+    "box_2d": [
+      195,
+      99,
+      307,
+      715
+    ],
+    "type": "table",
+    "caption": "生命保険の契約の流れ"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14.png",
+    "page_number": 14,
+    "box_2d": [
+      208,
+      100,
+      650,
+      898
+    ],
+    "type": "table",
+    "caption": "自動車保険証券"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15_1.png",
+    "page_number": 15,
+    "box_2d": [
+      263,
+      94,
+      345,
+      411
+    ],
+    "type": "table",
+    "caption": "伊丹さんの収入および経費"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15_2.png",
+    "page_number": 15,
+    "box_2d": [
+      463,
+      94,
+      638,
+      903
+    ],
+    "type": "table",
+    "caption": "公的年金等控除額の速算表"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16.png",
+    "page_number": 16,
+    "box_2d": [
+      248,
+      95,
+      396,
+      905
+    ],
+    "type": "table",
+    "caption": "関根さんの医療費等"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17.png",
+    "page_number": 17,
+    "box_2d": [
+      229,
+      95,
+      335,
+      822
+    ],
+    "type": "table",
+    "caption": "北村さんの所得の種類と所得金額"
+  },
+  {
+    "question_number": 19,
+    "filename": "問題19.png",
+    "page_number": 18,
+    "box_2d": [
+      226,
+      126,
+      439,
+      904
+    ],
+    "type": "figure",
+    "caption": "被相続人の親族関係図"
+  },
+  {
+    "question_number": 20,
+    "filename": "問題20_1.png",
+    "page_number": 19,
+    "box_2d": [
+      238,
+      94,
+      447,
+      904
+    ],
+    "type": "table",
+    "caption": "特例贈与財産に係る贈与税の速算表"
+  },
+  {
+    "question_number": 20,
+    "filename": "問題20_2.png",
+    "page_number": 19,
+    "box_2d": [
+      456,
+      94,
+      626,
+      905
+    ],
+    "type": "table",
+    "caption": "一般贈与財産に係る贈与税の速算表"
+  },
+  {
+    "question_number": 21,
+    "filename": "問題21.png",
+    "page_number": 20,
+    "box_2d": [
+      189,
+      258,
+      563,
+      739
+    ],
+    "type": "figure",
+    "caption": "普通借地権の評価に関する土地の資料"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22.png",
+    "page_number": 21,
+    "box_2d": [
+      408,
+      206,
+      461,
+      792
+    ],
+    "type": "figure",
+    "caption": "被相続人の親族関係図"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_1.png",
+    "page_number": 22,
+    "box_2d": [
+      130,
+      99,
+      219,
+      532
+    ],
+    "type": "table",
+    "caption": "小山家の家族データ"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_2.png",
+    "page_number": 22,
+    "box_2d": [
+      262,
+      97,
+      698,
+      906
+    ],
+    "type": "table",
+    "caption": "小山家のキャッシュフロー表"
+  },
+  {
+    "question_number": 24,
+    "filename": "問題24_1.png",
+    "page_number": 23,
+    "box_2d": [
+      336,
+      120,
+      375,
+      697
+    ],
+    "type": "figure",
+    "caption": "小山家の進学プラン"
+  },
+  {
+    "question_number": 24,
+    "filename": "問題24_2.png",
+    "page_number": 23,
+    "box_2d": [
+      408,
+      118,
+      452,
+      856
+    ],
+    "type": "table",
+    "caption": "学校の学費 (1人当たりの年間総額)"
+  },
+  {
+    "question_number": 26,
+    "filename": "問題26.png",
+    "page_number": 24,
+    "box_2d": [
+      205,
+      113,
+      531,
+      893
+    ],
+    "type": "table",
+    "caption": "係数早見表(年利率1.0%)"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_1.png",
+    "page_number": 26,
+    "box_2d": [
+      238,
+      115,
+      334,
+      792
+    ],
+    "type": "table",
+    "caption": "小田家の家族構成"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_2.png",
+    "page_number": 28,
+    "box_2d": [
+      239,
+      93,
+      646,
+      905
+    ],
+    "type": "table",
+    "caption": "小田家の住宅ローンの償還予定表の一部"
+  },
+  {
+    "question_number": 30,
+    "filename": "問題30.png",
+    "page_number": 29,
+    "box_2d": [
+      227,
+      100,
+      381,
+      650
+    ],
+    "type": "table",
+    "caption": "小田さん夫婦の金融資産 (時価)"
+  },
+  {
+    "question_number": 31,
+    "filename": "問題31.png",
+    "page_number": 30,
+    "box_2d": [
+      189,
+      97,
+      461,
+      903
+    ],
+    "type": "table",
+    "caption": "学資保険Cおよび学資保険Dの契約のしおり (一部抜粋)"
+  },
+  {
+    "question_number": 32,
+    "filename": "問題32_1.png",
+    "page_number": 31,
+    "box_2d": [
+      238,
+      98,
+      335,
+      796
+    ],
+    "type": "table",
+    "caption": "秀和さんに関するデータ"
+  },
+  {
+    "question_number": 32,
+    "filename": "問題32_2.png",
+    "page_number": 31,
+    "box_2d": [
+      369,
+      98,
+      439,
+      898
+    ],
+    "type": "table",
+    "caption": "在職老齢年金に係る計算式"
+  },
+  {
+    "question_number": 33,
+    "filename": "問題33.png",
+    "page_number": 32,
+    "box_2d": [
+      242,
+      116,
+      386,
+      900
+    ],
+    "type": "table",
+    "caption": "出産手当金に関する説明"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_1.png",
+    "page_number": 34,
+    "box_2d": [
+      229,
+      115,
+      326,
+      793
+    ],
+    "type": "table",
+    "caption": "安藤家の家族構成 (同居家族)"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_2.png",
+    "page_number": 34,
+    "box_2d": [
+      377,
+      305,
+      526,
+      897
+    ],
+    "type": "figure",
+    "caption": "安藤家の親族関係図"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_3.png",
+    "page_number": 34,
+    "box_2d": [
+      623,
+      100,
+      816,
+      836
+    ],
+    "type": "table",
+    "caption": "安藤家の保有資産 (時価)"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_4.png",
+    "page_number": 35,
+    "box_2d": [
+      179,
+      100,
+      350,
+      898
+    ],
+    "type": "table",
+    "caption": "安藤家の生命保険契約"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_5.png",
+    "page_number": 35,
+    "box_2d": [
+      668,
+      97,
+      899,
+      903
+    ],
+    "type": "table",
+    "caption": "安藤家のバランスシート"
+  },
+  {
+    "question_number": 36,
+    "filename": "問題36.png",
+    "page_number": 36,
+    "box_2d": [
+      288,
+      116,
+      550,
+      903
+    ],
+    "type": "table",
+    "caption": "令和5年分 給与所得の源泉徴収票"
+  },
+  {
+    "question_number": 38,
+    "filename": "問題38.png",
+    "page_number": 38,
+    "box_2d": [
+      229,
+      93,
+      620,
+      904
+    ],
+    "type": "table",
+    "caption": "特定口座年間取引報告書 (抜粋)"
+  },
+  {
+    "question_number": 40,
+    "filename": "問題40_1.png",
+    "page_number": 39,
+    "box_2d": [
+      240,
+      118,
+      389,
+      888
+    ],
+    "type": "table",
+    "caption": "洋子さんの2024年2月の勤務状況"
+  },
+  {
+    "question_number": 40,
+    "filename": "問題40_2.png",
+    "page_number": 39,
+    "box_2d": [
+      539,
+      117,
+      614,
+      905
+    ],
+    "type": "table",
+    "caption": "傷病手当金の1日当たりの支給額に関する計算式"
+  }
+]

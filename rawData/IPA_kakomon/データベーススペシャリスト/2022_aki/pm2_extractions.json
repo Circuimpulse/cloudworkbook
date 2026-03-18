@@ -1,0 +1,132 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 3,
+    "box_2d": [
+      462,
+      284,
+      617,
+      723
+    ],
+    "type": "figure",
+    "caption": "エンティティタイプとリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 4,
+    "box_2d": [
+      94,
+      518,
+      244,
+      878
+    ],
+    "type": "figure",
+    "caption": "対応関係にゼロを含むか否かを区別して表現する場合の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 4,
+    "box_2d": [
+      487,
+      185,
+      782,
+      820
+    ],
+    "type": "figure",
+    "caption": "スーパータイプとサブタイプの間のリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_4.png",
+    "page_number": 5,
+    "box_2d": [
+      150,
+      375,
+      240,
+      645
+    ],
+    "type": "figure",
+    "caption": "エンティティタイプの属性の表記ルール"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 8,
+    "box_2d": [
+      250,
+      125,
+      775,
+      893
+    ],
+    "type": "figure",
+    "caption": "宿泊管理システムの概念データモデル"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 9,
+    "box_2d": [
+      104,
+      125,
+      620,
+      875
+    ],
+    "type": "figure",
+    "caption": "宿泊管理システムの関係スキーマ（一部省略）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 13,
+    "box_2d": [
+      550,
+      180,
+      780,
+      820
+    ],
+    "type": "figure",
+    "caption": "標準単価と客室稼働率の関係（散布図）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 17,
+    "box_2d": [
+      383,
+      125,
+      631,
+      893
+    ],
+    "type": "figure",
+    "caption": "貸会議室予約業務追加後のトランザクション領域の概念データモデル"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 30,
+    "box_2d": [
+      105,
+      125,
+      838,
+      895
+    ],
+    "type": "figure",
+    "caption": "現行業務の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 31,
+    "box_2d": [
+      100,
+      125,
+      760,
+      875
+    ],
+    "type": "figure",
+    "caption": "現行業務のテーブル構造（未完成）"
+  }
+]

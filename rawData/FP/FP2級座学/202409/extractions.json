@@ -1,0 +1,54 @@
+[
+  {
+    "question_number": 23,
+    "filename": "問題23.png",
+    "page_number": 10,
+    "box_2d": [
+      390,
+      93,
+      477,
+      907
+    ],
+    "type": "table",
+    "caption": "固定利付債券の取引条件"
+  },
+  {
+    "question_number": 25,
+    "filename": "問題25.png",
+    "page_number": 11,
+    "box_2d": [
+      201,
+      240,
+      324,
+      461
+    ],
+    "type": "table",
+    "caption": "X社のデータ"
+  },
+  {
+    "question_number": 27,
+    "filename": "問題27.png",
+    "page_number": 12,
+    "box_2d": [
+      145,
+      93,
+      260,
+      465
+    ],
+    "type": "table",
+    "caption": "Aさんの各資産のポートフォリオの構成比と期待収益率"
+  },
+  {
+    "question_number": 33,
+    "filename": "問題33.png",
+    "page_number": 14,
+    "box_2d": [
+      392,
+      93,
+      469,
+      906
+    ],
+    "type": "table",
+    "caption": "Aさんの2024年分の所得の金額"
+  }
+]

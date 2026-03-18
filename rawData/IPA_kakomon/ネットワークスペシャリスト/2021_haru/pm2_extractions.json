@@ -1,0 +1,288 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      638,
+      597,
+      770,
+      725
+    ],
+    "type": "figure",
+    "caption": "問2を選択した場合の例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      369,
+      116,
+      887,
+      888
+    ],
+    "type": "figure",
+    "caption": "G社の社内システムの構成(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 4,
+    "box_2d": [
+      105,
+      172,
+      386,
+      829
+    ],
+    "type": "table",
+    "caption": "G社のサーバ及びPCの設定(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_2.png",
+    "page_number": 4,
+    "box_2d": [
+      447,
+      173,
+      622,
+      889
+    ],
+    "type": "table",
+    "caption": "G社のネットワーク機器に設定する静的経路情報(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_3.png",
+    "page_number": 6,
+    "box_2d": [
+      169,
+      149,
+      290,
+      891
+    ],
+    "type": "table",
+    "caption": "RSTPで追加されたポートの役割"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 6,
+    "box_2d": [
+      392,
+      381,
+      629,
+      742
+    ],
+    "type": "figure",
+    "caption": "J主任が作成した RSTPのネットワーク図"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 8,
+    "box_2d": [
+      93,
+      110,
+      412,
+      886
+    ],
+    "type": "figure",
+    "caption": "新社内システムの構成(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_4.png",
+    "page_number": 8,
+    "box_2d": [
+      633,
+      116,
+      804,
+      886
+    ],
+    "type": "table",
+    "caption": "移行における作業ステップ(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 9,
+    "box_2d": [
+      39,
+      118,
+      414,
+      892
+    ],
+    "type": "figure",
+    "caption": "ステップ1完了時のネットワーク構成(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_5.png",
+    "page_number": 10,
+    "box_2d": [
+      283,
+      172,
+      439,
+      829
+    ],
+    "type": "table",
+    "caption": "新サーバの設定(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_6.png",
+    "page_number": 10,
+    "box_2d": [
+      484,
+      174,
+      696,
+      889
+    ],
+    "type": "table",
+    "caption": "新FW及びスタック L3SW に設定する静的経路情報(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_7.png",
+    "page_number": 10,
+    "box_2d": [
+      742,
+      174,
+      831,
+      888
+    ],
+    "type": "table",
+    "caption": "FW 及び L3SW に追加する静的経路情報(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_8.png",
+    "page_number": 11,
+    "box_2d": [
+      179,
+      114,
+      725,
+      887
+    ],
+    "type": "table",
+    "caption": "ステップ3の作業手順(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 14,
+    "box_2d": [
+      405,
+      126,
+      755,
+      874
+    ],
+    "type": "figure",
+    "caption": "現在のA社ネットワーク環境(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 16,
+    "box_2d": [
+      307,
+      180,
+      432,
+      879
+    ],
+    "type": "table",
+    "caption": "インタフェースの通信量に関するMIBの説明(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 17,
+    "box_2d": [
+      245,
+      110,
+      582,
+      889
+    ],
+    "type": "figure",
+    "caption": "Z社の提案した構成(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 18,
+    "box_2d": [
+      419,
+      290,
+      552,
+      707
+    ],
+    "type": "table",
+    "caption": "BGP パスアトリビュートの一覧(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_3.png",
+    "page_number": 19,
+    "box_2d": [
+      369,
+      280,
+      599,
+      715
+    ],
+    "type": "table",
+    "caption": "最適経路選択アルゴリズムの仕様"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_4.png",
+    "page_number": 20,
+    "box_2d": [
+      447,
+      280,
+      547,
+      719
+    ],
+    "type": "table",
+    "caption": "FW10のBGP テーブル(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_5.png",
+    "page_number": 20,
+    "box_2d": [
+      586,
+      280,
+      696,
+      718
+    ],
+    "type": "table",
+    "caption": "FW10のルーティングテーブル(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_6.png",
+    "page_number": 21,
+    "box_2d": [
+      638,
+      149,
+      839,
+      887
+    ],
+    "type": "table",
+    "caption": "Cさんが検討した冗長化手順"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_7.png",
+    "page_number": 24,
+    "box_2d": [
+      737,
+      280,
+      838,
+      717
+    ],
+    "type": "table",
+    "caption": "FW10のルーティングテーブル(抜粋)"
+  }
+]

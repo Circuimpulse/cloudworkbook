@@ -1,0 +1,28 @@
+[
+  {
+    "question_number": 52,
+    "filename": "問題52.png",
+    "page_number": 14,
+    "box_2d": [
+      170,
+      203,
+      372,
+      442
+    ],
+    "type": "figure",
+    "caption": "問52の建蔽率計算に関する図"
+  },
+  {
+    "question_number": 57,
+    "filename": "問題57.png",
+    "page_number": 16,
+    "box_2d": [
+      148,
+      172,
+      307,
+      650
+    ],
+    "type": "figure",
+    "caption": "問57の親族関係図"
+  }
+]

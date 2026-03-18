@@ -1,0 +1,587 @@
+[
+  {
+    "question_number": 3,
+    "filename": "問題3_1.png",
+    "page_number": 3,
+    "box_2d": [
+      293,
+      114,
+      370,
+      558
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 3,
+    "filename": "問題3_2.png",
+    "page_number": 3,
+    "box_2d": [
+      405,
+      114,
+      477,
+      608
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 4,
+    "filename": "問題4.png",
+    "page_number": 4,
+    "box_2d": [
+      214,
+      107,
+      329,
+      650
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 5,
+    "filename": "問題5.png",
+    "page_number": 4,
+    "box_2d": [
+      537,
+      85,
+      638,
+      439
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 6,
+    "filename": "問題6_1.png",
+    "page_number": 5,
+    "box_2d": [
+      161,
+      91,
+      317,
+      909
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 7,
+    "filename": "問題7.png",
+    "page_number": 6,
+    "box_2d": [
+      247,
+      126,
+      521,
+      903
+    ],
+    "type": "figure",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 8,
+    "filename": "問題8.png",
+    "page_number": 6,
+    "box_2d": [
+      677,
+      90,
+      810,
+      909
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 11,
+    "filename": "問題11_1.png",
+    "page_number": 8,
+    "box_2d": [
+      272,
+      111,
+      467,
+      860
+    ],
+    "type": "figure",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 11,
+    "filename": "問題11_2.png",
+    "page_number": 8,
+    "box_2d": [
+      498,
+      106,
+      887,
+      898
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12.png",
+    "page_number": 10,
+    "box_2d": [
+      251,
+      93,
+      452,
+      906
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 13,
+    "filename": "問題13.png",
+    "page_number": 11,
+    "box_2d": [
+      246,
+      114,
+      396,
+      885
+    ],
+    "type": "figure",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14_1.png",
+    "page_number": 12,
+    "box_2d": [
+      272,
+      99,
+      574,
+      908
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14_2.png",
+    "page_number": 12,
+    "box_2d": [
+      612,
+      103,
+      804,
+      899
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15.png",
+    "page_number": 14,
+    "box_2d": [
+      265,
+      87,
+      433,
+      821
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16_1.png",
+    "page_number": 15,
+    "box_2d": [
+      221,
+      107,
+      281,
+      393
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16_2.png",
+    "page_number": 15,
+    "box_2d": [
+      299,
+      108,
+      442,
+      887
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16_3.png",
+    "page_number": 15,
+    "box_2d": [
+      453,
+      106,
+      680,
+      889
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17_1.png",
+    "page_number": 16,
+    "box_2d": [
+      333,
+      106,
+      488,
+      888
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17_2.png",
+    "page_number": 16,
+    "box_2d": [
+      506,
+      107,
+      638,
+      886
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17_3.png",
+    "page_number": 16,
+    "box_2d": [
+      657,
+      105,
+      915,
+      887
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 19,
+    "filename": "問題19.png",
+    "page_number": 18,
+    "box_2d": [
+      248,
+      252,
+      447,
+      897
+    ],
+    "type": "figure",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 21,
+    "filename": "問題21.png",
+    "page_number": 20,
+    "box_2d": [
+      330,
+      269,
+      434,
+      764
+    ],
+    "type": "figure",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_1.png",
+    "page_number": 21,
+    "box_2d": [
+      241,
+      154,
+      451,
+      866
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_2.png",
+    "page_number": 21,
+    "box_2d": [
+      462,
+      155,
+      632,
+      865
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_1.png",
+    "page_number": 22,
+    "box_2d": [
+      136,
+      91,
+      192,
+      626
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_2.png",
+    "page_number": 22,
+    "box_2d": [
+      251,
+      91,
+      672,
+      908
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_3.png",
+    "page_number": 23,
+    "box_2d": [
+      265,
+      107,
+      335,
+      892
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 25,
+    "filename": "問題25.png",
+    "page_number": 24,
+    "box_2d": [
+      197,
+      98,
+      281,
+      889
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 26,
+    "filename": "問題26.png",
+    "page_number": 25,
+    "box_2d": [
+      142,
+      101,
+      506,
+      898
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_1.png",
+    "page_number": 26,
+    "box_2d": [
+      238,
+      126,
+      323,
+      814
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_2.png",
+    "page_number": 27,
+    "box_2d": [
+      530,
+      93,
+      608,
+      888
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 32,
+    "filename": "問題32.png",
+    "page_number": 29,
+    "box_2d": [
+      209,
+      90,
+      444,
+      899
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 33,
+    "filename": "問題33_1.png",
+    "page_number": 30,
+    "box_2d": [
+      370,
+      102,
+      467,
+      885
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 33,
+    "filename": "問題33_2.png",
+    "page_number": 30,
+    "box_2d": [
+      486,
+      104,
+      637,
+      888
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 34,
+    "filename": "問題34.png",
+    "page_number": 31,
+    "box_2d": [
+      250,
+      114,
+      388,
+      843
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_1.png",
+    "page_number": 32,
+    "box_2d": [
+      202,
+      113,
+      274,
+      810
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_2.png",
+    "page_number": 32,
+    "box_2d": [
+      333,
+      227,
+      497,
+      803
+    ],
+    "type": "figure",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_3.png",
+    "page_number": 32,
+    "box_2d": [
+      532,
+      108,
+      786,
+      896
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_4.png",
+    "page_number": 33,
+    "box_2d": [
+      156,
+      102,
+      313,
+      897
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_5.png",
+    "page_number": 33,
+    "box_2d": [
+      506,
+      109,
+      777,
+      902
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 36,
+    "filename": "問題36_1.png",
+    "page_number": 34,
+    "box_2d": [
+      238,
+      107,
+      297,
+      517
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 36,
+    "filename": "問題36_2.png",
+    "page_number": 34,
+    "box_2d": [
+      344,
+      108,
+      508,
+      888
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 38,
+    "filename": "問題38.png",
+    "page_number": 35,
+    "box_2d": [
+      619,
+      93,
+      725,
+      514
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 39,
+    "filename": "問題39.png",
+    "page_number": 36,
+    "box_2d": [
+      247,
+      104,
+      360,
+      626
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  },
+  {
+    "question_number": 40,
+    "filename": "問題40.png",
+    "page_number": 37,
+    "box_2d": [
+      209,
+      90,
+      335,
+      908
+    ],
+    "type": "table",
+    "caption": "図表の説明"
+  }
+]

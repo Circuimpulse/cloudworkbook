@@ -1,0 +1,67 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      473,
+      99,
+      615,
+      907
+    ],
+    "type": "figure",
+    "caption": "製造の流れ"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 4,
+    "box_2d": [
+      554,
+      101,
+      828,
+      842
+    ],
+    "type": "table",
+    "caption": "A社の生産管理システムの主要なファイルと主な属性"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1.png",
+    "page_number": 15,
+    "box_2d": [
+      706,
+      108,
+      855,
+      841
+    ],
+    "type": "table",
+    "caption": "新システムの主要なファイル"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_2.png",
+    "page_number": 16,
+    "box_2d": [
+      121,
+      108,
+      837,
+      842
+    ],
+    "type": "table",
+    "caption": "管理サーバの主要な機能"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_3.png",
+    "page_number": 17,
+    "box_2d": [
+      123,
+      108,
+      340,
+      841
+    ],
+    "type": "table",
+    "caption": "管理サーバの主要な機能（続き）"
+  }
+]

@@ -1,0 +1,626 @@
+[
+  {
+    "question_number": 3,
+    "filename": "問題3_1.png",
+    "page_number": 3,
+    "box_2d": [
+      209,
+      92,
+      442,
+      909
+    ],
+    "type": "table",
+    "caption": "経済統計等に関する表"
+  },
+  {
+    "question_number": 3,
+    "filename": "問題3_2.png",
+    "page_number": 3,
+    "box_2d": [
+      463,
+      90,
+      566,
+      908
+    ],
+    "type": "table",
+    "caption": "語群"
+  },
+  {
+    "question_number": 6,
+    "filename": "問題6_1.png",
+    "page_number": 5,
+    "box_2d": [
+      214,
+      102,
+      725,
+      898
+    ],
+    "type": "table",
+    "caption": "投資信託説明書(交付目論見書)およびファンドの費用"
+  },
+  {
+    "question_number": 7,
+    "filename": "問題7_1.png",
+    "page_number": 6,
+    "box_2d": [
+      253,
+      93,
+      532,
+      897
+    ],
+    "type": "figure",
+    "caption": "甲土地・乙土地および関連情報図"
+  },
+  {
+    "question_number": 10,
+    "filename": "問題10_1.png",
+    "page_number": 9,
+    "box_2d": [
+      208,
+      110,
+      381,
+      896
+    ],
+    "type": "table",
+    "caption": "○○マンション302号室の広告情報"
+  },
+  {
+    "question_number": 11,
+    "filename": "問題11_1.png",
+    "page_number": 10,
+    "box_2d": [
+      270,
+      260,
+      422,
+      882
+    ],
+    "type": "table",
+    "caption": "生命保険提案書の概要"
+  },
+  {
+    "question_number": 11,
+    "filename": "問題11_2.png",
+    "page_number": 10,
+    "box_2d": [
+      539,
+      93,
+      829,
+      886
+    ],
+    "type": "table",
+    "caption": "生命保険提案書の詳細なご提案内容"
+  },
+  {
+    "question_number": 13,
+    "filename": "問題13_1.png",
+    "page_number": 12,
+    "box_2d": [
+      204,
+      110,
+      826,
+      897
+    ],
+    "type": "table",
+    "caption": "自動車保険証券"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14_1.png",
+    "page_number": 14,
+    "box_2d": [
+      239,
+      115,
+      360,
+      886
+    ],
+    "type": "table",
+    "caption": "終身保険および終身医療保険の契約情報"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14_2.png",
+    "page_number": 14,
+    "box_2d": [
+      431,
+      91,
+      532,
+      908
+    ],
+    "type": "table",
+    "caption": "所得税の生命保険料控除額の速算表 (2011年12月31日以前締結)"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14_3.png",
+    "page_number": 14,
+    "box_2d": [
+      560,
+      91,
+      656,
+      908
+    ],
+    "type": "table",
+    "caption": "所得税の生命保険料控除額の速算表 (2012年1月1日以後締結)"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15_1.png",
+    "page_number": 15,
+    "box_2d": [
+      256,
+      111,
+      335,
+      510
+    ],
+    "type": "table",
+    "caption": "西山さんの収入等"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15_2.png",
+    "page_number": 15,
+    "box_2d": [
+      412,
+      90,
+      579,
+      908
+    ],
+    "type": "table",
+    "caption": "公的年金等控除額の速算表"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16_1.png",
+    "page_number": 16,
+    "box_2d": [
+      248,
+      107,
+      345,
+      904
+    ],
+    "type": "table",
+    "caption": "建物の状況"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16_2.png",
+    "page_number": 16,
+    "box_2d": [
+      377,
+      108,
+      429,
+      569
+    ],
+    "type": "table",
+    "caption": "耐用年数表(抜粋)"
+  },
+  {
+    "question_number": 18,
+    "filename": "問題18_1.png",
+    "page_number": 17,
+    "box_2d": [
+      244,
+      185,
+      497,
+      880
+    ],
+    "type": "figure",
+    "caption": "親族関係図"
+  },
+  {
+    "question_number": 18,
+    "filename": "問題18_2.png",
+    "page_number": 17,
+    "box_2d": [
+      603,
+      90,
+      680,
+      908
+    ],
+    "type": "table",
+    "caption": "語群"
+  },
+  {
+    "question_number": 19,
+    "filename": "問題19_1.png",
+    "page_number": 18,
+    "box_2d": [
+      194,
+      169,
+      508,
+      831
+    ],
+    "type": "figure",
+    "caption": "宅地(貸家建付地)の図"
+  },
+  {
+    "question_number": 20,
+    "filename": "問題20_1.png",
+    "page_number": 19,
+    "box_2d": [
+      336,
+      283,
+      442,
+      513
+    ],
+    "type": "figure",
+    "caption": "親族関係図"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_1.png",
+    "page_number": 22,
+    "box_2d": [
+      135,
+      98,
+      203,
+      650
+    ],
+    "type": "table",
+    "caption": "杉田家の家族データ"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_2.png",
+    "page_number": 22,
+    "box_2d": [
+      253,
+      93,
+      706,
+      907
+    ],
+    "type": "table",
+    "caption": "杉田家のキャッシュフロー表"
+  },
+  {
+    "question_number": 25,
+    "filename": "問題25_1.png",
+    "page_number": 24,
+    "box_2d": [
+      179,
+      90,
+      521,
+      908
+    ],
+    "type": "table",
+    "caption": "係数早見表(年利1.0%)"
+  },
+  {
+    "question_number": 28,
+    "filename": "問題28_1.png",
+    "page_number": 26,
+    "box_2d": [
+      253,
+      110,
+      321,
+      853
+    ],
+    "type": "table",
+    "caption": "牧村家の家族構成"
+  },
+  {
+    "question_number": 28,
+    "filename": "問題28_2.png",
+    "page_number": 27,
+    "box_2d": [
+      432,
+      129,
+      650,
+      878
+    ],
+    "type": "figure",
+    "caption": "所得税の基本的な仕組みイメージ図"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_1.png",
+    "page_number": 28,
+    "box_2d": [
+      189,
+      290,
+      427,
+      904
+    ],
+    "type": "table",
+    "caption": "財形年金貯蓄の契約条件等"
+  },
+  {
+    "question_number": 31,
+    "filename": "問題31_1.png",
+    "page_number": 29,
+    "box_2d": [
+      213,
+      105,
+      396,
+      497
+    ],
+    "type": "figure",
+    "caption": "解約返戻金相当額の推移イメージ図1"
+  },
+  {
+    "question_number": 31,
+    "filename": "問題31_2.png",
+    "page_number": 29,
+    "box_2d": [
+      216,
+      525,
+      398,
+      905
+    ],
+    "type": "figure",
+    "caption": "解約返戻金相当額の推移イメージ図2"
+  },
+  {
+    "question_number": 31,
+    "filename": "問題31_3.png",
+    "page_number": 29,
+    "box_2d": [
+      445,
+      104,
+      627,
+      498
+    ],
+    "type": "figure",
+    "caption": "解約返戻金相当額の推移イメージ図3"
+  },
+  {
+    "question_number": 31,
+    "filename": "問題31_4.png",
+    "page_number": 29,
+    "box_2d": [
+      449,
+      525,
+      630,
+      902
+    ],
+    "type": "figure",
+    "caption": "解約返戻金相当額の推移イメージ図4"
+  },
+  {
+    "question_number": 33,
+    "filename": "問題33_1.png",
+    "page_number": 31,
+    "box_2d": [
+      253,
+      116,
+      360,
+      843
+    ],
+    "type": "table",
+    "caption": "耕治さんの2024年1月の出勤状況"
+  },
+  {
+    "question_number": 33,
+    "filename": "問題33_2.png",
+    "page_number": 31,
+    "box_2d": [
+      539,
+      290,
+      560,
+      706
+    ],
+    "type": "figure",
+    "caption": "傷病手当金の1日当たりの額の計算式"
+  },
+  {
+    "question_number": 33,
+    "filename": "問題33_3.png",
+    "page_number": 31,
+    "box_2d": [
+      791,
+      91,
+      872,
+      908
+    ],
+    "type": "table",
+    "caption": "語群"
+  },
+  {
+    "question_number": 34,
+    "filename": "問題34_1.png",
+    "page_number": 32,
+    "box_2d": [
+      346,
+      112,
+      624,
+      887
+    ],
+    "type": "table",
+    "caption": "基本手当の所定給付日数(抜粋)"
+  },
+  {
+    "question_number": 34,
+    "filename": "問題34_2.png",
+    "page_number": 32,
+    "box_2d": [
+      809,
+      91,
+      874,
+      908
+    ],
+    "type": "table",
+    "caption": "語群"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_1.png",
+    "page_number": 34,
+    "box_2d": [
+      238,
+      97,
+      323,
+      796
+    ],
+    "type": "table",
+    "caption": "池谷家の家族構成"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_2.png",
+    "page_number": 34,
+    "box_2d": [
+      386,
+      218,
+      526,
+      893
+    ],
+    "type": "figure",
+    "caption": "池谷家の親族関係図"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_3.png",
+    "page_number": 34,
+    "box_2d": [
+      597,
+      107,
+      804,
+      843
+    ],
+    "type": "table",
+    "caption": "池谷家の保有資産(時価)"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_4.png",
+    "page_number": 35,
+    "box_2d": [
+      105,
+      115,
+      166,
+      797
+    ],
+    "type": "table",
+    "caption": "池谷家の負債残高"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_5.png",
+    "page_number": 35,
+    "box_2d": [
+      179,
+      115,
+      306,
+      886
+    ],
+    "type": "table",
+    "caption": "池谷家の生命保険契約情報"
+  },
+  {
+    "question_number": 35,
+    "filename": "問題35_6.png",
+    "page_number": 35,
+    "box_2d": [
+      638,
+      91,
+      808,
+      908
+    ],
+    "type": "table",
+    "caption": "池谷家のバランスシート"
+  },
+  {
+    "question_number": 36,
+    "filename": "問題36_1.png",
+    "page_number": 36,
+    "box_2d": [
+      256,
+      126,
+      589,
+      884
+    ],
+    "type": "table",
+    "caption": "池谷博子さんの令和5年分給与所得の源泉徴収票"
+  },
+  {
+    "question_number": 36,
+    "filename": "問題36_2.png",
+    "page_number": 36,
+    "box_2d": [
+      638,
+      90,
+      765,
+      908
+    ],
+    "type": "table",
+    "caption": "給与所得控除額の速算表"
+  },
+  {
+    "question_number": 37,
+    "filename": "問題37_1.png",
+    "page_number": 37,
+    "box_2d": [
+      101,
+      91,
+      321,
+      680
+    ],
+    "type": "table",
+    "caption": "配偶者特別控除額(所得税)の早見表"
+  },
+  {
+    "question_number": 37,
+    "filename": "問題37_2.png",
+    "page_number": 37,
+    "box_2d": [
+      628,
+      107,
+      692,
+      558
+    ],
+    "type": "table",
+    "caption": "RRファンド購入時の条件"
+  },
+  {
+    "question_number": 37,
+    "filename": "問題37_3.png",
+    "page_number": 37,
+    "box_2d": [
+      719,
+      107,
+      783,
+      557
+    ],
+    "type": "table",
+    "caption": "RRファンド解約時の条件"
+  },
+  {
+    "question_number": 38,
+    "filename": "問題38_1.png",
+    "page_number": 38,
+    "box_2d": [
+      208,
+      107,
+      308,
+      730
+    ],
+    "type": "table",
+    "caption": "RQファンドの取引履歴"
+  },
+  {
+    "question_number": 39,
+    "filename": "問題39_1.png",
+    "page_number": 39,
+    "box_2d": [
+      213,
+      115,
+      335,
+      804
+    ],
+    "type": "table",
+    "caption": "雅之さんの在職老齢年金関連データ"
+  },
+  {
+    "question_number": 39,
+    "filename": "問題39_2.png",
+    "page_number": 39,
+    "box_2d": [
+      369,
+      114,
+      461,
+      888
+    ],
+    "type": "table",
+    "caption": "在職老齢年金に係る計算式"
+  }
+]

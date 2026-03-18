@@ -1,0 +1,41 @@
+[
+  {
+    "question_number": 35,
+    "filename": "問題35.png",
+    "page_number": 5,
+    "box_2d": [
+      128,
+      128,
+      285,
+      400
+    ],
+    "type": "figure",
+    "caption": "住宅ローンの返済方式をイメージ図"
+  },
+  {
+    "question_number": 58,
+    "filename": "問題58.png",
+    "page_number": 9,
+    "box_2d": [
+      628,
+      226,
+      724,
+      825
+    ],
+    "type": "figure",
+    "caption": "親族関係図"
+  },
+  {
+    "question_number": 60,
+    "filename": "問題60.png",
+    "page_number": 10,
+    "box_2d": [
+      310,
+      151,
+      420,
+      645
+    ],
+    "type": "table",
+    "caption": "上場株式Xの価格"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "question_number": 2,
+    "filename": "問題2.png",
+    "page_number": 2,
+    "box_2d": [
+      570,
+      93,
+      729,
+      517
+    ],
+    "type": "table",
+    "caption": "年率2%の各種係数"
+  },
+  {
+    "question_number": 9,
+    "filename": "問題9.png",
+    "page_number": 5,
+    "box_2d": [
+      169,
+      93,
+      458,
+      796
+    ],
+    "type": "table",
+    "caption": "A社の貸借対照表"
+  },
+  {
+    "question_number": 25,
+    "filename": "問題25.png",
+    "page_number": 11,
+    "box_2d": [
+      170,
+      290,
+      313,
+      436
+    ],
+    "type": "table",
+    "caption": "X社のデータ"
+  },
+  {
+    "question_number": 56,
+    "filename": "問題56.png",
+    "page_number": 22,
+    "box_2d": [
+      470,
+      299,
+      680,
+      909
+    ],
+    "type": "figure",
+    "caption": "親族関係図"
+  }
+]

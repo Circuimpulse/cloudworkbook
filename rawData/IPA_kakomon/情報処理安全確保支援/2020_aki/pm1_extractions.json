@@ -1,0 +1,119 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      550,
+      135,
+      695,
+      865
+    ],
+    "type": "figure",
+    "caption": "Nシステムの構成（概要）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 5,
+    "box_2d": [
+      335,
+      140,
+      560,
+      860
+    ],
+    "type": "figure",
+    "caption": "HMAC値を含むQRコードを用いた決済フロー"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 5,
+    "box_2d": [
+      625,
+      125,
+      835,
+      875
+    ],
+    "type": "figure",
+    "caption": "QRコード生成及びQRコード検証の手順"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 6,
+    "box_2d": [
+      415,
+      125,
+      515,
+      875
+    ],
+    "type": "figure",
+    "caption": "サーバ証明書の検証条件（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      95,
+      125,
+      265,
+      875
+    ],
+    "type": "figure",
+    "caption": "R社の情報システムのネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      285,
+      125,
+      740,
+      875
+    ],
+    "type": "figure",
+    "caption": "Pシステムのネットワーク構成（概要）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 15,
+    "box_2d": [
+      615,
+      125,
+      775,
+      875
+    ],
+    "type": "figure",
+    "caption": "ホスト型IPSの概要"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 16,
+    "box_2d": [
+      250,
+      125,
+      320,
+      875
+    ],
+    "type": "figure",
+    "caption": "診断要件"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 16,
+    "box_2d": [
+      415,
+      125,
+      570,
+      875
+    ],
+    "type": "figure",
+    "caption": "診断サービスの調査結果"
+  }
+]

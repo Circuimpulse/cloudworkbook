@@ -1,0 +1,340 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      317,
+      125,
+      744,
+      917
+    ],
+    "type": "figure",
+    "caption": "L社のネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 4,
+    "box_2d": [
+      659,
+      139,
+      824,
+      904
+    ],
+    "type": "figure",
+    "caption": "Fツールの概要（抜粋）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 8,
+    "box_2d": [
+      697,
+      143,
+      892,
+      900
+    ],
+    "type": "figure",
+    "caption": "暫定対策と追加調査"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 9,
+    "box_2d": [
+      163,
+      103,
+      588,
+      903
+    ],
+    "type": "figure",
+    "caption": "C社の解析結果（概要）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 12,
+    "box_2d": [
+      693,
+      184,
+      888,
+      815
+    ],
+    "type": "figure",
+    "caption": "A社のネットワーク（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 15,
+    "box_2d": [
+      369,
+      127,
+      471,
+      902
+    ],
+    "type": "figure",
+    "caption": "Z-Webサイトへの移行手順"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 15,
+    "box_2d": [
+      500,
+      127,
+      833,
+      902
+    ],
+    "type": "figure",
+    "caption": "Uサービスへの移行手順"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 16,
+    "box_2d": [
+      588,
+      233,
+      634,
+      792
+    ],
+    "type": "figure",
+    "caption": "DMARCレコード"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 17,
+    "box_2d": [
+      692,
+      392,
+      740,
+      635
+    ],
+    "type": "figure",
+    "caption": "SPFレコード"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_6.png",
+    "page_number": 18,
+    "box_2d": [
+      94,
+      142,
+      347,
+      902
+    ],
+    "type": "figure",
+    "caption": "メールの一斉配信の説明"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_7.png",
+    "page_number": 19,
+    "box_2d": [
+      94,
+      143,
+      678,
+      902
+    ],
+    "type": "figure",
+    "caption": "メーリングリストの説明"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_8.png",
+    "page_number": 19,
+    "box_2d": [
+      747,
+      137,
+      906,
+      903
+    ],
+    "type": "figure",
+    "caption": "N主任の説明"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 23,
+    "box_2d": [
+      117,
+      159,
+      715,
+      860
+    ],
+    "type": "figure",
+    "caption": "商品購入に関する画面遷移"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 26,
+    "box_2d": [
+      77,
+      117,
+      377,
+      904
+    ],
+    "type": "figure",
+    "caption": "整形後のファイルK"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 26,
+    "box_2d": [
+      494,
+      115,
+      873,
+      906
+    ],
+    "type": "figure",
+    "caption": "配送先・支払方法選択画面のHTMLソース"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 27,
+    "box_2d": [
+      167,
+      143,
+      456,
+      902
+    ],
+    "type": "figure",
+    "caption": "V社からの調査結果及び対処の報告"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 30,
+    "box_2d": [
+      632,
+      139,
+      908,
+      902
+    ],
+    "type": "figure",
+    "caption": "診断対象と診断方法"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_2.png",
+    "page_number": 31,
+    "box_2d": [
+      151,
+      142,
+      519,
+      902
+    ],
+    "type": "figure",
+    "caption": "WebAPIの仕様"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_3.png",
+    "page_number": 32,
+    "box_2d": [
+      100,
+      111,
+      855,
+      910
+    ],
+    "type": "figure",
+    "caption": "画面遷移図（抜粋）"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_4.png",
+    "page_number": 33,
+    "box_2d": [
+      103,
+      118,
+      294,
+      904
+    ],
+    "type": "figure",
+    "caption": "画面遷移図（抜粋）（続き）"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_5.png",
+    "page_number": 34,
+    "box_2d": [
+      172,
+      137,
+      863,
+      902
+    ],
+    "type": "figure",
+    "caption": "診断報告書"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_6.png",
+    "page_number": 35,
+    "box_2d": [
+      151,
+      133,
+      853,
+      902
+    ],
+    "type": "figure",
+    "caption": "診断報告書（続き）"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_7.png",
+    "page_number": 36,
+    "box_2d": [
+      106,
+      143,
+      150,
+      902
+    ],
+    "type": "figure",
+    "caption": "メール（あ）の検査文字列"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_8.png",
+    "page_number": 36,
+    "box_2d": [
+      163,
+      142,
+      810,
+      902
+    ],
+    "type": "figure",
+    "caption": "診断報告書（続き）"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_9.png",
+    "page_number": 37,
+    "box_2d": [
+      94,
+      142,
+      865,
+      902
+    ],
+    "type": "figure",
+    "caption": "診断報告書（続き）"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_10.png",
+    "page_number": 38,
+    "box_2d": [
+      94,
+      143,
+      803,
+      902
+    ],
+    "type": "figure",
+    "caption": "診断報告書（続き）"
+  }
+]

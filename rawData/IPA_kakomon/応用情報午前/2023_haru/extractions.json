@@ -1,0 +1,301 @@
+[
+  {
+    "question_number": 2,
+    "filename": "問題2.png",
+    "page_number": 3,
+    "box_2d": [
+      452,
+      143,
+      767,
+      801
+    ],
+    "type": "figure",
+    "caption": "正規分布を表す4つのグラフの選択肢"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14_1.png",
+    "page_number": 8,
+    "box_2d": [
+      289,
+      249,
+      375,
+      754
+    ],
+    "type": "table",
+    "caption": "ジョブごとのCPUの処理時間と磁気ディスク装置の処理時間"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14_2.png",
+    "page_number": 8,
+    "box_2d": [
+      403,
+      143,
+      547,
+      598
+    ],
+    "type": "table",
+    "caption": "CPUの使用率と磁気ディスク装置の使用率の選択肢"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16.png",
+    "page_number": 9,
+    "box_2d": [
+      230,
+      207,
+      330,
+      802
+    ],
+    "type": "figure",
+    "caption": "装置X〜Zを接続したシステムAとBの構成図"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17_1.png",
+    "page_number": 10,
+    "box_2d": [
+      252,
+      274,
+      446,
+      745
+    ],
+    "type": "table",
+    "caption": "ページ置換えアルゴリズムの割り当てステップ表"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17_2.png",
+    "page_number": 10,
+    "box_2d": [
+      512,
+      143,
+      594,
+      801
+    ],
+    "type": "figure",
+    "caption": "実記憶ページの状態を示す選択肢"
+  },
+  {
+    "question_number": 19,
+    "filename": "問題19.png",
+    "page_number": 11,
+    "box_2d": [
+      184,
+      143,
+      592,
+      803
+    ],
+    "type": "figure",
+    "caption": "ハッシュ表の探索時間を示す4つのグラフの選択肢"
+  },
+  {
+    "question_number": 21,
+    "filename": "問題21.png",
+    "page_number": 12,
+    "box_2d": [
+      177,
+      377,
+      264,
+      682
+    ],
+    "type": "figure",
+    "caption": "NAND素子を用いた組合せ回路"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_1.png",
+    "page_number": 12,
+    "box_2d": [
+      459,
+      207,
+      578,
+      482
+    ],
+    "type": "figure",
+    "caption": "図1 入力信号の電圧波形"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_2.png",
+    "page_number": 12,
+    "box_2d": [
+      469,
+      569,
+      578,
+      801
+    ],
+    "type": "figure",
+    "caption": "図2 ダイオードを含む回路図"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22_3.png",
+    "page_number": 12,
+    "box_2d": [
+      622,
+      143,
+      788,
+      853
+    ],
+    "type": "figure",
+    "caption": "出力電圧の波形の選択肢"
+  },
+  {
+    "question_number": 26,
+    "filename": "問題26_1.png",
+    "page_number": 15,
+    "box_2d": [
+      253,
+      153,
+      425,
+      438
+    ],
+    "type": "figure",
+    "caption": "図1 A社 Webサービスの商品データ(JSON)"
+  },
+  {
+    "question_number": 26,
+    "filename": "問題26_2.png",
+    "page_number": 15,
+    "box_2d": [
+      253,
+      453,
+      425,
+      903
+    ],
+    "type": "figure",
+    "caption": "図2 B社 Webサービスの商品データ(JSON)"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_1.png",
+    "page_number": 17,
+    "box_2d": [
+      284,
+      184,
+      375,
+      813
+    ],
+    "type": "figure",
+    "caption": "UMLを用いたデータモデルの図"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_2.png",
+    "page_number": 17,
+    "box_2d": [
+      404,
+      143,
+      546,
+      523
+    ],
+    "type": "table",
+    "caption": "多重度a, bの組合せの選択肢"
+  },
+  {
+    "question_number": 30,
+    "filename": "問題30.png",
+    "page_number": 17,
+    "box_2d": [
+      749,
+      252,
+      857,
+      688
+    ],
+    "type": "figure",
+    "caption": "注文表と注文明細表のリレーション図"
+  },
+  {
+    "question_number": 43,
+    "filename": "問題43.png",
+    "page_number": 23,
+    "box_2d": [
+      171,
+      136,
+      470,
+      899
+    ],
+    "type": "table",
+    "caption": "無線LANのセキュリティ対策とその効果の表"
+  },
+  {
+    "question_number": 47,
+    "filename": "問題47_1.png",
+    "page_number": 25,
+    "box_2d": [
+      384,
+      171,
+      561,
+      745
+    ],
+    "type": "table",
+    "caption": "値引き条件の決定表"
+  },
+  {
+    "question_number": 47,
+    "filename": "問題47_2.png",
+    "page_number": 25,
+    "box_2d": [
+      614,
+      143,
+      878,
+      903
+    ],
+    "type": "figure",
+    "caption": "動作指定部の選択肢(ア〜エ)"
+  },
+  {
+    "question_number": 53,
+    "filename": "問題53.png",
+    "page_number": 28,
+    "box_2d": [
+      329,
+      143,
+      436,
+      854
+    ],
+    "type": "table",
+    "caption": "作業配分モデルの工数比と期間比"
+  },
+  {
+    "question_number": 57,
+    "filename": "問題57.png",
+    "page_number": 30,
+    "box_2d": [
+      394,
+      184,
+      571,
+      740
+    ],
+    "type": "table",
+    "caption": "移行によって不要となるシステム運用作業の組合せ"
+  },
+  {
+    "question_number": 75,
+    "filename": "問題75_1.png",
+    "page_number": 38,
+    "box_2d": [
+      249,
+      153,
+      656,
+      923
+    ],
+    "type": "figure",
+    "caption": "デシジョンツリーによる期待値計算の図"
+  },
+  {
+    "question_number": 75,
+    "filename": "問題75_2.png",
+    "page_number": 38,
+    "box_2d": [
+      674,
+      143,
+      815,
+      544
+    ],
+    "type": "table",
+    "caption": "期待値の組合せの選択肢"
+  }
+]

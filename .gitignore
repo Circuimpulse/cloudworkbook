@@ -46,8 +46,16 @@ next-env.d.ts
 /docs/procedures/
 
 # misc
-IPA_kakomon/
 tsc_errors.log
 
+# rawData: 画像は除外（PDF/MD/py/json/csvはコミット対象）
+/rawData/**/*.png
+/rawData/**/*.jpg
+/rawData/**/*.jpeg
+/rawData/**/*.gif
+/rawData/**/*.webp
+/rawData/**/*.svg
+/rawData/**/*.bmp
+/rawData/**/rpd_counter.json
 
-/rawData
+

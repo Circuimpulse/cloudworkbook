@@ -1,0 +1,132 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      360,
+      155,
+      570,
+      845
+    ],
+    "type": "table",
+    "caption": "表 1 IT インフラ部の提供している IT サービスの概要 (2023 年 4 月時点)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 2,
+    "box_2d": [
+      750,
+      195,
+      915,
+      804
+    ],
+    "type": "table",
+    "caption": "表 2 顧客に課金している費用の一覧"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 4,
+    "box_2d": [
+      334,
+      127,
+      477,
+      871
+    ],
+    "type": "table",
+    "caption": "表 3 R クラウドのサービス料金"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 4,
+    "box_2d": [
+      785,
+      147,
+      869,
+      852
+    ],
+    "type": "table",
+    "caption": "表 4 2024 年度情報系サービスで使う R クラウド利用料の見積り"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 8,
+    "box_2d": [
+      770,
+      157,
+      915,
+      842
+    ],
+    "type": "figure",
+    "caption": "図 1 システム保全・点検作業時に実施される交換作業"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 9,
+    "box_2d": [
+      454,
+      150,
+      670,
+      849
+    ],
+    "type": "table",
+    "caption": "表 1 2023 年度の駅務機器の故障と稼働率の状況"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 11,
+    "box_2d": [
+      538,
+      147,
+      806,
+      851
+    ],
+    "type": "figure",
+    "caption": "図 2 障害発生日と通常日の投稿件数の推移"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 13,
+    "box_2d": [
+      550,
+      144,
+      911,
+      855
+    ],
+    "type": "table",
+    "caption": "表 1 ゲームアプリの開発と運用における課題"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 14,
+    "box_2d": [
+      510,
+      157,
+      804,
+      842
+    ],
+    "type": "figure",
+    "caption": "図 1 コンテナ型仮想環境とハイパーバイザー型仮想環境の構成例"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 15,
+    "box_2d": [
+      737,
+      226,
+      913,
+      773
+    ],
+    "type": "figure",
+    "caption": "図 2 ブルーグリーンデプロイメント方式の例"
+  }
+]

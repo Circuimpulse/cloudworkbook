@@ -1,0 +1,262 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 3,
+    "box_2d": [
+      455,
+      284,
+      610,
+      715
+    ],
+    "type": "figure",
+    "caption": "図1 エンティティタイプとリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 4,
+    "box_2d": [
+      91,
+      513,
+      240,
+      875
+    ],
+    "type": "figure",
+    "caption": "図2 対応関係にゼロを含むか否かを区別して表現する場合の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 4,
+    "box_2d": [
+      483,
+      155,
+      667,
+      843
+    ],
+    "type": "figure",
+    "caption": "図3 スーパタイプとサブタイプの間のリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_4.png",
+    "page_number": 5,
+    "box_2d": [
+      138,
+      377,
+      238,
+      620
+    ],
+    "type": "figure",
+    "caption": "図4 エンティティタイプの属性の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_5.png",
+    "page_number": 5,
+    "box_2d": [
+      353,
+      290,
+      383,
+      708
+    ],
+    "type": "figure",
+    "caption": "図5 関係スキーマの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_6.png",
+    "page_number": 5,
+    "box_2d": [
+      671,
+      307,
+      702,
+      691
+    ],
+    "type": "figure",
+    "caption": "図6 関係データベースのテーブル（表）構造の表記ルール"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 8,
+    "box_2d": [
+      191,
+      139,
+      574,
+      858
+    ],
+    "type": "figure",
+    "caption": "図1 概念データモデル（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 8,
+    "box_2d": [
+      618,
+      110,
+      853,
+      889
+    ],
+    "type": "figure",
+    "caption": "図2 関係スキーマ（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 10,
+    "box_2d": [
+      433,
+      120,
+      878,
+      878
+    ],
+    "type": "figure",
+    "caption": "図3 新たな商品を追加した概念データモデル（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 11,
+    "box_2d": [
+      100,
+      122,
+      284,
+      880
+    ],
+    "type": "figure",
+    "caption": "図4 工場、物流センタ、ルート及び納入の関係スキーマ（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 14,
+    "box_2d": [
+      577,
+      110,
+      713,
+      889
+    ],
+    "type": "figure",
+    "caption": "図1 空席管理システムの主なテーブルのテーブル構造（一部省略）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 14,
+    "box_2d": [
+      753,
+      110,
+      838,
+      889
+    ],
+    "type": "figure",
+    "caption": "図2 販売管理システムの主なテーブルのテーブル構造（一部省略）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 16,
+    "box_2d": [
+      192,
+      110,
+      413,
+      889
+    ],
+    "type": "figure",
+    "caption": "図3 チケット情報一覧の出力の例"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 16,
+    "box_2d": [
+      467,
+      120,
+      663,
+      880
+    ],
+    "type": "figure",
+    "caption": "図4 チケット情報一覧を出力するSQL文の構文（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 17,
+    "box_2d": [
+      198,
+      110,
+      631,
+      894
+    ],
+    "type": "figure",
+    "caption": "図5 チケットの販売処理の概要（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_6.png",
+    "page_number": 18,
+    "box_2d": [
+      538,
+      110,
+      699,
+      889
+    ],
+    "type": "figure",
+    "caption": "図6 レプリカデータの運用（未完成）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 20,
+    "box_2d": [
+      625,
+      110,
+      877,
+      889
+    ],
+    "type": "figure",
+    "caption": "図1 見直し前の主なテーブル構造（一部省略）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 22,
+    "box_2d": [
+      455,
+      110,
+      514,
+      889
+    ],
+    "type": "figure",
+    "caption": "図2 見直し後の“会員”、“売上”テーブルのテーブル構造（一部省略）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 23,
+    "box_2d": [
+      683,
+      155,
+      815,
+      843
+    ],
+    "type": "figure",
+    "caption": "図3 分析B1用SQL文の構文（未完成）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 24,
+    "box_2d": [
+      555,
+      120,
+      695,
+      880
+    ],
+    "type": "figure",
+    "caption": "図4 分析B2用SQL文の構文"
+  }
+]

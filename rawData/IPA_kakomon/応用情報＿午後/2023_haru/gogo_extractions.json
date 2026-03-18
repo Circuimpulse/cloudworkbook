@@ -1,0 +1,639 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      342,
+      393,
+      398,
+      698
+    ],
+    "type": "table",
+    "caption": "問題の選択方法"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 1,
+    "box_2d": [
+      460,
+      724,
+      849,
+      862
+    ],
+    "type": "figure",
+    "caption": "選択欄の例 (問3,問4,問6,問8を選択した場合の例)"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 3,
+    "box_2d": [
+      182,
+      168,
+      252,
+      698
+    ],
+    "type": "table",
+    "caption": "問1(必須)の出題分野とテーマ"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_4.png",
+    "page_number": 3,
+    "box_2d": [
+      283,
+      168,
+      767,
+      896
+    ],
+    "type": "table",
+    "caption": "問2～問11(10問中4問選択)の出題分野とテーマ"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 5,
+    "box_2d": [
+      99,
+      235,
+      431,
+      885
+    ],
+    "type": "table",
+    "caption": "表1 サイバーキルチェーンの攻撃の段階"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 5,
+    "box_2d": [
+      603,
+      103,
+      791,
+      887
+    ],
+    "type": "table",
+    "caption": "表2 R社のセキュリティ管理に関する課題(一部)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 6,
+    "box_2d": [
+      98,
+      103,
+      340,
+      887
+    ],
+    "type": "table",
+    "caption": "表3 Tさんが検討したセキュリティ管理に関する改善策の候補"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 6,
+    "box_2d": [
+      484,
+      103,
+      663,
+      890
+    ],
+    "type": "table",
+    "caption": "表4 インシデント対応に関する改善策の具体化案"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 7,
+    "box_2d": [
+      98,
+      200,
+      195,
+      888
+    ],
+    "type": "table",
+    "caption": "表5 社員教育に関する改善策の具体化案"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_6.png",
+    "page_number": 7,
+    "box_2d": [
+      482,
+      120,
+      544,
+      888
+    ],
+    "type": "figure",
+    "caption": "図1 一連のインシデント対応フロー"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 12,
+    "box_2d": [
+      440,
+      200,
+      695,
+      820
+    ],
+    "type": "figure",
+    "caption": "図1 R社長が考えた戦略キャンバス(抜粋)"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 16,
+    "box_2d": [
+      336,
+      168,
+      510,
+      887
+    ],
+    "type": "figure",
+    "caption": "図1 456+789を計算した例"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 17,
+    "box_2d": [
+      509,
+      240,
+      668,
+      799
+    ],
+    "type": "figure",
+    "caption": "図2 1234×5678についてのツリー"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 18,
+    "box_2d": [
+      238,
+      138,
+      460,
+      888
+    ],
+    "type": "table",
+    "caption": "表1 構造体の型と要素"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 18,
+    "box_2d": [
+      618,
+      103,
+      889,
+      887
+    ],
+    "type": "table",
+    "caption": "表2 多倍長整数の操作を行う関数"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_5.png",
+    "page_number": 19,
+    "box_2d": [
+      98,
+      103,
+      407,
+      888
+    ],
+    "type": "table",
+    "caption": "表3 使用する主な変数、配列及び関数"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_6.png",
+    "page_number": 19,
+    "box_2d": [
+      431,
+      118,
+      744,
+      887
+    ],
+    "type": "figure",
+    "caption": "図3 与えられた二つの多倍長整数からツリーを構築するプログラム"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_7.png",
+    "page_number": 20,
+    "box_2d": [
+      98,
+      118,
+      531,
+      887
+    ],
+    "type": "figure",
+    "caption": "図4 ツリーを用いて演算を行うプログラム"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 22,
+    "box_2d": [
+      401,
+      168,
+      582,
+      887
+    ],
+    "type": "figure",
+    "caption": "図1 現状のITニュース配信サービスのシステム構成"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_2.png",
+    "page_number": 22,
+    "box_2d": [
+      628,
+      103,
+      785,
+      888
+    ],
+    "type": "table",
+    "caption": "表1 画面一覧"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_3.png",
+    "page_number": 23,
+    "box_2d": [
+      680,
+      103,
+      912,
+      887
+    ],
+    "type": "table",
+    "caption": "表2 APで提供する Web API"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_4.png",
+    "page_number": 24,
+    "box_2d": [
+      146,
+      118,
+      335,
+      887
+    ],
+    "type": "table",
+    "caption": "表3 Web ブラウザ上で実行されるスクリプトの概要"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_5.png",
+    "page_number": 25,
+    "box_2d": [
+      99,
+      118,
+      414,
+      888
+    ],
+    "type": "table",
+    "caption": "表4 テストデータを用いて処理時間を測定した結果"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_1.png",
+    "page_number": 28,
+    "box_2d": [
+      394,
+      136,
+      654,
+      887
+    ],
+    "type": "figure",
+    "caption": "図1 現在のMシステムのネットワーク構成(抜粋)"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_2.png",
+    "page_number": 28,
+    "box_2d": [
+      687,
+      143,
+      812,
+      856
+    ],
+    "type": "table",
+    "caption": "表1 DNS サーバbに登録されているAレコードの情報"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_3.png",
+    "page_number": 30,
+    "box_2d": [
+      205,
+      142,
+      488,
+      887
+    ],
+    "type": "figure",
+    "caption": "図2 Mシステムを増強する構成"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_4.png",
+    "page_number": 30,
+    "box_2d": [
+      704,
+      142,
+      829,
+      856
+    ],
+    "type": "table",
+    "caption": "表2 DNS サーバbに追加登録するAレコードの情報"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_1.png",
+    "page_number": 32,
+    "box_2d": [
+      352,
+      103,
+      478,
+      888
+    ],
+    "type": "table",
+    "caption": "表1 G社の組織の例"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_2.png",
+    "page_number": 32,
+    "box_2d": [
+      668,
+      103,
+      858,
+      888
+    ],
+    "type": "table",
+    "caption": "表2 追加した KPI の項目"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_3.png",
+    "page_number": 33,
+    "box_2d": [
+      472,
+      118,
+      879,
+      887
+    ],
+    "type": "figure",
+    "caption": "図1 KシステムのためのE-R図(抜粋)"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_4.png",
+    "page_number": 34,
+    "box_2d": [
+      102,
+      103,
+      397,
+      888
+    ],
+    "type": "table",
+    "caption": "表3 表の管理内容と運用方法"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_5.png",
+    "page_number": 35,
+    "box_2d": [
+      100,
+      103,
+      357,
+      888
+    ],
+    "type": "table",
+    "caption": "表4 集計リスト作成処理の概要"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_6.png",
+    "page_number": 36,
+    "box_2d": [
+      99,
+      103,
+      636,
+      888
+    ],
+    "type": "figure",
+    "caption": "図2 集計リスト作成処理"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_1.png",
+    "page_number": 38,
+    "box_2d": [
+      530,
+      138,
+      620,
+      887
+    ],
+    "type": "figure",
+    "caption": "図1 PRTを用いた位置情報システムの構成"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_2.png",
+    "page_number": 39,
+    "box_2d": [
+      431,
+      213,
+      485,
+      730
+    ],
+    "type": "figure",
+    "caption": "図2 PRTのハードウェア構成"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_3.png",
+    "page_number": 39,
+    "box_2d": [
+      515,
+      103,
+      912,
+      888
+    ],
+    "type": "table",
+    "caption": "表1 PRTの構成要素"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_4.png",
+    "page_number": 40,
+    "box_2d": [
+      783,
+      118,
+      908,
+      888
+    ],
+    "type": "table",
+    "caption": "表2 各処理の消費電流"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_5.png",
+    "page_number": 41,
+    "box_2d": [
+      336,
+      128,
+      837,
+      888
+    ],
+    "type": "figure",
+    "caption": "図3 タイマー通知時のシーケンス図"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_1.png",
+    "page_number": 45,
+    "box_2d": [
+      141,
+      103,
+      327,
+      888
+    ],
+    "type": "table",
+    "caption": "表1 A社で使うバージョン管理ツールの主な機能"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_2.png",
+    "page_number": 45,
+    "box_2d": [
+      542,
+      103,
+      842,
+      888
+    ],
+    "type": "table",
+    "caption": "表2 ブランチの種類"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_3.png",
+    "page_number": 46,
+    "box_2d": [
+      429,
+      118,
+      495,
+      887
+    ],
+    "type": "figure",
+    "caption": "図1 ブランチの運用ルール"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_4.png",
+    "page_number": 46,
+    "box_2d": [
+      547,
+      192,
+      586,
+      793
+    ],
+    "type": "figure",
+    "caption": "図2 ブランチの樹形図"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_5.png",
+    "page_number": 46,
+    "box_2d": [
+      751,
+      118,
+      895,
+      888
+    ],
+    "type": "figure",
+    "caption": "図3 開発の流れ"
+  },
+  {
+    "question_number": 10,
+    "filename": "図10_1.png",
+    "page_number": 56,
+    "box_2d": [
+      380,
+      118,
+      497,
+      888
+    ],
+    "type": "table",
+    "caption": "表1 L社の現在の業務システムの概要"
+  },
+  {
+    "question_number": 10,
+    "filename": "図10_2.png",
+    "page_number": 56,
+    "box_2d": [
+      709,
+      103,
+      812,
+      888
+    ],
+    "type": "table",
+    "caption": "表2 サービス可用性の特性及び指標"
+  },
+  {
+    "question_number": 10,
+    "filename": "図10_3.png",
+    "page_number": 57,
+    "box_2d": [
+      539,
+      118,
+      690,
+      888
+    ],
+    "type": "table",
+    "caption": "表3 Sサービスのサービスカタログ(抜粋)"
+  },
+  {
+    "question_number": 10,
+    "filename": "図10_4.png",
+    "page_number": 57,
+    "box_2d": [
+      747,
+      118,
+      827,
+      888
+    ],
+    "type": "table",
+    "caption": "表4 L社とM社との間で合意したSLAのサービスレベル目標"
+  },
+  {
+    "question_number": 11,
+    "filename": "図11_1.png",
+    "page_number": 62,
+    "box_2d": [
+      441,
+      128,
+      579,
+      887
+    ],
+    "type": "figure",
+    "caption": "図1 工場在庫管理システム及びその関連システムの概要"
+  },
+  {
+    "question_number": 11,
+    "filename": "図11_2.png",
+    "page_number": 64,
+    "box_2d": [
+      102,
+      118,
+      443,
+      887
+    ],
+    "type": "table",
+    "caption": "表1 監査手続案"
+  }
+]

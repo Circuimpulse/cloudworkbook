@@ -1,0 +1,132 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      360,
+      137,
+      616,
+      887
+    ],
+    "type": "figure",
+    "caption": "K社の現行のネットワーク及び導入予定の機器(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 6,
+    "box_2d": [
+      510,
+      122,
+      856,
+      878
+    ],
+    "type": "figure",
+    "caption": "P主任が考えたテレワーク環境"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 8,
+    "box_2d": [
+      89,
+      137,
+      529,
+      831
+    ],
+    "type": "figure",
+    "caption": "VDI クライアントから仮想 PC までの接続シーケンス(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 10,
+    "box_2d": [
+      95,
+      106,
+      467,
+      887
+    ],
+    "type": "figure",
+    "caption": "P主任が考えた新たな冗長化構成(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 11,
+    "box_2d": [
+      200,
+      252,
+      420,
+      781
+    ],
+    "type": "figure",
+    "caption": "サーバセグメントに接続されている L3SW の冗長化"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 13,
+    "box_2d": [
+      363,
+      213,
+      725,
+      755
+    ],
+    "type": "figure",
+    "caption": "現在の U 社ネットワーク構成(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 14,
+    "box_2d": [
+      549,
+      230,
+      911,
+      768
+    ],
+    "type": "figure",
+    "caption": "サーバ仮想化技術を利用した AP の構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 16,
+    "box_2d": [
+      323,
+      187,
+      683,
+      810
+    ],
+    "type": "figure",
+    "caption": "WebAP コンテナの構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 19,
+    "box_2d": [
+      107,
+      159,
+      311,
+      843
+    ],
+    "type": "figure",
+    "caption": "AP0a と AP1a に対する PC からの HTTP 接続要求パケットの例"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 21,
+    "box_2d": [
+      435,
+      275,
+      747,
+      727
+    ],
+    "type": "figure",
+    "caption": "WebAP の移行途中の構成(抜粋)"
+  }
+]

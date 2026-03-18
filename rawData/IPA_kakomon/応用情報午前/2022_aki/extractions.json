@@ -1,0 +1,236 @@
+[
+  {
+    "question_number": 2,
+    "filename": "問題2.png",
+    "page_number": 3,
+    "box_2d": [
+      343,
+      332,
+      490,
+      653
+    ],
+    "type": "table",
+    "caption": "カルノー図"
+  },
+  {
+    "question_number": 6,
+    "filename": "問題6.png",
+    "page_number": 5,
+    "box_2d": [
+      180,
+      229,
+      595,
+      491
+    ],
+    "type": "figure",
+    "caption": "整列アルゴリズムの流れ図"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_1.png",
+    "page_number": 11,
+    "box_2d": [
+      155,
+      198,
+      245,
+      541
+    ],
+    "type": "figure",
+    "caption": "論理回路ア"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_2.png",
+    "page_number": 11,
+    "box_2d": [
+      272,
+      198,
+      353,
+      541
+    ],
+    "type": "figure",
+    "caption": "論理回路イ"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_3.png",
+    "page_number": 11,
+    "box_2d": [
+      382,
+      198,
+      464,
+      541
+    ],
+    "type": "figure",
+    "caption": "論理回路ウ"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_4.png",
+    "page_number": 11,
+    "box_2d": [
+      502,
+      198,
+      584,
+      541
+    ],
+    "type": "figure",
+    "caption": "論理回路エ"
+  },
+  {
+    "question_number": 27,
+    "filename": "問題27_1.png",
+    "page_number": 13,
+    "box_2d": [
+      155,
+      134,
+      352,
+      481
+    ],
+    "type": "table",
+    "caption": "従業員表と異動表"
+  },
+  {
+    "question_number": 27,
+    "filename": "問題27_2.png",
+    "page_number": 13,
+    "box_2d": [
+      407,
+      134,
+      618,
+      481
+    ],
+    "type": "table",
+    "caption": "結果の選択肢アとイ"
+  },
+  {
+    "question_number": 27,
+    "filename": "問題27_3.png",
+    "page_number": 13,
+    "box_2d": [
+      656,
+      134,
+      765,
+      481
+    ],
+    "type": "table",
+    "caption": "結果の選択肢ウとエ"
+  },
+  {
+    "question_number": 28,
+    "filename": "問題28.png",
+    "page_number": 14,
+    "box_2d": [
+      264,
+      221,
+      553,
+      792
+    ],
+    "type": "table",
+    "caption": "商品表"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29.png",
+    "page_number": 15,
+    "box_2d": [
+      203,
+      186,
+      455,
+      800
+    ],
+    "type": "figure",
+    "caption": "トランザクションの実行時間経過図"
+  },
+  {
+    "question_number": 48,
+    "filename": "問題48_1.png",
+    "page_number": 23,
+    "box_2d": [
+      208,
+      235,
+      700,
+      569
+    ],
+    "type": "figure",
+    "caption": "テスト用流れ図"
+  },
+  {
+    "question_number": 48,
+    "filename": "問題48_2.png",
+    "page_number": 23,
+    "box_2d": [
+      208,
+      600,
+      373,
+      850
+    ],
+    "type": "table",
+    "caption": "テストケース"
+  },
+  {
+    "question_number": 52,
+    "filename": "問題52.png",
+    "page_number": 25,
+    "box_2d": [
+      538,
+      300,
+      780,
+      723
+    ],
+    "type": "figure",
+    "caption": "プレシデンスダイアグラム"
+  },
+  {
+    "question_number": 53,
+    "filename": "問題53.png",
+    "page_number": 26,
+    "box_2d": [
+      327,
+      150,
+      503,
+      820
+    ],
+    "type": "table",
+    "caption": "開発工程の見積工数と要員割当て"
+  },
+  {
+    "question_number": 64,
+    "filename": "問題64.png",
+    "page_number": 31,
+    "box_2d": [
+      606,
+      215,
+      774,
+      811
+    ],
+    "type": "table",
+    "caption": "各シナリオのキャッシュフロー"
+  },
+  {
+    "question_number": 66,
+    "filename": "問題66.png",
+    "page_number": 32,
+    "box_2d": [
+      458,
+      118,
+      618,
+      878
+    ],
+    "type": "figure",
+    "caption": "開発フェーズと契約形態の対応図"
+  },
+  {
+    "question_number": 72,
+    "filename": "問題72.png",
+    "page_number": 35,
+    "box_2d": [
+      215,
+      215,
+      357,
+      800
+    ],
+    "type": "table",
+    "caption": "構成表と在庫表"
+  }
+]

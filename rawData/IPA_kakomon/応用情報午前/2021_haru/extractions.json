@@ -1,0 +1,236 @@
+[
+  {
+    "question_number": 1,
+    "filename": "問題1.png",
+    "page_number": 4,
+    "box_2d": [
+      195,
+      178,
+      266,
+      743
+    ],
+    "type": "figure",
+    "caption": "ブール演算A, Bの排他的論理和の相補演算を示すベン図"
+  },
+  {
+    "question_number": 5,
+    "filename": "問題5.png",
+    "page_number": 5,
+    "box_2d": [
+      338,
+      401,
+      446,
+      616
+    ],
+    "type": "figure",
+    "caption": "スタックへのデータの挿入と取出しのモデル図"
+  },
+  {
+    "question_number": 9,
+    "filename": "問題9.png",
+    "page_number": 7,
+    "box_2d": [
+      140,
+      246,
+      244,
+      710
+    ],
+    "type": "table",
+    "caption": "コンピュータの命令種別ごとの実行速度と出現頻度の一覧表"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14_1.png",
+    "page_number": 9,
+    "box_2d": [
+      199,
+      380,
+      270,
+      619
+    ],
+    "type": "figure",
+    "caption": "4つの装置を組み合わせたシステムの構成図"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14_2.png",
+    "page_number": 9,
+    "box_2d": [
+      315,
+      165,
+      750,
+      834
+    ],
+    "type": "figure",
+    "caption": "稼働率xに対するシステム全体の稼働率f(x)のグラフ選択肢"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16.png",
+    "page_number": 10,
+    "box_2d": [
+      447,
+      267,
+      576,
+      637
+    ],
+    "type": "table",
+    "caption": "ジョブA〜Cの到着時刻と処理時間の一覧表"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_1.png",
+    "page_number": 13,
+    "box_2d": [
+      252,
+      284,
+      484,
+      717
+    ],
+    "type": "figure",
+    "caption": "DCモータの正転逆転制御回路図"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23_2.png",
+    "page_number": 13,
+    "box_2d": [
+      515,
+      142,
+      658,
+      565
+    ],
+    "type": "table",
+    "caption": "制御信号A1〜A4の組み合わせの選択肢"
+  },
+  {
+    "question_number": 25,
+    "filename": "問題25.png",
+    "page_number": 14,
+    "box_2d": [
+      167,
+      377,
+      268,
+      626
+    ],
+    "type": "figure",
+    "caption": "SRラッチにNOT回路を付加した論理回路図"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_1.png",
+    "page_number": 15,
+    "box_2d": [
+      544,
+      288,
+      589,
+      808
+    ],
+    "type": "figure",
+    "caption": "UMLによるクラス間の関連図（クラス名a〜d）"
+  },
+  {
+    "question_number": 29,
+    "filename": "問題29_2.png",
+    "page_number": 15,
+    "box_2d": [
+      614,
+      142,
+      746,
+      558
+    ],
+    "type": "table",
+    "caption": "クラス名a〜dに当てはまる語句の選択肢"
+  },
+  {
+    "question_number": 45,
+    "filename": "問題45.png",
+    "page_number": 23,
+    "box_2d": [
+      417,
+      211,
+      532,
+      796
+    ],
+    "type": "table",
+    "caption": "TLSクライアント認証における処理手順"
+  },
+  {
+    "question_number": 47,
+    "filename": "問題47.png",
+    "page_number": 25,
+    "box_2d": [
+      250,
+      154,
+      524,
+      842
+    ],
+    "type": "table",
+    "caption": "装置の温度変化に伴う状態遷移表"
+  },
+  {
+    "question_number": 48,
+    "filename": "問題48.png",
+    "page_number": 26,
+    "box_2d": [
+      208,
+      394,
+      526,
+      619
+    ],
+    "type": "figure",
+    "caption": "命令網羅テストのためのプログラムフローチャート"
+  },
+  {
+    "question_number": 52,
+    "filename": "問題52.png",
+    "page_number": 28,
+    "box_2d": [
+      281,
+      167,
+      467,
+      808
+    ],
+    "type": "table",
+    "caption": "RACIチャートを用いた責任分担マトリックス"
+  },
+  {
+    "question_number": 53,
+    "filename": "問題53.png",
+    "page_number": 29,
+    "box_2d": [
+      230,
+      192,
+      558,
+      952
+    ],
+    "type": "figure",
+    "caption": "当初の計画(図1)と変更後の計画(図2)のアローダイアグラム"
+  },
+  {
+    "question_number": 67,
+    "filename": "問題67_1.png",
+    "page_number": 35,
+    "box_2d": [
+      447,
+      383,
+      628,
+      675
+    ],
+    "type": "figure",
+    "caption": "PPMマトリックス（a:縦軸、b:横軸）"
+  },
+  {
+    "question_number": 67,
+    "filename": "問題67_2.png",
+    "page_number": 35,
+    "box_2d": [
+      664,
+      142,
+      808,
+      491
+    ],
+    "type": "table",
+    "caption": "PPMマトリックスの軸a, bに当てはまる語句の選択肢"
+  }
+]

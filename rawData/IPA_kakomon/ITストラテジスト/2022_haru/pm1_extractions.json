@@ -1,0 +1,15 @@
+[
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 8,
+    "box_2d": [
+      568,
+      162,
+      797,
+      858
+    ],
+    "type": "figure",
+    "caption": "システム整備後のイメージ"
+  }
+]

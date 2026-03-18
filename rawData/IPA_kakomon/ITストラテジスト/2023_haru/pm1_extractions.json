@@ -1,0 +1,54 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      378,
+      179,
+      444,
+      528
+    ],
+    "type": "table",
+    "caption": "試験時間と問題選択"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 1,
+    "box_2d": [
+      648,
+      603,
+      815,
+      744
+    ],
+    "type": "figure",
+    "caption": "問題選択欄の記入例"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 8,
+    "box_2d": [
+      458,
+      187,
+      698,
+      837
+    ],
+    "type": "figure",
+    "caption": "スマートシティプラットフォーム概念図"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 16,
+    "box_2d": [
+      433,
+      269,
+      617,
+      758
+    ],
+    "type": "figure",
+    "caption": "F社のモーションシミュレーター"
+  }
+]

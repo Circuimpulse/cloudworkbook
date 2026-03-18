@@ -1,0 +1,132 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      659,
+      150,
+      798,
+      849
+    ],
+    "type": "figure",
+    "caption": "現状の在庫管理システムの構成（抜粋）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 3,
+    "box_2d": [
+      559,
+      183,
+      822,
+      818
+    ],
+    "type": "figure",
+    "caption": "RTの利用構成"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 4,
+    "box_2d": [
+      531,
+      146,
+      864,
+      870
+    ],
+    "type": "figure",
+    "caption": "ネットワーク更改後の在庫管理システムの構成（抜粋）"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 6,
+    "box_2d": [
+      264,
+      151,
+      757,
+      848
+    ],
+    "type": "table",
+    "caption": "ある店舗で想定されるポート接続リストの例"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      144,
+      111,
+      589,
+      887
+    ],
+    "type": "figure",
+    "caption": "D社の現行のネットワーク構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      671,
+      185,
+      861,
+      812
+    ],
+    "type": "table",
+    "caption": "D社の現行のネットワークにおける各セグメントのIPアドレス"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 11,
+    "box_2d": [
+      110,
+      132,
+      187,
+      867
+    ],
+    "type": "table",
+    "caption": "ルーティングループを防ぐOSPF経路"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 12,
+    "box_2d": [
+      195,
+      142,
+      842,
+      886
+    ],
+    "type": "figure",
+    "caption": "Fさんの考えた統合後のネットワーク構成"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      473,
+      113,
+      859,
+      885
+    ],
+    "type": "figure",
+    "caption": "Y社のネットワーク構成"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 15,
+    "box_2d": [
+      338,
+      119,
+      767,
+      883
+    ],
+    "type": "figure",
+    "caption": "電話サービス導入後のネットワーク構成"
+  }
+]

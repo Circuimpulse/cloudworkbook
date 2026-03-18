@@ -1,0 +1,236 @@
+[
+  {
+    "question_number": 2,
+    "filename": "問題2.png",
+    "page_number": 3,
+    "box_2d": [
+      200,
+      93,
+      638,
+      908
+    ],
+    "type": "table",
+    "caption": "山岸家のキャッシュフロー表"
+  },
+  {
+    "question_number": 4,
+    "filename": "問題4.png",
+    "page_number": 5,
+    "box_2d": [
+      201,
+      91,
+      318,
+      908
+    ],
+    "type": "table",
+    "caption": "預金残高資料"
+  },
+  {
+    "question_number": 5,
+    "filename": "問題5_1.png",
+    "page_number": 6,
+    "box_2d": [
+      182,
+      93,
+      431,
+      907
+    ],
+    "type": "table",
+    "caption": "株式市場に関するデータ"
+  },
+  {
+    "question_number": 5,
+    "filename": "問題5_2.png",
+    "page_number": 6,
+    "box_2d": [
+      477,
+      103,
+      574,
+      573
+    ],
+    "type": "table",
+    "caption": "MX株式会社に関するデータ"
+  },
+  {
+    "question_number": 6,
+    "filename": "問題6.png",
+    "page_number": 7,
+    "box_2d": [
+      248,
+      102,
+      580,
+      888
+    ],
+    "type": "figure",
+    "caption": "甲土地と乙土地の配置図"
+  },
+  {
+    "question_number": 7,
+    "filename": "問題7.png",
+    "page_number": 8,
+    "box_2d": [
+      195,
+      93,
+      370,
+      908
+    ],
+    "type": "figure",
+    "caption": "物件の購入金額内訳"
+  },
+  {
+    "question_number": 8,
+    "filename": "問題8.png",
+    "page_number": 9,
+    "box_2d": [
+      244,
+      91,
+      610,
+      894
+    ],
+    "type": "table",
+    "caption": "がん保険契約内容"
+  },
+  {
+    "question_number": 9,
+    "filename": "問題9.png",
+    "page_number": 10,
+    "box_2d": [
+      166,
+      91,
+      273,
+      908
+    ],
+    "type": "table",
+    "caption": "生命保険契約の概要"
+  },
+  {
+    "question_number": 10,
+    "filename": "問題10.png",
+    "page_number": 10,
+    "box_2d": [
+      463,
+      91,
+      574,
+      908
+    ],
+    "type": "table",
+    "caption": "損害保険の事例と保険種類"
+  },
+  {
+    "question_number": 11,
+    "filename": "問題11.png",
+    "page_number": 11,
+    "box_2d": [
+      202,
+      91,
+      310,
+      770
+    ],
+    "type": "table",
+    "caption": "目黒昭雄さんの家族構成と所得等"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12.png",
+    "page_number": 12,
+    "box_2d": [
+      201,
+      91,
+      466,
+      908
+    ],
+    "type": "table",
+    "caption": "公的年金等控除額の速算表"
+  },
+  {
+    "question_number": 13,
+    "filename": "問題13.png",
+    "page_number": 13,
+    "box_2d": [
+      238,
+      92,
+      412,
+      908
+    ],
+    "type": "figure",
+    "caption": "最上真司さんの親族関係図"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16_1.png",
+    "page_number": 16,
+    "box_2d": [
+      256,
+      107,
+      345,
+      715
+    ],
+    "type": "table",
+    "caption": "川野家の家族構成"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16_2.png",
+    "page_number": 16,
+    "box_2d": [
+      374,
+      108,
+      517,
+      532
+    ],
+    "type": "table",
+    "caption": "川野家の保有財産"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16_3.png",
+    "page_number": 17,
+    "box_2d": [
+      191,
+      93,
+      375,
+      897
+    ],
+    "type": "table",
+    "caption": "川野家のバランスシート"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17.png",
+    "page_number": 17,
+    "box_2d": [
+      644,
+      91,
+      694,
+      655
+    ],
+    "type": "table",
+    "caption": "係数早見表(年利1.0%)"
+  },
+  {
+    "question_number": 18,
+    "filename": "問題18.png",
+    "page_number": 18,
+    "box_2d": [
+      270,
+      93,
+      442,
+      804
+    ],
+    "type": "table",
+    "caption": "70歳未満の医療費自己負担限度額"
+  },
+  {
+    "question_number": 20,
+    "filename": "問題20.png",
+    "page_number": 19,
+    "box_2d": [
+      226,
+      172,
+      517,
+      856
+    ],
+    "type": "figure",
+    "caption": "投資信託の購入時と現在の時価構成"
+  }
+]

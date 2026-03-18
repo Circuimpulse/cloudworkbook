@@ -1,0 +1,158 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      641,
+      617,
+      816,
+      765
+    ],
+    "type": "figure",
+    "caption": "選択欄のマーク例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 5,
+    "box_2d": [
+      126,
+      140,
+      517,
+      872
+    ],
+    "type": "table",
+    "caption": "表1 X社から提示されたERPの新バージョンへの移行パターン"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 6,
+    "box_2d": [
+      124,
+      113,
+      622,
+      872
+    ],
+    "type": "table",
+    "caption": "表2 立案した移行計画の概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 11,
+    "box_2d": [
+      116,
+      143,
+      338,
+      871
+    ],
+    "type": "table",
+    "caption": "表1 新システムの主要なファイル"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 11,
+    "box_2d": [
+      584,
+      142,
+      851,
+      871
+    ],
+    "type": "table",
+    "caption": "表2 新システムにおける募集・申込みの処理"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 13,
+    "box_2d": [
+      169,
+      122,
+      274,
+      871
+    ],
+    "type": "table",
+    "caption": "表3 各項目の計算式"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 15,
+    "box_2d": [
+      94,
+      297,
+      222,
+      704
+    ],
+    "type": "figure",
+    "caption": "図1 それぞれの契約関係の概要"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 18,
+    "box_2d": [
+      359,
+      101,
+      950,
+      873
+    ],
+    "type": "table",
+    "caption": "表1 新システムの主な機能概要"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 19,
+    "box_2d": [
+      115,
+      101,
+      452,
+      871
+    ],
+    "type": "table",
+    "caption": "表1 新システムの主な機能概要（続き）"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 21,
+    "box_2d": [
+      94,
+      222,
+      253,
+      780
+    ],
+    "type": "figure",
+    "caption": "図1 本システムのサービスの概要"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_2.png",
+    "page_number": 23,
+    "box_2d": [
+      240,
+      119,
+      392,
+      882
+    ],
+    "type": "figure",
+    "caption": "図2 顔認証基盤の概要"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_3.png",
+    "page_number": 23,
+    "box_2d": [
+      491,
+      117,
+      880,
+      883
+    ],
+    "type": "table",
+    "caption": "表1 顔認証基盤が提供する機能"
+  }
+]

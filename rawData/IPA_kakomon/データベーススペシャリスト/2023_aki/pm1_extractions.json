@@ -1,0 +1,197 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 3,
+    "box_2d": [
+      463,
+      286,
+      612,
+      715
+    ],
+    "type": "figure",
+    "caption": "エンティティタイプとリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 4,
+    "box_2d": [
+      94,
+      518,
+      245,
+      805
+    ],
+    "type": "figure",
+    "caption": "対応関係にゼロを含むか否かを区別して表現する場合の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 4,
+    "box_2d": [
+      500,
+      181,
+      691,
+      820
+    ],
+    "type": "figure",
+    "caption": "スーパータイプとサブタイプの間のリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_4.png",
+    "page_number": 5,
+    "box_2d": [
+      153,
+      376,
+      244,
+      626
+    ],
+    "type": "figure",
+    "caption": "エンティティタイプの属性の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_5.png",
+    "page_number": 5,
+    "box_2d": [
+      372,
+      293,
+      390,
+      709
+    ],
+    "type": "figure",
+    "caption": "関係スキーマの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_6.png",
+    "page_number": 5,
+    "box_2d": [
+      688,
+      307,
+      708,
+      695
+    ],
+    "type": "figure",
+    "caption": "関係データベースのテーブル（表）構造の表記ルール"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 11,
+    "box_2d": [
+      107,
+      210,
+      408,
+      792
+    ],
+    "type": "figure",
+    "caption": "現行業務の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 11,
+    "box_2d": [
+      435,
+      125,
+      810,
+      876
+    ],
+    "type": "figure",
+    "caption": "現行業務の関係スキーマ（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 17,
+    "box_2d": [
+      289,
+      195,
+      544,
+      807
+    ],
+    "type": "figure",
+    "caption": "現状の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 17,
+    "box_2d": [
+      591,
+      125,
+      891,
+      876
+    ],
+    "type": "figure",
+    "caption": "現状の関係スキーマ（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 18,
+    "box_2d": [
+      188,
+      224,
+      369,
+      778
+    ],
+    "type": "figure",
+    "caption": "新規要件に関する概念データモデル（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 18,
+    "box_2d": [
+      431,
+      125,
+      606,
+      876
+    ],
+    "type": "figure",
+    "caption": "新規要件に関する関係スキーマ（未完成）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 21,
+    "box_2d": [
+      318,
+      115,
+      383,
+      886
+    ],
+    "type": "figure",
+    "caption": "テーブル構造（一部省略）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 23,
+    "box_2d": [
+      500,
+      138,
+      761,
+      500
+    ],
+    "type": "figure",
+    "caption": "SQL1 の結果の一部"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 23,
+    "box_2d": [
+      500,
+      550,
+      761,
+      861
+    ],
+    "type": "figure",
+    "caption": "SQL2 の結果行（未完成）"
+  }
+]

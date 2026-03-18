@@ -1,0 +1,54 @@
+[
+  {
+    "question_number": 31,
+    "filename": "問題31.png",
+    "page_number": 4,
+    "box_2d": [
+      228,
+      163,
+      348,
+      626
+    ],
+    "type": "table",
+    "caption": "<資料>2023年分のAさんの収入等"
+  },
+  {
+    "question_number": 52,
+    "filename": "問題52.png",
+    "page_number": 8,
+    "box_2d": [
+      141,
+      281,
+      345,
+      545
+    ],
+    "type": "figure",
+    "caption": "建築物の敷地の図"
+  },
+  {
+    "question_number": 57,
+    "filename": "問題57.png",
+    "page_number": 9,
+    "box_2d": [
+      308,
+      160,
+      435,
+      840
+    ],
+    "type": "figure",
+    "caption": "親族関係図 (問57)"
+  },
+  {
+    "question_number": 58,
+    "filename": "問題58.png",
+    "page_number": 9,
+    "box_2d": [
+      594,
+      218,
+      710,
+      830
+    ],
+    "type": "figure",
+    "caption": "親族関係図 (問58)"
+  }
+]

@@ -1,0 +1,340 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 3,
+    "box_2d": [
+      464,
+      263,
+      618,
+      740
+    ],
+    "type": "figure",
+    "caption": "エンティティタイプとリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 4,
+    "box_2d": [
+      100,
+      266,
+      243,
+      845
+    ],
+    "type": "figure",
+    "caption": "対応関係にゼロを含むか否かを区別して表現する場合の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 4,
+    "box_2d": [
+      491,
+      241,
+      643,
+      843
+    ],
+    "type": "figure",
+    "caption": "スーパタイプとサブタイプの間のリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_4.png",
+    "page_number": 5,
+    "box_2d": [
+      147,
+      370,
+      242,
+      649
+    ],
+    "type": "figure",
+    "caption": "エンティティタイプの属性の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_5.png",
+    "page_number": 5,
+    "box_2d": [
+      317,
+      294,
+      360,
+      683
+    ],
+    "type": "figure",
+    "caption": "関係スキーマの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_6.png",
+    "page_number": 5,
+    "box_2d": [
+      681,
+      304,
+      710,
+      676
+    ],
+    "type": "figure",
+    "caption": "関係データベースのテーブル（表）構造の表記ルール"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 7,
+    "box_2d": [
+      155,
+      108,
+      328,
+      879
+    ],
+    "type": "figure",
+    "caption": "ミスマッチ分析表の例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 7,
+    "box_2d": [
+      531,
+      108,
+      903,
+      883
+    ],
+    "type": "figure",
+    "caption": "関係スキーマ（一部省略）"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 8,
+    "box_2d": [
+      115,
+      110,
+      419,
+      883
+    ],
+    "type": "table",
+    "caption": "主な属性とその意味・制約"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_2.png",
+    "page_number": 9,
+    "box_2d": [
+      104,
+      110,
+      562,
+      883
+    ],
+    "type": "table",
+    "caption": "処理の例"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_3.png",
+    "page_number": 12,
+    "box_2d": [
+      447,
+      110,
+      782,
+      883
+    ],
+    "type": "table",
+    "caption": "実装方法の短所（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_4.png",
+    "page_number": 13,
+    "box_2d": [
+      541,
+      200,
+      724,
+      807
+    ],
+    "type": "table",
+    "caption": "変更データ反映処理のグループとテーブル（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_5.png",
+    "page_number": 14,
+    "box_2d": [
+      147,
+      110,
+      404,
+      883
+    ],
+    "type": "table",
+    "caption": "制約とその定義内容（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_6.png",
+    "page_number": 15,
+    "box_2d": [
+      121,
+      110,
+      563,
+      883
+    ],
+    "type": "table",
+    "caption": "表2の処理7に用いる問合せの内容（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 16,
+    "box_2d": [
+      93,
+      110,
+      578,
+      883
+    ],
+    "type": "figure",
+    "caption": "“M1”の問合せを実装するSQL文の検討例（未完成・一部省略）"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_7.png",
+    "page_number": 17,
+    "box_2d": [
+      121,
+      110,
+      351,
+      883
+    ],
+    "type": "table",
+    "caption": "想定した障害ケース"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_8.png",
+    "page_number": 17,
+    "box_2d": [
+      598,
+      160,
+      684,
+      833
+    ],
+    "type": "table",
+    "caption": "試算対象テーブルのデータ量及び更新ログ件数見積り"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 19,
+    "box_2d": [
+      93,
+      205,
+      255,
+      807
+    ],
+    "type": "figure",
+    "caption": "“商談”テーブルの最新接触日時を更新するSQL文（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_9.png",
+    "page_number": 19,
+    "box_2d": [
+      521,
+      110,
+      711,
+      883
+    ],
+    "type": "table",
+    "caption": "障害ケース③の復旧手順（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 25,
+    "box_2d": [
+      754,
+      124,
+      846,
+      881
+    ],
+    "type": "figure",
+    "caption": "業務の流れ"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 28,
+    "box_2d": [
+      171,
+      130,
+      361,
+      867
+    ],
+    "type": "figure",
+    "caption": "マスタ及び在庫の領域の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 28,
+    "box_2d": [
+      504,
+      124,
+      815,
+      863
+    ],
+    "type": "figure",
+    "caption": "トランザクションの領域の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 29,
+    "box_2d": [
+      93,
+      110,
+      466,
+      883
+    ],
+    "type": "figure",
+    "caption": "マスタ及び在庫の領域の関係スキーマ（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 29,
+    "box_2d": [
+      521,
+      110,
+      883,
+      883
+    ],
+    "type": "figure",
+    "caption": "トランザクションの領域の関係スキーマ（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_6.png",
+    "page_number": 32,
+    "box_2d": [
+      97,
+      274,
+      409,
+      720
+    ],
+    "type": "figure",
+    "caption": "設計変更した顧客の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_7.png",
+    "page_number": 32,
+    "box_2d": [
+      464,
+      121,
+      659,
+      883
+    ],
+    "type": "figure",
+    "caption": "設計変更した顧客の関係スキーマ（未完成）"
+  }
+]

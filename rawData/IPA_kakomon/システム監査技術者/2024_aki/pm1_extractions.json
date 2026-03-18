@@ -1,0 +1,119 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      378,
+      179,
+      444,
+      466
+    ],
+    "type": "table",
+    "caption": "問題番号と解答選択方法の対応表"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 1,
+    "box_2d": [
+      554,
+      640,
+      786,
+      743
+    ],
+    "type": "figure",
+    "caption": "解答欄の選択例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      562,
+      143,
+      845,
+      898
+    ],
+    "type": "figure",
+    "caption": "A社のECシステムにおける開発・運用プロセスの概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 6,
+    "box_2d": [
+      511,
+      108,
+      827,
+      896
+    ],
+    "type": "table",
+    "caption": "表1 システム監査報告書案（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 7,
+    "box_2d": [
+      123,
+      108,
+      328,
+      896
+    ],
+    "type": "table",
+    "caption": "表1 システム監査報告書案（抜粋）（続き）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 7,
+    "box_2d": [
+      368,
+      108,
+      892,
+      896
+    ],
+    "type": "table",
+    "caption": "表2 監査調書（リスク1）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 8,
+    "box_2d": [
+      122,
+      108,
+      485,
+      896
+    ],
+    "type": "table",
+    "caption": "表3 監査調書（リスク2）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 8,
+    "box_2d": [
+      512,
+      108,
+      842,
+      896
+    ],
+    "type": "table",
+    "caption": "表4 監査調書（リスク3）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 11,
+    "box_2d": [
+      654,
+      118,
+      890,
+      879
+    ],
+    "type": "figure",
+    "caption": "ITサービス管理システムの概要"
+  }
+]

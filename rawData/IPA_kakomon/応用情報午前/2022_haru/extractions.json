@@ -1,0 +1,41 @@
+[
+  {
+    "question_number": 16,
+    "filename": "問題16.png",
+    "page_number": 8,
+    "box_2d": [
+      215,
+      183,
+      316,
+      846
+    ],
+    "type": "figure",
+    "caption": "ジョブ群の依存関係を表すグラフ"
+  },
+  {
+    "question_number": 21,
+    "filename": "問題21.png",
+    "page_number": 11,
+    "box_2d": [
+      417,
+      175,
+      683,
+      824
+    ],
+    "type": "figure",
+    "caption": "グラフィックLCDの画素とメモリのアドレス対応図"
+  },
+  {
+    "question_number": 47,
+    "filename": "問題47.png",
+    "page_number": 22,
+    "box_2d": [
+      181,
+      324,
+      525,
+      649
+    ],
+    "type": "figure",
+    "caption": "判定条件網羅を満たすテストケースを検討するための流れ図"
+  }
+]

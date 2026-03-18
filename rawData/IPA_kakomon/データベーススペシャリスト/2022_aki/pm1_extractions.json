@@ -1,0 +1,197 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 3,
+    "box_2d": [
+      471,
+      260,
+      638,
+      735
+    ],
+    "type": "figure",
+    "caption": "エンティティタイプとリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 4,
+    "box_2d": [
+      100,
+      519,
+      269,
+      891
+    ],
+    "type": "figure",
+    "caption": "対応関係にゼロを含むか否かを区別して表現する場合の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 4,
+    "box_2d": [
+      501,
+      143,
+      706,
+      853
+    ],
+    "type": "figure",
+    "caption": "スーパータイプとサブタイプの間のリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_4.png",
+    "page_number": 5,
+    "box_2d": [
+      146,
+      303,
+      273,
+      692
+    ],
+    "type": "figure",
+    "caption": "エンティティタイプの属性の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_5.png",
+    "page_number": 5,
+    "box_2d": [
+      360,
+      277,
+      396,
+      718
+    ],
+    "type": "figure",
+    "caption": "関係スキーマの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_6.png",
+    "page_number": 5,
+    "box_2d": [
+      684,
+      271,
+      719,
+      725
+    ],
+    "type": "figure",
+    "caption": "関係データベースのテーブル(表)構造の表記ルール"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 10,
+    "box_2d": [
+      103,
+      172,
+      401,
+      848
+    ],
+    "type": "figure",
+    "caption": "現状の概念データモデル(未完成)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 10,
+    "box_2d": [
+      535,
+      110,
+      893,
+      892
+    ],
+    "type": "figure",
+    "caption": "現状の関係スキーマ(未完成)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 11,
+    "box_2d": [
+      212,
+      211,
+      467,
+      792
+    ],
+    "type": "figure",
+    "caption": "修正改善要望に関する概念データモデル(未完成)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 11,
+    "box_2d": [
+      503,
+      108,
+      770,
+      892
+    ],
+    "type": "figure",
+    "caption": "修正改善要望に関する関係スキーマ(未完成)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 14,
+    "box_2d": [
+      600,
+      133,
+      723,
+      866
+    ],
+    "type": "figure",
+    "caption": "主なテーブルのテーブル構造(一部省略)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 15,
+    "box_2d": [
+      376,
+      126,
+      503,
+      901
+    ],
+    "type": "figure",
+    "caption": "商品の変更を調べるSQL文(未完成)"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 17,
+    "box_2d": [
+      236,
+      110,
+      649,
+      892
+    ],
+    "type": "figure",
+    "caption": "商品の変更履歴を調べるSQL文(未完成)"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 21,
+    "box_2d": [
+      679,
+      108,
+      878,
+      892
+    ],
+    "type": "figure",
+    "caption": "テーブル構造(一部省略)"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 24,
+    "box_2d": [
+      499,
+      185,
+      724,
+      814
+    ],
+    "type": "figure",
+    "caption": "棚と商品の配置,及びピッカーの順路(一部省略)"
+  }
+]

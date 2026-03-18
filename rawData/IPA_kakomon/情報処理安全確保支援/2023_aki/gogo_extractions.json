@@ -1,0 +1,145 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      338,
+      111,
+      856,
+      891
+    ],
+    "type": "table",
+    "caption": "Web アプリ Q の主な機能"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 3,
+    "box_2d": [
+      232,
+      115,
+      545,
+      888
+    ],
+    "type": "figure",
+    "caption": "ページ V"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 4,
+    "box_2d": [
+      89,
+      112,
+      804,
+      888
+    ],
+    "type": "figure",
+    "caption": "ページ V の HTML"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 5,
+    "box_2d": [
+      86,
+      114,
+      735,
+      888
+    ],
+    "type": "figure",
+    "caption": "N さんが抽出したスクリプト"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 8,
+    "box_2d": [
+      94,
+      91,
+      715,
+      901
+    ],
+    "type": "figure",
+    "caption": "M 社のネットワーク構成"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 17,
+    "box_2d": [
+      421,
+      115,
+      528,
+      887
+    ],
+    "type": "figure",
+    "caption": "フロントエンドが行う処理"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 19,
+    "box_2d": [
+      788,
+      114,
+      854,
+      888
+    ],
+    "type": "figure",
+    "caption": "事後処理と対策（抜粋）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 20,
+    "box_2d": [
+      763,
+      115,
+      874,
+      887
+    ],
+    "type": "figure",
+    "caption": "ビルドスクリプトに記述されているコマンド"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 23,
+    "box_2d": [
+      447,
+      137,
+      663,
+      878
+    ],
+    "type": "figure",
+    "caption": "W 社の配送業務におけるデータの流れ"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_2.png",
+    "page_number": 25,
+    "box_2d": [
+      94,
+      112,
+      301,
+      891
+    ],
+    "type": "figure",
+    "caption": "W 社のネットワーク構成"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_3.png",
+    "page_number": 27,
+    "box_2d": [
+      94,
+      115,
+      630,
+      888
+    ],
+    "type": "figure",
+    "caption": "リスクアセスメントの手順"
+  }
+]

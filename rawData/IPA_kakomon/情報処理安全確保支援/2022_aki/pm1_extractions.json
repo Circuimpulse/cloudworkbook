@@ -1,0 +1,327 @@
+[
+  {
+    "question_number": 0,
+    "filename": "表0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      373,
+      166,
+      426,
+      513
+    ],
+    "type": "table",
+    "caption": "解答選択方法"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      448,
+      592,
+      792,
+      715
+    ],
+    "type": "figure",
+    "caption": "問題選択の例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      248,
+      134,
+      739,
+      874
+    ],
+    "type": "figure",
+    "caption": "製品Rの仕様(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 4,
+    "box_2d": [
+      326,
+      172,
+      442,
+      878
+    ],
+    "type": "figure",
+    "caption": "IPアドレス設定に用いる画面"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 4,
+    "box_2d": [
+      482,
+      116,
+      584,
+      882
+    ],
+    "type": "figure",
+    "caption": "setvalueに送信されるリクエスト"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 4,
+    "box_2d": [
+      632,
+      116,
+      661,
+      878
+    ],
+    "type": "figure",
+    "caption": "IPアドレス設定を行うコマンド"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 5,
+    "box_2d": [
+      62,
+      116,
+      252,
+      882
+    ],
+    "type": "figure",
+    "caption": "細工されたリクエストの例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_6.png",
+    "page_number": 6,
+    "box_2d": [
+      62,
+      116,
+      252,
+      882
+    ],
+    "type": "figure",
+    "caption": "攻撃リクエスト"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 8,
+    "box_2d": [
+      263,
+      114,
+      386,
+      882
+    ],
+    "type": "figure",
+    "caption": "U社のネットワーク構成(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 8,
+    "box_2d": [
+      409,
+      116,
+      889,
+      882
+    ],
+    "type": "table",
+    "caption": "サーバの機能概要(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 9,
+    "box_2d": [
+      135,
+      126,
+      335,
+      891
+    ],
+    "type": "table",
+    "caption": "FWのフィルタリングルール"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_3.png",
+    "page_number": 9,
+    "box_2d": [
+      760,
+      192,
+      867,
+      807
+    ],
+    "type": "table",
+    "caption": "予約サーバのプロセス一覧(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_4.png",
+    "page_number": 10,
+    "box_2d": [
+      59,
+      172,
+      177,
+      829
+    ],
+    "type": "table",
+    "caption": "予約サーバのコネクション一覧(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_5.png",
+    "page_number": 11,
+    "box_2d": [
+      253,
+      192,
+      332,
+      807
+    ],
+    "type": "table",
+    "caption": "脆弱性を悪用したと考えられるアクセスログ"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_6.png",
+    "page_number": 11,
+    "box_2d": [
+      539,
+      192,
+      735,
+      807
+    ],
+    "type": "table",
+    "caption": "予約サーバを送信元とするFWの通信ログ"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_7.png",
+    "page_number": 12,
+    "box_2d": [
+      59,
+      203,
+      335,
+      882
+    ],
+    "type": "table",
+    "caption": "予約サーバへの攻撃の流れ"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_8.png",
+    "page_number": 13,
+    "box_2d": [
+      352,
+      192,
+      426,
+      807
+    ],
+    "type": "table",
+    "caption": "URL フィルタリングルールについての設定"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      346,
+      126,
+      495,
+      874
+    ],
+    "type": "figure",
+    "caption": "M社のネットワーク構成(抜粋)"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      520,
+      116,
+      868,
+      882
+    ],
+    "type": "table",
+    "caption": "M社の機器の概要(抜粋) (前半)"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_2.png",
+    "page_number": 15,
+    "box_2d": [
+      59,
+      116,
+      355,
+      882
+    ],
+    "type": "table",
+    "caption": "M社の機器の概要(抜粋) (後半)"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 15,
+    "box_2d": [
+      412,
+      140,
+      622,
+      874
+    ],
+    "type": "figure",
+    "caption": "更新手順"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_3.png",
+    "page_number": 16,
+    "box_2d": [
+      59,
+      116,
+      155,
+      882
+    ],
+    "type": "table",
+    "caption": "ゲームサーバ1上のコンテナの一覧"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 16,
+    "box_2d": [
+      352,
+      116,
+      506,
+      882
+    ],
+    "type": "figure",
+    "caption": "判明した内容"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_4.png",
+    "page_number": 17,
+    "box_2d": [
+      307,
+      116,
+      625,
+      882
+    ],
+    "type": "table",
+    "caption": "レジストリサーバのHTTP 及び HTTPS のアクセスログ(抜粋)"
+  },
+  {
+    "question_number": 0,
+    "filename": "表0_2.png",
+    "page_number": 20,
+    "box_2d": [
+      135,
+      335,
+      170,
+      526
+    ],
+    "type": "table",
+    "caption": "退室可能時間"
+  }
+]

@@ -1,0 +1,171 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      381,
+      168,
+      443,
+      831
+    ],
+    "type": "table",
+    "caption": "表1 生産支援業務の内容"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 3,
+    "box_2d": [
+      654,
+      168,
+      804,
+      831
+    ],
+    "type": "table",
+    "caption": "表2 監視システムの主な機能"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 4,
+    "box_2d": [
+      191,
+      168,
+      521,
+      831
+    ],
+    "type": "table",
+    "caption": "表3 2022年4月第3週に発生したしきい値超えの発生件数"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 5,
+    "box_2d": [
+      510,
+      140,
+      841,
+      859
+    ],
+    "type": "table",
+    "caption": "表4 Rソフトの主な機能"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 6,
+    "box_2d": [
+      288,
+      172,
+      442,
+      827
+    ],
+    "type": "table",
+    "caption": "表5 Rソフトが設定するしきい値の例"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 8,
+    "box_2d": [
+      305,
+      140,
+      517,
+      859
+    ],
+    "type": "figure",
+    "caption": "図1 J社のシステム構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 9,
+    "box_2d": [
+      94,
+      140,
+      169,
+      859
+    ],
+    "type": "figure",
+    "caption": "図2 作業管理の手順"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 10,
+    "box_2d": [
+      681,
+      140,
+      865,
+      859
+    ],
+    "type": "table",
+    "caption": "表1 L社の保守サービスの概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 11,
+    "box_2d": [
+      349,
+      140,
+      643,
+      859
+    ],
+    "type": "table",
+    "caption": "表2 現状のログ管理の課題及び検討した対策内容"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      541,
+      148,
+      822,
+      851
+    ],
+    "type": "figure",
+    "caption": "図1 営業所の課題"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 15,
+    "box_2d": [
+      648,
+      208,
+      869,
+      791
+    ],
+    "type": "figure",
+    "caption": "図2 システム構成図"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 16,
+    "box_2d": [
+      230,
+      140,
+      503,
+      859
+    ],
+    "type": "table",
+    "caption": "表1 新サービスによって期待される効果"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 17,
+    "box_2d": [
+      288,
+      140,
+      404,
+      859
+    ],
+    "type": "table",
+    "caption": "表2 初期サポートのサポート内容と完了基準"
+  }
+]

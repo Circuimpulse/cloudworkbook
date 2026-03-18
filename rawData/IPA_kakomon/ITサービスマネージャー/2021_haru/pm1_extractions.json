@@ -1,0 +1,80 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      417,
+      144,
+      809,
+      881
+    ],
+    "type": "figure",
+    "caption": "図1 L社が行うサービスデスクの機能"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      544,
+      175,
+      876,
+      854
+    ],
+    "type": "figure",
+    "caption": "図1 B社のシステム構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 11,
+    "box_2d": [
+      250,
+      121,
+      421,
+      881
+    ],
+    "type": "figure",
+    "caption": "図2 サーバのOSパッチの適用手順"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 11,
+    "box_2d": [
+      472,
+      121,
+      600,
+      881
+    ],
+    "type": "figure",
+    "caption": "図3 PCのOSパッチの適用手順"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 14,
+    "box_2d": [
+      89,
+      122,
+      185,
+      880
+    ],
+    "type": "figure",
+    "caption": "図4 不審メール対応訓練"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 16,
+    "box_2d": [
+      100,
+      140,
+      416,
+      847
+    ],
+    "type": "figure",
+    "caption": "図1 DCの電力供給設備と電力負荷機器"
+  }
+]

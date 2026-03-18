@@ -1,0 +1,171 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      507,
+      133,
+      656,
+      864
+    ],
+    "type": "figure",
+    "caption": "VTEP 及び VXLAN トンネルの構成例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 4,
+    "box_2d": [
+      84,
+      181,
+      139,
+      819
+    ],
+    "type": "figure",
+    "caption": "VXLAN パケットの構造"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 5,
+    "box_2d": [
+      94,
+      151,
+      623,
+      838
+    ],
+    "type": "figure",
+    "caption": "現行の検証 NW（抜粋）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 6,
+    "box_2d": [
+      378,
+      114,
+      846,
+      913
+    ],
+    "type": "figure",
+    "caption": "現行の検証 NW の VLAN, VXLAN 及び VTEP（抜粋）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 9,
+    "box_2d": [
+      510,
+      162,
+      887,
+      838
+    ],
+    "type": "figure",
+    "caption": "新検証 NW（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 14,
+    "box_2d": [
+      381,
+      211,
+      714,
+      743
+    ],
+    "type": "figure",
+    "caption": "Y 社のネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 14,
+    "box_2d": [
+      749,
+      178,
+      857,
+      776
+    ],
+    "type": "figure",
+    "caption": "外部 DNS サーバ Y が管理するゾーン情報（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 15,
+    "box_2d": [
+      101,
+      178,
+      211,
+      776
+    ],
+    "type": "figure",
+    "caption": "社内 DNS サーバ Y が管理するゾーン情報（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 16,
+    "box_2d": [
+      819,
+      134,
+      857,
+      891
+    ],
+    "type": "figure",
+    "caption": "Y 社が登録している SPF レコード"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 18,
+    "box_2d": [
+      230,
+      138,
+      266,
+      892
+    ],
+    "type": "figure",
+    "caption": "Y 社が登録している DKIM レコード"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_6.png",
+    "page_number": 20,
+    "box_2d": [
+      333,
+      165,
+      607,
+      854
+    ],
+    "type": "figure",
+    "caption": "Z 社のネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_7.png",
+    "page_number": 20,
+    "box_2d": [
+      663,
+      189,
+      715,
+      771
+    ],
+    "type": "figure",
+    "caption": "外部 DNS サーバ Z が管理するゾーン情報（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_8.png",
+    "page_number": 23,
+    "box_2d": [
+      144,
+      178,
+      174,
+      816
+    ],
+    "type": "figure",
+    "caption": "PTR レコードの形式（抜粋）"
+  }
+]

@@ -1,0 +1,639 @@
+[
+  {
+    "question_number": 0,
+    "filename": "表0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      352,
+      237,
+      436,
+      461
+    ],
+    "type": "table",
+    "caption": "問題番号・選択方法"
+  },
+  {
+    "question_number": 0,
+    "filename": "表0_2.png",
+    "page_number": 1,
+    "box_2d": [
+      486,
+      715,
+      836,
+      829
+    ],
+    "type": "table",
+    "caption": "選択欄"
+  },
+  {
+    "question_number": 0,
+    "filename": "表0_3.png",
+    "page_number": 2,
+    "box_2d": [
+      248,
+      102,
+      725,
+      868
+    ],
+    "type": "table",
+    "caption": "応用情報技術者試験 午後問題 正誤表"
+  },
+  {
+    "question_number": 0,
+    "filename": "表0_4.png",
+    "page_number": 4,
+    "box_2d": [
+      136,
+      85,
+      750,
+      874
+    ],
+    "type": "table",
+    "caption": "問題一覧"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 5,
+    "box_2d": [
+      328,
+      171,
+      627,
+      882
+    ],
+    "type": "figure",
+    "caption": "図1 A社のネットワーク構成(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 7,
+    "box_2d": [
+      315,
+      159,
+      396,
+      840
+    ],
+    "type": "figure",
+    "caption": "図2 メール管理システムの未使用の機能(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 11,
+    "box_2d": [
+      116,
+      219,
+      321,
+      847
+    ],
+    "type": "table",
+    "caption": "表1 PEST分析"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 11,
+    "box_2d": [
+      610,
+      169,
+      905,
+      875
+    ],
+    "type": "table",
+    "caption": "表2 PEST分析の環境項目の絞込みとW社への影響"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 15,
+    "box_2d": [
+      386,
+      222,
+      552,
+      770
+    ],
+    "type": "figure",
+    "caption": "図1 画像変換の例"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 16,
+    "box_2d": [
+      94,
+      335,
+      174,
+      663
+    ],
+    "type": "figure",
+    "caption": "図2 拡散先の数が4の場合の、誤差拡散のパターンの例"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 16,
+    "box_2d": [
+      733,
+      107,
+      810,
+      893
+    ],
+    "type": "figure",
+    "caption": "図4 左上から3ピクセル目について処理した例"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1.png",
+    "page_number": 17,
+    "box_2d": [
+      142,
+      97,
+      471,
+      870
+    ],
+    "type": "table",
+    "caption": "表1 プログラム中で使用する主な変数、定数及び配列"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 17,
+    "box_2d": [
+      487,
+      107,
+      856,
+      867
+    ],
+    "type": "figure",
+    "caption": "図5 作成したプログラム"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_5.png",
+    "page_number": 18,
+    "box_2d": [
+      443,
+      277,
+      497,
+      868
+    ],
+    "type": "figure",
+    "caption": "図6 書き換えた後の①の行の処理"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_6.png",
+    "page_number": 18,
+    "box_2d": [
+      506,
+      206,
+      540,
+      868
+    ],
+    "type": "figure",
+    "caption": "図7 書き換えた後の②の行の処理"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_1.png",
+    "page_number": 22,
+    "box_2d": [
+      308,
+      142,
+      792,
+      865
+    ],
+    "type": "table",
+    "caption": "表1 新サービスの非機能要件"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_2.png",
+    "page_number": 23,
+    "box_2d": [
+      178,
+      145,
+      439,
+      870
+    ],
+    "type": "table",
+    "caption": "表2 三つの検討案"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_3.png",
+    "page_number": 23,
+    "box_2d": [
+      586,
+      148,
+      792,
+      880
+    ],
+    "type": "table",
+    "caption": "表3 五つの評価軸を設けて整理した結果"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_1.png",
+    "page_number": 27,
+    "box_2d": [
+      282,
+      137,
+      650,
+      885
+    ],
+    "type": "figure",
+    "caption": "図1 現在のL社のネットワーク構成(抜粋)"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_2.png",
+    "page_number": 28,
+    "box_2d": [
+      442,
+      118,
+      693,
+      879
+    ],
+    "type": "figure",
+    "caption": "図2 N主任が設計したVDI 導入後のネットワーク構成(抜粋)"
+  },
+  {
+    "question_number": 5,
+    "filename": "表5_1.png",
+    "page_number": 29,
+    "box_2d": [
+      519,
+      153,
+      642,
+      856
+    ],
+    "type": "table",
+    "caption": "表1 全社で発生している主要な通信の種類と内容"
+  },
+  {
+    "question_number": 5,
+    "filename": "表5_2.png",
+    "page_number": 30,
+    "box_2d": [
+      116,
+      114,
+      381,
+      870
+    ],
+    "type": "table",
+    "caption": "表2 VDI導入後の最も混雑した時間帯に必要な平均通信帯域の予測値"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_1.png",
+    "page_number": 31,
+    "box_2d": [
+      594,
+      99,
+      851,
+      893
+    ],
+    "type": "figure",
+    "caption": "図2 データベースのE-R図(一部)"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_2.png",
+    "page_number": 32,
+    "box_2d": [
+      554,
+      151,
+      711,
+      859
+    ],
+    "type": "figure",
+    "caption": "図3 部屋の空き状況の確認を行うためのSQL文"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_3.png",
+    "page_number": 33,
+    "box_2d": [
+      97,
+      281,
+      310,
+      693
+    ],
+    "type": "figure",
+    "caption": "図4 空き状況確認の処理の流れ"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_4.png",
+    "page_number": 33,
+    "box_2d": [
+      577,
+      283,
+      859,
+      695
+    ],
+    "type": "figure",
+    "caption": "図5 予約確定の処理の流れ"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_5.png",
+    "page_number": 34,
+    "box_2d": [
+      552,
+      151,
+      629,
+      871
+    ],
+    "type": "figure",
+    "caption": "図6 削除するレコードを抽出するSQL文"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_1.png",
+    "page_number": 35,
+    "box_2d": [
+      327,
+      126,
+      452,
+      532
+    ],
+    "type": "figure",
+    "caption": "図1 両替システムの構成"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_2.png",
+    "page_number": 35,
+    "box_2d": [
+      327,
+      597,
+      451,
+      873
+    ],
+    "type": "figure",
+    "caption": "図2 両替機の外観"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_3.png",
+    "page_number": 35,
+    "box_2d": [
+      480,
+      131,
+      622,
+      567
+    ],
+    "type": "figure",
+    "caption": "図3 両替機の内部構成"
+  },
+  {
+    "question_number": 7,
+    "filename": "表7_1.png",
+    "page_number": 35,
+    "box_2d": [
+      657,
+      133,
+      893,
+      866
+    ],
+    "type": "table",
+    "caption": "表1 両替機の構成要素の機能概要"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_4.png",
+    "page_number": 36,
+    "box_2d": [
+      270,
+      296,
+      420,
+      712
+    ],
+    "type": "figure",
+    "caption": "図4 タッチパネルの画面例"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_5.png",
+    "page_number": 38,
+    "box_2d": [
+      93,
+      144,
+      199,
+      874
+    ],
+    "type": "figure",
+    "caption": "図5 シリアルバス通信のシーケンス"
+  },
+  {
+    "question_number": 7,
+    "filename": "表7_2.png",
+    "page_number": 38,
+    "box_2d": [
+      238,
+      129,
+      448,
+      871
+    ],
+    "type": "table",
+    "caption": "表2 シリアルバスで通信される主なメッセージ"
+  },
+  {
+    "question_number": 7,
+    "filename": "表7_3.png",
+    "page_number": 38,
+    "box_2d": [
+      553,
+      142,
+      726,
+      874
+    ],
+    "type": "table",
+    "caption": "表3 制御部の主なタスクの一覧"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_1.png",
+    "page_number": 41,
+    "box_2d": [
+      468,
+      130,
+      818,
+      893
+    ],
+    "type": "table",
+    "caption": "表1 開発体制"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_2.png",
+    "page_number": 42,
+    "box_2d": [
+      142,
+      132,
+      545,
+      888
+    ],
+    "type": "table",
+    "caption": "表2 開発プロセス"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_1.png",
+    "page_number": 43,
+    "box_2d": [
+      340,
+      128,
+      513,
+      469
+    ],
+    "type": "figure",
+    "caption": "図1 バーンダウンチャート"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_2.png",
+    "page_number": 43,
+    "box_2d": [
+      315,
+      521,
+      520,
+      880
+    ],
+    "type": "figure",
+    "caption": "図2 確認したポイント"
+  },
+  {
+    "question_number": 9,
+    "filename": "表9_1.png",
+    "page_number": 45,
+    "box_2d": [
+      608,
+      140,
+      770,
+      879
+    ],
+    "type": "table",
+    "caption": "表1 開発対象のサブシステムの概要と機能数"
+  },
+  {
+    "question_number": 9,
+    "filename": "表9_2.png",
+    "page_number": 46,
+    "box_2d": [
+      733,
+      115,
+      856,
+      323
+    ],
+    "type": "table",
+    "caption": "表2 サブシステム別の障害分析表"
+  },
+  {
+    "question_number": 9,
+    "filename": "表9_3.png",
+    "page_number": 46,
+    "box_2d": [
+      733,
+      370,
+      856,
+      580
+    ],
+    "type": "table",
+    "caption": "表3 障害動作別の障害分析表"
+  },
+  {
+    "question_number": 9,
+    "filename": "表9_4.png",
+    "page_number": 46,
+    "box_2d": [
+      733,
+      626,
+      856,
+      835
+    ],
+    "type": "table",
+    "caption": "表4 原因工程別の障害分析表"
+  },
+  {
+    "question_number": 9,
+    "filename": "表9_5.png",
+    "page_number": 47,
+    "box_2d": [
+      638,
+      126,
+      804,
+      874
+    ],
+    "type": "table",
+    "caption": "表5 見積りの前提条件"
+  },
+  {
+    "question_number": 9,
+    "filename": "表9_6.png",
+    "page_number": 48,
+    "box_2d": [
+      506,
+      128,
+      649,
+      870
+    ],
+    "type": "table",
+    "caption": "表6 見積りの前提条件の変更点"
+  },
+  {
+    "question_number": 10,
+    "filename": "表10_1.png",
+    "page_number": 51,
+    "box_2d": [
+      405,
+      144,
+      539,
+      850
+    ],
+    "type": "table",
+    "caption": "表1 システム部が提供する IT サービス"
+  },
+  {
+    "question_number": 10,
+    "filename": "表10_2.png",
+    "page_number": 53,
+    "box_2d": [
+      100,
+      169,
+      290,
+      850
+    ],
+    "type": "table",
+    "caption": "表2 動画講座システムの総所有費用の見積項目 (抜粋)"
+  },
+  {
+    "question_number": 11,
+    "filename": "図11_1.png",
+    "page_number": 58,
+    "box_2d": [
+      593,
+      137,
+      882,
+      875
+    ],
+    "type": "figure",
+    "caption": "図1 販売業務関連システムの関係及びデータの流れ"
+  },
+  {
+    "question_number": 11,
+    "filename": "表11_1.png",
+    "page_number": 59,
+    "box_2d": [
+      186,
+      132,
+      532,
+      871
+    ],
+    "type": "table",
+    "caption": "表1 監査手続(抜粋)"
+  }
+]

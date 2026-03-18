@@ -1,0 +1,223 @@
+[
+  {
+    "question_number": 2,
+    "filename": "問題2.png",
+    "page_number": 3,
+    "box_2d": [
+      210,
+      89,
+      638,
+      908
+    ],
+    "type": "table",
+    "caption": "近藤家のキャッシュフロー表"
+  },
+  {
+    "question_number": 3,
+    "filename": "問題3.png",
+    "page_number": 4,
+    "box_2d": [
+      233,
+      89,
+      335,
+      532
+    ],
+    "type": "table",
+    "caption": "WX株式会社に関するデータ"
+  },
+  {
+    "question_number": 4,
+    "filename": "問題4.png",
+    "page_number": 4,
+    "box_2d": [
+      558,
+      89,
+      680,
+      908
+    ],
+    "type": "table",
+    "caption": "金融商品の時価の一覧表"
+  },
+  {
+    "question_number": 5,
+    "filename": "問題5.png",
+    "page_number": 5,
+    "box_2d": [
+      149,
+      94,
+      340,
+      637
+    ],
+    "type": "table",
+    "caption": "景気動向指数に関する表"
+  },
+  {
+    "question_number": 6,
+    "filename": "問題6.png",
+    "page_number": 6,
+    "box_2d": [
+      229,
+      95,
+      493,
+      906
+    ],
+    "type": "figure",
+    "caption": "土地に建築物を建築する場合の資料 (図と条件)"
+  },
+  {
+    "question_number": 7,
+    "filename": "問題7.png",
+    "page_number": 7,
+    "box_2d": [
+      159,
+      93,
+      219,
+      508
+    ],
+    "type": "table",
+    "caption": "土地登記記録の構成"
+  },
+  {
+    "question_number": 8,
+    "filename": "問題8.png",
+    "page_number": 7,
+    "box_2d": [
+      444,
+      94,
+      514,
+      822
+    ],
+    "type": "table",
+    "caption": "都市計画区域に関する表"
+  },
+  {
+    "question_number": 9,
+    "filename": "問題9.png",
+    "page_number": 8,
+    "box_2d": [
+      264,
+      94,
+      785,
+      908
+    ],
+    "type": "table",
+    "caption": "終身医療保険に関する資料"
+  },
+  {
+    "question_number": 10,
+    "filename": "問題10_1.png",
+    "page_number": 9,
+    "box_2d": [
+      312,
+      94,
+      452,
+      908
+    ],
+    "type": "table",
+    "caption": "生命保険と医療保険の資料"
+  },
+  {
+    "question_number": 10,
+    "filename": "問題10_2.png",
+    "page_number": 9,
+    "box_2d": [
+      478,
+      94,
+      626,
+      908
+    ],
+    "type": "table",
+    "caption": "所得税の生命保険料控除額の速算表"
+  },
+  {
+    "question_number": 13,
+    "filename": "問題13.png",
+    "page_number": 11,
+    "box_2d": [
+      625,
+      94,
+      694,
+      642
+    ],
+    "type": "table",
+    "caption": "配偶者の所得状況に関する資料"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14.png",
+    "page_number": 12,
+    "box_2d": [
+      204,
+      94,
+      330,
+      908
+    ],
+    "type": "table",
+    "caption": "土地および建物の売却に係る資料"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15.png",
+    "page_number": 13,
+    "box_2d": [
+      233,
+      107,
+      377,
+      888
+    ],
+    "type": "figure",
+    "caption": "工藤達夫さんの親族関係図"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17_1.png",
+    "page_number": 14,
+    "box_2d": [
+      251,
+      100,
+      347,
+      715
+    ],
+    "type": "table",
+    "caption": "有馬家の家族構成"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17_2.png",
+    "page_number": 14,
+    "box_2d": [
+      373,
+      100,
+      529,
+      532
+    ],
+    "type": "table",
+    "caption": "有馬家の保有財産"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17_3.png",
+    "page_number": 15,
+    "box_2d": [
+      173,
+      94,
+      381,
+      908
+    ],
+    "type": "table",
+    "caption": "有馬家のバランスシート"
+  },
+  {
+    "question_number": 18,
+    "filename": "問題18.png",
+    "page_number": 15,
+    "box_2d": [
+      638,
+      94,
+      706,
+      608
+    ],
+    "type": "table",
+    "caption": "係数早見表(年利1.0%)"
+  }
+]

@@ -1,0 +1,184 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      429,
+      152,
+      693,
+      900
+    ],
+    "type": "figure",
+    "caption": "会議サービスの様子"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 2,
+    "box_2d": [
+      741,
+      146,
+      854,
+      863
+    ],
+    "type": "figure",
+    "caption": "VRシステムの構成"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 5,
+    "box_2d": [
+      628,
+      245,
+      913,
+      815
+    ],
+    "type": "figure",
+    "caption": "魚眼画像から平面画像への変換"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 6,
+    "box_2d": [
+      531,
+      143,
+      814,
+      904
+    ],
+    "type": "figure",
+    "caption": "3Dカメラの撮影範囲と計測の例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 9,
+    "box_2d": [
+      362,
+      137,
+      566,
+      870
+    ],
+    "type": "figure",
+    "caption": "会議室でのアバターの手の先とスクリーンの位置関係"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_6.png",
+    "page_number": 10,
+    "box_2d": [
+      94,
+      136,
+      356,
+      864
+    ],
+    "type": "figure",
+    "caption": "AR展示サービスの様子"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_7.png",
+    "page_number": 10,
+    "box_2d": [
+      543,
+      186,
+      604,
+      810
+    ],
+    "type": "figure",
+    "caption": "AR展示サービスの概要"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_8.png",
+    "page_number": 11,
+    "box_2d": [
+      606,
+      298,
+      799,
+      752
+    ],
+    "type": "figure",
+    "caption": "展示物Zと周囲の入館者の位置関係"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_9.png",
+    "page_number": 12,
+    "box_2d": [
+      100,
+      184,
+      249,
+      825
+    ],
+    "type": "figure",
+    "caption": "ARグラスの状態遷移の一部"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 13,
+    "box_2d": [
+      370,
+      172,
+      618,
+      809
+    ],
+    "type": "figure",
+    "caption": "自動運転システムのシステム構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 14,
+    "box_2d": [
+      237,
+      138,
+      458,
+      864
+    ],
+    "type": "figure",
+    "caption": "Cバスの外観"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 15,
+    "box_2d": [
+      144,
+      140,
+      405,
+      904
+    ],
+    "type": "figure",
+    "caption": "Cバスのシステム構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 18,
+    "box_2d": [
+      509,
+      259,
+      760,
+      833
+    ],
+    "type": "figure",
+    "caption": "制御部のタスク構造"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 20,
+    "box_2d": [
+      343,
+      135,
+      815,
+      861
+    ],
+    "type": "figure",
+    "caption": "自動運転中のCバスのユニット間通信の例"
+  }
+]

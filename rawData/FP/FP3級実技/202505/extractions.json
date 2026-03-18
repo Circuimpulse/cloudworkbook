@@ -1,0 +1,119 @@
+[
+  {
+    "question_number": 2,
+    "filename": "問題2.png",
+    "page_number": 2,
+    "box_2d": [
+      201,
+      88,
+      597,
+      907
+    ],
+    "type": "table",
+    "caption": "東条家のキャッシュフロー表"
+  },
+  {
+    "question_number": 3,
+    "filename": "問題3_1.png",
+    "page_number": 3,
+    "box_2d": [
+      189,
+      93,
+      386,
+      908
+    ],
+    "type": "table",
+    "caption": "山本家のバランスシート"
+  },
+  {
+    "question_number": 3,
+    "filename": "問題3_2.png",
+    "page_number": 3,
+    "box_2d": [
+      425,
+      96,
+      600,
+      532
+    ],
+    "type": "table",
+    "caption": "保有財産（時価）リスト"
+  },
+  {
+    "question_number": 7,
+    "filename": "問題7.png",
+    "page_number": 5,
+    "box_2d": [
+      476,
+      92,
+      604,
+      906
+    ],
+    "type": "table",
+    "caption": "投資信託の費用に関する表"
+  },
+  {
+    "question_number": 9,
+    "filename": "問題9.png",
+    "page_number": 7,
+    "box_2d": [
+      224,
+      154,
+      461,
+      878
+    ],
+    "type": "figure",
+    "caption": "甲土地・乙土地の配置図"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12.png",
+    "page_number": 9,
+    "box_2d": [
+      200,
+      94,
+      715,
+      906
+    ],
+    "type": "table",
+    "caption": "大下秀雄さんの生命保険保障内容"
+  },
+  {
+    "question_number": 18,
+    "filename": "問題18.png",
+    "page_number": 12,
+    "box_2d": [
+      524,
+      218,
+      699,
+      903
+    ],
+    "type": "figure",
+    "caption": "森隆男さんの親族関係図"
+  },
+  {
+    "question_number": 19,
+    "filename": "問題19_1.png",
+    "page_number": 13,
+    "box_2d": [
+      205,
+      305,
+      353,
+      696
+    ],
+    "type": "figure",
+    "caption": "藤田信二さんの親族関係図"
+  },
+  {
+    "question_number": 20,
+    "filename": "問題20.png",
+    "page_number": 14,
+    "box_2d": [
+      207,
+      169,
+      439,
+      856
+    ],
+    "type": "figure",
+    "caption": "宅地の借地権に関する図"
+  }
+]

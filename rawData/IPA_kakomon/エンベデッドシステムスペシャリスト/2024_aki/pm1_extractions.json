@@ -1,0 +1,119 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      433,
+      133,
+      829,
+      905
+    ],
+    "type": "figure",
+    "caption": "SK システムに関連するシステム構成"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 6,
+    "box_2d": [
+      188,
+      116,
+      540,
+      903
+    ],
+    "type": "figure",
+    "caption": "eVTOL の外観"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 6,
+    "box_2d": [
+      571,
+      110,
+      896,
+      831
+    ],
+    "type": "figure",
+    "caption": "eVTOL の主なシステム構成"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 8,
+    "box_2d": [
+      561,
+      335,
+      792,
+      737
+    ],
+    "type": "figure",
+    "caption": "機体とローターユニットの配置（真上から見た図）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 10,
+    "box_2d": [
+      597,
+      244,
+      856,
+      861
+    ],
+    "type": "figure",
+    "caption": "無風時における eVTOL の燃費と飛行速度の関係"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 14,
+    "box_2d": [
+      365,
+      111,
+      874,
+      904
+    ],
+    "type": "figure",
+    "caption": "監視システムが設置された農地とその周辺の概略図"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 15,
+    "box_2d": [
+      100,
+      149,
+      211,
+      837
+    ],
+    "type": "figure",
+    "caption": "監視システムの主な構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 18,
+    "box_2d": [
+      472,
+      255,
+      680,
+      803
+    ],
+    "type": "figure",
+    "caption": "制御装置の制御部の主なタスク構造"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 20,
+    "box_2d": [
+      576,
+      230,
+      684,
+      801
+    ],
+    "type": "figure",
+    "caption": "制御装置と各ユニット, PC 端末との間のメッセージ送受信"
+  }
+]

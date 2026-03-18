@@ -1,0 +1,665 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      536,
+      725,
+      848,
+      874
+    ],
+    "type": "figure",
+    "caption": "選択欄の例"
+  },
+  {
+    "question_number": 0,
+    "filename": "表0_1.png",
+    "page_number": 3,
+    "box_2d": [
+      164,
+      110,
+      755,
+      885
+    ],
+    "type": "table",
+    "caption": "問題一覧"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 4,
+    "box_2d": [
+      549,
+      150,
+      797,
+      893
+    ],
+    "type": "table",
+    "caption": "表1 通信販売サイトの不正アクセス対策(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_2.png",
+    "page_number": 5,
+    "box_2d": [
+      641,
+      108,
+      892,
+      890
+    ],
+    "type": "table",
+    "caption": "表2 セキュリティインシデント対応で確認した事象と課題(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      336,
+      169,
+      497,
+      829
+    ],
+    "type": "table",
+    "caption": "表1 景気の見通しにおける設備投資案ごとの営業利益の予測"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 10,
+    "box_2d": [
+      307,
+      115,
+      459,
+      884
+    ],
+    "type": "table",
+    "caption": "表2 注力すべき商品の価格帯の案ごとの全体市場シェアの予測"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 14,
+    "box_2d": [
+      339,
+      269,
+      517,
+      471
+    ],
+    "type": "figure",
+    "caption": "図1 問題例"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 14,
+    "box_2d": [
+      343,
+      532,
+      513,
+      735
+    ],
+    "type": "figure",
+    "caption": "図2 図1の解答"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 15,
+    "box_2d": [
+      440,
+      273,
+      588,
+      804
+    ],
+    "type": "figure",
+    "caption": "図3 配列 board による盤面の表現"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1.png",
+    "page_number": 16,
+    "box_2d": [
+      100,
+      114,
+      608,
+      893
+    ],
+    "type": "table",
+    "caption": "表1 プログラムで使用する配列、関数、変数及び定数の一部"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 16,
+    "box_2d": [
+      692,
+      113,
+      804,
+      886
+    ],
+    "type": "figure",
+    "caption": "図4 メインプログラム"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_5.png",
+    "page_number": 17,
+    "box_2d": [
+      100,
+      112,
+      412,
+      887
+    ],
+    "type": "figure",
+    "caption": "図5 関数 solve のプログラム"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_6.png",
+    "page_number": 17,
+    "box_2d": [
+      423,
+      111,
+      896,
+      887
+    ],
+    "type": "figure",
+    "caption": "図6 重複チェックを行うプログラムの一部"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_2.png",
+    "page_number": 18,
+    "box_2d": [
+      401,
+      107,
+      563,
+      890
+    ],
+    "type": "table",
+    "caption": "表2 データ構造Zの初期化処理と更新処理"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_1.png",
+    "page_number": 20,
+    "box_2d": [
+      362,
+      113,
+      649,
+      885
+    ],
+    "type": "table",
+    "caption": "表1 性能・拡張性の要件(抜粋)"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_2.png",
+    "page_number": 21,
+    "box_2d": [
+      96,
+      109,
+      810,
+      890
+    ],
+    "type": "table",
+    "caption": "表2 クラウドサービスの一覧"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 22,
+    "box_2d": [
+      423,
+      214,
+      565,
+      808
+    ],
+    "type": "figure",
+    "caption": "図1 システム構成案"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_3.png",
+    "page_number": 22,
+    "box_2d": [
+      739,
+      111,
+      856,
+      885
+    ],
+    "type": "table",
+    "caption": "表3 クラウドサービス利用料金の試算に必要な情報"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_1.png",
+    "page_number": 24,
+    "box_2d": [
+      326,
+      147,
+      638,
+      882
+    ],
+    "type": "figure",
+    "caption": "図1 P社のネットワーク構成(抜粋)"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_2.png",
+    "page_number": 25,
+    "box_2d": [
+      463,
+      150,
+      858,
+      889
+    ],
+    "type": "figure",
+    "caption": "図2 NPCによる各種通信時に経由する社内の機器又はサーバ"
+  },
+  {
+    "question_number": 5,
+    "filename": "表5_1.png",
+    "page_number": 26,
+    "box_2d": [
+      99,
+      161,
+      313,
+      891
+    ],
+    "type": "table",
+    "caption": "表1 FWに設定されている通信を許可するルール(抜粋)"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_3.png",
+    "page_number": 26,
+    "box_2d": [
+      451,
+      151,
+      755,
+      887
+    ],
+    "type": "figure",
+    "caption": "図3 新ネットワーク構成 (抜粋)"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_4.png",
+    "page_number": 27,
+    "box_2d": [
+      644,
+      152,
+      792,
+      885
+    ],
+    "type": "figure",
+    "caption": "図4 外出先及び社内のNPCから q-SaaS アクセス時に経由する社内の機器"
+  },
+  {
+    "question_number": 5,
+    "filename": "表5_2.png",
+    "page_number": 28,
+    "box_2d": [
+      238,
+      172,
+      335,
+      829
+    ],
+    "type": "table",
+    "caption": "表2 設定変更後の IPsec ルータ1の処理内容(抜粋)"
+  },
+  {
+    "question_number": 6,
+    "filename": "表6_1.png",
+    "page_number": 30,
+    "box_2d": [
+      539,
+      110,
+      688,
+      888
+    ],
+    "type": "table",
+    "caption": "表1 提携スポンサによって任意に設定可能なチェック仕様(一部)"
+  },
+  {
+    "question_number": 6,
+    "filename": "表6_2.png",
+    "page_number": 30,
+    "box_2d": [
+      696,
+      110,
+      878,
+      888
+    ],
+    "type": "table",
+    "caption": "表2 クーポン発行サービスの概要"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_1.png",
+    "page_number": 31,
+    "box_2d": [
+      390,
+      108,
+      840,
+      890
+    ],
+    "type": "figure",
+    "caption": "図1 予約サイトデータベースのE-R図(抜粋)"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_2.png",
+    "page_number": 32,
+    "box_2d": [
+      162,
+      172,
+      230,
+      828
+    ],
+    "type": "figure",
+    "caption": "図2 “同一会員1枚限りの獲得制限”を制約とするためのSQL文"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_3.png",
+    "page_number": 32,
+    "box_2d": [
+      649,
+      112,
+      804,
+      887
+    ],
+    "type": "figure",
+    "caption": "図3 クーポン発行サービスと施設予約サービスのCRUD図(抜粋)"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_4.png",
+    "page_number": 33,
+    "box_2d": [
+      373,
+      171,
+      526,
+      828
+    ],
+    "type": "figure",
+    "caption": "図4 ロックなし方式の SQL文"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_5.png",
+    "page_number": 33,
+    "box_2d": [
+      796,
+      171,
+      891,
+      828
+    ],
+    "type": "figure",
+    "caption": "図5 ロックあり方式のSQL 文"
+  },
+  {
+    "question_number": 6,
+    "filename": "表6_3.png",
+    "page_number": 34,
+    "box_2d": [
+      157,
+      153,
+      396,
+      888
+    ],
+    "type": "table",
+    "caption": "表3 ロックなし方式とロックあり方式の比較"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_1.png",
+    "page_number": 36,
+    "box_2d": [
+      463,
+      203,
+      638,
+      795
+    ],
+    "type": "figure",
+    "caption": "図1 ワイヤレスカメラのシステム構成"
+  },
+  {
+    "question_number": 7,
+    "filename": "表7_1.png",
+    "page_number": 38,
+    "box_2d": [
+      99,
+      192,
+      239,
+      888
+    ],
+    "type": "table",
+    "caption": "表1 ワイヤレスカメラの状態"
+  },
+  {
+    "question_number": 7,
+    "filename": "表7_2.png",
+    "page_number": 38,
+    "box_2d": [
+      351,
+      150,
+      525,
+      888
+    ],
+    "type": "table",
+    "caption": "表2 状態遷移のトリガとなるイベント"
+  },
+  {
+    "question_number": 7,
+    "filename": "表7_3.png",
+    "page_number": 38,
+    "box_2d": [
+      634,
+      153,
+      892,
+      888
+    ],
+    "type": "table",
+    "caption": "表3 状態遷移したときに行う処理"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_2.png",
+    "page_number": 39,
+    "box_2d": [
+      164,
+      160,
+      563,
+      886
+    ],
+    "type": "figure",
+    "caption": "図2 ワイヤレスカメラの状態遷移図"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_1.png",
+    "page_number": 42,
+    "box_2d": [
+      567,
+      107,
+      786,
+      892
+    ],
+    "type": "figure",
+    "caption": "図1 新バスターミナルシステムの概要"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_1.png",
+    "page_number": 43,
+    "box_2d": [
+      102,
+      110,
+      408,
+      888
+    ],
+    "type": "table",
+    "caption": "表1 運行管理システムがもつ案内表示に関連する機能"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_2.png",
+    "page_number": 43,
+    "box_2d": [
+      414,
+      112,
+      513,
+      888
+    ],
+    "type": "table",
+    "caption": "表2 案内表示システムがもつ機能"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_3.png",
+    "page_number": 43,
+    "box_2d": [
+      534,
+      114,
+      706,
+      888
+    ],
+    "type": "table",
+    "caption": "表3 表示器の表示項目の例"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_4.png",
+    "page_number": 44,
+    "box_2d": [
+      99,
+      110,
+      290,
+      889
+    ],
+    "type": "table",
+    "caption": "表4 E社,F社, G社, H社の調査結果"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_5.png",
+    "page_number": 44,
+    "box_2d": [
+      346,
+      112,
+      526,
+      888
+    ],
+    "type": "table",
+    "caption": "表5 空席情報の連携機能が提供しているデータ項目の書式と例(抜粋)"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_6.png",
+    "page_number": 45,
+    "box_2d": [
+      103,
+      110,
+      274,
+      888
+    ],
+    "type": "table",
+    "caption": "表6 空席情報ファイルのデータレコードの内容"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_7.png",
+    "page_number": 45,
+    "box_2d": [
+      412,
+      112,
+      646,
+      888
+    ],
+    "type": "table",
+    "caption": "表7 連携方法に関する調整結果"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_2.png",
+    "page_number": 45,
+    "box_2d": [
+      767,
+      113,
+      829,
+      888
+    ],
+    "type": "figure",
+    "caption": "図2 空席情報ファイルの取得から設定の処理の検討内容"
+  },
+  {
+    "question_number": 9,
+    "filename": "図9_1.png",
+    "page_number": 49,
+    "box_2d": [
+      718,
+      142,
+      903,
+      888
+    ],
+    "type": "figure",
+    "caption": "図1 再構築プロジェクトの開発スケジュール"
+  },
+  {
+    "question_number": 10,
+    "filename": "表10_1.png",
+    "page_number": 55,
+    "box_2d": [
+      99,
+      150,
+      563,
+      891
+    ],
+    "type": "table",
+    "caption": "表1 インシデントの対応手順"
+  },
+  {
+    "question_number": 10,
+    "filename": "表10_2.png",
+    "page_number": 56,
+    "box_2d": [
+      102,
+      112,
+      386,
+      889
+    ],
+    "type": "table",
+    "caption": "表2 問題管理の手順“解決”の活動内容"
+  },
+  {
+    "question_number": 11,
+    "filename": "図11_1.png",
+    "page_number": 61,
+    "box_2d": [
+      205,
+      108,
+      484,
+      888
+    ],
+    "type": "figure",
+    "caption": "図1 販売物流システムの処理プロセスの概要"
+  },
+  {
+    "question_number": 11,
+    "filename": "表11_1.png",
+    "page_number": 62,
+    "box_2d": [
+      104,
+      189,
+      447,
+      889
+    ],
+    "type": "table",
+    "caption": "表1 監査手続"
+  }
+]

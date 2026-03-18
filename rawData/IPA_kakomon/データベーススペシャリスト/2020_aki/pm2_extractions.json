@@ -1,0 +1,236 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 3,
+    "box_2d": [
+      457,
+      242,
+      613,
+      771
+    ],
+    "type": "figure",
+    "caption": "図1 エンティティタイプとリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_2.png",
+    "page_number": 4,
+    "box_2d": [
+      80,
+      424,
+      251,
+      861
+    ],
+    "type": "figure",
+    "caption": "図2 対応関係にゼロを含むか否かを区別して表現する場合の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_3.png",
+    "page_number": 4,
+    "box_2d": [
+      472,
+      185,
+      654,
+      830
+    ],
+    "type": "figure",
+    "caption": "図3 スーパタイプとサブタイプの間のリレーションシップの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_4.png",
+    "page_number": 5,
+    "box_2d": [
+      138,
+      361,
+      256,
+      651
+    ],
+    "type": "figure",
+    "caption": "図4 エンティティタイプの属性の表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_5.png",
+    "page_number": 5,
+    "box_2d": [
+      353,
+      281,
+      388,
+      730
+    ],
+    "type": "figure",
+    "caption": "図5 関係スキーマの表記ルール"
+  },
+  {
+    "question_number": 0,
+    "filename": "図0_6.png",
+    "page_number": 5,
+    "box_2d": [
+      664,
+      301,
+      700,
+      711
+    ],
+    "type": "figure",
+    "caption": "図6 関係データベースのテーブル（表）構造の表記ルール"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 6,
+    "box_2d": [
+      591,
+      86,
+      878,
+      912
+    ],
+    "type": "figure",
+    "caption": "図1 使用電力量表示画面の例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 7,
+    "box_2d": [
+      161,
+      110,
+      418,
+      875
+    ],
+    "type": "figure",
+    "caption": "図2 節電支援システムのテーブル構造（一部省略）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 14,
+    "box_2d": [
+      521,
+      112,
+      806,
+      886
+    ],
+    "type": "figure",
+    "caption": "図3 処理3の問合せに用いるSQL文（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 15,
+    "box_2d": [
+      551,
+      122,
+      768,
+      851
+    ],
+    "type": "figure",
+    "caption": "図4 処理4の問合せに用いるSQL文（未完成）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 17,
+    "box_2d": [
+      736,
+      120,
+      862,
+      880
+    ],
+    "type": "figure",
+    "caption": "図5 性能テストの実行結果"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 22,
+    "box_2d": [
+      584,
+      191,
+      691,
+      742
+    ],
+    "type": "figure",
+    "caption": "図1 ルートのイメージ"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 24,
+    "box_2d": [
+      217,
+      131,
+      833,
+      885
+    ],
+    "type": "figure",
+    "caption": "図2 業務の流れ"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 26,
+    "box_2d": [
+      77,
+      80,
+      539,
+      885
+    ],
+    "type": "figure",
+    "caption": "図3 マスタ及び在庫領域の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 26,
+    "box_2d": [
+      602,
+      86,
+      870,
+      886
+    ],
+    "type": "figure",
+    "caption": "図4 トランザクション領域の概念データモデル（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_7.png",
+    "page_number": 28,
+    "box_2d": [
+      631,
+      146,
+      782,
+      863
+    ],
+    "type": "figure",
+    "caption": "図7 荷量計算のイメージ"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_8.png",
+    "page_number": 30,
+    "box_2d": [
+      72,
+      107,
+      620,
+      891
+    ],
+    "type": "figure",
+    "caption": "図8 検証のために作成した関係スキーマ処理フロー（未完成）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_9.png",
+    "page_number": 31,
+    "box_2d": [
+      739,
+      323,
+      789,
+      675
+    ],
+    "type": "figure",
+    "caption": "図9 追加したエンティティタイプが関連する範囲の概念データモデル"
+  }
+]

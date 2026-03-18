@@ -1,0 +1,28 @@
+[
+  {
+    "question_number": 57,
+    "filename": "問題57.png",
+    "page_number": 9,
+    "box_2d": [
+      160,
+      201,
+      260,
+      622
+    ],
+    "type": "figure",
+    "caption": "Aさんの親族関係図"
+  },
+  {
+    "question_number": 58,
+    "filename": "問題58.png",
+    "page_number": 9,
+    "box_2d": [
+      428,
+      187,
+      543,
+      640
+    ],
+    "type": "figure",
+    "caption": "Aさんの親族関係図"
+  }
+]

@@ -1,0 +1,548 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      333,
+      109,
+      475,
+      892
+    ],
+    "type": "figure",
+    "caption": "図1 Sシステムの要件(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 4,
+    "box_2d": [
+      116,
+      110,
+      296,
+      892
+    ],
+    "type": "table",
+    "caption": "表1 E社が提供するクラウドサービスのサービス一覧(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 4,
+    "box_2d": [
+      341,
+      137,
+      510,
+      870
+    ],
+    "type": "figure",
+    "caption": "図2 サービスYのシステム構成"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 4,
+    "box_2d": [
+      563,
+      110,
+      695,
+      892
+    ],
+    "type": "figure",
+    "caption": "図3 S-API呼出し時の動作概要(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_2.png",
+    "page_number": 5,
+    "box_2d": [
+      109,
+      109,
+      701,
+      894
+    ],
+    "type": "table",
+    "caption": "表2 S-APIの仕様(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 6,
+    "box_2d": [
+      89,
+      144,
+      610,
+      865
+    ],
+    "type": "figure",
+    "caption": "図4 Sシステムの仕様(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_3.png",
+    "page_number": 7,
+    "box_2d": [
+      110,
+      109,
+      418,
+      891
+    ],
+    "type": "table",
+    "caption": "表3 U社による診断レポート(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_4.png",
+    "page_number": 7,
+    "box_2d": [
+      592,
+      269,
+      738,
+      734
+    ],
+    "type": "table",
+    "caption": "表4 JWTのデコード結果(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_5.png",
+    "page_number": 8,
+    "box_2d": [
+      236,
+      108,
+      582,
+      892
+    ],
+    "type": "table",
+    "caption": "表5 脆弱性の分析と対策案"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 9,
+    "box_2d": [
+      144,
+      110,
+      548,
+      892
+    ],
+    "type": "figure",
+    "caption": "図5 サービスNにおけるWAFルールの記述形式"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_6.png",
+    "page_number": 10,
+    "box_2d": [
+      102,
+      110,
+      612,
+      892
+    ],
+    "type": "figure",
+    "caption": "図6 脆弱性Vについての関連情報(抜粋)"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_7.png",
+    "page_number": 10,
+    "box_2d": [
+      796,
+      110,
+      883,
+      892
+    ],
+    "type": "figure",
+    "caption": "図7 Rさんが実施した検証手順"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_8.png",
+    "page_number": 11,
+    "box_2d": [
+      102,
+      109,
+      141,
+      892
+    ],
+    "type": "figure",
+    "caption": "図8 作成した検証コード"
+  },
+  {
+    "question_number": 1,
+    "filename": "表1_6.png",
+    "page_number": 11,
+    "box_2d": [
+      439,
+      183,
+      510,
+      818
+    ],
+    "type": "table",
+    "caption": "表6 WAFルールの案"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 13,
+    "box_2d": [
+      507,
+      137,
+      766,
+      869
+    ],
+    "type": "figure",
+    "caption": "図1 H社のネットワーク構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 14,
+    "box_2d": [
+      127,
+      110,
+      347,
+      891
+    ],
+    "type": "table",
+    "caption": "表1 UTMの機能概要及び設定"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_2.png",
+    "page_number": 14,
+    "box_2d": [
+      394,
+      110,
+      616,
+      891
+    ],
+    "type": "table",
+    "caption": "表2 VPN-Hの機能概要及び設定(抜粋)"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_3.png",
+    "page_number": 15,
+    "box_2d": [
+      452,
+      110,
+      587,
+      891
+    ],
+    "type": "table",
+    "caption": "表3 方法1と方法2についてT主任がまとめた対策案"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_4.png",
+    "page_number": 16,
+    "box_2d": [
+      215,
+      110,
+      404,
+      891
+    ],
+    "type": "table",
+    "caption": "表4 H社で未対策のDDoSに関連する攻撃"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_5.png",
+    "page_number": 17,
+    "box_2d": [
+      298,
+      110,
+      571,
+      891
+    ],
+    "type": "table",
+    "caption": "表5 多要素認証を狙った攻撃例"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_6.png",
+    "page_number": 18,
+    "box_2d": [
+      545,
+      110,
+      727,
+      891
+    ],
+    "type": "table",
+    "caption": "表6 SPAの主な仕様"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_7.png",
+    "page_number": 19,
+    "box_2d": [
+      403,
+      110,
+      503,
+      891
+    ],
+    "type": "table",
+    "caption": "表7 S-APPLとSソフトの主な機能"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 23,
+    "box_2d": [
+      102,
+      100,
+      346,
+      903
+    ],
+    "type": "figure",
+    "caption": "図1 サイトX、サイトY及びサイトPのネットワーク構成"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 23,
+    "box_2d": [
+      479,
+      110,
+      875,
+      892
+    ],
+    "type": "figure",
+    "caption": "図2 サーバやサービスの説明"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1.png",
+    "page_number": 24,
+    "box_2d": [
+      278,
+      110,
+      810,
+      892
+    ],
+    "type": "table",
+    "caption": "表1 サイトXの機能一覧(抜粋)"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 25,
+    "box_2d": [
+      511,
+      110,
+      813,
+      892
+    ],
+    "type": "figure",
+    "caption": "図3 問合せ機能のリクエストとレスポンス"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 26,
+    "box_2d": [
+      434,
+      110,
+      580,
+      892
+    ],
+    "type": "figure",
+    "caption": "図4 会員機能(編集)のリクエスト"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_2.png",
+    "page_number": 26,
+    "box_2d": [
+      725,
+      110,
+      836,
+      891
+    ],
+    "type": "table",
+    "caption": "表2 リクエスト内のメッセージボディと応答"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_3.png",
+    "page_number": 27,
+    "box_2d": [
+      507,
+      110,
+      634,
+      891
+    ],
+    "type": "table",
+    "caption": "表3 SameSite属性の値の違いによるcookie送信の有無"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_5.png",
+    "page_number": 28,
+    "box_2d": [
+      102,
+      110,
+      256,
+      892
+    ],
+    "type": "figure",
+    "caption": "図5 利用者αで注文履歴を閲覧した際のリクエスト"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_6.png",
+    "page_number": 28,
+    "box_2d": [
+      322,
+      110,
+      477,
+      892
+    ],
+    "type": "figure",
+    "caption": "図6 利用者βで注文履歴を閲覧した際のリクエスト"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_7.png",
+    "page_number": 29,
+    "box_2d": [
+      240,
+      110,
+      332,
+      892
+    ],
+    "type": "figure",
+    "caption": "図7 利用者のWebブラウザがWebサーバYに送るリクエスト"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_1.png",
+    "page_number": 31,
+    "box_2d": [
+      494,
+      110,
+      887,
+      891
+    ],
+    "type": "table",
+    "caption": "表1 Web受注システムの要件"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_1_2.png",
+    "page_number": 32,
+    "box_2d": [
+      116,
+      110,
+      847,
+      891
+    ],
+    "type": "table",
+    "caption": "表1 Web受注システムの要件(続き)"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_2.png",
+    "page_number": 33,
+    "box_2d": [
+      252,
+      110,
+      453,
+      891
+    ],
+    "type": "table",
+    "caption": "表2 OSアカウントの一覧"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_3.png",
+    "page_number": 33,
+    "box_2d": [
+      521,
+      137,
+      680,
+      865
+    ],
+    "type": "table",
+    "caption": "表3 所属グループとその権限"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_4.png",
+    "page_number": 34,
+    "box_2d": [
+      144,
+      110,
+      466,
+      891
+    ],
+    "type": "table",
+    "caption": "表4 データ連携機能のプログラム一覧"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 34,
+    "box_2d": [
+      632,
+      110,
+      853,
+      892
+    ],
+    "type": "figure",
+    "caption": "図1 No.3のプログラムの内容(抜粋)"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_2.png",
+    "page_number": 35,
+    "box_2d": [
+      671,
+      110,
+      830,
+      892
+    ],
+    "type": "figure",
+    "caption": "図2 UserDataクラスのプログラム仕様(抜粋)"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_3.png",
+    "page_number": 36,
+    "box_2d": [
+      102,
+      110,
+      810,
+      892
+    ],
+    "type": "figure",
+    "caption": "図3 UserDataクラスのソースコード(抜粋)"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_4.png",
+    "page_number": 37,
+    "box_2d": [
+      683,
+      110,
+      865,
+      892
+    ],
+    "type": "figure",
+    "caption": "図4 修正後のUserDataクラスのソースコード(抜粋)"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_4_2.png",
+    "page_number": 38,
+    "box_2d": [
+      102,
+      110,
+      544,
+      892
+    ],
+    "type": "figure",
+    "caption": "図4 修正後のUserDataクラスのソースコード(抜粋)(続き)"
+  }
+]

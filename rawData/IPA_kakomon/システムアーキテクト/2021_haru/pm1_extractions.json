@@ -1,0 +1,93 @@
+[
+  {
+    "question_number": 1,
+    "filename": "表1_1.png",
+    "page_number": 5,
+    "box_2d": [
+      115,
+      105,
+      284,
+      924
+    ],
+    "type": "table",
+    "caption": "表1 現行の事業管理システムで使用している主なマスタ"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 8,
+    "box_2d": [
+      642,
+      155,
+      838,
+      875
+    ],
+    "type": "figure",
+    "caption": "図1 集荷から配達までの業務の流れ"
+  },
+  {
+    "question_number": 3,
+    "filename": "表3_1.png",
+    "page_number": 17,
+    "box_2d": [
+      685,
+      105,
+      925,
+      924
+    ],
+    "type": "table",
+    "caption": "表1 WFシステムの主要なファイル"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 19,
+    "box_2d": [
+      693,
+      125,
+      851,
+      880
+    ],
+    "type": "figure",
+    "caption": "図1 現行システムの運用例"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_1.png",
+    "page_number": 20,
+    "box_2d": [
+      102,
+      105,
+      450,
+      924
+    ],
+    "type": "table",
+    "caption": "表1 現行システムの仕様・機能"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_2.png",
+    "page_number": 22,
+    "box_2d": [
+      503,
+      125,
+      675,
+      880
+    ],
+    "type": "figure",
+    "caption": "図2 NFRシステムの運用例"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_2.png",
+    "page_number": 23,
+    "box_2d": [
+      102,
+      105,
+      475,
+      924
+    ],
+    "type": "table",
+    "caption": "表2 NFRシステムの仕様・機能"
+  }
+]

@@ -1,0 +1,457 @@
+[
+  {
+    "question_number": 3,
+    "filename": "問題3.png",
+    "page_number": 3,
+    "box_2d": [
+      240,
+      95,
+      650,
+      898
+    ],
+    "type": "table",
+    "caption": "QA投資信託の商品概要および収益分配金受取時の運用状況"
+  },
+  {
+    "question_number": 4,
+    "filename": "問題4.png",
+    "page_number": 4,
+    "box_2d": [
+      341,
+      95,
+      479,
+      898
+    ],
+    "type": "table",
+    "caption": "QT株式の購入株価等の推移"
+  },
+  {
+    "question_number": 5,
+    "filename": "問題5.png",
+    "page_number": 5,
+    "box_2d": [
+      287,
+      237,
+      360,
+      679
+    ],
+    "type": "table",
+    "caption": "為替レート"
+  },
+  {
+    "question_number": 6,
+    "filename": "問題6.png",
+    "page_number": 6,
+    "box_2d": [
+      165,
+      93,
+      638,
+      905
+    ],
+    "type": "table",
+    "caption": "財形貯蓄制度の比較表"
+  },
+  {
+    "question_number": 7,
+    "filename": "問題7.png",
+    "page_number": 7,
+    "box_2d": [
+      234,
+      117,
+      501,
+      882
+    ],
+    "type": "figure",
+    "caption": "敷地面積と建蔽率に関する資料"
+  },
+  {
+    "question_number": 10,
+    "filename": "問題10.png",
+    "page_number": 8,
+    "box_2d": [
+      603,
+      91,
+      769,
+      898
+    ],
+    "type": "table",
+    "caption": "借家契約に関する比較表"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12_1.png",
+    "page_number": 10,
+    "box_2d": [
+      254,
+      107,
+      558,
+      895
+    ],
+    "type": "figure",
+    "caption": "沼田さんの生命保険ご提案書の概要図"
+  },
+  {
+    "question_number": 12,
+    "filename": "問題12_2.png",
+    "page_number": 10,
+    "box_2d": [
+      587,
+      106,
+      810,
+      897
+    ],
+    "type": "table",
+    "caption": "沼田さんの生命保険ご提案内容詳細"
+  },
+  {
+    "question_number": 14,
+    "filename": "問題14.png",
+    "page_number": 12,
+    "box_2d": [
+      203,
+      107,
+      843,
+      898
+    ],
+    "type": "table",
+    "caption": "普通傷害保険の補償内容"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15_1.png",
+    "page_number": 14,
+    "box_2d": [
+      216,
+      95,
+      290,
+      509
+    ],
+    "type": "table",
+    "caption": "真史さんの家族構成"
+  },
+  {
+    "question_number": 15,
+    "filename": "問題15_2.png",
+    "page_number": 14,
+    "box_2d": [
+      361,
+      203,
+      461,
+      831
+    ],
+    "type": "table",
+    "caption": "真史さんの生命保険契約一覧"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16_1.png",
+    "page_number": 15,
+    "box_2d": [
+      334,
+      108,
+      396,
+      792
+    ],
+    "type": "table",
+    "caption": "自動車の取得情報"
+  },
+  {
+    "question_number": 16,
+    "filename": "問題16_2.png",
+    "page_number": 15,
+    "box_2d": [
+      434,
+      107,
+      479,
+      574
+    ],
+    "type": "table",
+    "caption": "耐用年数表(抜粋)"
+  },
+  {
+    "question_number": 17,
+    "filename": "問題17.png",
+    "page_number": 15,
+    "box_2d": [
+      779,
+      93,
+      824,
+      458
+    ],
+    "type": "table",
+    "caption": "倉田さんの退職に係るデータ"
+  },
+  {
+    "question_number": 20,
+    "filename": "問題20.png",
+    "page_number": 17,
+    "box_2d": [
+      381,
+      126,
+      442,
+      344
+    ],
+    "type": "figure",
+    "caption": "親族関係図"
+  },
+  {
+    "question_number": 22,
+    "filename": "問題22.png",
+    "page_number": 19,
+    "box_2d": [
+      195,
+      237,
+      393,
+      888
+    ],
+    "type": "figure",
+    "caption": "親族関係図"
+  },
+  {
+    "question_number": 23,
+    "filename": "問題23.png",
+    "page_number": 20,
+    "box_2d": [
+      183,
+      235,
+      454,
+      747
+    ],
+    "type": "figure",
+    "caption": "宅地の図"
+  },
+  {
+    "question_number": 24,
+    "filename": "問題24_1.png",
+    "page_number": 22,
+    "box_2d": [
+      142,
+      94,
+      230,
+      622
+    ],
+    "type": "table",
+    "caption": "露木家の家族データ"
+  },
+  {
+    "question_number": 24,
+    "filename": "問題24_2.png",
+    "page_number": 22,
+    "box_2d": [
+      261,
+      95,
+      715,
+      903
+    ],
+    "type": "table",
+    "caption": "露木家のキャッシュフロー表"
+  },
+  {
+    "question_number": 27,
+    "filename": "問題27.png",
+    "page_number": 24,
+    "box_2d": [
+      160,
+      94,
+      497,
+      898
+    ],
+    "type": "table",
+    "caption": "係数早見表(年利率1.0%)"
+  },
+  {
+    "question_number": 30,
+    "filename": "問題30_1.png",
+    "page_number": 26,
+    "box_2d": [
+      234,
+      116,
+      335,
+      778
+    ],
+    "type": "table",
+    "caption": "安西さんの家族構成"
+  },
+  {
+    "question_number": 31,
+    "filename": "問題31.png",
+    "page_number": 28,
+    "box_2d": [
+      206,
+      91,
+      442,
+      906
+    ],
+    "type": "table",
+    "caption": "企業型確定拠出年金と個人型確定拠出年金の比較表"
+  },
+  {
+    "question_number": 32,
+    "filename": "問題32.png",
+    "page_number": 29,
+    "box_2d": [
+      349,
+      107,
+      495,
+      747
+    ],
+    "type": "table",
+    "caption": "借入額100万円当たりの毎月の元利合計返済額早見表"
+  },
+  {
+    "question_number": 33,
+    "filename": "問題33.png",
+    "page_number": 30,
+    "box_2d": [
+      341,
+      107,
+      420,
+      638
+    ],
+    "type": "table",
+    "caption": "標準報酬月額表"
+  },
+  {
+    "question_number": 36,
+    "filename": "問題36_1.png",
+    "page_number": 32,
+    "box_2d": [
+      234,
+      116,
+      336,
+      778
+    ],
+    "type": "table",
+    "caption": "宇野家の家族構成"
+  },
+  {
+    "question_number": 36,
+    "filename": "問題36_2.png",
+    "page_number": 32,
+    "box_2d": [
+      419,
+      219,
+      584,
+      866
+    ],
+    "type": "figure",
+    "caption": "宇野家の親族関係図"
+  },
+  {
+    "question_number": 36,
+    "filename": "問題36_3.png",
+    "page_number": 32,
+    "box_2d": [
+      629,
+      93,
+      888,
+      856
+    ],
+    "type": "table",
+    "caption": "宇野家の保有資産(時価)"
+  },
+  {
+    "question_number": 36,
+    "filename": "問題36_4.png",
+    "page_number": 33,
+    "box_2d": [
+      142,
+      107,
+      289,
+      898
+    ],
+    "type": "table",
+    "caption": "生命保険契約一覧"
+  },
+  {
+    "question_number": 36,
+    "filename": "問題36_5.png",
+    "page_number": 33,
+    "box_2d": [
+      622,
+      95,
+      903,
+      901
+    ],
+    "type": "table",
+    "caption": "宇野家のバランスシート"
+  },
+  {
+    "question_number": 38,
+    "filename": "問題38_1.png",
+    "page_number": 35,
+    "box_2d": [
+      217,
+      107,
+      412,
+      898
+    ],
+    "type": "table",
+    "caption": "所得明細"
+  },
+  {
+    "question_number": 38,
+    "filename": "問題38_2.png",
+    "page_number": 35,
+    "box_2d": [
+      438,
+      105,
+      616,
+      898
+    ],
+    "type": "table",
+    "caption": "確定申告書(抜粋)"
+  },
+  {
+    "question_number": 39,
+    "filename": "問題39.png",
+    "page_number": 36,
+    "box_2d": [
+      263,
+      116,
+      381,
+      880
+    ],
+    "type": "figure",
+    "caption": "倫子さんの公的年金の加入歴(見込みを含む)図"
+  },
+  {
+    "question_number": 40,
+    "filename": "問題40_1.png",
+    "page_number": 37,
+    "box_2d": [
+      254,
+      110,
+      349,
+      529
+    ],
+    "type": "table",
+    "caption": "医療費等および賦課基準額"
+  },
+  {
+    "question_number": 40,
+    "filename": "問題40_2.png",
+    "page_number": 37,
+    "box_2d": [
+      367,
+      549,
+      532,
+      898
+    ],
+    "type": "figure",
+    "caption": "高額療養費の算定図"
+  },
+  {
+    "question_number": 40,
+    "filename": "問題40_3.png",
+    "page_number": 37,
+    "box_2d": [
+      554,
+      107,
+      679,
+      897
+    ],
+    "type": "table",
+    "caption": "医療費の1ヵ月当たりの自己負担限度額(70歳未満)表"
+  }
+]

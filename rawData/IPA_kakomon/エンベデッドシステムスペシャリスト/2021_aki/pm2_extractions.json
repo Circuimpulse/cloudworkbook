@@ -1,0 +1,171 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 2,
+    "box_2d": [
+      378,
+      177,
+      508,
+      822
+    ],
+    "type": "figure",
+    "caption": "ロボットの外観"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 2,
+    "box_2d": [
+      541,
+      123,
+      892,
+      877
+    ],
+    "type": "figure",
+    "caption": "駅構内の平面図"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 6,
+    "box_2d": [
+      528,
+      107,
+      678,
+      892
+    ],
+    "type": "figure",
+    "caption": "ロボPFの構成"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 7,
+    "box_2d": [
+      683,
+      184,
+      874,
+      868
+    ],
+    "type": "figure",
+    "caption": "LIDARによる計測の様子"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 9,
+    "box_2d": [
+      299,
+      266,
+      413,
+      734
+    ],
+    "type": "figure",
+    "caption": "利用者オブジェクト情報の通信方式"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_6.png",
+    "page_number": 11,
+    "box_2d": [
+      210,
+      183,
+      572,
+      749
+    ],
+    "type": "figure",
+    "caption": "警備ロボAが倒された時点の様子"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 14,
+    "box_2d": [
+      447,
+      137,
+      624,
+      853
+    ],
+    "type": "figure",
+    "caption": "本システムの概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 17,
+    "box_2d": [
+      543,
+      158,
+      758,
+      873
+    ],
+    "type": "figure",
+    "caption": "モデルの構成及び構成要素"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 19,
+    "box_2d": [
+      258,
+      187,
+      358,
+      813
+    ],
+    "type": "figure",
+    "caption": "制御プログラムの主なタスク構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 21,
+    "box_2d": [
+      451,
+      114,
+      705,
+      911
+    ],
+    "type": "figure",
+    "caption": "投入センサ、状態センサ及び産出センサが示す状態"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 22,
+    "box_2d": [
+      227,
+      114,
+      444,
+      886
+    ],
+    "type": "figure",
+    "caption": "メインタスクの状態遷移"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_6.png",
+    "page_number": 23,
+    "box_2d": [
+      116,
+      128,
+      458,
+      903
+    ],
+    "type": "figure",
+    "caption": "タスク間通信シーケンスの例"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_7.png",
+    "page_number": 24,
+    "box_2d": [
+      254,
+      204,
+      374,
+      796
+    ],
+    "type": "figure",
+    "caption": "新システムの概要"
+  }
+]

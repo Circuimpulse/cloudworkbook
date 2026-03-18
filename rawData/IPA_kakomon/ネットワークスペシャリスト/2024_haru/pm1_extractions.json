@@ -1,0 +1,132 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      451,
+      180,
+      711,
+      818
+    ],
+    "type": "figure",
+    "caption": "D社データセンターの構成（抜粋）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 5,
+    "box_2d": [
+      370,
+      147,
+      581,
+      818
+    ],
+    "type": "figure",
+    "caption": "BGP anycast 方式による E 社の経路広告イメージ"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 6,
+    "box_2d": [
+      345,
+      152,
+      639,
+      814
+    ],
+    "type": "figure",
+    "caption": "E 社 POP の概要（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 9,
+    "box_2d": [
+      342,
+      143,
+      673,
+      814
+    ],
+    "type": "figure",
+    "caption": "G 社の現行ネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 13,
+    "box_2d": [
+      100,
+      121,
+      402,
+      878
+    ],
+    "type": "figure",
+    "caption": "G 社の SD-WAN 装置導入後のネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 13,
+    "box_2d": [
+      573,
+      121,
+      908,
+      878
+    ],
+    "type": "figure",
+    "caption": "J さんが考えた SD-WAN 装置間の IPsec トンネルの構成"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 16,
+    "box_2d": [
+      531,
+      130,
+      893,
+      869
+    ],
+    "type": "figure",
+    "caption": "現在の A 社のネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 17,
+    "box_2d": [
+      667,
+      117,
+      828,
+      735
+    ],
+    "type": "figure",
+    "caption": "A 社の VPN を構成する IP パケット構造"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 18,
+    "box_2d": [
+      479,
+      146,
+      818,
+      871
+    ],
+    "type": "figure",
+    "caption": "各支社の PC から、C 社 SaaS 宛てとその他インターネット宛ての通信の流れ"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_4.png",
+    "page_number": 19,
+    "box_2d": [
+      456,
+      140,
+      865,
+      861
+    ],
+    "type": "figure",
+    "caption": "B さんが作成した大阪支社の UTM の PAC ファイル"
+  }
+]

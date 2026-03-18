@@ -1,0 +1,470 @@
+[
+  {
+    "question_number": 0,
+    "filename": "図0_1.png",
+    "page_number": 1,
+    "box_2d": [
+      310,
+      690,
+      835,
+      880
+    ],
+    "type": "figure",
+    "caption": "問3,問4,問6,問8を選択した場合の例"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 4,
+    "box_2d": [
+      285,
+      125,
+      655,
+      875
+    ],
+    "type": "figure",
+    "caption": "図1 P社のネットワーク構成"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 12,
+    "box_2d": [
+      345,
+      100,
+      650,
+      895
+    ],
+    "type": "figure",
+    "caption": "図1 B社のビジネスモデル"
+  },
+  {
+    "question_number": 2,
+    "filename": "表2_1.png",
+    "page_number": 13,
+    "box_2d": [
+      70,
+      110,
+      305,
+      890
+    ],
+    "type": "table",
+    "caption": "表1 財務計画第1版"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 16,
+    "box_2d": [
+      438,
+      135,
+      652,
+      442
+    ],
+    "type": "figure",
+    "caption": "図1 解が一つの迷路の例"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 16,
+    "box_2d": [
+      438,
+      558,
+      652,
+      858
+    ],
+    "type": "figure",
+    "caption": "図2 解が複数ある迷路の例"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_1.png",
+    "page_number": 21,
+    "box_2d": [
+      90,
+      125,
+      265,
+      890
+    ],
+    "type": "figure",
+    "caption": "図1 今後のリリーススケジュール"
+  },
+  {
+    "question_number": 4,
+    "filename": "表4_1.png",
+    "page_number": 22,
+    "box_2d": [
+      315,
+      135,
+      435,
+      865
+    ],
+    "type": "table",
+    "caption": "表1 Dさんが作成したコンテナイメージの一覧"
+  },
+  {
+    "question_number": 4,
+    "filename": "図4_2.png",
+    "page_number": 22,
+    "box_2d": [
+      465,
+      145,
+      525,
+      860
+    ],
+    "type": "figure",
+    "caption": "図2 Eさんが用いたコンテナの起動コマンドの引数(抜粋)"
+  },
+  {
+    "question_number": 5,
+    "filename": "図5_1.png",
+    "page_number": 26,
+    "box_2d": [
+      380,
+      110,
+      670,
+      895
+    ],
+    "type": "figure",
+    "caption": "図1 W社のネットワーク構成"
+  },
+  {
+    "question_number": 6,
+    "filename": "表6_1a.png",
+    "page_number": 32,
+    "box_2d": [
+      630,
+      105,
+      925,
+      895
+    ],
+    "type": "table",
+    "caption": "表1 管理台帳の項目"
+  },
+  {
+    "question_number": 6,
+    "filename": "表6_1b.png",
+    "page_number": 33,
+    "box_2d": [
+      70,
+      110,
+      255,
+      895
+    ],
+    "type": "table",
+    "caption": "表1 管理台帳の項目(続き)"
+  },
+  {
+    "question_number": 6,
+    "filename": "表6_2.png",
+    "page_number": 33,
+    "box_2d": [
+      425,
+      105,
+      740,
+      895
+    ],
+    "type": "table",
+    "caption": "表2 ヒアリング結果"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_1.png",
+    "page_number": 34,
+    "box_2d": [
+      60,
+      145,
+      685,
+      895
+    ],
+    "type": "figure",
+    "caption": "図1 新システムのE-R図(抜粋)"
+  },
+  {
+    "question_number": 6,
+    "filename": "表6_3.png",
+    "page_number": 35,
+    "box_2d": [
+      235,
+      105,
+      445,
+      895
+    ],
+    "type": "table",
+    "caption": "表3 契約表の表定義"
+  },
+  {
+    "question_number": 6,
+    "filename": "表6_4.png",
+    "page_number": 35,
+    "box_2d": [
+      485,
+      105,
+      835,
+      895
+    ],
+    "type": "table",
+    "caption": "表4 料金プラン表の表定義"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_2.png",
+    "page_number": 36,
+    "box_2d": [
+      200,
+      105,
+      255,
+      695
+    ],
+    "type": "figure",
+    "caption": "図2 表3のアクセス制御を設定するためのSQL 文"
+  },
+  {
+    "question_number": 6,
+    "filename": "図6_3.png",
+    "page_number": 36,
+    "box_2d": [
+      295,
+      105,
+      485,
+      895
+    ],
+    "type": "figure",
+    "caption": "図3 表4の料金プラン表を作成するための SQL 文"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_1.png",
+    "page_number": 38,
+    "box_2d": [
+      280,
+      145,
+      450,
+      625
+    ],
+    "type": "figure",
+    "caption": "図1 本システムの構成"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_2.png",
+    "page_number": 38,
+    "box_2d": [
+      265,
+      625,
+      455,
+      845
+    ],
+    "type": "figure",
+    "caption": "図2 傘貸出機の外観"
+  },
+  {
+    "question_number": 7,
+    "filename": "図7_3.png",
+    "page_number": 38,
+    "box_2d": [
+      670,
+      145,
+      850,
+      850
+    ],
+    "type": "figure",
+    "caption": "図3 傘貸出機の構成"
+  },
+  {
+    "question_number": 7,
+    "filename": "表7_1.png",
+    "page_number": 40,
+    "box_2d": [
+      70,
+      105,
+      535,
+      895
+    ],
+    "type": "table",
+    "caption": "表1 制御部の主なタスクの一覧"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_1.png",
+    "page_number": 42,
+    "box_2d": [
+      645,
+      105,
+      860,
+      895
+    ],
+    "type": "table",
+    "caption": "表1 設計工程でのレビュー形態"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_2.png",
+    "page_number": 43,
+    "box_2d": [
+      70,
+      105,
+      685,
+      895
+    ],
+    "type": "table",
+    "caption": "表2 レビュー会議の手順"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_3.png",
+    "page_number": 44,
+    "box_2d": [
+      70,
+      105,
+      245,
+      895
+    ],
+    "type": "table",
+    "caption": "表3 基本測定量(抜粋)"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_4.png",
+    "page_number": 44,
+    "box_2d": [
+      495,
+      105,
+      615,
+      895
+    ],
+    "type": "table",
+    "caption": "表4 設計書のレビュー結果の指標"
+  },
+  {
+    "question_number": 8,
+    "filename": "図8_1.png",
+    "page_number": 45,
+    "box_2d": [
+      215,
+      145,
+      445,
+      635
+    ],
+    "type": "figure",
+    "caption": "図1 レビューのゾーン分析"
+  },
+  {
+    "question_number": 8,
+    "filename": "表8_5.png",
+    "page_number": 45,
+    "box_2d": [
+      535,
+      105,
+      830,
+      895
+    ],
+    "type": "table",
+    "caption": "表5 レビュー会議の状況についての確認結果と対応"
+  },
+  {
+    "question_number": 9,
+    "filename": "表9_1.png",
+    "page_number": 50,
+    "box_2d": [
+      375,
+      105,
+      515,
+      895
+    ],
+    "type": "table",
+    "caption": "表1 AI処理時間検証遅延リスクへの対応検討結果"
+  },
+  {
+    "question_number": 9,
+    "filename": "図9_1.png",
+    "page_number": 51,
+    "box_2d": [
+      300,
+      105,
+      500,
+      895
+    ],
+    "type": "figure",
+    "caption": "図1 問合せ回数増加に対する対応のデシジョンツリー"
+  },
+  {
+    "question_number": 9,
+    "filename": "表9_2.png",
+    "page_number": 51,
+    "box_2d": [
+      645,
+      105,
+      890,
+      895
+    ],
+    "type": "table",
+    "caption": "表2 対応と追加コスト一覧"
+  },
+  {
+    "question_number": 10,
+    "filename": "表10_1.png",
+    "page_number": 56,
+    "box_2d": [
+      475,
+      135,
+      605,
+      865
+    ],
+    "type": "table",
+    "caption": "表1 情報システム部の追加作業項目とその作業内容の一覧"
+  },
+  {
+    "question_number": 10,
+    "filename": "表10_2.png",
+    "page_number": 57,
+    "box_2d": [
+      190,
+      135,
+      335,
+      865
+    ],
+    "type": "table",
+    "caption": "表2 受注サービスの変更前の作業工数の実績一覧"
+  },
+  {
+    "question_number": 10,
+    "filename": "表10_3.png",
+    "page_number": 57,
+    "box_2d": [
+      615,
+      135,
+      860,
+      865
+    ],
+    "type": "table",
+    "caption": "表3 信用情報取得ジョブ1回当たりの実施時間"
+  },
+  {
+    "question_number": 10,
+    "filename": "表10_4.png",
+    "page_number": 58,
+    "box_2d": [
+      295,
+      135,
+      440,
+      865
+    ],
+    "type": "table",
+    "caption": "表4 サービス変更後のサービス運用に必要な作業工数"
+  },
+  {
+    "question_number": 11,
+    "filename": "表11_1.png",
+    "page_number": 62,
+    "box_2d": [
+      605,
+      105,
+      780,
+      895
+    ],
+    "type": "table",
+    "caption": "表1 セキュリティ点検の項目及び内容(一部)"
+  }
+]

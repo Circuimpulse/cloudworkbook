@@ -1,0 +1,171 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      146,
+      117,
+      340,
+      882
+    ],
+    "type": "figure",
+    "caption": "機器集約後のネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 4,
+    "box_2d": [
+      583,
+      117,
+      747,
+      458
+    ],
+    "type": "figure",
+    "caption": "サイトPにおけるサイトQのアカウントの紐付けの画面と処理内容"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 6,
+    "box_2d": [
+      90,
+      117,
+      874,
+      882
+    ],
+    "type": "figure",
+    "caption": "Web-P の Web アプリにおける AccountLink のクラス定義"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 7,
+    "box_2d": [
+      483,
+      203,
+      891,
+      882
+    ],
+    "type": "figure",
+    "caption": "Web-P の Web アプリにおける AccountLink のメソッドを呼んでいる部分"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 9,
+    "box_2d": [
+      145,
+      117,
+      345,
+      461
+    ],
+    "type": "figure",
+    "caption": "サイトRのパスワード失念時の操作画面"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_6.png",
+    "page_number": 10,
+    "box_2d": [
+      512,
+      117,
+      715,
+      876
+    ],
+    "type": "figure",
+    "caption": "Web Browser SSO Profile の基本的な通信の流れ"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_7.png",
+    "page_number": 11,
+    "box_2d": [
+      107,
+      117,
+      240,
+      882
+    ],
+    "type": "figure",
+    "caption": "サイトSのアカウントでサイトQにログインするときの画面遷移図"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_8.png",
+    "page_number": 11,
+    "box_2d": [
+      447,
+      117,
+      856,
+      882
+    ],
+    "type": "figure",
+    "caption": "サイトQのアカウントとサイトSのアカウントを紐付けるときの画面遷移図"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 14,
+    "box_2d": [
+      563,
+      117,
+      760,
+      589
+    ],
+    "type": "figure",
+    "caption": "E社のネットワーク構成（概要）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 18,
+    "box_2d": [
+      91,
+      114,
+      442,
+      883
+    ],
+    "type": "figure",
+    "caption": "SaaS-X と IDaaS-Y との認証連携"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_3.png",
+    "page_number": 18,
+    "box_2d": [
+      514,
+      114,
+      747,
+      882
+    ],
+    "type": "figure",
+    "caption": "会議ツールZ と IDaaS-Y との認証連携"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_4.png",
+    "page_number": 20,
+    "box_2d": [
+      366,
+      117,
+      592,
+      589
+    ],
+    "type": "figure",
+    "caption": "T環境のネットワーク構成（概要）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_5.png",
+    "page_number": 23,
+    "box_2d": [
+      449,
+      117,
+      807,
+      893
+    ],
+    "type": "figure",
+    "caption": "認証メッセージ又は処理の解答群"
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "question_number": 1,
+    "filename": "図1_1.png",
+    "page_number": 3,
+    "box_2d": [
+      209,
+      114,
+      479,
+      886
+    ],
+    "type": "figure",
+    "caption": "J社ネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_2.png",
+    "page_number": 4,
+    "box_2d": [
+      85,
+      114,
+      865,
+      888
+    ],
+    "type": "figure",
+    "caption": "顧客管理サーバの保守方法"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_3.png",
+    "page_number": 6,
+    "box_2d": [
+      85,
+      114,
+      382,
+      888
+    ],
+    "type": "figure",
+    "caption": "保守作業関連書類及び各種ログの調査結果"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_4.png",
+    "page_number": 6,
+    "box_2d": [
+      417,
+      114,
+      554,
+      888
+    ],
+    "type": "figure",
+    "caption": "保守員へのヒアリング結果"
+  },
+  {
+    "question_number": 1,
+    "filename": "図1_5.png",
+    "page_number": 7,
+    "box_2d": [
+      193,
+      114,
+      310,
+      888
+    ],
+    "type": "figure",
+    "caption": "公開鍵認証の初期登録手順（抜粋）"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_1.png",
+    "page_number": 11,
+    "box_2d": [
+      85,
+      114,
+      880,
+      888
+    ],
+    "type": "figure",
+    "caption": "IRM-Lの概要"
+  },
+  {
+    "question_number": 2,
+    "filename": "図2_2.png",
+    "page_number": 13,
+    "box_2d": [
+      75,
+      114,
+      236,
+      888
+    ],
+    "type": "figure",
+    "caption": "比較結果"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_1.png",
+    "page_number": 15,
+    "box_2d": [
+      380,
+      114,
+      700,
+      886
+    ],
+    "type": "figure",
+    "caption": "Q社のネットワーク構成（抜粋）"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_2.png",
+    "page_number": 17,
+    "box_2d": [
+      754,
+      114,
+      865,
+      888
+    ],
+    "type": "figure",
+    "caption": "マルウェアへの対処"
+  },
+  {
+    "question_number": 3,
+    "filename": "図3_3.png",
+    "page_number": 18,
+    "box_2d": [
+      211,
+      114,
+      728,
+      888
+    ],
+    "type": "figure",
+    "caption": "調査結果"
+  }
+]
