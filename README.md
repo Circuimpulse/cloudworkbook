@@ -1,178 +1,46 @@
-# 資格試験対策Webアプリケーション
+# CloudWorkbook
 
-Next.js + Cloudflare D1で構築する、効率的な学習を支援する資格試験対策アプリケーションです。
+IPA資格試験・FP技能検定の過去問演習Webアプリケーション。
+スマホ1台で過去問演習が完結し、AI採点で記述式問題のフィードバックを提供。
 
-## 🎯 特徴
+## 特徴
 
-- **セクション学習**: 7問1セットの問題で効率的に学習
-- **模擬テスト**: 全問題からランダム50問を出題し、本番さながらの演習
-- **学習履歴管理**: セクションごとの進捗と模擬テスト履歴を記録
-- **認証機能**: Clerkによる安全なユーザー認証
+- **14試験対応**: 応用情報(午前/午後)、FP3級/2級、IPA高度試験9区分
+- **5つの問題形式**: 4択、○×、穴埋め、語群選択、自由記述
+- **AI採点**: Gemini APIで記述式回答を自動採点・フィードバック
+- **スマホファースト**: 横スクロール排除、文字サイズ最適化
+- **お気に入り3段階**: 重要度別にブックマーク、OR/ANDフィルタで復習
 
-## 🏗️ 技術スタック
+## 技術スタック
 
-### フロントエンド
-- **Next.js 15** (App Router)
-- **TypeScript**
-- **Tailwind CSS**
-- **Shadcn/UI**
+| カテゴリ | 技術 |
+|:---|:---|
+| フレームワーク | Next.js 15 (App Router) / React 19 / TypeScript |
+| スタイリング | Tailwind CSS / shadcn/ui |
+| DB | Turso (LibSQL/SQLite) / Drizzle ORM |
+| 認証 | Clerk |
+| AI | Google Gemini API |
+| バリデーション | Zod |
+| テスト | Vitest (46テスト) |
+| デプロイ | Vercel |
 
-### バックエンド
-- **Edge Runtime** (Cloudflare互換)
-- **Drizzle ORM**
-- **SQLite / Turso / Cloudflare D1**
-
-### 認証
-- **Clerk**
-
-### デプロイ
-- **フェーズ1**: Vercel（現在）
-- **フェーズ2**: Cloudflare Pages + D1（将来）
-
-## 📋 前提条件
-
-- Node.js 18以上
-- npm または yarn
-- Clerkアカウント
-- （オプション）Tursoアカウント
-
-## 🚀 クイックスタート
-
-### 1. リポジトリのクローン
+## クイックスタート
 
 ```bash
-git clone <repository-url>
-cd cloudworkbook
-```
-
-### 2. 依存関係のインストール
-
-```bash
+# 依存関係インストール
 npm install
-```
 
-### 3. 環境変数の設定
+# 環境変数設定
+cp .env.example .env.local
+# .env.local を編集: Clerk, Turso の認証情報を設定
 
-```bash
-cp .env.example .env
-```
-
-`.env` ファイルを編集し、Clerkの認証情報を設定してください。
-
-### 4. データベースのセットアップ
-
-```bash
-# マイグレーション実行
-npm run db:generate
-npm run db:migrate
-
-# サンプルデータ投入
-tsx scripts/seed.ts
-```
-
-### 5. 開発サーバーの起動
-
-```bash
+# 開発サーバー起動
 npm run dev
 ```
 
 http://localhost:3000 にアクセス
 
-## 📁 プロジェクト構造
-
-```
-cloudworkbook/
-├── frontend/                   # フロントエンド
-│   ├── screens/               # 画面コンポーネント
-│   │   ├── top.tsx           # トップページ
-│   │   ├── section.tsx       # セクション選択画面
-│   │   ├── quizes.tsx        # クイズ画面
-│   │   ├── list.tsx          # 進捗リスト画面
-│   │   └── dashboard.tsx     # ダッシュボード
-│   ├── components/            # UIコンポーネント
-│   │   ├── common/           # 共通コンポーネント
-│   │   │   ├── app-header.tsx        # ヘッダー
-│   │   │   ├── page-container.tsx    # ページコンテナ
-│   │   │   ├── section-header.tsx    # セクションヘッダー
-│   │   │   └── index.ts              # エクスポート
-│   │   └── features/         # 機能固有コンポーネント
-│   │       ├── sections-accordion.tsx # セクションアコーディオン
-│   │       ├── section-card.tsx       # セクションカード
-│   │       ├── stats-card.tsx         # 統計カード
-│   │       ├── feature-card.tsx       # 機能カード
-│   │       └── index.ts               # エクスポート
-│   ├── constants/             # 定数定義
-│   │   └── descriptions.ts   # 文言管理
-│   ├── hooks/                 # カスタムフック
-│   └── types/                 # 型定義
-├── backend/                    # バックエンド
-│   └── db/                    # データベース関連
-│       ├── schema.ts          # Drizzleスキーマ
-│       ├── client.ts          # DB接続（移行対応）
-│       ├── queries.ts         # クエリ関数
-│       ├── migrate.ts         # マイグレーション
-│       └── index.ts           # エクスポート
-├── app/                        # Next.js App Router
-│   ├── api/                   # APIルート（Edge Runtime）
-│   ├── layout.tsx             # ルートレイアウト（AppHeader使用）
-│   └── */page.tsx             # 各ページ（Screenを呼び出し）
-├── components/ui/              # Shadcn/UIコンポーネント
-├── lib/utils.ts               # ユーティリティ関数
-├── scripts/seed.ts            # サンプルデータ投入
-└── middleware.ts              # Clerk認証ミドルウェア
-```
-
-詳細は `PROJECT_STRUCTURE.md` を参照してください。
-
-## 🗄️ データベース設計
-
-### テーブル構成
-
-- **users**: ユーザー情報
-- **sections**: セクション（7問1セット）
-- **questions**: 問題
-- **section_progress**: セクション進捗（上書き更新）
-- **mock_test_history**: 模擬テスト履歴（追記型）
-- **mock_test_details**: 模擬テスト詳細
-
-詳細は `lib/db/schema.ts` を参照してください。
-
-## 🔧 開発コマンド
-
-```bash
-# 開発サーバー起動
-npm run dev
-
-# ビルド
-npm run build
-
-# 本番サーバー起動
-npm start
-
-# リント
-npm run lint
-
-# データベース関連
-npm run db:generate    # マイグレーション生成
-npm run db:migrate     # マイグレーション実行
-npm run db:studio      # Drizzle Studio起動
-npm run db:push        # スキーマをDBにプッシュ
-```
-
-## 📦 デプロイ
-
-### Vercelへのデプロイ（推奨）
-
-このアプリケーションはVercelへのデプロイに最適化されています。
-
-#### クイックデプロイ
-
-1. [Vercel Dashboard](https://vercel.com/new) にアクセス
-2. GitHubリポジトリを選択: `Circuimpulse/cloudworkbook`
-3. 環境変数を設定（下記参照）
-4. デプロイ
-
-#### 必要な環境変数
+## 環境変数
 
 ```env
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
@@ -181,83 +49,37 @@ DATABASE_URL=libsql://your-database.turso.io
 DATABASE_AUTH_TOKEN=your_turso_token
 ```
 
-#### 詳細な手順
-
-完全なデプロイガイドは **[VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md)** を参照してください。
-
-以下の内容が含まれています：
-- Tursoデータベースのセットアップ
-- Clerk認証の設定
-- 環境変数の設定方法
-- データベースマイグレーション
-- カスタムドメインの設定
-- トラブルシューティング
-
-### Cloudflare Pagesへの移行（将来）
-
-将来的にCloudflare Pages + D1に移行する際の手順は `MIGRATION_TO_CLOUDFLARE.md` を参照してください。
-
-## 🎨 デザインシステム
-
-このプロジェクトは [Shadcn/UI](https://ui.shadcn.com/) を使用しています。
-
-新しいコンポーネントの追加:
+## 開発コマンド
 
 ```bash
-npx shadcn@latest add button
-npx shadcn@latest add card
+npm run dev          # 開発サーバー
+npm run build        # ビルド
+npm run test         # テスト実行
+npm run db:generate  # マイグレーション生成
+npm run db:migrate   # マイグレーション実行
+npm run db:studio    # Drizzle Studio
 ```
 
-## 🔐 認証
+## データインポート
 
-[Clerk](https://clerk.com/) を使用した最新のNext.js App Router対応認証を実装しています。
+```bash
+# 応用情報午前（CSV）
+DATABASE_URL="file:./local.db" npx tsx scripts/import-ap-gozen.ts
 
-### セットアップ手順
+# IPA午後（Markdown）
+DATABASE_URL="file:./local.db" npx tsx scripts/import-ipa-gogo.ts
 
-1. [Clerk Dashboard](https://dashboard.clerk.com/last-active?path=api-keys) でAPI Keysを取得
-2. `.env.local` に設定（`.env.example` を参照）
-3. 開発サーバーを起動して、ヘッダーの「新規登録」ボタンからユーザー作成
+# FP（CSV/Markdown）
+DATABASE_URL="file:./local.db" npx tsx scripts/import-csv.ts
+```
 
-### 認証ページ
+## ドキュメント
 
-- ログイン: `/sign-in`
-- サインアップ: `/sign-up`
-- ダッシュボード: `/dashboard`（認証必須）
+- [要件定義書](docs/design/01_requirements.md)
+- [基本設計書](docs/design/02_architecture.md)
+- [Vercelデプロイガイド](docs/procedures/VERCEL_DEPLOYMENT.md)
+- [API設計書](docs/design/api/)
 
-### 実装詳細
-
-- `middleware.ts`: `clerkMiddleware()` を使用した最新のミドルウェア
-- `app/layout.tsx`: `<ClerkProvider>` でアプリ全体をラップ
-- Clerkコンポーネント: `<SignInButton>`, `<SignUpButton>`, `<UserButton>`, `<SignedIn>`, `<SignedOut>`
-
-## 📝 ライセンス
+## ライセンス
 
 MIT
-
-## 🤝 コントリビューション
-
-プルリクエストを歓迎します！
-
-## 📞 サポート
-
-問題が発生した場合は、Issueを作成してください。
-
-## 🗺️ ロードマップ
-
-- [x] プロジェクト初期構築
-- [x] データベース設計
-- [x] 認証実装
-- [x] コンポーネント共通化
-- [x] ダッシュボードUI
-- [x] セクション学習機能
-- [ ] 模擬テスト機能
-- [ ] 学習履歴の可視化
-- [ ] Cloudflare Pages移行
-
-## 📚 参考資料
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Drizzle ORM](https://orm.drizzle.team/)
-- [Clerk Documentation](https://clerk.com/docs)
-- [Cloudflare D1](https://developers.cloudflare.com/d1/)
-- [Shadcn/UI](https://ui.shadcn.com/)
