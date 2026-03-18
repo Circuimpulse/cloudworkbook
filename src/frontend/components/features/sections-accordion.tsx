@@ -9,6 +9,7 @@ interface SectionItem {
   id: number;
   title: string;
   order: number;
+  description?: string | null;
   examTitle?: string | null;
 }
 
@@ -106,9 +107,9 @@ export function SectionsAccordion({ sections }: SectionsAccordionProps) {
                         }}
                         className="inline-block text-left text-xl font-semibold text-blue-600 hover:text-blue-500 md:text-2xl transition-colors"
                       >
-                        {section.examTitle && (
+                        {(section.examTitle || section.description) && (
                           <span className="block text-base text-gray-500 mb-1 pointer-events-none">
-                            {section.examTitle}
+                            {section.description || section.examTitle}
                           </span>
                         )}
                         {section.title}
