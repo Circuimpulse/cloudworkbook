@@ -101,6 +101,8 @@ export default function QuizesScreen({
     explanation?: string;
     error?: string;
   }>>({});
+  // AI採点自動実行フラグ
+  const [pendingAiScore, setPendingAiScore] = useState(false);
   // 複数空欄回答用のstate (語群選択/○×複数)
   const [multiAnswers, setMultiAnswers] = useState<Record<string, string>>({});
 
@@ -448,6 +450,48 @@ export default function QuizesScreen({
     }
   };
 
+  // AI採点関数（コンポーネントレベル）
+  const handleAiScore = async () => {
+    const qId = currentQuestion.id;
+    setAiScoring(prev => ({ ...prev, [qId]: { status: "loading" } }));
+    try {
+      const detailRaw = (currentQuestion as any).correctAnswerDetail;
+      let detailParsed: Record<string, string> | null = null;
+      if (detailRaw) {
+        try { detailParsed = typeof detailRaw === "string" ? JSON.parse(detailRaw) : detailRaw; } catch {}
+      }
+      const response = await fetch("/api/ai/score", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          questionText: currentQuestion.questionText,
+          userAnswer: selectedAnswer || fillInAnswer,
+          correctAnswer: currentQuestion.correctAnswer,
+          explanation: detailParsed ? JSON.stringify(detailParsed) : undefined,
+          examType: exam?.slug || "",
+        }),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setAiScoring(prev => ({ ...prev, [qId]: { status: "success", score: data.score, isCorrect: data.isCorrect, explanation: data.explanation } }));
+      } else {
+        const errorData = await response.json().catch(() => ({}));
+        const isNoApiKey = response.status === 400 && errorData.error?.includes("APIキーが設定されていません");
+        setAiScoring(prev => ({ ...prev, [qId]: { status: isNoApiKey ? "no_key" : "error", error: errorData.error || `エラー (${response.status})` } }));
+      }
+    } catch {
+      setAiScoring(prev => ({ ...prev, [qId]: { status: "error", error: "接続エラー" } }));
+    }
+  };
+
+  // AI採点自動実行: pendingAiScoreフラグが立ったら実行
+  useEffect(() => {
+    if (pendingAiScore && showResult) {
+      setPendingAiScore(false);
+      handleAiScore();
+    }
+  }, [pendingAiScore, showResult]);
+
   // questionTypeに基づく表示設定
   const questionType = (currentQuestion as any).questionType || "choice";
   const isTrueFalse = questionType === "true_false";
@@ -492,10 +536,12 @@ export default function QuizesScreen({
       // 自由記述式 → 完全一致採点は不可能、回答済みとして記録
       isCorrect = false;
       // XSS対策: HTMLタグを除去（ReactのJSX表示で基本安全だが、DB保存時にも防御）
-      answerStr = fillInAnswer
+      const sanitized = fillInAnswer
         .replace(/<[^>]*>/g, "")
         .replace(/javascript:/gi, "")
-        .trim() || "（未回答）";
+        .replace(/on\w+\s*=/gi, "")
+        .trim();
+      answerStr = sanitized || "（未回答）";
     } else {
       // 単一回答の採点（FP計算問題等）
       const userAnswer = fillInAnswer.replace(/,/g, "").trim();
@@ -953,33 +999,36 @@ export default function QuizesScreen({
                     ✓ この問題は既に正解済みです。説明を確認できます。
                   </div>
                 )}
-                {/* 出典情報 + お気に入り */}
-                <div className="flex items-center justify-between mb-2">
+                {/* 出典情報 + お気に入り（横並び・コンパクト） */}
+                <div className="flex items-center gap-2 mb-2">
                   {currentQuestion.sourceNote && (
                     <div className="text-xs text-slate-400 font-medium">
                       {currentQuestion.sourceNote}
                     </div>
                   )}
-                  <FavoriteToggles
-                    key={currentQuestion.id}
-                    questionId={currentQuestion.id}
-                    initialStatus={{
-                      isFavorite1: isFavorite.isFavorite1 || false,
-                      isFavorite2: isFavorite.isFavorite2 || false,
-                      isFavorite3: isFavorite.isFavorite3 || false,
-                      isFavorite: false,
-                    }}
-                    onUpdate={(newStatus) => {
-                      setFavorites((prev) => ({
-                        ...prev,
-                        [currentQuestion.id]: {
-                          isFavorite1: newStatus.isFavorite1,
-                          isFavorite2: newStatus.isFavorite2,
-                          isFavorite3: newStatus.isFavorite3,
-                        },
-                      }));
-                    }}
-                  />
+                  <div className="flex items-center">
+                    <span className="text-xs text-slate-400 mr-1">お気に入り登録</span>
+                    <FavoriteToggles
+                      key={currentQuestion.id}
+                      questionId={currentQuestion.id}
+                      initialStatus={{
+                        isFavorite1: isFavorite.isFavorite1 || false,
+                        isFavorite2: isFavorite.isFavorite2 || false,
+                        isFavorite3: isFavorite.isFavorite3 || false,
+                        isFavorite: false,
+                      }}
+                      onUpdate={(newStatus) => {
+                        setFavorites((prev) => ({
+                          ...prev,
+                          [currentQuestion.id]: {
+                            isFavorite1: newStatus.isFavorite1,
+                            isFavorite2: newStatus.isFavorite2,
+                            isFavorite3: newStatus.isFavorite3,
+                          },
+                        }));
+                      }}
+                    />
+                  </div>
                 </div>
                 {/* 問題文（全幅） */}
                 <div className="prose prose-sm max-w-none text-sm md:text-lg leading-relaxed font-medium overflow-x-auto [&_table]:text-xs [&_table]:md:text-base [&_table]:font-normal [&_table]:w-full [&_table]:table-fixed [&_th]:bg-slate-100 [&_th]:px-2 [&_th]:py-1 [&_th]:md:px-3 [&_th]:md:py-2 [&_td]:px-2 [&_td]:py-1 [&_td]:md:px-3 [&_td]:md:py-2 [&_td]:break-words [&_img]:rounded-lg [&_img]:shadow-md [&_img]:my-3 [&_img]:max-w-full [&_pre]:overflow-x-auto [&_code]:break-words">
@@ -1102,23 +1151,16 @@ export default function QuizesScreen({
                         <Button
                           onClick={() => {
                             handleDescriptiveSubmit();
-                            // 回答送信後にAI採点を自動実行
-                            setTimeout(() => {
-                              const aiBtn = document.querySelector("[data-ai-score-btn]") as HTMLButtonElement;
-                              if (aiBtn) aiBtn.click();
-                            }, 300);
+                            setPendingAiScore(true);
                           }}
                           disabled={!fillInAnswer.trim()}
                           className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white py-3 text-sm md:text-base shadow-md"
                         >
                           <Sparkles className="w-4 h-4 mr-1.5" />
-                          AIで採点してフィードバック
+                          回答してAI採点
                         </Button>
                         <Button
-                          onClick={() => {
-                            // 空文字でも模範解答を表示
-                            handleDescriptiveSubmit();
-                          }}
+                          onClick={handleDescriptiveSubmit}
                           variant="outline"
                           className="py-3 text-sm md:text-base whitespace-nowrap"
                         >
@@ -1242,59 +1284,6 @@ export default function QuizesScreen({
         {/* AI採点セクション（記述式のみ） */}
         {showResult && isDescriptive && (() => {
           const aiState = aiScoring[currentQuestion.id] || { status: "idle" };
-
-          const handleAiScore = async () => {
-            setAiScoring(prev => ({
-              ...prev,
-              [currentQuestion.id]: { status: "loading" }
-            }));
-
-            try {
-              const detail = getCorrectAnswerDetail();
-              const response = await fetch("/api/ai/score", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                  questionText: currentQuestion.questionText,
-                  userAnswer: selectedAnswer || fillInAnswer,
-                  correctAnswer: currentQuestion.correctAnswer,
-                  explanation: detail ? JSON.stringify(detail) : undefined,
-                  examType: exam?.slug || "",
-                }),
-              });
-
-              if (response.ok) {
-                const data = await response.json();
-                setAiScoring(prev => ({
-                  ...prev,
-                  [currentQuestion.id]: {
-                    status: "success",
-                    score: data.score,
-                    isCorrect: data.isCorrect,
-                    explanation: data.explanation,
-                  }
-                }));
-              } else {
-                const errorData = await response.json().catch(() => ({}));
-                const isNoApiKey = response.status === 400 && errorData.error?.includes("APIキーが設定されていません");
-                setAiScoring(prev => ({
-                  ...prev,
-                  [currentQuestion.id]: {
-                    status: isNoApiKey ? "no_key" : "error",
-                    error: errorData.error || `エラー (${response.status})`,
-                  }
-                }));
-              }
-            } catch (error) {
-              setAiScoring(prev => ({
-                ...prev,
-                [currentQuestion.id]: {
-                  status: "error",
-                  error: "接続エラー: サーバーに接続できませんでした",
-                }
-              }));
-            }
-          };
 
           return (
             <div className="mb-8">
